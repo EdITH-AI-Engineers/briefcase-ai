@@ -1,12 +1,17 @@
 # briefcase-ai
 
+Extension for briefcase.
+
 Monorepo for AI-assisted data and tooling projects. Each package is self-contained — its own `package.json`, `node_modules`, and `.env`. No root-level workspace; `cd` into a package and run it there.
 
 ## Packages
 
 | Path | Description |
 | --- | --- |
-| [`synth-data-gen`](./synth-data-gen) | Synthetic user-profile generator built on `@google/genai`. Schema-enforced JSON output, per-run checkpointing, flex inference, context caching. |
+| [`synth-data-gen`](./synth-data-gen) | Synthetic student-profile generator built on `@google/genai`. Emits schema-enforced JSON (skills, certifications, awards, education, projects, experience), checkpoints per batch, uses flex inference and context caching. |
+| [`genai-analysis`](./genai-analysis) | Evaluates student profiles against an external skills framework (loaded from `frameworks/*.md`). Produces structured, evidence-grounded assessments. Consumes output from `synth-data-gen`. |
+
+The two packages are contract-coupled: `synth-data-gen`'s `COLUMNS` in `src/config.ts` stay field-aligned with `StudentProfile` in `genai-analysis/src/types.ts`.
 
 ## Adding a package
 
