@@ -1,6 +1,8 @@
 # synth-data-gen
 
-Synthetic user-profile generator using Google's Gemini models via `@google/genai`. Produces schema-enforced JSON, batches requests, checkpoints after every batch, and tears down any caches it creates.
+Synthetic **student-profile** generator using Google's Gemini models via `@google/genai`. Produces schema-enforced JSON — each profile has id, full name, self-authored description, skills, certifications, awards, education, projects, and experience — batches requests, checkpoints after every batch, and tears down any caches it creates.
+
+Downstream consumer: [`genai-analysis`](../genai-analysis) evaluates these profiles against an external skills framework. Column names in `src/config.ts` are kept in sync with `StudentProfile` in `genai-analysis/src/types.ts` — the two packages are contract-coupled.
 
 ## Prerequisites
 

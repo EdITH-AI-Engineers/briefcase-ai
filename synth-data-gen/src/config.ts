@@ -10,6 +10,9 @@ export type ColumnSpec = {
   items?: Schema;
 };
 
+// Column shape mirrors the StudentProfile type consumed by genai-analysis.
+// Keep field names in sync with genai-analysis/src/types.ts — the two are
+// contract-coupled even though the packages don't share code.
 export const COLUMNS: Record<string, ColumnSpec> = {
   id: {
     type: Type.STRING,
@@ -18,76 +21,174 @@ export const COLUMNS: Record<string, ColumnSpec> = {
   full_name: {
     type: Type.STRING,
     description:
-      "Realistic full name reflecting the country_of_residence. Vary cultures, scripts transliterated to Latin.",
+      "Realistic full name reflecting cultural diversity (scripts transliterated to Latin). Rotate countries and naming conventions across the batch.",
   },
-  email: {
+  description: {
     type: Type.STRING,
     description:
-      "Plausible email derived loosely from full_name, across diverse providers (gmail, proton, outlook, custom domains).",
+      "Self-authored bio in the student's own voice — first-person, 2-4 sentences, conversational. Should mention their year/stage, what drew them to their field, and what they are working on now. Do not sanitize into marketing copy.",
   },
-  age: {
-    type: Type.INTEGER,
-    description: "Integer age between 18 and 85.",
-  },
-  gender: {
-    type: Type.STRING,
-    description: "Gender identity.",
-    enum: ["male", "female", "non-binary", "prefer_not_to_say"],
-  },
-  country_of_residence: {
-    type: Type.STRING,
-    description:
-      "ISO 3166-1 alpha-2 country code. Spread across continents — avoid clustering on a single country.",
-  },
-  occupation: {
-    type: Type.STRING,
-    description:
-      "Specific job title (e.g. 'Pediatric Nurse', 'Freight Dispatcher'), not generic categories.",
-  },
-  annual_income_usd: {
-    type: Type.INTEGER,
-    description:
-      "Plausible annual income in USD given occupation and country. Range 0–500000.",
-  },
-  education_level: {
-    type: Type.STRING,
-    description: "Highest completed education level.",
-    enum: [
-      "none",
-      "primary",
-      "secondary",
-      "vocational",
-      "bachelors",
-      "masters",
-      "doctorate",
-    ],
-  },
-  interests: {
+  skills: {
     type: Type.ARRAY,
-    description: "3–6 distinct hobbies or interests, lowercase short phrases.",
+    description:
+      "5–12 distinct skills — mix of technical, soft, and domain-specific, coherent with the student's field and stage. Short phrases, lowercase-friendly.",
     items: { type: Type.STRING },
   },
-  signup_date: {
-    type: Type.STRING,
-    description: "ISO-8601 date (YYYY-MM-DD) between 2019-01-01 and today.",
+  certifications: {
+    type: Type.ARRAY,
+    description:
+      "0–4 certifications. Earlier-stage students often have 0–1; senior/grad students 2–4. Real-sounding names and issuers appropriate to the field.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        name: {
+          type: Type.STRING,
+          description:
+            "Certification name, e.g. 'AWS Certified Cloud Practitioner', 'Google Data Analytics Certificate'.",
+        },
+        issuer: {
+          type: Type.STRING,
+          description: "Issuing organization or body.",
+        },
+        date: {
+          type: Type.STRING,
+          description: "Issue date in YYYY-MM format, between 2019-01 and today.",
+        },
+      },
+      required: ["name", "issuer", "date"],
+      propertyOrdering: ["name", "issuer", "date"],
+    },
   },
-  is_active: {
-    type: Type.BOOLEAN,
-    description: "Whether the user is currently active.",
+  awards: {
+    type: Type.ARRAY,
+    description:
+      "0–4 awards, honors, or scholarships earned during study. Leave empty for students with no notable recognitions.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        name: { type: Type.STRING },
+        year: {
+          type: Type.INTEGER,
+          description: "Year awarded, between 2018 and 2026.",
+        },
+        description: {
+          type: Type.STRING,
+          description: "One sentence describing what the award recognized.",
+        },
+      },
+      required: ["name", "year", "description"],
+      propertyOrdering: ["name", "year", "description"],
+    },
+  },
+  education: {
+    type: Type.ARRAY,
+    description:
+      "1–3 education entries in reverse-chronological order. Always include the current or most recent program.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        institution: {
+          type: Type.STRING,
+          description:
+            "Real-sounding institution name — include state schools, regional universities, community colleges, and vocational programs, not only elite names.",
+        },
+        degree: {
+          type: Type.STRING,
+          description:
+            "e.g. 'B.Sc.', 'B.A.', 'M.Sc.', 'Associate of Applied Science', 'High School Diploma', 'Diploma in Practical Nursing'.",
+        },
+        field: {
+          type: Type.STRING,
+          description: "Major or concentration.",
+        },
+        year: {
+          type: Type.INTEGER,
+          description: "Expected or actual year of graduation.",
+        },
+      },
+      required: ["institution", "degree", "field", "year"],
+      propertyOrdering: ["institution", "degree", "field", "year"],
+    },
+  },
+  projects: {
+    type: Type.ARRAY,
+    description:
+      "1–5 academic, personal, or open-source projects relevant to the student's field. Should reflect their stage — early students: small class or hobby projects; later students: richer independent or capstone work.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        name: { type: Type.STRING },
+        description: {
+          type: Type.STRING,
+          description:
+            "1–2 sentences: goal, what was built or investigated, outcome.",
+        },
+        tech: {
+          type: Type.ARRAY,
+          description:
+            "Tools, languages, frameworks, or methods used. Can be empty for non-technical disciplines.",
+          items: { type: Type.STRING },
+        },
+      },
+      required: ["name", "description", "tech"],
+      propertyOrdering: ["name", "description", "tech"],
+    },
+  },
+  experience: {
+    type: Type.ARRAY,
+    description:
+      "0–3 internships, part-time jobs, research assistantships, or volunteer roles. Leave empty for students with no work history.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        role: { type: Type.STRING },
+        organization: { type: Type.STRING },
+        description: {
+          type: Type.STRING,
+          description: "What the student did and learned, 1–2 sentences.",
+        },
+        duration: {
+          type: Type.STRING,
+          description:
+            "Human-readable duration, e.g. '3 months (Summer 2024)', '1 year (part-time)', 'ongoing since 2025-09'.",
+        },
+      },
+      required: ["role", "organization", "description", "duration"],
+      propertyOrdering: ["role", "organization", "description", "duration"],
+    },
   },
 };
 
 export const CONTEXT = `
-You are generating a synthetic dataset of user profiles for testing a SaaS analytics
-platform. Profiles must be internally consistent (income ~ occupation ~ education ~
-country) but collectively maximally diverse across:
-  - geography (all inhabited continents represented)
-  - age brackets (Gen Z through Boomers)
-  - socioeconomic status (not all white-collar; include trades, students, retirees,
-    gig workers, public sector)
-  - cultural/naming conventions
-No two rows should share the same full_name, email, or id. Avoid stereotypes and
-placeholder-looking data (no "John Doe", no "test@test.com", no "Example Corp").
+You are generating a synthetic dataset of STUDENT profiles — the kind of
+self-reported summary a college or university student would fill out on a
+career-services portal. Each row represents ONE student and must be
+internally consistent: skills align with their field and stage,
+certifications fit their level, and the project and experience histories
+match their timeline.
+
+Aim for maximum diversity across:
+  - disciplines (STEM, humanities, arts, business, health sciences,
+    trades/vocational, and interdisciplinary programs)
+  - stage (first-year undergrad through graduate/postgraduate; include
+    mid-career returners and transfer students)
+  - country and cultural context (spread across continents)
+  - access level — not every student has prestigious internships or
+    well-funded resources; include community-college students, self-taught
+    learners, first-generation students, and rural or regional programs
+  - career-stage coherence: early students should have fewer certifications,
+    1–2 projects, lighter or no experience; later students richer portfolios.
+
+The "description" is the student's own voice. Write in first person, 2–4
+sentences, conversational, with the specifics a real student would mention
+(favorite courses, what drew them to the field, what they're building or
+researching right now). Do not turn it into a cover-letter or marketing pitch.
+
+No two rows should share the same id or full_name. Avoid stereotypes and
+placeholder-looking data: no "John Doe", no "Example University", no
+"Test Corporation". Institution names should be real-sounding but not only
+elite — include state universities, regional institutions, community
+colleges, and vocational schools.
 `.trim();
 
 export const GENERATION = {
