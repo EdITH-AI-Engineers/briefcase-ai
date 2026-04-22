@@ -1,19 +1,10 @@
-import { GoogleGenAI } from "@google/genai";
+import { getClient } from "./client.js";
 import { ANALYSIS, MODEL } from "./config.js";
 import type { Framework } from "./context.js";
 import { buildStudentPrompt, buildSystemInstruction } from "./prompt.js";
+import { withRetry } from "./retry.js";
 import { ANALYSIS_SCHEMA } from "./schema.js";
 import type { AnalysisResult, StudentProfile } from "./types.js";
-
-let _client: GoogleGenAI | null = null;
-function getClient(): GoogleGenAI {
-  if (!_client) {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) throw new Error("GEMINI_API_KEY is not set.");
-    _client = new GoogleGenAI({ apiKey });
-  }
-  return _client;
-}
 
 export type AnalyzeOptions = {
   student: StudentProfile;
@@ -46,11 +37,23 @@ export async function analyzeStudent(
   }
   if (ANALYSIS.useFlex) config.serviceTier = "flex";
 
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents: buildStudentPrompt(opts.student),
-    config,
-  });
+  const response = await withRetry(
+    () =>
+      ai.models.generateContent({
+        model: MODEL,
+        contents: buildStudentPrompt(opts.student),
+        config,
+      }),
+    {
+      onRetry: (err, attempt, delayMs) => {
+        const status = (err as { status?: number }).status;
+        const secs = (delayMs / 1000).toFixed(1);
+        console.warn(
+          `  transient error (status=${status ?? "?"}), retry ${attempt} in ${secs}s`,
+        );
+      },
+    },
+  );
 
   const text = response.text;
   if (!text) throw new Error("Empty response from model.");

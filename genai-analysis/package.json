@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "analyze": "tsx src/index.ts"
   },
   "dependencies": {
     "@google/genai": "^1.50.1",

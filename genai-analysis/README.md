@@ -4,14 +4,11 @@ Evaluates self-reported student profiles (skills, certifications, awards, descri
 
 Same model as `synth-data-gen`: `gemini-3.1-flash-lite-preview`. Same posture: structured output via `responseSchema`, context caching for the framework, flex-tier inference.
 
-## Status
-
-Prompt and context **structure** is in place. The orchestration layer (loading profiles from a `synth-data-gen` run, fanning out analyses, checkpointing, manifest) is not yet wired — will be added once a concrete skills framework is chosen.
-
 ## Prerequisites
 
 - Node.js 20+
 - A Gemini API key (`.env` → `GEMINI_API_KEY`)
+- A `synth-data-gen` run on disk (the analyzer consumes its `profiles.json`), or any other JSON array of `StudentProfile` objects.
 
 ## Setup
 
@@ -20,7 +17,28 @@ npm install
 cp .env.example .env   # then set GEMINI_API_KEY if not already
 ```
 
-Drop a skills-framework document at the path named in `src/config.ts` (default: `frameworks/framework.md`). See [`frameworks/README.md`](./frameworks/README.md) for the expected shape.
+A reference skills framework ships in [`frameworks/framework.md`](./frameworks/framework.md) so the pipeline is runnable out of the box. Replace it with DigComp, SFIA, a custom rubric, or any competency-plus-scale document — `src/prompt.ts` embeds the file verbatim, so no code changes needed.
+
+## Run
+
+```
+npm run analyze
+```
+
+Output lands in `output/run-<YYYYMMDD-HHMMSS>/`:
+
+- `analyses.json` — `AnalysisResult[]`, one per student. Rewritten after every completed analysis so a mid-run crash leaves the partial result intact.
+- `manifest.json` — run metadata: status, counts, model, features used (flex/cache), timestamps, framework + profiles paths used, error message if any.
+
+Every run gets its own folder; nothing is overwritten. On a crash, `status` is `partial` and whatever analyses had finished are preserved.
+
+### Auto-discovery of profiles
+
+If `ANALYSIS.profilesPath` in `src/config.ts` doesn't resolve to an existing file, the runner falls back to the newest `run-*/profiles.json` it can find under the sibling `synth-data-gen/output/` directory. So the defaults "just work" after any `synth-data-gen` run — you don't need to edit `config.ts` every time.
+
+### Retry
+
+Transient errors (429, 500, 502, 503, 504, network resets) retry with exponential backoff up to 5 times per API call. Non-transient errors abort the run (partial results preserved).
 
 ## Design
 
@@ -49,7 +67,7 @@ Keeping the framework as an external file rather than inlining it in code is del
 
 Composed by [`src/prompt.ts`](./src/prompt.ts):
 
-**System instruction** (static across a run, cached):
+**System instruction** (static across a run, cached when the free tier allows it):
 1. `ROLE_BRIEF` — who the model is, what it does.
 2. The framework document — wrapped in `=== SKILLS FRAMEWORK ===` markers.
 3. `EVALUATION_RULES` — framework-agnostic invariants (ground every claim in evidence, use framework scale verbatim, never invent competencies, etc.).
@@ -58,7 +76,7 @@ Composed by [`src/prompt.ts`](./src/prompt.ts):
 **Per-student prompt** (the only thing that varies):
 - A short directive plus the student's profile as JSON, wrapped in `=== STUDENT PROFILE ===` markers.
 
-Keeping the system instruction static and the per-student contents small means cache hits dominate input-token spend as soon as the framework is substantial enough to activate caching (≥ 1024 tokens for flash-tier models).
+Keeping the system instruction static and the per-student contents small means cache hits dominate input-token spend whenever caching is available.
 
 ### Output
 
@@ -83,8 +101,12 @@ Every competency in the framework must appear in `competencies`. Missing-evidenc
 | Capability | Where |
 | --- | --- |
 | **Structured output** (`responseSchema`) | Every call — forces valid `AnalysisResult` JSON. |
-| **Context caching** | Framework + role brief + rules cached once per run; each student call reuses it. No-ops with a warning when the system instruction is below the 1024-token minimum. |
+| **Context caching** | Attempted once per run. No-ops below the 1024-token floor; also no-ops on free-tier accounts (see note below). |
 | **Flex inference** (`serviceTier: "flex"`) | Every call — 50% cheaper, 1–15 min latency tolerated. |
+
+### Note on free-tier caching
+
+Gemini's free tier allocates **0 tokens** of cached-content storage for `gemini-3.1-flash-lite`. Even when the system instruction clears the 1024-token minimum, `caches.create` returns `RESOURCE_EXHAUSTED ... limit=0`. The runner catches this, logs a warning, and proceeds without caching — so free-tier users don't get the 50% input-token discount on the shared context, but the pipeline still works. Upgrade to a paid tier to actually benefit from caching.
 
 ## Configuration surface
 
@@ -93,8 +115,8 @@ All editable in [`src/config.ts`](./src/config.ts):
 | Key | Purpose |
 | --- | --- |
 | `ANALYSIS.frameworkPath` | Which framework file to embed. |
-| `ANALYSIS.profilesPath` | Where to load `StudentProfile[]` from (typically a `synth-data-gen` run). |
-| `ANALYSIS.outputDir` | Where per-run outputs will land once orchestration is added. |
+| `ANALYSIS.profilesPath` | Where to load `StudentProfile[]` from. Falls back to the newest `synth-data-gen` run if this path doesn't exist. |
+| `ANALYSIS.outputDir` | Base directory for runs. |
 | `ANALYSIS.temperature` | Sampling temperature (default low — assessments should be deterministic). |
 | `ANALYSIS.useFlex` | Toggle flex-tier inference. |
 | `ANALYSIS.useCache` | Toggle context caching. |
@@ -111,7 +133,13 @@ src/
   context.ts   # framework loader (external file -> string)
   prompt.ts    # system instruction + per-student prompt assembly
   schema.ts    # Gemini Schema for AnalysisResult
+  client.ts    # shared GoogleGenAI singleton
+  retry.ts     # transient-error detection and exponential backoff
+  cache.ts     # createSharedCache / deleteSharedCache
   analyze.ts   # single-student analyzeStudent() call
+  runner.ts    # analyzeDataset: loop + cache lifecycle + checkpoint hook
+  index.ts     # entry point: run folder, profiles loader, manifest
 frameworks/
-  README.md    # expected framework shape; drop the framework doc here
+  README.md       # expected framework shape
+  framework.md    # reference 21st-century student skills framework
 ```
