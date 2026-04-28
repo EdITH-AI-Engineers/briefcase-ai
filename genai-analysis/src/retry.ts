@@ -5,7 +5,7 @@ export type RetryOptions = {
   onRetry?: (err: unknown, attempt: number, delayMs: number) => void;
 };
 
-const TRANSIENT_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
+const TRANSIENT_STATUS = new Set([408, 429, 500, 502, 503, 504]);
 const TRANSIENT_CODES = new Set([
   "ECONNRESET",
   "ETIMEDOUT",
@@ -13,6 +13,8 @@ const TRANSIENT_CODES = new Set([
   "EAI_AGAIN",
   "ECONNREFUSED",
   "EPIPE",
+  "UND_ERR_SOCKET",
+  "ECONNABORTED",
 ]);
 
 export function isTransientError(err: unknown): boolean {
@@ -20,6 +22,10 @@ export function isTransientError(err: unknown): boolean {
   const e = err as { status?: number; code?: string };
   if (typeof e.status === "number" && TRANSIENT_STATUS.has(e.status)) return true;
   if (typeof e.code === "string" && TRANSIENT_CODES.has(e.code)) return true;
+  // SyntaxError from JSON.parse means the model returned truncated or
+  // malformed JSON — treat as transient so the call gets retried
+  // instead of aborting the whole run.
+  if (err instanceof SyntaxError) return true;
   return false;
 }
 

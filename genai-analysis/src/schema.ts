@@ -7,10 +7,16 @@ export const ANALYSIS_SCHEMA: Schema = {
       type: Type.STRING,
       description: "Must equal the profile's id field verbatim.",
     },
+    program: {
+      type: Type.STRING,
+      description:
+        "Program of study echoed from the profile. Use 'unknown' if the profile does not specify.",
+      enum: ["BSCS", "BSIT", "BSCpE", "unknown"],
+    },
     summary: {
       type: Type.STRING,
       description:
-        "1–2 sentence holistic assessment grounded in the framework.",
+        "1–2 sentence holistic assessment grounded in the framework bundle.",
     },
     competencies: {
       type: Type.ARRAY,
@@ -34,6 +40,28 @@ export const ANALYSIS_SCHEMA: Schema = {
               "Direct quotes or close paraphrases from the student profile.",
             items: { type: Type.STRING },
           },
+          citations: {
+            type: Type.ARRAY,
+            description:
+              "Framework clauses supporting the assigned level. At least one citation is required. Cite only clauses that actually exist in the provided framework documents.",
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                doc: {
+                  type: Type.STRING,
+                  description:
+                    "Framework document id from the bundle manifest (e.g., 'ched-25', 'cc2020', 'sfia-9').",
+                },
+                clause: {
+                  type: Type.STRING,
+                  description:
+                    "Clause id defined inside that document (e.g., 'bscs-po-3', 'KA-SDF', 'PROG-3').",
+                },
+              },
+              required: ["doc", "clause"],
+              propertyOrdering: ["doc", "clause"],
+            },
+          },
           confidence: {
             type: Type.STRING,
             description:
@@ -47,8 +75,15 @@ export const ANALYSIS_SCHEMA: Schema = {
             nullable: true,
           },
         },
-        required: ["name", "level", "evidence", "confidence"],
-        propertyOrdering: ["name", "level", "evidence", "confidence", "notes"],
+        required: ["name", "level", "evidence", "citations", "confidence"],
+        propertyOrdering: [
+          "name",
+          "level",
+          "evidence",
+          "citations",
+          "confidence",
+          "notes",
+        ],
       },
     },
     strengths: {
@@ -89,9 +124,17 @@ export const ANALYSIS_SCHEMA: Schema = {
       },
     },
   },
-  required: ["student_id", "summary", "competencies", "strengths", "gaps"],
+  required: [
+    "student_id",
+    "program",
+    "summary",
+    "competencies",
+    "strengths",
+    "gaps",
+  ],
   propertyOrdering: [
     "student_id",
+    "program",
     "summary",
     "competencies",
     "strengths",
