@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "analyze": "tsx src/index.ts"
+    "analyze": "tsx src/index.ts",
+    "evaluate": "tsx src/evaluate/index.ts"
   },
   "dependencies": {
     "@google/genai": "^1.50.1",
