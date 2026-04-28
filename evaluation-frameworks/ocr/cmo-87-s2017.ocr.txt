@@ -1,0 +1,3803 @@
+
+===== PAGE 1 (cmo87-page-01.png) =====
+
+Rs, |
+Joy a) a Republic of the Philippines aon High .
+2 wes o OFFICE OF THE PRESIDENT ro “Gr
+€ a E Bh Jul & 0
+~& > COMMISSION ON HIGHEREDUCATION fo piciacs
+Vie, o a wm own
+"36 ge pence” O RELEADZ I
+©, CRED Central Oiics £5
+~., PECCRDS seoTion
+CHED MEMORANDUM ORDER “rg, . re
+- No. 87 CIR
+Series of 2017
+SUBJECT: POLICIES, STANDARDS AND GUIDELINES FOR THE BACHELOR
+OF SCIENCE IN COMPUTER ENGINEERING (BSCpE) EFFECTIVE
+(AY) 2018-2019
+In accordance with the pertinent provisions of Republic Act (RA) No. 7722, otherwise
+known as the “Higher Education Act of 1994,” in pursuance of an outcomes-based
+quality assurance system as advocated under CMO 46 s. 2012 (Policy-Standard
+to Enhance Quality Assurance (QA) in Philippine Higher Education through an
+Outcomes-Based and Typology-Based Quality Assurance) and as addendum to
+CMO 37, s. 2012 (Establishment of an Outcomes-Based Educational System in
+Higher Education Institutions offering Engineering Programs), and by virtue of
+Commission en banc Resolution No. 788-2017 dated October 24, 2017 the
+following Policies, Standards and Guidelines (PSG) are hereby adopted and
+promulgated by the Commission.
+ARTICLE|
+INTRODUCTION
+Section 1. Rationale
+Based on the Guidelines for the Implementation of CMO No. 46 series of
+2012 and CMO 37 s. 2012, this PSG implements shift to outcomes based
+education leading to competency based standards. It specifies the “core
+competencies” expected of BS Computer Engineering graduates
+“regardless of the type of Higher Education Institutions (HEI) they
+graduate from.” However, in recognition of outcomes-based education
+(OBE) and the typology of HEIs, this PSG also provide ample space for
+HEIs to innovate in the curriculum in line with the assessment of how best
+to achieve learning outcomes in their particular contexts and their
+respective missions.
+ARTICLE i
+AUTHORITY TO OPERATE
+Section 2. Government Recognition
+All private higher education institutions (PHEIs) intending to offer BS
+Computer Engineering must first secure proper authority from the
+Commission in accordance with this PSG. All PHEIs with an existing BS
+Computer Engineering program are required to shift to an outcomes-
+based approach based on CMO 37, s. 2012 and guided by this PSG.
+State universities and colleges (SUCs), and local universities and
+“Higher Education Development Center Building, C.P. Garcia Ave, UP Campus, Diliman, Quezon City, Philippines
+Web Site: www.ched.gov.ph Tel. Nos. 441-1177, 385-4391, 441-1169, 441-1148, 441-1170, 441-1216, 392-5296, 441-1220
+441-1228, 988-0002, 441-0750, 441-1254, 441-1235, 441-1255, 411-8910, 441-1171, 352-1871
+
+
+===== PAGE 2 (cmo87-page-02.png) =====
+
+colleges (LUCs) should likewise strictly adhere to the provisions in these
+policies and standards.
+ARTICLE Hi
+GENERAL PROVISIONS
+
+Per Section 13 of RA 7722, the higher education institution shall exercise academic
+
+freedom in its curricular offerings but must comply with the minimum requirements for
+
+specific academic programs, the general education distribution requirements and the
+
+specific professional courses.
+
+Section 3, Minimum Standards
+The Articles that follow give minimum standards and other requirements
+and guidelines. The minimum standards are expressed as a minimum set
+of desired program outcomes which are given in Article IV Section 6.
+CHED designed a curriculum to attain such outcomes. This curriculum is
+shown in Article V Section 10 and Section 11 as sample curriculum. The
+number of units of this curriculum is here prescribed as the “minimum unit
+requirement” under Section 13 of RA 7722. To assure alignment of the
+curriculum with the program outcomes, this PSG provides a sample
+curriculum map in Article V Section 12 for the HE to refer to in compliance
+with the implementing guidelines of CMO 37, 5.2012.
+Using a learner-centered/outcomes-based approach, CHED provided a
+description of Outcomes-Based Teaching and Learning delivery method
+in Article V Section 13. A sample course syllabus is also given in Article
+V Section 14 as support to the outcomes-based delivery method. Based
+on the curriculum and the means of its delivery, CHED determines the
+physical resource requirements for the library, laboratories and other
+facilities and the human resource requirements in terms of Administration
+and faculty. These are provided for in Article VI.
+
+Section 4. Curriculum Design
+The HEIs are allowed to design curricula suited to their own contexts and
+missions provided that they can demonstrate that the same leads to the
+attainment of the required minimum set of outcomes, albeit by a different
+route. In the same vein, they have latitude in terms of curriculum delivery
+and in terms of specification and deployment of human and physical
+resources as long as they can show that the attainment of the program
+outcomes and satisfaction of program educational objectives can be
+assured by the alternative means they propose.
+The HEIs can use the CHED Implementation Handbook for
+Outcomes-Based Education (OBE) and the Institutional
+Sustainability Assessment (ISA) as a guide in making their
+submissions for Sections 19 to 24 of Article Vii.
+
+PSG for BSCpE Page 2 of 22
+
+
+===== PAGE 3 (cmo87-page-03.png) =====
+
+ARTICLE IV
+PROGRAM SPECIFICATIONS
+Section 5. Program Descripfion
+5.1 Degree Name
+The degree program described herein shall be called Bachelor of Science
+in Computer Engineering (BSCpE).
+5.2 Nature of the Field of Study
+
+The Bachelor of Science in Computer Engineering (BSCpE) is a program
+
+that embodies the science and technology of design, development,
+
+implementation, maintenance and integration of software and hardware
+components in modern computing systems and computer-controlled
+equipment.
+
+5.3 Characteristics of Computer Engineering Graduates
+
+With the ubiquity of computers, computer-based systems and networks
+
+in the world today, computer engineers must be versatile in the
+
+knowledge drawn from standard {opics in computer science and electrical
+engineering as well as the foundations in mathematics and sciences.
+
+Because of the rapid pace of change in the computing field, computer
+
+engineers must be life-long learners to maintain their knowledge and
+
+skills within their chosen discipline.
+
+An important distinction should be made between computer engineers,
+
+electrical engineers, other computer professionals, and engineering
+
+technologists. While such distinctions are sometimes ambiguous,
+computer engineers generally should satisfy the following three
+characteristics.
+
+1. Possess the ability to design computers, computer-based systems
+and networks that include both hardware and software and their
+integration to solve novel engineering problems, subject to trade-offs
+involving a set of competing goals and constraints. In this context,
+“design” refers to a level of ability beyond “assembling” or
+“configuring” systems.
+
+2. Have a breadth of knowledge in mathematics and engineering
+sciences, associated with the broader scope of engineering and
+beyond that narrowly required for the field.
+
+3. Acquire and maintain a preparation for professional practice in
+engineering.
+
+PSG for BSCpE Page 3 of 22
+
+
+===== PAGE 4 (cmo87-page-04.png) =====
+
+5.4 Program Educational Objectives
+Program Educational Objectives (PEOs) are broad statements that
+describe the career and professional accomplishments that the program
+is preparing graduates to achieve within 3-5 years from graduation.
+PEOs are based on the needs of the program’s constituencies and these
+shall be determined, articulated, and disseminated to the general public
+by the unit or department of the HE! offering the BSCpE program. The
+PEOs should alse be assessed and evaluated periodically for continuing
+improvement.
+5.5 Knowledge Areas
+The knowledge areas include the following but not limited to:
+a) Circuits and Electronics
+b) Computing Algorithms
+¢) Computer Architecture and Organization
+d) Digital Design
+e) Embedded Systems
+f) Computer Networks
+g) Professional Practice
+h) Information Security
+iy Signal Processing
+i} Systems and Project Engineering
+k) Software Design
+1} Occupational Health and Safety
+m) Technopreneurship
+5.6 Allied Programs
+The allied programs of the BSCpE program are the following:
+a) Electrical Engineering
+b) Electronics Engineering
+c) Software Engineering
+d) Computer Science
+e) Information Technology
+These programs are those that may be considered as equivalent {o the
+program for the purpose of determining faculty qualifications to handle
+allied and related courses to the program.
+Section 6. Institutional and Program Outcomes
+The minimum standards for the BS Computer Engineering program are
+expressed in the following minimum set of institutional and BSCpE
+program outcomes.
+6.1 Institutional outcomes
+a) Graduates of professional institutions must demonstrate a service
+orientation in one’s profession,
+PSG for BSCpE Page 4 of 22
+A
+
+
+===== PAGE 5 (cmo87-page-05.png) =====
+
+b) Graduates of colleges must participate in various types of
+employment, development activities, and public discourses,
+particularly in response to the needs of the communities one serves
+
+¢) Graduates of universities must participate in the generation of new
+knowledge or in research and development projects
+
+d) Graduates of State Universities and Colleges must, in addition, have
+the competencies to support “national, regional and local
+development plans.” (RA 7722),
+
+e) Graduates of higher educational institutions must preserve and
+promote the Filipino historical and cultural heritage.
+
+6.2. BSCpE Program Qutcomes
+
+By the time of graduation, the students of the program shall have the
+
+ability to:
+
+a) Ability to apply knowledge of mathematics and science to solve
+complex engineering problems;
+
+b) Ability to design and conduct experiments, as well as to analyze
+and interpret data;
+
+c) Ability to design a system, component, or process to meet desired
+needs within realistic constraints such as economic,
+environmental, social, political, ethical, health and safety,
+manufacturability, and sustainability, in accordance with
+standards;
+
+d) Ability to function on multidisciplinary teams;
+
+e) Ability to identify, formulate, and solve complex engineering
+problems;
+
+f) Understanding of professional and ethical responsibility;
+
+g) Ability to communicate effectively;
+
+h) Broad education necessary to understand the impact of
+engineering solutions in a global, economic, environmental, and
+societal context;
+
+i) Recognition of the need for, and an ability to engage in life-long
+learning
+
+J) Knowledge of contemporary issues;
+
+k) Ability to use techniques, skills, and modern engineering tools
+necessary for engineering practice; and
+
+I) Knowledge and understanding of engineering and management
+principles as a member and leader in a team, to manage projects
+and in multidisciplinary environments.
+
+A PHEI, SUC, or LUC, at its option, may adopt mission-related program
+
+outcomes that are not included in the minimum set
+
+Annex | presents the Competency Standards, Attributes and
+
+competencies of a Computer Engineer which should result from the
+
+program outcomes stated above.
+
+PSG for BSCpE Page 5 of 22
+Z = Let
+
+
+===== PAGE 6 (cmo87-page-06.png) =====
+
+Section 7. Sample Performance Indicators
+Performance Indicators (Pls) are specific, measurable statements
+identifying the performance(s) required to meet the outcome; confirmable
+through evidence.
+Table 1. Sample Performance Indicators of a Program Outcome
+Performance Outcomes Performance Indicators
+| f | Understanding of professional | 1 | Demonstrate knowledge of
+and ethical responsibility |__| professional code of ethics
+2 | Evaluate the ethical and |
+societal implications of a
+design solution to a problem
+CL ~ | in CpE BN
+Section 8. Program Assessment and Evaluation
+Program Assessment refers to one or more processes that identify,
+collect, and prepare data to evaluate the attainment of Program
+Outcomes and Program Educational Objectives.
+Program Evaluation pertains to one or more processes for interpreting
+the data and evidence accumulated from the assessment. Evaluation
+determines the extent at which the Program Outcomes and the Program
+Educational Objectives are achieved by comparing actual achievement
+versus set targets and standards. Evaluation results in decisions and
+actions regarding the continuous improvement of the program.
+All HEIs are encouraged to form a Consultative Body to be part of the
+assessment and evaluation processes to be represented by the
+stakeholders.
+8.1 Assessments and Evaluation of PECs
+The Assessment of Program Educational Objectives may include the
+following: the stakeholders of the program have to be contacted through
+surveys or focus group discussion to obtain feedback data on the extent
+of the achievement of the PECs.
+8.2. Assessment and Evaluation of POs
+In the case of Program Outcomes Assessment, the defined
+Performance Indicators shall be connected to Key Courses (usually the
+Demonstrating or “D” courses in the Curriculum map), and an
+appropriate Assessment Methods (AM) may be applied. These
+methods may be direct or indirect depending on whether the
+demonstration of learning was measured by actual observation and
+authentic work of the student or through gathered opinions from the
+student or his peers. Refer to Table 2.
+PSG for BSCpE Page 6 of 22
+& Woy .
+
+
+===== PAGE 7 (cmo87-page-07.png) =====
+
+Table 2. Sample Matrix Linking Performance indicators with
+Key Courses, Assessment Methods, Set Targets and Standards
+Performance Assessment | Targets and
+Indicators | Key Courses Tools Standards
+1 | Demonstrate | OJT | Employer 60% of
+knowledge of | Assessment | students
+professional Form (EAF) | enrolled in |
+code of ethics | the course
+|| | shall get at
+bo least a rating
+of 70%
+2 | Evaluate the Design Project 2 | Rubric for 60% of
+ethical and (Project Design students
+| societal Implementation) | Presentation | enrolled in
+implications of | I (RDP) | the course
+| a design | i shall get at
+| | solutiontoa | | least a rating
+| | problem in | | | of 70%
+| | CpE —
+Other Methods of Program Assessment and Evaluation may be found in the
+CHED Implementation Handbook for Outcomes-Based Education (OBE) and
+Institutional Sustainability Assessment (ISA).
+Section 8. Continuous Quality Improvement
+There must be a documented process for the assessment and evaluation of
+program educational objectives and program outcomes.
+The comparison of achieved performance indicators with declared targets or
+standards of performance should serve as basis for the priority projects or
+programs for improving the weak performance indicators. Such projects and
+programs shall be documented as well as the results of its implementation. This
+regular cycle of documentation of projects, programs for remediation and their
+successful implementation shail serve as the evidence for Continuous Quality
+improvement.
+ARTICLE V
+CURRICULUM
+Section 10. Curriculum Description
+The BSCpE curriculum is designed to meet the SOs/POs stated in Article [V
+Section 6. This is articulated in a curriculum map discussed in Section 12 to
+develop graduates of the program to have a strong background in mathematics,
+PSG for BSCpE Page 7 of 22
+
+
+===== PAGE 8 (cmo87-page-08.png) =====
+
+natural, physical and allied sciences. Also, it contains complementary courses
+such as general education courses to ensure that the graduates are articulate
+and understands the nature of their role and impact of their work in the society
+and environment.
+The BSCpE curriculum is designed to guarantee breadth of knowledge of the
+discipline through a set of professional courses and to ensure depth and focus
+in certain disciplines through cognates/tracks. Also, it develops student's ability
+to use modern tools necessary to solve problems in the field of computer
+engineering.
+The curriculum has a minimum total of 166 credit units, comprising of 115 units
+of technical courses. These technicai courses include 12 units of mathematics,
+8 units of natural/physical sciences, 6 units of basic engineering sciences, 8
+units of allied courses, 72 units of professional courses, and 9 units of
+elective/cognate courses.
+The general education courses in accordance with CMO 20 s. 2013 - The New
+General Education Curriculum consists of 24 units of general education
+courses, 12 units of GEC electives/mandated courses, 8 units of Physical
+Education (PE), and 6 units of National Service Training Program (NSTP).
+Section 11. Sample Curriculum
+11.1. Components:
+Below is a sample curriculum of the BSCpE program. The institution
+may enrich the sample curriculum depending on the needs of the
+industry and community, provided that all prescribed courses are
+offered and pre-requisite and co-requisite are observed.
+Classification/Field/Course ! week Credit
+oo | Lecture L/FID Units
+LTECHNICALCOURSES | _
+A. Mathematics or]
+Calculus 4 S| 0 3
+ Caleuwsz 1 3 o__ 3
+|__Engineering DataAnalysis | 3 o__ | 3
+Differential Equations | 8 | 0 | 3
+B. Natural/Physical Sciences |
+Chemistry for Engineers 3 3 4
+Physics for Engineers 3 3 4
+Ciao poco Subtotal ooo) 6 8 0 BL
+| C. Basic Engineering Sciences
+Computer-Aided Drafting 0 | 3 1
+Engineering Economics 3 | oo | 3
+_Technopreneurshipiot ~~ 1 3 9 i 3
+BEHRENS TE NO EE RR
+PSG for BSCpE Page 8 of 22
+
+
+===== PAGE 9 (cmo87-page-09.png) =====
+
+Classification/Field/Course f week Credit
+| Lecture | LIFID Units
+D. Allied Courses ~~
+Fundamentals of Electrical Circuits 3 | 3 4
+"Fundamentals of Electronic Circuits | 3 3 14
+foo Sublofal ppd 8 ele [Fg
+_E. Professional Courses ~~~ a
+| Discrete Mathematics 3 oI 3
+Numerical Methods ~~~ | 3 0 3
+Computer Engineering as a Discipline 1 0 I
+Fundamentals of Mixed Signals and Sensors | ~~ 3 ~~ | 0 3
+Computer Engineering Drafting and Design 0 3 1
+Programming LogicandDesign ~~ 0 | 6 2
+Data Structures and Algorithms 0 6 2 |
+Object Oriented Programming ~~~ | 0 6 | 2
+EE 4
+Microprocessors | 3 3 4
+Logie Circutsand Design| 3 | 3
+Methods of Research ~~~ | 2 0 2
+Operating Systems BS —— 3
+Computer Architecture and Organization 3 3 4
+___Data and Digital Communications 3 | 0 3
+Computer Networks and Security 3 3 4
+{Embedded Systems ~~ | 3 3 4
+Digital Signal Processing ~~ 3 3 4
+Feedback and Control Systems ~~~ 3 0 3
+__IntroductiontoHDL — EE
+Seminars and Fieldtrips ~~ 3 1
+Basic Occupational Health and Safety 3 0 3
+pt Laws and Professions! Practice. 2 oo | 2
+Emerging Technologies inCpE ~~~ 3 0 3
+CpE Practice and Design 1 ~~ 0 | s 11
+CpE Practice and Design2 BR 2
+0 csubtefal en gg or] Se
+F. Cognates/Electives (Piease refer to |
+Suggested Electives
+Cognate/Track Course 1 ~~~ EN 3 |
+Cognate/Track Course 2 | 3
+Ce en subtotal ee 1 SRE ig
+il. NON - TECHNICAL COURSES
+(A: General Education Courses | i
+|__ Science, Technology, and Society ~~~ | 3 3
+PSG for BSCpE Page 9 of 22
+
+
+===== PAGE 10 (cmo87-page-10.png) =====
+
+Minimum no. of hours | Minimum
+Classification/Field/Course / week Credit
+I tecture | LFD Units
+Readings in Philippine Histor 3 0 3
+Understandingthe Self ~~} 3 | 0 | 3
+Art Appreciation 3 | 0] 3
+ETT — 3 0 3
+Hiathematos for he oder Ward 1310 3
+Ethics ~~~ | 3 0 3
+a Ee Sibtotal i Se 00 p24
+B. GEC Electives/Mandated Courses
+GEC Elective ~~~ ~~ 3 0] 3 |
+GEC Elective 2 3 0
+GEC Elective 3 3 | 0 3
+| ___Lifeand WorksofRizal ~~ | 3 | 0 | 3
+ior Subtotal 42 To RETIN
+C. Physical Education
+PE 2 2 2
+PE 3 2 0 | 2
+PE 4 i 2 6c | 2
+else Subketal eT TE TE TEE bi PR BT TT
+D. National Service Training Program |
+._ wNsTPA4_____ 3 0 3 i
+| _NsTP2 3 1 0 3
+Pon mth tn Subtotal eR Te FT Tg nT TE
+... . CGRANDTOVAL + | 133° 32 | 186
+SUMMARY OF THE BSCpE CURRICULUM
+| Total No. of Hours / Week | Minimum
+| Classification/Field/Course I Lecture | Lab | Credit Units |
+| |. TECHNICAL COURSES
+ENT — 12 0 | 12
+B. Natural/Physical Sciences 6 6 8
+| C. Basic Engineering Sciences I —— 7
+5: Alied Courses. 6&8 | 6 8
+| E. Professional Courses 53 | 297 72
+'F.CognatesfElectives | ] 9
+TE ‘Subtotal © | 83° Uap HqE
+| ll. NON-TECHNICAL COURSES |
+A. General Education Courses 24 0 ea
+B. GEC Electives/Mandated Courses 12] 0
+C. Physical Education 8 0 8
+EL —— 6 4 0 I 6
+fain Subtotal of i Bg Th Bo TT 6
+_ GRAND TOTAL (including PEandNSTP) | 133 | 312 | 166 |
+PSG for BSCpE Page 10 of 22
+
+
+===== PAGE 11 (cmo87-page-11.png) =====
+
+11.2. Program of Study
+The institution may enrich the sample/model program of study
+depending on the needs of the industry, provided that all prescribed
+courses required in the curriculum outlines are offered and pre-
+requisites and co-requisites are complied with.
+The sample Program of Study listed below is meant for HEIs operating
+on a Semestral System. HE!s with CHED approved trimester or quarter
+term systems may adjust their courses and course specifications
+accordingly to fit their delivery system, as long as the minimum
+requirements are still satisfied.
+The HEls are also encouraged to include other courses to fulfill their
+institutional outcomes, as long as the total units for the whole program
+shall not be less than 166 units, including P.E., and NSTP.
+SAMPLE SEMESTRAL PROGRAM OF STUDY
+FIRST YEAR
+1st year — 15 semester]
+- SO
+ourse nits rerequis
+s Lab/Field/Drafting aus!
+Calculus so | s |
+Chemistry for Engineers
+Computer Engineering as a 1 1
+Discipline
+Programming Logic and
+Design
+Mathematics for the Modern 3 3
+World
+Science, Technology, and
+. 3 3
+Societ
+Understanding the Self 3 | oo Vs
+Physical Education 1 2! oo V2 {
+NSTP 1 os! oo ls
+TOTAL 20 | 9 | 2a |]
+PSG for BSCpE Page 11 of 22
+SETS
+Tati
+
+
+===== PAGE 12 (cmo87-page-12.png) =====
+
+Courses Units | Prerequisites
+Lab/Field/Drafting a
+Calculus 2 3 0 Calculus 1
+Physics for Engineers Calculus 1
+Object Oriented . . ,
+EC RC IE eres
+Engineering Data Analysis 3] oo | 3 | Calculus 1
+Discrete Mathematics 3] oo | 3 | Calculus 1
+Readings in Philippine 3 3
+Histo
+Physical Education 2 2 | 0 | 2 [Pnysical Education 1
+NSTP 2 3 0 NSTP 1
+TotALj20| oe |= [| 0000000000000]
+SECOND YEAR
+2" year — 15 Semester]
+Courses Units | Prerequisites
+Lab/Field/Drafting a
+Differential Equations 3] oo [3] Calculus 2
+Art Appreciation IE ER AT
+Data Structures and Algorithms os | 2 Object Oriented
+Programming
+Engineering Economics 3 oo 1 3] 2" Year Standing*
+Fundamentals of Electrical .
+| GEC Elective 1 3! oo ls 000
+Computer-Aided Drafting Lo] 3 1 2" Year Standing”
+Physical Education 3 Physical Education 2
+TOTAL 17 | 12 [at |
+PSG for BSCpE Page 12 of 22
+LE
+de
+
+
+===== PAGE 13 (cmo87-page-13.png) =====
+
+2nd year — 2" semester]
+. J
+ourses nits rerequisites
+Lab/Field/Drafting a
+Numerical Methods Differential Equations
+Software Design 3 4 Data S tructures and
+Algorithms
+Fundamentals of Electronic Fundamentals of Electrical
+oe 3 3 4 oo
+Circuits Circuits
+Life and Works of Rizal bs! oo lst
+Physical Education 4 2 oo ly
+The Contemporary Word | 3 | _ 0 | 5 |
+TotaL20| 6 [22]
+THIRD YEAR
+3 year — 1° Semester]
+Courses Units | Prerequisites
+NP . Fundamentals of Electronic
+A Data Structures and
+Data and Digital Fundamentals of Electronic
+BY 3 3 So
+Communications Circuits
+Programming Logic and
+. Design;
+Introduction to HDL 3 1 Fundamentals of Electronic
+Circuits
+Numerical Methods;
+Feedback and Control Systems 3 0 3 Fundamentals of Electrical
+Circuits
+Fundamentals of Mixed Signals 3 3 Fundamentals of Electronic
+and Sensors Circuits
+Computer Engineering Drafting 3 1 Fundamentals of Electronic
+and Design Circuits
+Cognate / Elective Course 1** Ts 3“ Year Standing”
+Tota 1s | 09 2a [ 0]
+PSG for BSCpE Page 13 of 22
+Dar
+
+
+===== PAGE 14 (cmo87-page-14.png) =====
+
+3 year — 2™ semester]
+Courses Units | Prerequisites
+Lab/Field/Drafting a
+Computer Networks and 3 4 | Dataand Digital
+| Securit lo | Communications
+Engineering Data Analysis;
+Methods of Research 2 2 Purposive Communication:
+Logic Circuits and Design
+Technopreneurship 3 oo | 3 | 3 Year Standing*
+Ethics 3 0 3
+CpE Laws and Professional 39 Year Standing”
+Practice
+Cognate/Elective Course 2** rs Cognate/Track Course 1
+TotAL[ 19 | 6 [af
+FOURTH YEAR
+4% year — 15 semester]
+Courses Units | Prerequisites
+Lec | Lab/Field/Drafting 9
+Embedded Systems
+rganization
+, . Microprocessors;
+ocr mine | 0 | 5 | 1 [mm
+| Digital Signal Processing [3 reedback and Control Systems
+GEC Elective 2 ls! oo [3
+Cognate/Elective Course 3** Ts Cognate/Track Course 2
+TotaL| 1s | 0 12 [22 | 000]
+PSG for BSCpE Page 14 of 22
+
+
+===== PAGE 15 (cmo87-page-15.png) =====
+
+4" year — 2° semester]
+Courses Units | Prerequisites
+1
+Lab/Field/Drafting aust
+CpE Practice and Design 2 bo | es | 2] CpE Practice and Design 1
+Seminars and Fieldtrips 0 3 1 | 4% Year Standing*
+On the Job Training 3 Ath Year Standing*
+GEC Elective 3 os] oo ts]
+TotaL| 6 | 2s | 9 | 1]
+Suggested Cognates/Electives
+(The program has an option to include additional cognates/electives.)
+Co No. of Hours No. of
+FE —
+Embedded Systems rope No
+Embedded Systems 1 | —-— 3
+Embedded Systems2 ~~~ ee S
+Embedded Systems 3 | 3
+TT CT Lab | . Co
+Microelectronics | | Lab/Field/Drafting
+Microelectronics 1 ~ 3
+Microelectronics 2 I. Lo 3S
+Microelectronics 3 I oo 3
+Lab | | abiField/Drattin
+Software Development | I 9 oo
+Software Development 1. — 1 3
+Software Development? ~~ oe 3
+Software Development ~~~ - S_
+Lab . .
+System and Network Administration | LebMFeldiDrafting |
+System and Network Administration 1 - a 3
+System and Network Administration2 | lL | 3
+System and Network Administration 3 | I | 3 -
+!
+Machine Learning #0 1 LabrFieldiDrafting |
+Machine Learning 1 | 3
+Machine Learning EE | — 3
+Machine Leaming3 || 3
+Lab . .
+ate Analvtics | | Lab/Field/Drafting
+Big Data Analytics 1 ~~ | 3
+Big Data Analytics 2 B } 3
+Big Data Analytics3 ~~ 3
+Auamented Realit Lb | LabiFieldiDrafting
+Au mented Reality A Na 3
+Augmented Reality 2 | 3
+Augmented Reality 3 oo A oo 3
+PSG for BSCpE Page 15 of 23
+Ke
+ie 3 ;
+
+
+===== PAGE 16 (cmo87-page-16.png) =====
+
+Technopreneurship I
+
+Courses No. of Hours
+1 Lab Lab/Field/Drafting Hours
+
+Technopreneurship 1 i 3
+Technopreneurship 2 5 | 3
+| Technopreneurship3 | oo
+* The n¥ year standing means that the student must have compieted at least 75%
+of the load requirements of the previous year level.
+
+** The courses in track specializations should be related.
+
+*** 80 hours per unit of field work.
+
+Section 12. Sample Curriculum Map
+Refer to Annex Hi for the Minimum Program Outcomes and a Sample
+Curriculum Map. The HE! may develop own Curriculum Map.
+
+Section 13. Description of Outcomes-Based Teaching and Learning
+Outcomes-based teaching and learning (OBTL) is an approach where
+teaching and learning activities are developed to support the learning
+outcomes (University of Hong Kong, 2007). It is a student-centered
+approach for the delivery of educational programs where the curriculum
+topics in a program and the courses contained in it are expressed as the
+intended outcomes for students to learn. It is an approach in which
+teachers facilitate and students find themselves actively engaged in their
+learning.
+
+Its primary focus is the clear statement of what students should be able
+to do after taking a course, known as the Intended Learning Oufcomes
+(ILOs). The ILOs describe what the learners will be able to do when they
+have completed their course or program. These are statements, written
+from the students’ perspective, indicating the level of understanding and
+performance they are expected to achieve as a result of engaging in
+teaching and learning experience (Biggs and Tang, 2007). Once the [LOs
+have been determined, the next step in OBTL is to design the Teaching /
+Learning Activities (TLAs) which require students to actively participate in
+the construction of their new knowledge and abilities. A TLA is any activity
+which stimulates, encourages or facilitates learning of one or more
+intended {earning outcome. The final OBTL component is the
+Assessment Tasks (ATs), which measure how well students can use their
+new abilities to solve real-world problems, design, demonstrate creativity,
+and communicate effectively, among others. An AT can be any method
+of assessing how well a set of ILO has been achieved.
+
+A key component of a course design using OBTL is the constructive
+alignment of ILOs, TLAs, and ATs. This design methodology requires the
+Intended Learning Outcomes to be developed first, and then the Teaching
+/ Learning Activities and Assessment Tasks are developed based on the
+ILOs. (Biggs, 1999)
+
+PSG for BSCpE Page 16 of 22
+A
+
+
+===== PAGE 17 (cmo87-page-17.png) =====
+
+“Constructive” refers to the idea that students construct meaning through
+relevant learning activities; “alignment” refers to the situation when
+teaching and learning activities, and assessment tasks, are aligned to the
+Intended Learning Outcomes by using the verbs stipulated in the ILOs.
+Constructive alignment provides the “how-to” by stating that the TLAs and
+the assessment tasks activate the same verbs as in the ILOs, (Biggs and
+Tang, 1959)
+The OBTL approach shall be reflected in the Course Syllabus to be
+implemented by the faculty.
+Section 14. Course Syllabus and Course Specifications
+The Course Syllabus must contain at least the following components:
+14.1. General Course Information (Title, Description, Code, Credit Units,
+Prerequisites)
+14.2 Links to Program Outcomes
+14.3 Course Outcomes
+14.4 Course Outline {Including Unit Outcomes)
+14.5 Teaching and Learning Activities
+14.6 Assessment Methods
+14.7 Final Grade Evaluation
+14.8 Learning Resources
+14.9 Course Policies and Standards
+14.10 Effectivity and Revision Information
+See Annex lI for Sample Course Specifications for the courses listed in
+the suggested Curriculum Map.
+ARTICLE VI
+REQUIRED RESOURCES
+This article covers the specific required resources for the BS Computer Engineering
+program.
+All other requirements on Administration, Library and Laboratory facilities, and
+buildings for the BS Engineering Program are contained in CMO No. BG6 , S.
+2017, Policies, Standards and Guidelines for Requirements Common to all BS
+Engineering and Bachelor of Engineering Technology Programs issued by the
+Commission.
+Section 15. Administration
+The administration of the college of engineering must provide academic
+governance and leadership to engineering programs by exerting efforts
+to achieve program educational objectives and program outcomes. As
+such, the college must have a full-time dean and full-time department or
+program chair who are adept in the principles of outcomes-based
+PSG for BSCpE Page 17 of 22
+Vay
+
+
+===== PAGE 18 (cmo87-page-18.png) =====
+
+education and are trained to implement the elements of OBE and OBTL
+required by CMO 37 s2012.
+There shall be a full-time Department/Program Chair/Coordinator who will
+lead the program in curriculum planning, implementation, monitoring,
+review, and evaluation of BSCpk program. The College Dean may serve
+as concurrent Department or Program Chair when appropriate.
+The qualifications of the Department/Program Chair/Coordinator of
+BSCpE program:
+a) Shall be a Professional Computer Engineer, if applicable;
+b) Shall be holder of any of the following Master's degree
+
+{1) Master of Science in Computer Engineering
+
+(2) Master of Engineering in Computer Engineering
+
+(3) Master of Engineering Education in Computer Engineering
+
+(4) Master of Engineering Program Major in Computer
+
+Engineering
+(5) Master of Science in Engineering Major in Computer
+Engineering; and
+¢} Shall have a minimum teaching experience of not less than three (3)
+years preferably with industry practice
+The Department/Program Chair to carry out his/her administrative
+function must be given a teaching load of not more than 50% of regular
+teaching load.
+Section 16. Faculty
+16.1 Requirements
+There shall be adequate number of competent and qualified faculty to
+teach professional courses of BSCpE program and appropriate student-
+faculty ratio to effectively implement the minimum curricular
+requirements. The program shall not be dependent on single facuity
+handling professional courses.
+in addition, by AY 2018-2019, thirty-five percent (35%) of the total full-
+time faculty members teaching professional courses in BSCpE must be
+holder of Master's degree in CpE or allied programs and preferably
+Doctoral degree in Cpk or allied programs. Faculty members teaching
+professional courses must be a Certified Computer Engineer, if
+applicable.
+All other full-time faculty of the program, including those teaching
+Mathematics, Sciences, Computing, and General Education courses,
+must also possess at least Master's degrees relevant to their courses
+being taught and research specializations by AY 2018-2019.
+Faculty members teaching professional courses that require industry
+certification shall have valid industry certification.
+PSG for BSCpE Page 18 of 22
+
+
+===== PAGE 19 (cmo87-page-19.png) =====
+
+Faculty members teaching CpE Design preferably shall have relevant
+industry immersion or experience.
+All faculty members must undergo training in the principles of OBE and
+the practice of OBTL using various modes of teaching and learning
+activities and appropriate outcomes-based assessment.
+16.2 Duties
+The faculty shall be actively involved in the following areas of
+implementation of CpE program:
+(1) curriculum review, decision-making, and implementation of the
+academic program
+(2) program assessment and evaluation, and implementation of
+continuous improvement of the program
+(3) development, improvement, and achievement of course outcomes
+(COs)
+(4) enrichment of teaching and learning activities(TLAS)
+(5) development and improvement of assessment tasks, constructively
+aligned with COs and TLAs
+(6) student advising activities of the program
+(7) research and scholarly work
+(8) professional services offered by the program
+(9) linkage and extension work
+Section 17. Library and other Learning Resources
+The library services and other learning resources are covered by CMO
+No. 86 , 8. 2017, Policies, Standards and Guidelines for
+Requirements Common to all BS Engineering and Bachelor of
+Engineering Technology Programs.
+Section 18. Laboratory Equipment and Resources
+18.1 Facilities
+Facilities are covered by CMO No. 86 , Ss. 2017, Policies,
+Standards and Guidelines for Requirements Common to all BS
+Engineering Programs
+18.2 Laboratories for the BSCpE Program
+1. Chemistry for Engineers
+2. Physics for Engineers
+3. Fundamentals of Electrical Circuits
+4. Fundamentals of Electronic Circuits
+5. Microprocessors
+6. Logic Circuits and Design
+7. Computer Architecture and Organization
+8. Computer Networks and Security
+9. Embedded Systems
+PSG for BSCpE Page 19 of 22
+Flo pon 5
+
+
+===== PAGE 20 (cmo87-page-20.png) =====
+
+10. Computer Engineering Drafting and Design
+11. Programming Logic and Design
+12. Data Structures and Algorithms
+13. Object Oriented Programming
+14. Software Design
+15. Digital Signal Processing
+16. Introduction to HDL
+18.3 Modernization of Facilities
+Each school/coliege of engineering shall have a program for the
+continuing modernization and upgrading of its instructional laboratories,
+facilities, and equipment. The said program shall have an adequate
+annual allocation in accordance with the financial capability of the
+school.
+18.4 Calibration of Equipment
+Each school/college of engineering shall ensure that the measuring
+instruments in its laboratories are recalibrated regularly. The date of the
+last calibration of the measuring instrument shall be indicated on each
+instrument.
+ARTICLE VII
+COMPLIANCE OF HEIs
+Section 18 Full Compliance with CMO 37, s. 2012
+Before the start of AY 2018-2019, all HEIs offering BS in Computer
+Engineering programs must show evidence of full compliance with
+CMO 37, s. 2012 (Establishment of an Outcomes-Based Education
+System) by the following actions:
+19.1 CMO 37 Monitoring Workbook and Self-Assessment Rubric
+The Commission, through its Regional offices or the TPET Website
+shall make available to all HEIs currently offering or applying to offer BS
+Computer Engineering programs a Monitoring Workbook (CMO 37-
+MW-2017-HEI-BSCpE) and Self-Assessment Rubric (SAR) (CMO-37-
+HEI-SAR-2017-BSCpE).
+The five-year BCpE curriculum shall be the basis of the monitoring. The
+completed Monitoring Workbook with a List of Supporting Evidences
+and Self-Assessment Rubric must be submitted to CHED or online
+through the CHED TPET website (www.ched-tpet.orgy within 30
+working days after the effectivity of this CMO. Failure to submit these
+documents will disqualify the concerned HEIs from continuing or
+starting their BSAekE programs in AY 2018-2019.
+19.2 Review of Submitted Forms by CHED
+CHED shall review the submitted Monitoring Workbooks and Self-
+Assessment Rubrics, and may schedule monitoring visits to the HEI
+thereafter. These visits shall determine the extent of compliance of the
+PSG for BSCpE Page 20 of 22
+Loto,
+
+
+===== PAGE 21 (cmo87-page-21.png) =====
+
+concerned HE with CMO 37, s. 2012. HE!s with BCpE programs with
+low SAR total scores may be asked to submit a one- or two-year
+development plan to CHED.
+19.3 Exemptions
+HEls with BSCpE programs that have applied as COEs/CODs during
+AY 2015-2016 and whose applications have been approved as COE or
+COD shall not be required to comply with Section 19.1 and 19.2.
+Instead, these HEIs must submit only their proposed four-year
+curriculum, corresponding curriculum map, and program of study using
+the Application Workbook for AY 2018-2019 (AW-2018-HEI-BSCpE).
+See Section 20. Those HEls whose COD/COE applications were
+disapproved for AY 2018-2012 must still comply with Sections 19.1 and
+19.2.
+Section 20 Application Workbook for AY 2018-2019
+HEIs currently offering the BSCpE program for AY 2018-2019 shall be
+made to complete a new Application Workbook (AW-2018-HEI-BSCpE)
+which shall be made available through CHED or downloadable from the
+CHED-TPET website. The Application Workbook shall be completed
+and submitted to CHED or uploaded to the CHED-TPET website before
+the start of AY 2018-2019.
+Section 21 Approval of Application
+All HEIs with BSCpE programs with COE or COD status submitting their
+completed Application Workbooks shall automatically receive
+certifications from CHED and shall be given approval to implement their
+programs beginning AY 2018-2019.
+Other concerned HEIs which have submitted their CMO Monitoring
+Workbooks, Self-Assessment Rubrics, and Application Workbook shall
+be given conditional approval by CHED to start offering their new BSIE
+Curriculum following this CMO effective AY 2018-2019. CHED shall,
+however, conduct monitoring of HEIs to assure complete compliance of
+this PSG within the transitory period, during which HEIs with BSCpE
+programs with weak implementation may be asked to submit
+developmental plans, which shall be subject to constant monitoring.
+ARTICLE Vili
+TRANSITORY, REPEALING and EFFECTIVITY PROVISIONS
+Section 22 Transitory Provision
+All private HEIs, state universities and colleges, and local universities
+and colleges with existing authorization to operate the Bachelor of
+Science in Computer Engineering program are hereby given a period
+of three (3) years from the effectivity thereof to fully comply with ali the
+PSG for BSCpE Page 21 of 22
+SAT,
+: Flee |
+se
+
+
+===== PAGE 22 (cmo87-page-22.png) =====
+
+requirements in this CMO. However, the prescribed minimum curricular
+requirements in this CMO shall be implemented starting AY 2018-2019.
+Section 23 Repealing Clause
+Any provision of this Order, which may thereafter be held invalid, shall
+not affect the remaining provisions.
+All CHED issuances or part thereof inconsistent with the provision in
+this CMO shall be deemed modified or repealed.
+Section 24  Effectivity Clause
+This CMO shall take effect fifteen (15) days after its publication in the
+Official Gazette or in a newspaper of general circulation. This CMO shall
+be implemented beginning AY 2018-2019.
+Quezon City, Philippines __ December 4 2017
+For the Commission:
+oe 2
+PATRICIA B. LICUANAN, Ph.D.
+Chairperson
+Attachments:
+Annex | — Competency Standards for an Industrial Engineer
+Annex Il — Minimum Program Outcomes and Sample Curriculum Map
+Annex It — Sample Course Specifications
+Annex IV — Laboratory Requirements
+A. Natural/Physical Sciences
+B. Professional Courses
+Annex V — Sample Course Syllabus
+PSG for BSCpE Page 22 of 22
+
+
+===== PAGE 23 (cmo87-page-23.png) =====
+
+| ANNEX | - COMPETENCY STANDARDS
+Bachelor of Science in Computer Engineering
+Computer Engineer (noun) — is a professional who embodies the science and technology of
+design, development, implementation, maintenance and integration of software and hardware
+components in modern computing systems and computer-controlled equipment.
+ATTRIBUTES AND COMPETENCIES OF A COMPUTER ENGINEER
+COMPETENCY LEVEL
+| ATTRIBUTES | NEW 1-7 YEARS GLOBALLY
+| GRADUATE ENGG. QUALIFIED
+EXPERIENCE ENGINEER
+APEC/ASEAN
+1 Apply Understand the | Use relevant and Propose innovations
+knowledge of principles of | appropriate applied in process design and
+mathematics, mathematics, science, engineering | operations
+chemistry, | chemistry, physics, principles and improvement and
+physics, biology, natural and | techniques in optimization and
+biology, applied sciences formulating process | impart these to peers.
+information including information | design and Develop and
+technology and | technology. operations continually upgrade
+other Determine relevant improvement and proficiency in
+engineering and appropriate optimization. numerical and
+principles applied science, i Develop simple | computational
+engineering computer programs modeling in solving
+principles and to solve computer computer engineering
+techniques that can engineering problems. |
+be used to address problems.
+
+i engineering i
+concerns related to |
+process design and
+operations.
+
+2 Identify, Use relevant i Apply results Consolidate results of
+| formulate, information gathered | research literature research and
+| research from research and other technical information
+| literature and literature and other technological in formulating
+analyse available | advances in process | solutions to computer |
+| complex | technological design and I engineering
+engineering information sources | operations processes and adapt
+| problems | in coming out with improvement and these into systems to
+reaching solutions to complex | optimization.Propose | achieve energy and
+substantiated engineering changes in | process efficiency
+conclusions problems. parameter settings targets.Impart these
+
+i using first | used in technological
+
+principles of manufacturing advances to peers.
+| mathematics, processes or lab-
+
+natural scale set-ups to |
+
+sciences and achieve the desired |
+
+
+===== PAGE 24 (cmo87-page-24.png) =====
+
+| engineering outputs.
+
+| sciences.
+
+| |
+
+| 3 | Design Study, investigate | Study, investigate Consolidate studies |
+
+| | solutions for | and gather data | and gather data made on problems in
+complex related to complex related to problems computer engineering
+
+| engineering | engineering in computer processes and
+
+problems and problems and engineering operations and
+
+| design systems, | propose solutions processes and propose changes in
+
+| components or | based on the | operations and operational
+
+processes that | fundamentals of | prepare proposals to | parameters.
+meet specified | engineering | implement solutions | Specialize in specific
+needs with principles while while incorporating fields of practice in
+appropriate incorporating ethics, | ethics, safety and | computer engineering
+consideration safety and environmental and use the technical
+for public health | environmental considerations. expertise in design of
+and safety, considerations. Conduct test runs solutions to applicable
+cultural, and prepare final complex engineering
+societal, and recommendations problems.
+environmental based on results Impart learnings to
+
+| considerations. athered. peers,
+
+4 Conduct Conceptualize, Use available Organize teams of
+investigations of | formulate and database experts, plan and
+complex implement design of | information, design experiments in
+problems using | experiments in a coordinate with other | conducting
+research-based | standard scientific technical experts, investigations of
+knowledge and | manner in | plan and design complex engineering
+
+| research conducting experiments in problems.
+| methods investigations of conducting Prepare feasibility,
+including design | complex engineering | investigations of optimization reports,
+of experiments, | problems with complex engineering | implementation plans
+analysis and consideration of cost, | problems. and make |
+interpretation of | quality, security, and | Prepare reports and | presentations to the
+data, and environmental make presentations | concerned entities on |
+synthesis of | impact. to concerned entities | the proposed
+information to | Recommend valid on the proposed | solutions to the |
+provide valid conclusions based solutions to the { complex engineering |
+conclusions. on gathered complex engineering | problems. |
+information and problems. |
+results of
+investigation. 3 1]
+FET
+x
+
+
+===== PAGE 25 (cmo87-page-25.png) =====
+
+5 Create, select Be familiar with the Be familiar with the Be familiar with
+and apply appropriate | appropriate process operations
+appropriate techniques, | techniques, and applicable
+| techniques, resources, and | resources, and | modern tools and
+| resources, and | modern engineering | modern engineering | techniques to solve
+modern and IT tools, and IT tools, operational problems
+engineering and | including prediction including prediction taking into
+IT tools, and modelling, to and modelling, to consideration process
+including complex engineering | complex engineering | limitations.Use
+prediction and problems, with an problems, with an industrial experience
+| modelling, to understanding of the | understanding of the | in conjunction with
+sclve complex limitations.Recomme | limitations. Consolidat | technical expertise
+| engineering nd the applicable e applicable and appropriate
+problems, with | modern tools that techniques and | modern tools in
+| an can be used to solve | modern tools that | solving complex
+understanding complex engineering | can be used to solve | engineering
+of the problems. complex engineering | problems.Prepare
+| limitations. problems.Prepare reports and
+recommendations recommendations
+i based on results and present these to
+considering the concerned
+optimization, entities.
+| practical applications
+and limitations of
+process parameters
+and equipment.
+6 Apply reasoning | Be familiar with Be familiar with Be familiar with
+| informed by relevant policies, relevant policies, relevant policies,
+contextual laws, regulations and | laws, regulations and | laws, regulations and
+knowledge to technical standards | technical standards | technical standards
+assess societal, | locally in conjunction | both locally and | both locally and
+health, safety, with the computer internationally in | internationally in
+legal and engineering conjunction with the | conjunction with the
+cultural issues professional practice. | computer computer engineering
+and the Make a personal engineering professional practice.
+consequent commitment to professional practice. | Be familiar with
+| responsibilities | societal, health, | Prepare plans and specific country
+| relevant to safety, legal and designs to address regulations on
+{ professional cultural issues industrial process professional
+engineering recognizing problems while I engineering practice
+practice and i obligations fo taking into in implementing
+solutions to society, consideration moral, | solutions to complex
+complex subordinates, and ethical and engineering
+engineering the environment. environmental problems.
+problems. concems. Prepare plans and
+Impart learning to designs to address
+peers. industrial process
+problems while taking
+into consideration
+moral, ethical and
+Lo environmental
+
+
+===== PAGE 26 (cmo87-page-26.png) =====
+
+| concerns.
+| Impart learning to
+| peers.
+| |
+| | |
+| |
+|
+|
+7 Understand and | Be familiar with | Be familiar with Be familiar with
+evaluate the relevant applicable relevant applicable relevant applicable
+sustainability technical and technical and technical and
+and impact of | engineering engineering engineering
+professional standards that can standards that can standards that can be |
+engineering be applied in be applied in applied in
+work in the i professional professional i professional computer
+solution of computer computer engineering
+complex engineering engineering practice.Use gained
+engineering practice. Assess the | practice. Use gained | experience in |
+problems in effects of experience in industrial professional
+societal and professional industrial practice to measure
+environmental engineering work on | professional practice | impacts on society
+| contexts, process operational to measure impacts and environment.Be
+| problems. Gather | on society and familiar with carbon
+relevant data in | environment.Be footprint calculations,
+relation to the i familiar with carbon life cycle assessment,
+professional footprint calculations, | green technologies i
+engineering work. life cycle and other upcoming |
+assessment, green standards.Do
+{ technologies and | research, develop
+other upcoming projects and prepare
+standards.Impart implementation plans
+learning to peers. to implement and
+| assess professional |
+engineering works in
+relation to complex
+engineering
+problems. impart
+learning to peers.
+
+
+===== PAGE 27 (cmo87-page-27.png) =====
+
+8 Apply ethical Be familiar with the Be familiar with the Be familiar with the
+principles and professional ethics | professional ethics | professional ethics for
+commit to for computer | for computer computer engineers
+professional engineers and apply | engineers and apply | and apply and behave
+ethics and and behave and behave according to this code
+responsibilities | according to this according to this in professional
+and norms of | code in professional | code in professional | practice.Be familiar
+engineering practice Apply ethical | practice.Be familiar with corporate and
+practice. principles in with corporate and industrial
+
+conjunction with industrial policies. Apply ethical
+engineering practice. | policies. Apply ethical | principles in
+principles in i conjunction with
+| | conjunction with engineering practice
+| engineering practice | incorporating public |
+| incorporating public | safety as a priority.Be
+safety as a an example to
+| priority.Be an | upcoming engineers
+| example to upcoming in terms of integrity, |
+engineers in terms of | morality and
+integrity, morality and | ethics.Exemplify
+! ethics. ethical and moral
+values through
+participation in |
+! socially relevant
+| projects that
+contribute to national
+| development.impart
+oo Po learning to peers.
+
+9 Function | Perform functions Plan, lead, Supervise and
+effectively as an | required in the coordinate and manage processes,
+individual, and | completion of a task | implement people and facilities
+
+as a member or | as part of a project or | designated tasks locally or
+leader in endeavororasan | either as a team internationally
+diverse teams employee of a leader or member. enabling efficiency,
+and in multi- | company. Interact with a improved
+i disciplinary Interact with peers network of performance,
+settings. and higher levels in a | professionals and business profitability
+professional manner. | participate in projects | and safety.
+| | Participate in or activities. Train other engineers.
+activities either as a | Handle small to
+| team leader or medium-sized
+member and perform | projects.
+| designated tasks. |
+i
+
+
+===== PAGE 28 (cmo87-page-28.png) =====
+
+10 | Communicate Prepare reports, Prepare reports, | Consolidate reports
+| effectively on presentations and | presentations and and make
+complex | other engineering | other engineering | presentations to |
+| engineering { documents in an | documents in an peers and superiors |
+activities with | organized way and | organized way and on projects or on
+the engineering | relay information relay information assigned endeavors
+community and | related to these related to these .Conduct trainings to
+with society at effectively. Communic | effectively.Prepare subordinates, peers
+large, such as ate clearly both policies, procedures | and
+being able to | verbally and in and other documents | superiors.Communica
+comprehend { written form all related to an activity | te and coordinate
+and write instructions to peers, | or project and clearly and act as |
+effective reports | subordinates and | cascade to liaison officer on
+and design superiors as may be | subordinates, peers | matters concerning
+documentation, | deemed and superiors legal or regulatory
+make effective necessary.Organize, | effectively.Conduct issues.Prepare
+| presentations, | coordinate and | trainings to policies, rules,
+and give and implement activities | subordinates and regulations,
+receive clear | or projects in a clear | peers.Communicate | instructions,
+instructions. way. clearly with legal procedures and
+| entities/ authorities implements them.
+regarding
+engineering
+iN activities.
+| 11 | Demonstrate Plan, lead, organize Plan, lead, organize | Manage and
+| knowledge and | and control small | and control small to implement medium-
+understanding projects or tasks as medium-sized sized to major
+of engineering may be deemed projects or tasks as projects or tasks as
+management necessary in the may be deemed may be deemed
+| principles and practice of computer | necessary in the necessary in the
+| economic engineering. practice of computer | practice of computer
+decision- engineering. engineering.
+making and Manage financial | Manage financial
+apply these to aspects of the aspects of the project.
+one’s own work, | project. Manage supervisors
+as a member | | Supervise and peers.
+and leader in a | subordinates and Prepare reports
+team, to peers when needed. | related to projects.
+manage Prepare reports
+projects and in related to projects.
+multidisciplinary
+environments
+SEF
+
+
+===== PAGE 29 (cmo87-page-29.png) =====
+
+ANNEX Il - SAMPLE CURRICULUM MAP
+
+Bachelor of Science in Computer Engineering
+
+PROGRAM OUTCOMES
+
+Graduates of Bachelor of Science in Computer Engineering (BSCpE) program
+shall be able to:
+
+a) Ability to apply knowledge of mathematics and science to solve engineering
+problems;
+
+b) Ability to design and conduct experiments, as well as to analyze and
+interpret data;
+
+c) Ability to design a system, component, or process to meet desired needs
+within realistic constraints such as economic, environmental, social,
+political, ethical, health and safety, manufacturability, and sustainability, in
+accordance with standards;
+
+d) Ability to function on multidisciplinary teams;
+
+e) Ability to identify, formulate, and solve engineering problems;
+
+f) Understanding of professional and ethical responsibility;
+
+g) Ability to communicate effectively;
+
+h) Broad education necessary to understand the impact of engineering
+solutions in a global, economic, environmental, and societal context;
+
+i) Recognition of the need for, and an ability to engage in life-long learning
+
+j) Knowledge of contemporary issues;
+
+k) Ability to use techniques, skills, and modern engineering tools necessary
+for engineering practice; and
+
+I) Knowledge and understanding of engineering and management principles
+as a member and leader in a team, to manage projects and in
+multidisciplinary environments.
+
+Page 1 of 4
+
+
+===== PAGE 30 (cmo87-page-30.png) =====
+
+SAMPLE CURRICULUM MAP
+| |
+| D | Demonstrating Course | A course demonstrating an outcome |
+|
+P| Professional Courses |
+on mr
+GEM Courses
+ste | Frog
+NSTP | Program
+Page 2 of 4
+
+
+===== PAGE 31 (cmo87-page-31.png) =====
+
+sme | Ly [ITT
+Discipline 1 P-01 /
+Programming Logicand Design | 2 | Po2 | | |r| | [| [| [[] |
+DiscreteMath | 3 |pos [yl | [J] [[ []]]]
+ NumericalMethods | 3 |poa [El | [J [ [[ [][/]]
+Object Oriented Programming | 2 | Pos | | Jel | [ | [ | []/]
+| Data Structures and Algorithms | 2 | pos | | [E[ | [ [| [|] [|
+SoftwareDesign | 4 [por | [Jel | [ [[ [[]]
+Logic Gircuitsand Design | 4 | pos | |g [| [ [[ [|] [|
+Senses een | oJ woo [E) | ||]
+Sensors
+Operating Systems | 3 [pao | [| [J] [| [[]e]
+| Data and Digital Communications | 3 | prt [el | [| [ [| [|] [|
+introductiontorpt | 1 |pr2| [JE[ J] [[ []]]]
+Feedback and Control Systems | 3 | P13 [E| | | | [ | [ [ [|] |
+Basic Occupational Health and
+Sarre |g Lene | LLL el
+| Computer Networks and Security | 4 | prs | | [el | [ [| [|] ||
+Mioroprocessors | 4 [pas | [Jel | [ [[ [[] |
+Methods of Research | 2 | p17 | |g [elf [g [g | |]
+| CpE Laws and Professional Practice | 2 | P18 | | | | | [el [| | [| |
+EmbeddedSystems | 4 | pro | | [e[ | [ [[ [J] ]]
+Computer Architecture and
+rman | a ea | |e || ||]
+Digital Signal Processing | 3 [per [E[ | [| [ I [ [[] |
+| Emerging Technologiesincpf | 1 | p22 | | | [| [ [| [|g [|
+| Seminarsand Fieldtrips | 3 | pas | | | [| [ [| [Oo ||
+| CpE Practice and Design? | 1 | P24 | | | | Ippoloo| [of |
+| CE Practiceand Designz | 2 | p2s [ploiolo | [0 [od [po]
+(OnthedobTraining | 3 | P26| | |plopol | |p [plc
+| Cognate/TrackCourse1 | 3 poz | | | [J [ [| [J] ]]
+| Cognate/TrackCourse2 | 3 | pag | | | [| [ [[ [|] ]]
+| Cognate/Trackcourses | 5 [peo | [| [|] [[ [[]]]
+| Fundamentals of Electrical Circuits | 4 | A-01 |E| | | | | | | [| [| [|
+| Fundamentals of Electronic Girouits | 4 | A-02 |e] | | | | | [ [|] ||
+Page 3 of 4
+
+
+===== PAGE 32 (cmo87-page-32.png) =====
+
+|
+Calouns1 | 4 (mor pif fp LP]
+Caeuws2 | 4 [moz uf | [LT]
+Engineering Data Analysis | 3 | M03 |r| 1) | [ [| [ [| []
+Differential Equation | 3 [moa |u| | | | || [[[][
+CremitytorErgineers | 4 | "gp [1] ||]
+01
+siestorbngineers | 4 | "gp [1] ||]
+Computerigeaaing | 1 | Tp [1] ||| pL]
+Ergneerng Economies | 3 | Pp | | || |r|] 1g
+rectnopreneursnp rot | 5 | fg | | | [| [ [|
+and Soca E10 | a [agar | | |||]
+and Society
+Contemporary Word | 3 | GEoz | | | | | | | | [ii] |
+Readings in Philippine History | 3 [Geos | | | | | [1] [ [ [1] [|
+Understanding the Sell | 8 | Geo | | | | | | [| [71] ||
+ArtAppreciation | 3 [ceeos| | | [i] | J [i] [[[
+purposive Communication | 5 | Geos | | | | | [1] [1] | | ||
+Mathematics for the Modern World | 3 | GE-o7 |r| | | [| | [ [ [[ [|
+Ethos | 8s Jeeos| [| | [ [| [4] lf]
+poesove | a |g" ||]
+03
+amon | oo | |||]
+Per pe deeor | [pif [PLT
+pz Leese [Lif [LLP]
+PEs pe fees] [Lif [PLT
+Pea fe feeoa [Li [LTT
+wore ps PTL]
+woree La [MEL]
+Page 4 of 4
+
+
+===== PAGE 33 (cmo87-page-33.png) =====
+
+ANNEX [li - COURSE SPECIFICATIONS
+Bachelor of Science in Computer Engineering
+TABLE OF CONTENTS
+TECHNICAL COURSES... iirc mii isniev srcssse isvarsss senses ssnssusumssnyssssnves 3
+CalCUIUS Tie eee acess
+CalCUIUS 2. eee ere eevee eee nee sneer vee enne nn Dh
+Engineering Data and Analysis ........ccccce vivitar D
+Differential EGUatIONS.........ooiiiii eerie een aevaeiee a
+NATURAL/PHYSICAL SCIENCES Lo. cies creeesen reese eees O
+Chemistry for ENgINEeIs ceiver O
+Chemistry for Engineers Laboratory..........coocooi ia 9
+Physics for ENQINEErs .......coooovviiiiiinircii rcs evevveveeereeeeineeeeeeeneeeeenas ence nenenenns 10
+Physics for Engineers Laboratory ........ooooce coin cenn 40
+BASIC ENGINEERING SCIENCE cies eres e eens 1]
+Computer Aided Drafting ........oviiiie cic eee vs vraresssssvamssae eens 11
+Engineering ECONOMICS ........iiiiiiiiiiiiiii rience cece ease inenieeees 12
+Technopreneurship 107 cereal 13
+Fundamentals of Electrical Circuits ........coccooo eevee 13
+Fundamentals of Electrical Circuits Laboratory ......ccooooeeiiivvvicie vee 14
+Fundamentals of Electronic Circuits...........ccoooiiiiiiiiccce 18
+Fundamentals of Electronic Circuits Laboratory..........cccccccvvivviiiivvnnnn 16
+PROFESSIONAL COURSES... rereeesine sree reeves enn 1
+Computer Engineering as a Discipline .........cccoocoociiniiiiiiieeeenn 17
+Discrete Mathematics o.oo ence, TTT
+Numerical Methods... eset essences 18
+Fundamentals of Mixed Signals and Sensors .......ccccoeeeeceivvniccciiccecne 19
+Programming Logic and Design ........cccoviiiiiiireeeeeeenccrrrenaenninneen 19
+Object Oriented Programming ........cccccuerieerirmiiiiiaesinnneccnmannecnenmeecnnnnmmnennens 200
+Data Structures and Algorithms coco 21
+SOfWAE DESIGN Lover cece eee cere ar rb eiran researc nnnnan 22
+Software Design Laboratory... 20
+Logic Circuits and DESIGN ....o...viiiiiiieiiii necessaries ane 23
+Logic Circuits and Design Laboratory .........c.cccociviiiiiiniccinnceeennn 24
+Operating SYSTEMS o.oo eens eerie 0 20D
+PSG for BSCpE (Annex 1) Page 1 of 38 ET
+
+
+===== PAGE 34 (cmo87-page-34.png) =====
+
+Data and Digital CommuniCationS.........cccocvvviiiiiiiiiieeeee crea esvriinre ace 2D
+Introduction 10 HDL... eee nee 20
+Feedback and Control SYStEMS ..........ccciiviiiire iirc seeciae crite es sciinesenccneeens 20
+Computer Engineering Drafting and Design........cc.ccooviivivnniciniccinnccenn 27
+Basic Occupational Health and Safety... cin... 28
+Computer Networks and SECUTLY oo... rece. 28
+Computer Networks and Security Laboratory..........ocoocooeiiiiiiiciieniccn 0. 29
+MICTOPIOCESSONS 1uvvieieiiiree eset e reise eerie ests e ee ciree eee es aeeree ea srn brea esne ase enrineeeneneens OU
+Microprocessors Laboratory .......occcvvvreviieer cece cee eee ea sees inae eee. 30
+Methods Of RESEEIC.......oviiiiiie cee OT
+CpE Laws and Professional Practice ........cccccoviiviiiiicciinci cen. 32
+Embedded SYSTEMS «o.oo eee OO
+Embedded Systems Laboratory.........ccocieriiiiiii cece 33
+Computer Architecture and Organization .........cccoe vein. 34
+Computer Architecture and Organization Laboratory ............cccovieiiiiiiiennnn. 34
+Emerging Technologies in CPE... ccc. 3D
+Seminars and FIelatrips couriers ee ener ees OO
+Digital Signal Processing ......ocouiiiiiiiiiei etree cesses seca OO
+Digital Signal Processing Laboratory .........ccooviviiiiiiii nce. 36
+CpE Practice and Design 1... cee BT
+CpE Practice and Design 2...ccccc.oveeoiiieviiiiri ieee eres reece nse eeeneees OF
+ON the JOD Training «o.oo eee ee serra erases ireeea eee: OO
+PSG for BSCpE (Annex lif) Page 2 of 38 {ey
+
+
+===== PAGE 35 (cmo87-page-35.png) =====
+
+TECHNICAL COURSES
+MATHEMATICS
+| CourseName _ [Caleulus1 ~~ ~~~ |
+An introductory course covering the core concepts of limit, continuity
+| and differentiability of functions involving one or more variables.
+Course This also includes the application of differential calculations in
+Description solving problems on optimization, rates of change, related rates,
+tangents and normals, and approximations; partial differentiation
+and transcendental curve tracing. ~~
+Number of Units .
+for Lecture 3 units ee
+Number of
+Contact Hours 3 hours per week
+| per Week —
+Prerequisites | None —
+Outoomes To be identified by the program.
+course To be identified by the program.
+1. Functions
+2. Continuity and Limits
+3. The Derivative
+4. The Slope
+5. Rate of Change
+6. The Chain Rule and the General Power Rule
+7. Implicit Differentiation
+| 8. Higher-Order Derivatives
+{ 9. Polynomial Curves
+Course Outline 10. Applications of the Derivative
+| 11. The Differential
+12. Derivatives of Trigonometric Functions
+| 13. Derivatives of Inverse Trigonometric Functions
+14. Derivatives of Logarithmic and Exponential Functions
+15. Derivatives of the Hyperbolic Functions
+16. Solutions of Equations
+17. Transcendental Curve Tracing
+18. Parametric Equations
+119. Partial Differentiation ee
+| Course Name Seon 2 ee
+The course introduces the concept of integration and its application
+to some physical problems such as evaluation of areas, volumes of
+| revolution, force, and work. The fundamental formulas and various
+| Course techniques of integration are taken up and applied to both single
+Description variable and multi-variable functions. The course also includes
+tracing of functions of two variables for a better appreciation of the
+interpretation of the double and triple integral as volume of a three- |
+dimensional region bounded by two or more surfaces. —
+for Lecture
+PSG for BSCPE (Annex lif Page 3 of 38 {oa
+
+
+===== PAGE 36 (cmo87-page-36.png) =====
+
+Number of
+Contact Hours 3 hours per week
+\perWeek | ___ OO OOOO
+rogram Calculus 1
+Program : iy.
+| Qutco mes To be identified by the program. i
+course | Tobe identified by the program. BB
+1. Integration Concepts/Formulas
+1.1. Anti-Differentiation |
+1.2. Indefinite Integrals
+1.3. Simple Power Formula |
+1.4. Simple Trigonometric Functions
+1.5. Logarithmic Function |
+1.6. Exponential Function |
+1.7. Inverse Trigonometric Functions i
+| 1.8. Hyperbolic Functions (sinh u & cosh u only) |
+1.9. General Power formula (include Substitution
+| Rule)
+1.10. Constant of Integration
+1.11. Definite Integral (include absolute, odd & even
+functions)
+2. Integration Techniques
+2.1. Integration by Parts
+| 2.2. Trigonometric Integrals
+2.3. Trigonometric Substitution
+2.4. Rational Functions
+2.5. Rationalizing Substitution
+Course Outline 3. Improper Integrals
+4. Application of Definite Integral
+4.1. Plane Area
+4.2, Areas Between Curves
+5. Other Applications
+5.1. Volumes
+5.2. Work
+5.3. Hydrostatic Pressure
+6. Multiple Integrals (Inversion of order/ change of
+coordinates)
+6.1. Double Integrals
+6.2. Triple Integrals
+7. Surface Tracing
+7.1. Planes
+| 7.2. Spheres |
+7.3. Cylinders
+7.4. Quadric Surfaces
+7.5. Intersection of Surfaces
+8. Multiple Integrals as Volume i
+8.1. Double Integrals
+oo 8.2. TripleIntegrals
+PSG for BSCpE (Annex Ii) Page 4 of 38 gis ni
+. Se
+
+
+===== PAGE 37 (cmo87-page-37.png) =====
+
+Course Name Engineering Data and Analysis
+This course is designed for undergraduate engineering students
+with emphasis on problem solving related to societal issues that
+engineers and scientists are called upon to solve. It introduces |
+different methods of data collection and the suitability of using a |
+particular method for a given situation.
+The relationship of probability to statistics is also discussed,
+providing students with the tools they need to understand how
+Course “chance” plays a role in statistical analysis. Probability distributions
+D intio of random variables and their uses are also considered, along with |
+| escription a discussion of linear functions of random variables within the
+| context of their application to data analysis and inference. The
+course also includes estimation techniques for unknown
+parameters; and hypothesis testing used in making inferences from |
+sample to population; inference for regression parameters and build
+models for estimating means and predicting future values of key
+| variables under study. Finally, statistically based experimental
+| design techniques and analysis of outcomes of experiments are
+Lo discussed with the aid of statistical software.
+: Number of Units | 3 units
+for Lecture
+Number of
+Contact Hours 3 hours per week
+per Week — E
+Prerequisites Calculus 1
+Outoomes To be identified by the program. LL
+course To be identified by the program. |
+1. Obtaining Data
+1.1. Methods of Data Cotiection
+| 1.2. Planning and Conducting Surveys
+1.3. Planning and Conducting Experiments: Introduction
+! to Design of Experiments
+2. Probability
+2.1. Sample Space and Relationships among Events |
+2.2. Counting Rules Useful in Probability
+2.3. Rules of Probability |
+3. Discreet Probability Distributions
+3.1. Random Variables and their Probability
+Distributions
+. 3.2. Cumulative Distribution Functions
+| Course Outline 3.3. Expected Values of Random Variables i
+| 3.4. The Binomial Distribution |
+3.5. The Poisson Distribution |
+4. Continuous Probability Distribution
+4.1. Continuous Random Variables and their
+Probability Distribution
+4.2. Expected Values of Continuous Random Variables
+4.3. Normal Distribution
+4.4. Normal Approximation to the Binomial and Poisson
+| | Distribution
+4.5. Exponential Distribution
+5. Joint Probability Distribution
+i 5.1. Two or Random Variables
+PSG for BSCpE (Annex 1) Page 5 of 38 EE
+
+
+===== PAGE 38 (cmo87-page-38.png) =====
+
+5.1.1. Joint Probability Distributions
+| 5.1.2. Marginal Probability Distribution
+5.1.3. Conditional Probability Distribution
+5.1.4. More than Two Random Variables
+5.2. Linear Functions of Random Variables i
+5.3. General Functions of Random Variables |
+| 6. Sampling Distributions and Point Estimation of |
+Parameters
+6.1. Point Estimation
+6.2. Sampling Distribution and the Central Limit
+Theorem
+6.3. General Concept of Point Estimation
+6.3.1. Unbiased Estimator
+6.3.2. Variance of a Point Estimator
+6.3.3. Standard Error
+6.3.4. Mean Squared Error of an Estimator
+7. Statistical Intervals
+7.1. Confidence Intervals: Single Sample
+7.2. Confidence Intervals: Multiple Samples
+i 7.3. Prediction Intervals
+7.4. Tolerance Intervals
+8. Test of Hypothesis for a Single Sample
+8.1. Hypothesis Testing
+8.1.1. One-sided and Two-sided Hypothesis
+8.1.2. P-value in Hypothesis Tests
+8.1.3. General Procedure for Test of Hypothesis
+8.2. Test on the Mean of a Normal Distribution,
+Variance Known
+8.3. Test on the Mean of a Normal Distribution, Variance
+Unknown
+8.4. Test on the Variance and Statistical Deviation of a
+Normal Distribution
+8.5. Test on a Population Proportion
+9. Statistical Inference of Two Samples
+9.1. Inference on the Difference in Means of Two
+| Normal Distributions, Variances Known
+9.2. Inference on the Difference in Means of Two
+Normal Distributions, Variances Unknown
+9.3. Inference on the Variance of Two Normal
+Distributions
+9.4. Inference on Two Population Proportions
+10. Simple Linear Regression and Correlation
+10.1. Empirical Models
+10.2. Regression: Modelling Linear Relationships — The
+Least-Squares Approach
+10.3. Correlation: Estimating the Strength of Linear
+Relation
+| 10.4. Hypothesis Tests in Simple Linear Regression
+10.4.1. Use of t-tests
+10.4.2. Analysis of Variance Approach to Test
+Significance of Regression
+10.5. Prediction of New Observations
+10.6. Adequacy of the Regression Model
+10.6.1. Residual Analysis
+10.6.2. Coefficient of Determination
+10.7. Correlation
+PSG for BSCpE (Annex Hil) Page 6 of 38 feo
+
+
+===== PAGE 39 (cmo87-page-39.png) =====
+
+Course Name | Differential Equations _ _
+This course is intended for all engineering students to have a firm
+foundation on differential equations in preparation for their degree-
+specific advanced mathematics courses. It covers first order
+
+i [ differential equations, nth order linear differential equations and
+| systems of first order linear differential equations. It also introduces
+| Course | the concept of Laplace Transforms in solving differential equations.
+
+Description The students are expected to be able to recognize different kinds of
+differential equations, determine the existence and uniqueness of
+solution, select the appropriate methods of solution and interpret the
+obtained solution. Students are also expected to relate differential
+equations to various practical engineering and scientific problems
+as well as employ computer technology in solving and verifying
+
+i solutions. ee
+
+Number of Units 3 units
+
+for Lecture |
+
+Number of
+
+Contact Hours 3 hours per week
+
+Prerequisites Calculus 2 LL
+
+Ouomes To be identified by the program. ne
+
+Outcomes | Tobeidertied byte program.
+1. Introduction / Definition
+1.1. Definition and Classifications of Differential
+Equations (DE)
+1.2. Solution of a DE
+2. Solution of some 1% order DE
+2.1. Variable Separable
+2.2. Exact Equation
+2.3. Linear Equation
+2.4. Substitution Methods
+2.4.1. Homogeneous Coefficients
+2.4.2. Bernoulli's Equation
+2.4.3. Other Substitution Methods
+2.5. Mixed Problems (method not pre-identified)
+2.6. Introduction to Use of Computer in Solving |
+
+Course Outline Differential Equations |
+
+3. Application of 15 Order Differential Equations
+3.1. Decomposition /Growth
+| 3.2. Newton's Law of Cooling
+3.3. Mixing (non-reacting fluids)
+3.4. Electric Circuits
+4. Linear Differential Equation of Order n
+4.1. Introduction
+4.1.1. Standard form of a n'" order Linear DE
+4.1.2. Differential Operators
+4.1.3. Principle of Superposition
+4.1.4. Linear Independence of a Set of
+Functions
+4.2. Homogeneous Linear Differential Equation with
+Constant Coefficients ~~~
+PSG for BSCpE (Annex II) Page 7 of 38 {EN
+. Se
+
+
+===== PAGE 40 (cmo87-page-40.png) =====
+
+4.2.1. Solution of a Homogeneous Linear
+Ordinary DE
+4.2.2. Initial and Boundary Value Problems
+4.3. Non-homogeneous Differential Equation With
+Constant Coefficients
+4.3.1. Form of the General Solution
+4.3.2. Solution by Method of Undetermined
+Coefficients
+4.3.3. Solution by Variation of Parameters
+4.3.4. Mixed Problems
+4.4. Solution of Higher Order Differential Equations
+using Computer
+5. Laplace Transforms of Functions
+5.1. Definition |
+5.2. Transform of Elementary Functions
+5.3. Transform of e#f(f) ~ Theorem
+5.4. Transform of V(t) — Derivatives of Transforms
+5.5. Inverse Transforms
+5.6. Laplace and inverse Laplace Transforms using a
+Computer
+5.7. Transforms of Derivatives |
+5.8. Initial Value Problems
+{ 6. The Heaviside Unit-Step Function
+| 6.1. Definition
+6.2. Laplace Transforms of Discontinuous Functions
+| and Inverse Transform Leading to Discontinuous
+Functions
+| 8.3. Solution of Initial Value Problems with
+| Discontinuous Functions by Laplace Transform
+| Method
+7. Application of Laplace Transforms (Problems on
+Vibration)
+i 8. Solution of Systems of Linear Differential Equation with
+| Initial Values/Simultaneous Solution to DE (Laplace
+Transform Method)
+NATURAL/PHYSICAL SCIENCES
+Course This course provides students with core concepts of chemistry that
+for Lecture
+Number of
+Contact Hours 3 hours per week
+per Week
+PSG for BSCpE (Annex lil) Page 8 of 38 SU
+
+
+===== PAGE 41 (cmo87-page-41.png) =====
+
+Program . i.
+Outcomes To be identified by the program.
+Course : oe
+To be identified by the program.
+1. Energy '
+1.1 Electrochemical energy
+1.2 Nuclear chemistry and energy
+1.3 Fuels
+| 2. The Chemistry of Engineering Materials
+3. Basic Concepts of Crystal Structure
+3.1 Metals
+Course Outline 3.2 Polymers
+3.3 Engineered Nanomaterials
+4. The Chemistry of the Environment
+5. The Chemistry of the atmosphere
+5.1 The Chemistry of Water
+5.2 Soil chemistry
+8. Chemical Safety
+7. Special topics specific to field of expertise
+Chemistry for Engineers Laboratory
+Course A fundamental laboratory course designed fo provide opportunity to
+Description observe and apply the principles and theories taught in the chemistry for
+engineers.
+Number of Units 1 unit
+for Laboratory
+Number of 3 hours per week
+Contact Hours per
+Week
+Chemistry for Engineers
+Program a-l, b-l, k-f
+Outcomes
+Course Outline 1. Rules and Regulations in the Chemistry Laboratory
+2. Safety Precautions in the Chemistry Laboratory
+3. Rules in Performing an Laboratory Experiment
+4. Making Preliminary and Final Reports
+5. Familiarization of Equipment/Apparatus
+6. Performance of Laboratory Experiments
+Laboratory Laboratory exercises to be identified by the program.
+Experiments Each major topic should have a corresponding laboratory exercise.
+For semestral program, 15 exercises per semester.
+For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Laboratory
+Equipment See Annex of Lab Requirements
+PSG for BSCPE (Annex Ill) Page 9 of 38 (EG
+ONE
+
+
+===== PAGE 42 (cmo87-page-42.png) =====
+
+Course Name Physics for Engineers
+This course covers vectors; kinematics; dynamics; work, energy, and
+power; impulse and momentum; rotation; dynamics of rotation;
+Course elasticity; and oscillation. Fluids; thermal expansion, thermal stress;
+Description heat transfer; calorimetry; waves; electrostatics; electricity,
+magnetism; optics; image formation by plane and curved mirrors;
+and image formation by thin lenses.
+Number of Units | 3 units
+for Lecture
+Number of 3 hours per week
+Contact Hours
+per Week
+Prerequisites Calculus 1
+Physics for Engineers Laboratory
+Program To be identified by the program.
+Qutcomes
+To be identified by the program.
+1. Work, Energy and Power
+2. Impulse and Momentum
+3. Kinematics
+4. Dynamics
+5. Rotation
+6. Dynamics of Rotation
+7. Elasticity
+Course Outline 8. Oscillations
+9. Fluids
+10. Heat Transfer
+11. Waves
+12. Electrostatics
+13. Electricity
+14. Magnetism
+15. Optics
+Course Name Physics for Engineers Laboratory
+Course A fundamental laboratory course designed to provide opportunity to
+Description observe and apply the principles and theories taught in the physics
+or engineers.
+Number of Units .
+for Laboratory
+Number of
+Contact Hours 3 hours per week
+per Week
+PSG for BSCpE (Annex 11) Page 10 of 38 {oe
+
+
+===== PAGE 43 (cmo87-page-43.png) =====
+
+Physics for Engineers
+Program . -
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. Rules and Regulations in the Physics Laboratory
+2. Safety Precautions in the Physics Laboratory
+Course Outline 3. Rules in Performing an Laboratory Experiment
+4. Making Preliminary and Final Reports
+5. Familiarization of Equipment/Apparatus
+6. Performance of Laboratory Experiments
+| Laboratory exercises to be identified by the program.
+Laborator Each major topic should have a corresponding laboratory exercise.
+Ex orments For semestral program, 15 exercises per semester.
+P For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Laboratory . .
+Equipment See Annex of Lab Requirements
+BASIC ENGINEERING SCIENCE
+Course Name Computer Aided Drafting
+c Concepts of computer-aided drafting (CAD); introduction to the CAD
+ourse ) k nologies: and th | i d
+Description environment; termino ogies; an e general operating procedures
+and techniques in entering and executing basic CAD commands.
+Number of Units .
+Laboratory 1 unit
+Number of
+{ Contact Hours 3 hours per week
+per Week
+Prerequisites 2nd Year Standing
+Program | To be identified by the program.
+Qutcomes |
+Course Outcomes | To be identified by the program.
+fee
+{ 1. Introduction to CAD Software
+2. CAD Drawing
+3. Snapping, Construction Elements
+Course Outline 4. Dimensioning
+5. Plotting, Inputting Images
+6. 3D and Navigating in 3D
+| 7. Rendering
+| Laboratory i
+| Equipment | See Annex of Lab Requirements |
+PSG for BSCPE (Annex ill) Page 11 of 38 Set
+: PB =
+
+
+===== PAGE 44 (cmo87-page-44.png) =====
+
+Engineering Economics
+This course deals with the study of concepts of the time value of
+| Course money and equivalence; basic economic study methods; decisions
+i Description under certainty; decisions recognizing risk; and decisions admitting
+uncertainty.
+Number of Units .
+Lecture ! 3 units
+Number of
+Contact Hours | 3 hours per week
+per Week
+Prerequisites |
+as Maas ee eae RR Eanes
+Program |eE. k-E |
+Outcomes
+After completing this course, the student must be able to:
+1. Solve problems involving interest and the time value of money;
+| 2. Evaluate project alternatives by applying engineering economic
+Course Outcomes principles and methods and select the most economically
+| efficient one; and
+3. Deal with risk and uncertainty in project outcomes by applying
+the basic economic decision making concepts.
+1. Introduction
+1.1. Definitions
+1.2. Principles of Engineering Economics |
+| 1.3. Engineering Economics and the Design Process
+1.4. Cost Concepts for Decision Making
+| 1.5. Present Economic Studies
+| i 2. Money-Time Relationships and Equivalence
+2.1. Interest and the Time Value of Money
+2.2. The Concept of Equivalence
+| 2.3. Cash Flows
+| 3. Economic Study Methods
+i 3.1. The Minimum Attractive Rate of Return
+| 3.2. Basic Economic Study Methods: Present Worth, Future
+Worth, Annual Worth, Internal Rate of Return, External
+Course Outline Rate of Return
+3.3. Other Methods: Discounted Payback Period, Benefit/Cost
+Ratio
+| 4. Decisions Under Certainty
+4.1. Evaluation of Mutually Exclusive Alternatives
+4.2. Evaluation of Independent Projects
+4.3. Effects of Inflation
+4.4. Depreciation and After-Tax Economic Analysis
+4.5. Replacement Studies
+5. Decisions Recognizing Risk
+5.1. Expected Monetary Value of Alternatives
+i 5.2. Discounted Decision Tree Analysis
+| 6. Decisions Admitting Uncertainty
+| 6.1. Sensitivity Analysis
+16.2. Decision Analysis Models
+PSG for BSCpE (Annex Iii) Page 12 of 38 goed
+
+
+===== PAGE 45 (cmo87-page-45.png) =====
+
+| Course Name Technopreneurship 101
+- Technopreneurship is a philosophy, a way of building a career or
+perspective in life. The course covers the value of professional and
+Course life skills in entrepreneurial thought, investment decisions, and action
+Description { that students can utilize in starting technology companies or executing
+p | R&D projects in companies as they start their careers. The net result
+lis a positive outlook towards wealth creation, high value adding, and
+wellness in society.
+Number of Units 1,
+Lecture |
+| Number of |
+| Contact Hours | 3 hours per week
+per Week
+| Prerequisites
+Program cf |
+ogee To be identified by the program.
+After completing this course, the student must be able to:
+1. Evaluate and define the market needs |
+| 2. Solicit and apply feedback from mentors, customers and
+Course Outcomes other stakeholders |
+3. Experience the dynamics of participating on a business |
+team i
+| 4. Pitch a business plan for a technology idea
+15 Developan inital idea into a prototype
+11. Introduction
+| e Entrepreneurial Mindset
+| eo Innovation and Ideas
+» Products and Services
+» Team Formation
+2, Customers
+] 13. Value Proposition
+Course Outline | 4. Market Identification and Analysis
+5. Creating Competitive Advantage
+16. Business Models
+| 7. Introduction to Intellectual Property
+| | 8. Execution and Business Plan
+| 9. Financial Analysis and Accounting Basics
+10. Raising Capital
+11. Ethics, social responsibility, and Globalization |
+ALLIED COURSES
+Fundamentals of Electrical Circuits
+Course This course introduces the fundamental concepts, circuit laws,
+Description theorems and techniques used in electrical circuit analysis and
+p transient analysis, as well as its application. The course covers
+PSG for BSCpE (Annex Hil) Page 13 of 38 BE
+. Nl
+
+
+===== PAGE 46 (cmo87-page-46.png) =====
+
+| circuit topologies and DC excitations, transient response, AC
+| response, and polyphase circuits. The use of computer software for
+| circuit simulation and design are emphasized to expose students to
+computer-based tools.
+Number of Units 3 units
+for Lecture
+Number of
+Contact Hours 3 hours per week
+per Week
+Prerequisites Physics for Engineers
+Fundamentals of Electrical Circuits Laboratory
+| Program . i”
+{
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. Circuit Topologies and DC Excitations
+1.1 Introductory Concepts
+1.2 Electrical Properties of Materials
+1.3 Passive Elements
+1.4 Network Laws and Theorems
+1.5 Electric Circuit Theorems
+2. Transient Response
+2.1 RC Circuits
+Course Outline 2.2 RL Circuits
+2.3 RLC Circuits
+3. AC Response and Polyphase Circuits
+3.1 Reactance and Impedance
+| 3.2 Introduction to Single-Phase AC
+3.3 AC Power Analysis
+3.4 Sinusoidal Steady-State Analysis
+3.5 Three-Phase Circuits
+3.6 Transformer
+| Course Name | Fundamentals of Electrical Circuits Laboratory
+This course allows the students to verify the laws and theorems
+discussed in Fundamentals of Electrical Circuits (lecture) through
+| simulation, experimentation and project construction. The course
+topics include experimental determination of the characteristics of the
+Course different circuit configurations (series, parallel, series/parallel, delta,
+Description and wye), electrical power, Ohm's Law, Kirchhoff's Voltage and
+| Current Laws, Superposition Theorem, Thevenin's equivalent circuit,
+and maximum power fransfer. The use of computer software for
+circuit simulation and design are used as basis in verifying
+experimental results and to expose students to computer-based tools.
+Number of Units | .
+for Laboratory | 1 unit
+PSG for BSCpE (Annex ii) Page 14 of 38 Yes
+NE
+
+
+===== PAGE 47 (cmo87-page-47.png) =====
+
+| Number of |
+| Contact Hours 3 hours per week
+per Week
+Prerequisites Physics for Engineers
+Co-requisites Fundamentals of Electrical Circuits |
+TT TTT TTT
+i Program | . i. i
+Outcomes To be identified by the program.
+To be identified by the program.
+1. Rules and Regulations in the Electrical Engineering Laboratory
+2. Safety Precautions in the Electrical Engineering Laboratory
+Course Outline 3. Rules in Performing an Laboratory Experiment
+4. Making Preliminary and Final Reports
+5. Familiarization of Equipment/Apparatus
+6. Performance of Laboratory Experiments
+Laboratory exercises to be identified by the program.
+Laborator Each major topic should have a corresponding laboratory exercise.
+Ex orn For semestral program, 15 exercises per semester.
+p For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Program shall provide complete tools and equipment necessary to
+Laboratory perform the identified laboratory exercise.
+| quip 1 set of tools and equipment per maximum of 5 students per group.
+Course Name | Fundamentals of Electronic Circuits
+| This course discusses the construction, operation and characteristics
+Course 1 of basic electronic devices such as junction diodes, bipolar junction
+Description | transistors, Field Effect Transistors and MOS Field Effect Transistors
+| and oscillators.
+Number of Units 3 units
+for Lecture i
+Number of
+Contact Hours i 3 hours per week
+per Week
+Prerequisites | Fundamentals of Electrical Circuits
+Co-requisites | Fundamentals of Electronic Circuits Laboratory
+| Program oe
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. Introduction to Electronics
+2. Solid State Fundamentals
+Course Outline 3. Semiconductor PN Junction Diode
+4, Diode Circuit Analysis and Applications
+5. DC Regulated Power Supply
+PSG for BSCpE (Annex il) Page 15 of 38 HG
+
+
+===== PAGE 48 (cmo87-page-48.png) =====
+
+18. IC Regulator
+7. Light Emitting Diode (LED)
+8. Bipolar Junction Transistor (BJT)
+19. Field Effect Transistor (FET)
+110. Switching Transistor Circuits
+11. Resistor Transistor Logic (RTL)
+12. Direct-Coupled Transistor Logic (DCTL)
+13. Integrated-Injection Logic (I12L)
+14. Schottky-Diode Non-Saturating Logic (Schottky-Clamped Logic
+| for TTL/2L)
+15. Emitter-Coupled Logic (ECL)
+| 16. MOSFET Logic
+| 17. Comparison of Different Logic Families (Summary)
+18. Oscillator Circuits
+Course Name Fundamentals of Electronic Circuits Laboratory |
+This course is the laboratory component of the course Fundamentals
+of Electronic Circuits (Lecture) that allows students to verify
+thearetical concepts pertaining to the operation of electronic devices
+such as the PN junction diodes, BJT and FET and their subsequent
+Course applications to electronics circuits involving rectification, amplification
+Description and switching applications. The use of laboratory equipment and
+apparatus to verify the characteristics of diodes and transistor
+devices, and their operations in circuits such as rectifiers, voltage
+i regulators, amplifiers, oscillators and switches are emphasized.
+Such equipment includes but not limited to the curve tracer, the
+oscilloscope, signal generator and multi-meters.
+Number of Units 1 unit
+| for Laboratory
+Number of
+Contact Hours 3 hours per week
+per Week
+Prerequisites Fundamentals of Electrical Circuits
+Co-requisites i Fundamentals of Electronic Circuits
+program To be identified by the program.
+| gourse To be identified by the program.
+1. Rules and Regulations in the Electronics Engineering Laboratory
+2. Safety Precautions in the Electronics Engineering Laboratory
+| Course Outline 3. Rules in Performing an Laboratory Experiment
+| 4, Making Preliminary and Final Reports
+[ 5. Familiarization of Equipment/Apparatus
+6. Performance of Laboratory Experiments
+Laboratory Laboratory exercises to be identified by the program.
+Experi Each major topic should have a corresponding laboratory exercise. |
+periments F :
+or semestral program, 15 exercises per semester. |
+PSG for BSCpE (Annex I1i) Page 16 of 38 LN
+
+
+===== PAGE 49 (cmo87-page-49.png) =====
+
+For trimestral program, 12 exercises per trimester. |
+| | For quarterm program, 9 exercises per quarter.
+Program shall provide complete tools and equipment necessary to
+Laboratory perform the identified laboratory exercise.
+quip 1 set of tools and equipment per maximum of 5 students per group.
+PROFESSIONAL COURSES
+Course Name | Computer Engineering as a Discipline
+{This course discusses the curriculum for Computer Engineering as
+Course well as how to prepare students for success through engineering |
+Description design process, ethical decision-making, teamwork, and |
+communicating to diverse audiences.
+Number of Units 1 unit
+for Lecture
+Number of
+Contact Hours 1 hour per week
+per Week
+| Program | a
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. CpE Curriculum
+2. Introduction to the Engineering Profession
+. 3. Preparing for an Engineering Career
+Course Outline 4. Introduction to Engineering Design
+5. Engineering Communication
+16. Engineering Ethics
+Course Name Discrete Mathematics
+c This course deals with logic, sets, proofs, growth of functions,
+ourse
+Description theory of
+Fe numbers, counting techniques, trees and graph theory.
+Number of Units 3 units
+for Lecture
+Number of
+Contact Hours 3 hours per week
+per Week
+Prerequisites Calculus 1
+Program | i.
+Outcomes To be Identified by the program.
+Course co
+Outcomes To be Identified by the program.
+1. Logic, Sets, Proofs, and Functions
+Course Outline 2. Algorithms, Integers and Matrices
+2.1 Growth of Functions
+PSG for BSCE (Annex Ili) Page 17 of 38 Ee
+
+
+===== PAGE 50 (cmo87-page-50.png) =====
+
+2.2 Complexity of Algorithms
+2.3 Number Theory
+i 2.4 Matrices
+| 3. Counting Techniques
+4. Relations
+5. Graph Theory |
+16. Trees
+7. Introduction to Modeling Computation
+[ Course Name Nurnerical Methods
+This course covers the concepts of numerical analysis and
+computer software tools in dealing with engineering problems. It
+includes techniques in finding the rots of an equation, solving
+Course systems of linear and non-linear equations, eigenvalue problems,
+Description polynomial approximation and interpolation, ordinary and partial
+differential equations. The Monte-Carlo method, simulation, error |
+propagation and analysis, the methods of least squares and
+a goodness-of-fit tests are also discussed
+Number of Units 3 units
+for Lecture B
+Number of
+Contact Hours 3 hours per week
+per Week
+Prerequisites Differential Equations
+program To be identified by the program.
+course To be identified by the program.
+1. Introduction
+2. Non Linear Transcendental and Polynomial
+Function Techniques
+| 3. Iterative Bracketing Method
+i 4. Iterative Non-Bracketing/Open Method
+5. lterative Polynomial Function Techniques
+6. System of Linear Equations
+Course Outline 7. Direct Methods
+8. Iterative Methods
+9. Curve Fitting Techniques
+10. Least Square Regression
+11. Interpolation Techniques
+12. Numerical Integration Techniques
+13. Numerical Differentiation
+14. Ordinary Differential Equations
+PSG for BSCpE (Annex iif) Page 18 of 38 Yes
+
+
+===== PAGE 51 (cmo87-page-51.png) =====
+
+Course Name | Fundamentals of Mixed Signals and Sensors
+i This course covers operational amplifiers, signal converters, power
+| switching devices and the construction and operation of sensors and
+i transducers for converting physical parameters into electrical signals
+Course and vice-versa. The course focuses on the application of these
+Description devices in developing signal conversion circuits that allows
+measurement, processing and control of physical parameters by
+digital processing systems such as a finite state machine or a digital
+computer. Topics on actuators are also included.
+| Number of Units :
+i for Lecture 3 units
+Number of
+Contact Hours 3 hours per week
+per Week
+Prerequisites Fundamentals of Electronic Circuits
+Program ) i.
+To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. Differential Amplifiers
+2. Operational Amplifiers
+3. Linear and Non-Linear Applications of Op-Amp |
+4. Analog to Digital Conversion
+. 5. Digital to Analog Conversion
+Course Outline 5" her Mixed Signals
+7. Basic Measurement Theory
+8. Sensors and Transducers
+0. Other Types of Sensors and Transducers
+i 10. Basic Control Devices
+UO
+Course Name Programming Logic and Design
+This is an introductory course in computer programming logic. The
+student will learn algorithms applicable to all programming languages,
+tincluding: identifiers, data types, arrays, control structures, modular |
+Course programming, generating reports, and computer memory concepis.
+Description The student will learn to use charts commonly used in business and
+| information processing. Program logic will be developed using
+| flowcharts and pseudo code. Programs will be written using any
+programming language.
+Number of Units
+for Laboratory | 2 units
+—
+Number of
+Contact Hours 6 hours per week
+per Week i
+Prerequisites None
+sot lloy,
+SETA
+PSG for BSCpE (Annex lil) Page 19 of 38 Ht
+
+
+===== PAGE 52 (cmo87-page-52.png) =====
+
+Program c—1 |
+Qutcomes |
+{ After completing this course, the student must be able to: |
+i 1. Identify important steps in program development cycle
+Course Outcomes 2. Draw a flowchart to represent the program's logic
+3. Break down programming problems into modules
+1. Introduction to Computers and Logic
+2. Tools for Developing Program Logic: Flowchart and
+Pseudocode Instructions
+3. Logical Control Structures: Sequence, Selection/Decision,
+lteration/Loop, Case
+| Course Outline i 4. Data and Data Types, Constants and Variables, Operators And
+: Its Hierarchy
+| 5. Looping: While Loop, Do...While Loop, For Loop
+| 6. Lists and Arrays: Representation, Arrays Interpolation, Add and
+i Delete, Operators and Functions, Slicing
+. 7. Debugging Techniques: Steps/Process in Debugging,
+Approaches, Debugging Tools
+laboratory exercises to be identified by the program.
+Each major topic should have a corresponding laboratory exercise.
+| Laboratory f
+E . For semestral program, 15 exercises per semester.
+Xperiments \ : ,
+For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Computer and object-oriented programming software tool
+| paporatory Depending on the class size
+quip 1 computer per student
+Sample Model Course Specification
+Object Oriented Programming
+Introduces the fundamental concepts of programming from an object
+| oriented perspective. Topics are drawn from classes and objects,
+Course | abstraction, encapsulation, data types, calling methods and passing
+yy [ parameters, decisions, loops, arrays and collections, documentation,
+Description : : ; ag . .
+testing and debugging, exceptions, design issues, inheritance, and
+i polymorphic variables and methods. The course emphasizes modern
+software engineering and design principles.
+| Number of Units .
+f Py . 2 units
+for Laboratory
+Number of
+Contact Hours per | 6 hours per week
+Week
+Prerequisites Programming Logic and Design |
+Program To be identified by the program.
+Outcomes
+To be identified by the program.
+Course Outline 1. Introduction to Object Oriented Programming and UML
+Ot Bik
+PSG for BSCpE {Annex lil) Page 20 of 38 Poet
+Ce
+
+
+===== PAGE 53 (cmo87-page-53.png) =====
+
+—_—
+i 1.1. Fundamental Concepts: Classes, Objects, and Methods,
+Inheritance, Encapsulation and Abstraction, Polymorphism
+1.2. Unified Modeling Language (UML): Basic Concepts,
+Association, Aggregation, Composition, and Multiplicity, UML
+i Diagrams
+2. Object Oriented Analysis and Design
+| 2.1. Cohesion and Coupling Concepts
+| 2.2. Data-Driven Design
+2.3. Responsibility-Driven Design
+2.4. Object-Criented Design using UML |
+3. Programming Language Fundamentals |
+3.1. Coding Conventions and Data Types
+3.2. Constants and Variables
+3.3. Attributes, Methods, and Constructors
+| 3.4. Control and lterative Statements
+| 3.5. Characters and Strings
+3.6. Arrays |
+4. Advanced Programming Language Fundamentals |
+4.1. Inheritance
+4.2, Abstract Classes
+5. Exception Handling
+5.1. Understanding Errors and Exceptions
+5.2. Try, Catch, and Finally
+16. Graphical User interface Programming
+| | 6.1. Forms and Widgets
+[ 6.2. Graphics, Images, and Sound
+i 6.3. Layout Managers
+| 6.4. Event Handling
+| Laboratory exercises to be identified by the program.
+Laboratory | Each major topic should have a corresponding laboratory exercise.
+E : i For semestral program, 15 exercises per semester.
+xperiments { : : .
+| For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Computer and object-oriented programming software tool
+Depending on the class size
+1 computer per student
+Course Name Data Structures and Algorithms
+| Course | Solving computational problems that involve manipulating collections
+Description of data, study a core set of data abstractions, data structures, and
+| algorithms that provide a foundation for writing efficient programs. |
+Number of Units .
+for Laboratory 2 units
+Number of
+Contact Hours per | 6 hours per week
+Week i {
+Object Oriented Programming
+PSG for BSCpE (Annex 11) Page 21 of 38 ghee
+
+
+===== PAGE 54 (cmo87-page-54.png) =====
+
+Program . i.
+| Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+{ Course Outline 1. Pointers, Dynamic Memory Allocation, Pointers, Arrays,
+Structures
+2. Abstract Data Types (ADT) and Fundamentals of Linked Lists
+3. Linked Lists Operations
+4. Stack Abstract Data Type and [ts Linked Lists Operations
+| 5. Queue Abstract Data Type and Its Linked Lists Operations
+8. Algorithm Analysis and Linked List Types: Doubly Linked Lists
+7. Tree ADT and Binary Search Tree
+18. AVL Tree
+19, Heaps
+| 10. Basic Algorithmic Analysis
+11. Algorithmic Strategies
+| 12. Classic Algorithms For Common Tasks
+| 13. Analysis and Design of Application-Specific Algorithms
+114, Parallel Algorithms and Multithreading
+15. Algorithmic Complexity
+16. Scheduling Algorithms
+17. Basic Computability Theory
+Laboratory | Laboratory exercises to be identified by the program.
+| Experiments | Each major topic should have a corresponding laboratory exercise.
+| For semestral program, 15 exercises per semester.
+For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Laboratory Computer and any programming software tool
+Equipment Depending on the class size
+1 computer per student
+Course This course focuses on programming paradigms and constructs,
+Description data structures and use of standard library functions for manipulating
+them, object-oriented design and the use of modeling languages,
+testing and software quality concepts, and tradeoffs among different
+software design methods.
+Number of Units | 3 units
+for Lecture
+Eh
+Number of 3 hours per week
+Contact Hours per
+Week
+Data Structures and Algorithms
+| Co-requisites Software Design Laboratory
+Program To be identified by the program.
+Qutcomes
+PSG for BSCPE (Annex Il) Page 22 of 38 ENG
+
+
+===== PAGE 55 (cmo87-page-55.png) =====
+
+Course Outcomes | To be identified by the program.
+| Course Qutline 1. History and Overview
+2. Relevant Tools, Standards, and/or Engineering Constraints
+| 3. Programming Constructs and Paradigms
+{4. Problem-Solving Strategies |
+| 5. Data Structures |
+| 6. Recursion
+{ 7. Object-Oriented Design
+8. Software Testing and Quality
+9. Data Modeling
+1 10. Database Systems
+11. Event-Driven and Concurrent Programming
+12. Using Application Programming interfaces
+| 13. Data Mining
+| 14. Data Visualization
+PS
+Course Name Software Design Laboratory
+Course This course focuses on providing hands-on experience in software
+Description design.
+Number of Units 1 unit
+for Lecture a
+Number of
+Contact Hours per | 3 hours per week
+Week
+Data Structures and Algorithms
+Program . ce
+To be identified by the program.
+Course Outcomes | To be identified by the program.
+Laboratory Laboratory exercises to be identified by the program.
+Experiments Each major topic should have a corresponding laboratory exercise.
+For semestral program, 15 exercises per semester.
+For trimestral program, 12 exercises per trimester.
+i For quarterm program, 9 exercises per quarter.
+Laboratory | Computer and object-oriented programming software tool
+Equipment Depending on the class size
+1 computer per student
+Course Name Logic Circuits and Design
+The course includes design and analysis or digital circuits. This course
+Course covers both combinational (synchronous and asynchronous} logic circuits
+Description with emphasis on solving digital problems using hardwired structures of the
+complexity of medium and large-scale integration.
+OC,
+PSG for BSCpE (Annex Ii) Page 23 of 38 Boe
+. Ss
+
+
+===== PAGE 56 (cmo87-page-56.png) =====
+
+Number of Units .
+for Lecture 3 units
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites Fundamentals of Electronic Circuits
+Co-requisites Logic Circuits and Design Laboratory
+Program Ce |
+Outcomes [To be identified by the program.
+Course Outcomes | To be identified by the program.
+a ———
+| 1. Gates, Truth Tables, Boolean Algebra, Function Simplification |
+12. K-Maps, Circuit Implementation Using K-Maps, SOP and POS |
+| Representation, NAND/NOR Implementations.
+! 3. Mux, Demux, Decoders, Code Conversion (BCD to Binary,
+Excess-3 to Binary, Gray Code)
+4. Latches and Flip-Flops: SR, D, JK, T
+Course Outline 5. Counter Design, Register Design, ALU Function
+6. Sequential Circuits, Excitation Function, State Table, State
+Diagram.
+7. Sequential Circuit Design with Different Flip-Flops.
+8. Synchronous and Asynchronous Circuits Analysis and Design,
+Excitation Function, Flow Table
+19. Algorithmic State Machine
+| 10. Addressing and Decoding of Memory and I/O Systems
+Course Name | Logic Circuits and Design Laboratory
+Course | This course focuses on providing hands-on experience in designing
+Description digital circuits.
+Number of Units 1 unit
+for Lecture
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites | Fundamentals of Electronic Circuits
+TT
+Co-requisites ' Logic Circuits and Design
+Program : i.
+Outcomes To be identified by the program.
+To be identified by the program.
+Laboratory | Laboratory exercises to be identified by the program.
+Experiments | Each major topic should have a corresponding laboratory exercise.
+i For semestral program, 15 exercises per semester.
+| For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+PSG for BSCpE (Annex Ii) Page 24 of 38 edt
+
+
+===== PAGE 57 (cmo87-page-57.png) =====
+
+Laboratory Program shall provide complete tools and equipment necessary to
+Equipment perform the identified laboratory exercise.
+1 set of tools and equipment per maximum of 5 students per group.
+This course includes different policies and strategies used by an
+Course | operating system. Topics include operating systems structures,
+Description | process management, storage management, file management and
+distributed systems.
+| Number of Units | .
+for Lecture 3 units
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites Data Structures and Algorithms
+Program i.
+Outcomes To be identified by the program.
+Course Qutcomes | To be identified by the program.
+| 1. Overview of the Operating System
+| 2. Process Management
+i 3. Process Coordination
+Course Outline 4. Memory Management
+5. Storage Management
+18. Protection and Security
+| 7. Interfacing to Operating Systems
+| 8. Special-Purpose Systems
+Course Name Data and Digital Communications
+Course This course focuses on the fundamental concepts of digital and data
+Description | communications. It also includes topics on data security and integrity.
+Number of Units 3 units
+for Lecture
+Number of
+Contact Hours per | 3 hours per week
+Week |
+Prerequisites Fundamentals of Electronic Circuits |
+Program . oe
+Outcomes To be identified by the program. |
+Course Outcomes | To be identified by the program.
+1. Elements of Digital Communication
+Course Qutline 2. Pulse Code Modulation
+3. Digital Modulation Techniques
+OS,
+$ANTRS
+PSG for BSCpE {Annex Ili) Page 25 of 38 Lea
+. Se
+
+
+===== PAGE 58 (cmo87-page-58.png) =====
+
+4. Information Theory 1
+; | 5. History of Data Communication
+6. Transmission Media and Transmission Technologies
+7. Data Transmission Modes and Standards
+8. Protocols
+i 9. Error Detection and Correction
+| 10. Encryption and Decryption
+11. Virus, Worms, And Hacking
+ee ee
+Course Name | Introduction to HDL
+i | A laboratory course that introduces hardware description language as
+Course a tool for designing and testing combinational and sequential circuits.
+Description it covers fundamental of concepts of HDL and the basic building
+blocks of HDL programming.
+Number of Units | 1 unit
+for Laboratory
+Number of 3 hours per week
+| Contact Hours per
+[Week |
+. Programming Logic and Design
+Prerequisites Fundamentals of Electronic Circuits
+Program To be identified by the program.
+Outcomes |
+SUT SVU UU S——
+Course Qutcomes | To be identified by the program.
+1. Introduction to Hardware Description Language Programming |
+i 2. Gate Level Modeling
+3. Dataflow Modeling
+4. Behavioral Modeling
+Course Outline 5. Combinational Circuit
+6. Sequential Circuit
+7. Counters
+8. State Machine Design
+9. Task and Functions
+Laboratory exercises to be identified by the program.
+| Each major topic should have a corresponding laboratory exercise.
+Laboratory | ) .
+. | For semestral program, 15 exercises per semester.
+Experiments : : .
+| For trimestral program, 12 exercises per trimester.
+| For quarterm program, 9 exercises per quarter.
+{ Computer and any HDL software tool
+Laboratory D \ he cl
+Equipment | epending on the class size
+I'1 computer per student
+Course Name | Feedback and Control Systems
+Course The course includes the control devices, equations of a systems and
+Description i block diagram of systems.
+Se
+EAST
+PSG for BSCpE (Annex II} Page 26 of 38 Lai
+CN
+
+
+===== PAGE 59 (cmo87-page-59.png) =====
+
+Number of Units 3 units
+for Lecture
+Number of i
+Contact Hours per | 3 hours per week
+Week i
+Prerequisites Numerical Methods
+a Fundamentals of Electrical Circuits BN
+Program To be identified by the program.
+Outcomes
+To be identified by the program.
+| 1. Introduction to Control System
+2. Block Diagram Algebra and Transfer Function
+3. Review of Frequency Response Transfer Function
+{ 4. Block Diagram of Control Systems
+Course Outline 5. Types of Feedback |
+6. Frequency Response of Feedback Systems |
+7. Root Locus and Nyquist Criteria
+: 8. Stability and Compensation
+19. Step Response
+Computer Engineering Drafting and Design
+This course focuses on the principles of layout of electrical,
+Course electronics, and logic drawings; stressing modern representation
+Description used for block diagrams, wiring/assembly, drawings, printed circuit
+i board layouts, and etching.
+Number of Units | 1 unit
+for Laboratory
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites Fundamentals of Electronic Circuits
+Program i.
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+| 1. Block Diagrams and Flowcharts
+2. Electrical, Electronic and Logic Components
+3. Designation, Standards and Abbreviations
+4. Hand-sketched Schematic Diagrams
+Course Outline 5. Circuit Layout Simulation Tool
+6. Wiring and Cabling Diagrams Electronic Packaging
+7. PCB Design Process
+8. PCB Design Issues
+| 9. Etching
+PSG for BSCpE (Annex Hl) Page 27 of 38 (ENG
+. Se
+
+
+===== PAGE 60 (cmo87-page-60.png) =====
+
+Laboratory exercises to be identified by the program.
+Laborator Each major topic should have a corresponding laboratory exercise.
+Ex rts | For semestral program, 15 exercises per semester.
+
+p | For trimestral program, 12 exercises per trimester. |
+| For quarterm program, 9 exercises per quarter.
+| Program shall provide complete tools and equipment necessary to
+
+Laboratory | perform the identified laboratory exercise.
+quip 1 set of tools and equipment per maximum of 5 students per group.
+Course Name Basic Occupational Health and Safety
+| This course tackles key Occupational Health and Safety (OSH) concepts,
+| principles and practices that are foundational knowledge requirements
+applicable in almost all industries. Specifically, it assists learners in|
+| identifying the key elements in the OSH situation both here and abroad; |
+Course | determine existing and potential safety and health hazards; identify the
+Description : range of control measures, discuss pertinent provisions of Philippine laws
+| that refer to occupational safety and health; explain key principles in
+| effectively communicating OSH; identify components of effective OSH
+i programs and demonstrate some skills in identifying hazards and
+corresponding control measures at the workplace.
+Number of Units 3 units
+for Lecture
+Number of Contact |
+| Hours per Week 3 hours per week
+Prerequisites 3™ Year Standing
+Program | . i”
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program. l
+1. Introductory Concepts
+2. Occupational Safety
+3. industrial Hygiene
+4. Control Measures for OSH Hazards
+. 5. Occupational Health
+Course Outline 6. Personal Protective Equipment
+17. OSH Programming
+18. Training of Personnel on OSH |
+19. OSH Legislation
+10. Plant Visit Simulation |
+Course Name Computer Networks and Security
+Course The course includes the basic principles of network architecture,
+hi computer network design, services, technologies and network
+Description .
+| security.
+Number of Units 3 units
+for Lecture
+PSG for BSCpE (Annex ili) Page 28 of 38 Fey 3
+TR
+
+
+===== PAGE 61 (cmo87-page-61.png) =====
+
+Number of
+| Contact Hours per | 3 hours per week
+Week
+Data and Digital Communications
+Coreduisites Computer Networks and Security Laboratory
+Program . I.
+Outcomes To be identified by the program. |
+To be identified by the program.
+1. Evolution of Computer Networks and Services
+| 2. Applications and Layered Architectures
+13. Local Area Networks (LAN) Wide Area Networks (WAN)
+| 3.1 Devices and Protocols |
+3.2 Standards
+| 4. Internetworks
+4.1 Principles of Internetworking
+| Course Outline | 4.2 Architectures
+| 4.3 IP Addressing and Architecture
+5, Network Security
+5.1 Internet Protocol and Standards
+| 5.2 Internet Authentication and Applications
+5.3 Wireless Network Security
+5.4 Web Security
+6. Introduction to Cybersecurity
+Computer Networks and Security Laboratory
+Course This course provides hands-on laboratory activities on computer |
+he networking. It focuses on the configuration of TCP/IP, routers and
+Description . : ; Co
+switches, network security and wireless fidelity.
+Number of Units .
+for Laboratory 1 unit |
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites | Data and Digital Communications
+Co-requisites Computer Networks and Security
+Program . i.
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+Laboratory exercises to be identified by the program.
+Each major topic should have a corresponding laboratory exercise,
+Laboratory :
+: For semestral program, 15 exercises per semester.
+Experiments : .
+For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+PSG for BSCpE (Annex IH) Page 29 of 38 {ENG
+a
+
+
+===== PAGE 62 (cmo87-page-62.png) =====
+
+Program shall provide complete tools and equipment necessary to
+Laporatory perform the identified laboratory exercise.
+quip 1 set of tools and equipment per maximum of 5 students per group.
+This course provides understanding of architecture of
+Course microprocessor-based systems; registers, study of microprocessor
+Description operation, assembly language, arithmetic operations, and
+interfacing.
+Number of Units | 3 units
+for Lecture
+Number of 3 hours per week
+Contact Hours per
+Week
+Logic Circuits and Design
+Microprocessors Laboratory
+Program To be identified by the program.
+Outcomes
+To be identified by the program.
+1. Structural Components of Microprocessor/Microcontroller
+1.1 Internal CPU Interconnection
+1.2 ALU
+1.3CU
+1.4 Registers
+1.5 Other Peripherals
+2. Fetch-Decode-Execute Cycle
+3. Functional Operations of Microprocessor/Microcontroller
+. 3.1 Data Movement
+Course Outline 3.2 Data Processing
+3.3 Control
+3.4 Data Storage
+4. Instruction Set
+5. 1/0 Interfacing
+5.1 Interfacing of Input/Output Devices
+5.2 Interface Devices
+5.3 Time-Based 1/O
+5.4 Handshaking
+Microprocessors Laboratory
+c This course provides understanding of architecture of
+ourse ; ) . .
+Description microprocessor-based systems; study of microprocessor operation,
+P assembly language, arithmetic operations, and interfacing
+Number of Units 1 unit
+for Laboratory
+PSG for BSCpE (Annex Ili) Page 30 of 38 {Ee
+
+
+===== PAGE 63 (cmo87-page-63.png) =====
+
+Number of
+Contact Hours per | 3 hours per week
+Week
+Logic Circuits and Design
+Program . op
+To be identified by the program.
+To be identified by the program.
+Laboratory exercises 10 be identified by the program.
+, Each major topic should have a corresponding laboratory exercise.
+Laboratory E tral 15 . t
+Experiments or semestral program, 15 exercises per semester.
+For trimestral program, 12 exercises per trimester.
+| For quarterm program, 9 exercises per quarter.
+Laboratory Computer and assembly language programming software tool
+Equipment : Depending on the class size
+1 computer per student
+Course Name Methods of Research
+This course will provide in-depth understanding of research through
+c exploration of different research methodologies and ethics. It includes
+ourse litati d ntitative r rch, descriptive and other applicable
+Description qualitative and quantitative research, descrip nd other app
+research methodologies, inferential statistics and introduction to data
+mining.
+Number of Units ,
+2 units
+for Lecture
+Number of
+Contact Hours per | 2 hours per week
+‘Week
+Engineering Data Analysis
+Prerequisites Purposive Communication
+Logic Circuits and Design
+Program . op
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. Academic Honesty/Plagiarism
+2. Types of Research
+3. Problem Identification
+4, Literature Search and Review
+5. Quantitative and Qualitative Methods
+Course Outline 18. Data Sampling, Collection, and Testing
+| I7. Data Analysis and Interpretation
+i 8. Validity, Reliability, and Sources of Error |
+9. Citation and Style Mechanics (E.G., APA)
+10. Article Writing (E.G., IEEE, ACM)
+11. Presentation and Publication
+PSG for BSCpE (Annex lI) Page 31 of 38 ght
+. Se
+
+
+===== PAGE 64 (cmo87-page-64.png) =====
+
+—
+Course Name CpE Laws and Professional Practice
+This course provides the importance of the professional and othical
+Course responsibilities of practicing computer engineers and the effects of
+Descriotion their work on society; the importance of understanding contemporary
+P issues, lifelong learning strategies; and applicable IT laws in the field
+of computer engineering.
+| Number of Units 2 units
+for Lecture
+Number of
+| Contact Hours per | 2 hours per week
+| Week
+Prerequisites 3 Year Standing
+Program ,
+Outcomes To be identified by the program. |
+Course Outcomes To be identified by the program.
+| Course Outcomes [To bo dontlied by he program: ___
+| {1. Philippine IT Laws and Policies
+a. E-Commerce Law (RA 8792) |
+b. Intellectual Property Code of the Philippines (RA 8293) |
+c. Optical Media Act Of 2003 (RA 9239)
+d. Data Privacy Act Of 2012 (RA 10173) |
+e. Department of Information and Communications Technology
+Act of 2015 (RA 10844)
+Course Outline f. Cybercrime Prevention Act of 2012 (RA 10175)
+{ 2. Philosophical Frameworks and Cultural Issues
+3. Engineering Solutions and Societal Effects
+4. Professional and Ethical Responsibilities
+5. Contemporary Issues
+6. Lifelong Learning Strategies
+7. Business and Management Issues
+8. Tradeoffs in Professional Practice
+Course Name | Embedded Systems
+Course I This course provides advanced topics in embedded systems design
+Description | using contemporary practice; interrupt-driven, reactive, real-time,
+p object- oriented, and distributed client/server embedded systems.
+Number of Units .
+for Lecture 3 units
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites Microprocessors |
+Embedded Systems Laboratory
+PSG for BSCpE (Annex Iii) Page 32 of 38 FLARES
+Se
+
+
+===== PAGE 65 (cmo87-page-65.png) =====
+
+Program . i.
+| Outcomes To be identified by the program.
+Course Qutcomes | To be identified by the program.
+| 1. History and Overview
+| 1. Relevant Tools, Standards, and/or Engineering Constraints
+| | 2. Characteristics of Embedded Systems
+{ 3. Basic Software Techniques for Embedded Applications
+4. Parallel Input and Output
+5. Asynchronous and Synchronous Serial Communication
+Course Outline 6. Periodic interrupts, Waveform Generation, Time Measurement
+17. Data Acquisition, Control, Sensors, and Actuators
+i 18. Implementation Strategies for Complex Embedded Systems
+| | 9. Techniques for Low-Power Operation
+| | 10. Mobile and Networked Embedded Systems
+| 11. Advanced Topics on Input/Output
+{ 12. Computing Platforms for Embedded Systems
+Course Name | Embedded Systems Laboratory
+This course will provide hands-on activities designed to advanced
+Course topics in embedded systems design using contemporary practice;
+Description | interrupt-driven, reactive, real-time, object- oriented, and distributed
+i client/server embedded systems. i
+Number of Units .
+for Laboratory 1 unit
+Number of |
+Contact Hours per | 3 hours per week |
+Week |
+Prerequisites | Microprocessors
+Co-requisites Embedded Systems
+| Program . i
+Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+Laboratory exercises to be identified by the program.
+{ aborator Each major topic should have a corresponding laboratory exercise.
+| Ex orros | For semestral program, 15 exercises per semester.
+p For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Program shall provide complete tools and equipment necessary to
+Laporatory perform the identified laboratory exercise.
+quip 1 set of tools and equipment per maximum of 5 students per group.
+ONT,
+ET
+PSG for BSCpE (Annex Ili) Page 33 of 38 BEE
+
+
+===== PAGE 66 (cmo87-page-66.png) =====
+
+Course Name Computer Architecture and Organization
+This course includes the study of the evolution of computer |
+ic architecture and the factors influencing the design of hardware and
+| Course ft lements of ter systems. The focus is on th
+Description software elements of computer systems. The focus is on the
+understanding of the design issues specifically the instruction set
+architecture and hardware architecture.
+Number of Units | 3 units lecture
+| for Lecture
+| Number of
+i Contact Hours per | 3 hours per week
+Week
+Prerequisites Microprocessors
+Co-requisites | Computer Architecture and Organization Laboratory |
+Program . i.
+| Outcomes To be identified by the program.
+Course Outcomes | To be identified by the program.
+1. History and Overview of Computer Architecture
+2. Relevant Tools, Standards and/or Engineering Constraints ;
+3. Instruction Set Architecture
+4. Measuring Performance
+5. Computer Arithmetic
+Course Outline | 6. Processor Organization
+7. Memory System Organization and Architectures
+| 8. Input/Output Interfacing and Communication
+19. Peripheral Subsystems
+10. MultifMany-Core Architectures
+11. Distributed System Architectures
+Course Name Computer Architecture and Organization Laboratory
+c | This course will provide hands-on activities designed to focus on the
+ourse hardware i ifically the instruction set architect
+Description computer har ware issues specifically the instruction set architecture
+and hardware architecture.
+i Number of Units .
+| for Laboratory | 1 unit laboratory |
+| Number of
+Contact Hours per | 3 hours per week
+Week
+Microprocessors
+Co-requisites Computer Architecture and Organization
+Program i . i.
+Outcomes 1 To be identified by the program.
+Course Outcomes | To be identified by the program.
+PSG for BSCpE (Annex Hil) Page 34 of 38 ENG
+a
+
+
+===== PAGE 67 (cmo87-page-67.png) =====
+
+) ee
+Laboratory exercises to be identified by the program. i
+Each major topic should have a corresponding laboratory exercise. |
+Laboratory F tral 15 ; t
+Experiments | For semestral program, 15 exercises per semester.
+For trimestral program, 12 exercises per trimester.
+For quarterm program, 9 exercises per quarter.
+Laboratory Program shal rid complete tools and equipment necessary to
+Equipment perform the identified laboratory exercise.
+{ 1 set of tools and equipment per maximum of 5 students per group.
+Le rrr
+Course Name Emerging Technologies in CpE
+Course This course is designed to provide flexibility in the curriculum by
+Description discussing any emerging technologies applicable to computer
+engineering.
+Number of Units 3 units
+for Lecture |
+Number of
+Contact Hours per | 3 hours per week
+Week
+Prerequisites 4 Year Standing
+Program . cp
+Outcomes | To be identified by the program.
+Course Outcomes | To be identified by the program.
+Course Outline | Depending on the topic chosen by the institution.
+Seminars and Fieldtrips
+The course includes seminars and lecturers on current trends and
+Course issues on Computer Engineering developments. include field trips to
+Description i different companies and plants dealing with computer system
+| facilities.
+Number of Units 1 unit
+for Laboratory
+Number of i
+Contact Hours per | 3 hours per week
+Week |
+Prerequisites 1 4% Year Standing
+Program i.
+Outcomes To be identified by the program.
+To be identified by the program.
+1. Seminars
+Course Qutline | 1.1 Technical Seminars (Minimum of 3)
+1.2 Non-Technical Seminars
+PSG for BSCpE (Annex Ii) Page 35 of 38 Hp
+
+
+===== PAGE 68 (cmo87-page-68.png) =====
+
+1.2.1 Career Development
+1.2.2 Labor Education
+2. Fieldtrips (Minimum of 2 Company Visits)
+: 3. Submission of Student Portfolio
+Course Name i Digital Signal Processing
+} The course includes the need for and tradeoffs made when sampling
+Course and quantizing a signal; linear, time-invariant system properties;
+Description i frequency as an analysis domain complementary to time; and filter
+| design.
+| Number of Units 3 units
+| for Lecture
+Number of |
+Contact Hours 3 hours per week
+per Week
+i Prerequisites Feedback and Control Systems
+Co-requisites Digital Signal Processing Laboratory
+Program . i.
+To be identified by the program. |
+Course Outcomes | To be identified by the program.
+11. History and Overview
+: 2. Relevant Tools, Standards, and/or Engineering Constraints i
+3. Convolution
+4. Transform Analysis
+. 5. Frequency Response
+Course Outline 6. Sampling and Aliasing
+7. Digital Spectra and Discrete Transforms
+18. Finite and Infinite Impulse Response Filter Design
+| 9. Window Functions
+i 10. Multimedia Processing
+Course Name | Digital Signal Processing Laboratory
+Course i This course is designed to provide hands-on activities on different
+Description ___| applations of digital signals processing.
+Number of Units | .
+for Laborator 1 unit
+Number of
+Contact Hours 3 hours
+per Week
+Prerequisites Feedback and Control Systems
+Co-requisites Digital Signal Processing
+Program . i.
+To be identified by the program.
+Course . op
+To be identified by the program.
+PSG for BSCPE (Annex lif) Page 36 of 38 HENS
+
+
+===== PAGE 69 (cmo87-page-69.png) =====
+
+Laboratory exercises to be identified by the program.
+Each major topic should have a corresponding laboratory exercise.
+Laboratory E tral 15 : t
+Experiments or semestral program, 15 exercises per semester.
+| For trimestral program, 12 exercises per trimester.
+| For quarterm program, 9 exercises per quarter.
+Laboratory | Computer and DSP software tool
+Equipment Depending on the class size
+auement  [fcomputerperstudent |
+Course Name CpE Practice and Design 1
+| This course is the first course in a two-semester sequence that
+constitutes the design experience for undergraduate computer
+engineers. lt provides essential ideas, concepts and principles in
+Course engineering design process and emphasizes other design issues
+Description | including engineering standards and multiple constraints as well as
+i effective communication strategies. Students work in teams to
+| develop project proposals for assigned open-ended problems.
+Students are required to make oral presentations and submit written
+proposal for their projects.
+Number of Units .
+Number of
+3 hours per week
+per Week 1
+I. Microprocessors
+Prerequisites | Methods of Research
+course To be identified by the program.
+i 1. Orientation
+| 2. Relevant Tools, Standards, and/or Engineering Constraints
+| 3. Effective Communication Strategies
+Course Outline | 4. Intellectual Property and Legal Issues
+5. Submission of Design Proposal
+i 6. Presentation of Design Proposal |
+7. Submission of Approved Proposal oo
+Laboratory Computer and any programming language and/or simulation |
+Equipment software tool; materials, components and fools needed for prototype
+development and testing.
+Course Name CpE Practice and Design 2
+—
+| This course is the second of the design experience for undergraduate
+computer engineering students. In this course, students will be
+| Course expected to build/fabricate their design, test and evaluate the design
+Description against their design specifications, and demonstrate a fully functional
+project to their design review committee. Students make oral]
+| presentations and submit final reports documenting their pees
+Number of Units | .
+for Laboratory | 2 units
+PSG for BSCpE (Annex lil) Page 37 of 38 Boe
+
+
+===== PAGE 70 (cmo87-page-70.png) =====
+
+| Number of
+Contact Hours 1 6 hours per week
+per Week
+i Prerequisites CpE Practice and Design 1
+Program . i.
+Outcomes | To be identified by the program.
+[Course Qutcomes [To be identified by the program.
+: :
+1. Orientation
+Course Outline 2. Final oral presentation
+3. Submission of final document
+Laborator | Computer and any programming language and/or simulation
+Equi ony ‘software tool; materials, components and tools needed for prototype
+i auip development and testing.
+| S—
+Course Name “Ton the Job Training
+This course enables students to relate their acquired competencies fo
+| ithe realities and problems of industries in a multidisciplinary
+Course environment. This may include involvement in the industry's
+Description manpower requirements, development and research concerns,
+| p trainings, applications of principles, environmental concerns, ethical
+and behavioral concerns, decision making, and equipment and!
+materials concerns.
+| Number of Units 3 units
+for Lecture
+oT EE ————————
+Number of a
+Contact Hours 3 hours per week
+per Week
+Minimum Number
+of Hours |
+| Required for Field | 240 hours of field work
+Work ;
+Prerequisites 4th Year Standing
+Program . i. |
+out comes To be identified by the program. |
+H T—— -
+| Course Outcomes | To be identified by the program. |
+| 1. Orientation and Presentation of Policies and Guidelines |
+| 2. Multidisciplinary Team Approaches
+3. Assertion of Student's OJT on the Company
+Course Outline 4. Completion of 240 Hours
+5. Submission of Progress Reports
+6. Final Oral Presentation
+| 7. Submission of Final Report
+PSG for BSCpE (Annex lI) Page 38 of 38 {EN
+
+
+===== PAGE 71 (cmo87-page-71.png) =====
+
+ANNEX IV-l — LABORATORY REQUIREMENTS (CHEMISTRY AND PHYSICS)
+Bachelor of Science in Computer Engineering
+TABLE OF CONTENTS
+NATURAL/PHYSICAL SCIENCES eee 2
+Chemistry for Engineers Laboratory............ccoooiii iii 2
+Physics for Engineers Laboratory... 3
+PSG for BSCpE (Annex IV-A) Page 10of 5
+ie:
+
+
+===== PAGE 72 (cmo87-page-72.png) =====
+
+NATURAL/PHYSICAL SCIENCES
+Chemistry for Engineers Laboratory
+Required Tools/Equipment ~~ | ~~ Required Quantit
+Activated charcoal | 5g
+Al strips i 5 pieces
+Aeohol aml
+Alligator cli | 10 pieces
+Alligator clip 10 pieces
+Batter __ Spieces
+Beaker I" Bpieces
+Burner 5 pieces
+Conductivity apparatus 1 set-up
+Custrips 10 pieces
+CuSO, solution 25m
+Distillation apparatus 1setup
+Electrolyte solution 25 mi
+Evaporating dish 5 pieces
+Fe (NOs); solution 25 mL
+FeCl, solution 25 mL
+Filter stand 5 pieces
+Food color S59
+Glass funnel ~~ Spieces
+| Glass tubing 5 pieces |
+Graduated cylinder ~~~ ___Spieces
+HCI solution 80 mL
+Hexane oo 25mL
+> crystals 89
+KClsolution 25 mL
+KCIO; solid — 39
+KMnO4 solution 25 mL
+| KSCN solution 25 mL
+Mg strips 10peces ~~
+NaCI 5g
+NaClsolution ~~~ ~~ 50 mL.
+NaOH solution 25mbL
+NH.OH solution __5mL
+ol sm
+Pb (NOs), solution 50 mL
+Pbstips 5 pieces
+Petri dish 5 pieces
+Hpaper 20 pieces
+Sand bag 5 pieces
+Staple wire 50 pieces
+Sugar 5g |
+Sugar solution 25 mL
+Syringe 5 pieces
+Testtube 50 pieces LL
+PSG for BSCpE (Annex IV-A) Page 2 of 5 -
+
+
+===== PAGE 73 (cmo87-page-73.png) =====
+
+Thermometer 5 pieces re
+Triple beam balance 5 pieces LL
+Urea 5g 1
+Zn (NOag), solution 25 mL :
+Zn strips 15 pieces
+¢ Maximum of 5 students per group and minimum required quantity is based on
+class size of 25 students.
+Physics for Engineers Laboratory
+Required Tools/Equipment Required Quantity
+| Atwood's machine Spieces
+| Barmagnets ~~ ~~ 10pieces
+[Beaker _ 5 pieces
+Beambalance === 000000 5 pieces
+Blackwood ballistic pendulum 5pieces
+Bridging plugs/connecting wires 5 sets
+Calorimeter ~~~ 5 pieces
+Centripetal force apparatus S5peces
+Clamp 5 pieces
+Coil. S pieces
+Compass 5 pieces
+Component holder 15 pieces
+concave lens 5 pieces
+Connectingwires ~~~ Ssets 00
+Convexlens 5 pieces
+| Crossed arrow target  _Speces
+| Cylindrical lens 5 pieces
+DC power supply Spieces
+ET —— ee  Spieces
+| Dynamic cart 5 pieces
+Electric calorimeter S pieces
+Field mapper kit/mapping Apparatus 5 pieces
+Fixed capacitor (330 microfarad Speces
+Fixed resistors ~~ 15 pieces
+ Fluorescentlamp ~~ 2 sets
+Forcetable Set ~~~ 5 pieces
+Frame for bar magnets Spieces |
+Free fall apparatus __ _5 pieces
+Friction block with different surfaces 5 pieces
+Friction board with pulle 5 pieces
+Frictionless dynamic track 5 pieces
+Galvanometer 5 pieces
+Glass plate 5 pieces
+| Glass plate of size similar to friction board S pieces
+Horseshoe magnets S5pieces
+Hydrometer jar 5 pieces
+Inclined plane ~~ 5 pieces
+PSG for BSCpE (Annex IV-A) Page 30of 5 wo
+A 5
+
+
+===== PAGE 74 (cmo87-page-74.png) =====
+
+Light source 5 pieces
+Light source, sodium/mercury lamps 5 pieces
+Linear air track with blower and trolle 5 pieces
+Mass with hook 5 pieces
+Masses _Ssets
+Mechanical equivalent of heat apparatus 5 pieces
+Metal ball 5 pieces
+Metal balls of different sizes 12 pieces
+Metal conductor with insulated handle 2 sets
+Metal stand 5 pieces
+Meter stick ~~ 5 pieces
+Micrometer caliper Spieces
+Natural magnets ___ bpieces
+Ohmmeter/\/OM 5 pieces
+Optics bench 5 pieces
+Panel board/circuit board _ bpieces
+Paralleiraylens ~~~ + ~~ Spieces
+| Platform/triple beam balance ~~~ __ Spieces
+Potentiometer 5 pieces
+Ramp/launcher 5 pieces
+Ray optics mirror 5 pieces
+Raytableandbase ~~~ | ~~~ Spleces
+Reversing switch 5 pieces
+_Rheostat opleces
+Ring __ Spieces
+Rubber hammer ~~ ~~ Spieces
+Set of Weights 5 sets
+slide wire/ wheatstone bridge DO pieces
+Slitmask Spieces
+Slit plate 5 pieces
+Slotted masses, 5-5009 Ssets
+Solenoid 5 pieces
+Sonometer __S pieces
+SPDT switch ~~~ pieces |
+Specimen for shot aoe
+spherical mirror S pieces
+Spring __5 pieces
+SPST switch | Spieces
+Steam generator _____Spleces
+Stirrer for shot Spieces
+Stopwatch 00 Speces |
+| Stopwatch > pieces
+Swpotod | pieces
+Switch 0 L  Spieces
+Thermal expansion apparatus ___Speces |
+Thermometer ~~ 5 pieces
+Timer/stopwatch 5 pieces
+| Tuning forks of three different frequencies
+U-tube oo 5 pieces
+PSG for BSCpE (Annex {V-A) Page 4 of 5
+pe
+
+
+===== PAGE 75 (cmo87-page-75.png) =====
+
+Van de Graff generator 2 sets
+| Vernier caliper 5 pieces Co
+| VOM or muititester 5 pieces
+Weight holder 5 pieces |
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+PSG for BSCpE (Annex IV-A) Page 5 of 5
+er
+
+
+===== PAGE 76 (cmo87-page-76.png) =====
+
+ANNEX IV-ll - LABORATORY REQUIREMENTS (PROFESSIONAL COURSES)
+Bachelor of Science in Computer Engineering
+TABLE OF CONTENTS .
+BASIC ENGINEERING SCIENCES «iii vienenn 2
+Computer Aided Drafting. .....cocoooi iii nee 2
+Fundamentals of Electrical CIrCUIS ...c....ocviviiiie cece 2
+Fundamentals of Electronic CirCUS .........ccoivviiieiie cece een 2
+PROFESSIONAL COURSES... octets ean ects eerie es O
+Programming Logic and DESIGN ......ccccoiiiiriiiieriiiiie ieee eee eee O
+Object Oriented Programming... ciara: 3
+Data Structures and AlGOTtNMS. o.oo 0 D
+Software Design Laboratory... 3
+Logic Circuits and Design Laboratory... 4
+Introduction to HDL Lo... eee
+Computer Engineering Drafting and Design ...........cccovcmvcniinicncnnn 4
+Computer Networks and Security Laboratory ............ccocoiii 4
+Microprocessors Laboratory... o.com. D
+Embedded Systems Laboratory... icine O
+Computer Architecture and Organization Laboratory..........cc.ococceieeiciiccd
+Digital Signal Processing Laboratory..........cc.oooc cc, B
+Se,
+PSG for BSCpE (Annex IV-B) Page 10f 6 as
+5 i RS po
+
+
+===== PAGE 77 (cmo87-page-77.png) =====
+
+BASIC ENGINEERING SCIENCES
+Computer Aided Drafting
+_Required Tools/Equipment _Required Quantity
+Complete set of computer system ER 1dratio
+Computer-aided design software 1:1 ratio
+ALLIED COURSES
+Fundamentals of Electrical Circuits
+. . Required Quantity | Minimum Required |
+Required Tools/Equipment | per Group Quantit
+Complete set of computer system | 1 5
+Open or commercial simulation |
+tools in Fundamentals of Electrical 1 | 5
+| Circuits ____
+Circuits trainer 1 5 —
+Analog DC ammeter (100mADC) | 1 5
+Analog DC voltmeter (20V DC (I 5
+Digital multimeter LI RE <M
+Wattmeter ~~ 1 SEE  - FE
+_Potentiometer +r 5
+Strain transducer | 1 | °
+Function generator LI SN
+Oscilloscope 11 5
+Variable power supply (0-20V DC 1 5
+and 0-5V AC) a
+Resistive load (e.g., 100Q, 470Q, 1 5
+1KQ) i
+Capacitive load (e.g., 2.2uF) 1
+Inductive load (e.g., 100mH, 4 5
+150mH EE
+Practical inductor (e.g., 100-200 1 5
+mH ER
+Test bed 1 5
+Purely resistive impedance (e.g., ’ 5
+3KQ) RN SE
+Balanced 3-phase source (e.g., 1 5
+| 220Vrus at 60Hz) RR
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+Fundamentals of Electronic Circuits
+. ; Required Quantity | Minimum Required 1
+_ Required Tools/Equipment _PerGroup | ~~ Quantity |
+Complete set of computer system r+ 5
+i Open or commercial simulation 1 5
+ol in Fundamentals of Electronic
+Circuits
+rh,
+PSG for BSCpE (Annex [V-B) Page 2 of 6 (oe
+
+
+===== PAGE 78 (cmo87-page-78.png) =====
+
+, . Required Quantity | Minimum Required |
+Required Tools/Equipment Per Group eo Quantity |
+Variable power supply (0-20V DC 1 5
+and0-5VAC)
+Analog DC ammeter (100 mA DC 1 5
++ Analog DC voltmeter (20V DC 1 5
+|-Sreadboard 1 5
+Oscilloscope LIN EE - BE
+Complete set of computer system | 1 5
+ Functiongenerator ~~ | 1 ~~ ~~ 5
+Semiconducior devices circuit
+1 5
+board —
+Transistor amplifier circuitboard | ~~ 1 5
+FET fundamentals circuitboard | 1 5
+Transistor power amplifier circuit 1 5 1
+board | _
+Operational amplifier circuit board | 1 9
+Transistor feedback circuit board 1 5S
+Digital circuit training moduie ro 5 J
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+PROFESSIONAL COURSES
+Programming Logic and Design
+Required Tools/Equipment Required Quantity
+Complete set of computer system 1:1 ratio
+Programming language environment 1:1 ratio oo
+Object Oriented Programming
+Required Tools/Equipment | Required Quantity
+Complete set of computer system oo MAyatio
+Programming language environment 1:1 ratio
+Data Structures and Algorithms
+|____ Required Tools/Equipment | Required Quantity _
+| Complete set of computer system 1:1 ratio
+Programming language environment oo 1:1 ratio
+Software Design Laboratory
+| Required Tools/Equipment Required Quantity
+Complete set of computer system T:1ratio |
+Programming language environment 1:1 ratio LL
+Computer-aided design software 1:1 ratio
+A,
+PSG for BSCpE {Annex IV-B) Page 3 of 6 GENT
+Pet
+hey
+
+
+===== PAGE 79 (cmo87-page-79.png) =====
+
+Logic Circuits and Design Laboratory
+Required Tools/Equipment Required Quantity | Minimum Required
+r_ Per Grou Quantit
+| Complete set of computer system 1 5
+Open or commercial simulation tools 1 5
+in Logic Circuitsand Design ~~~ | ~~" ~ i
+Power supply 1 5
+Breadboard BE 5
+Complete set of different logic gates 1 5
+Logic probe 1 5 —
+Oscilloscope BR 5
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+introduction to HDL
+|____ Required Tools/Equipment | Required Quantity
+Complete set of computer system | ___1:1 ratio
+a are _Yratio
+Computer-aided design software ~ 1:1 ratio
+Computer Engineering Drafting and Design
+Required Tools/Equipment } Rar Grou ty
+Complete set of computer system + 1 5
+Computer-aided design software 1 5
+Open or commercial simulation tools
+in Computer Engineering Drafting 1 5
+andDesign EE EE _
+Complete set of PCB etchingtools | 1 B 5
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+Computer Networks and Security Laboratory
+. . Required Quantity | Minimum Required
+Required Tools/Equipment Per Grou Quantit
+Complete set of computer system 1 i 5
+Open or commercial simulation tools 1 | 5
+in Computer Networks and Security | a
+Complete set of network cable 1 1 | 5
+{ fabrication tools i
+NIC 5
+Network operating system Depends on class | Depends on class |
+size size
+Switch/hub Depends on class Depends on class
+size size
+Router il Pepends on class Pepends on class
+* Required quantity is based on a class size of 25 students.
+PSG for BSCPE (Annex IV-B) Page 4 of 6 oh
+
+
+===== PAGE 80 (cmo87-page-80.png) =====
+
+Microprocessors Laboratory
+Required Tools/Equipment | Redgired Quantity | Minimum Redured |
+Complete set of computer system | 5
+Programming language environment 1 5
+Open or commercial simulation tools 1 5
+in Microprocessors EE
+Power supply 1 5
+Breadboard LON SE
+| Microprocessor or microcontroller 1 5
+L I/O devices __ EUR: RE 5 |
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+Embedded Systems Laboratory
+Required Tools/Equipment Required Quantity | Minimum Required
+oe Per Group Quantity
+Complete set of computersystem | 1 SH 5
+Programming language environment | 1 5 |
+om or commercial simulation {cools 1 5
+in Embedded Systems oo ~
+| Power supply 1 5
+Breadboard 1 5
+Microprocessor or microcontroller 1 5 i
+I/O devices oo 1 5 1
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+Computer Architecture and Organization Laboratory
+Required Tools/Equipment Required Quantity | Minimum Required
+bo |. PerGroup | Quantity
+| Complete set of computer system | 1 5
+Open or commercial simulation tools
+in Computer Architecture and 1 5
+Organization SE EN
+(Powersupply 1 | S
+Breadboard — 1 | 5 a
+Microprocessor or microcontroller 5 —
+I/O devices I SR S
+Memory devices RE °
+* Maximum of 5 students per group and minimum required quantity is based on class
+size of 25 students.
+SRR
+PSG for BSCPE (Annex IV-B) Page 5 of 6 Fag
+Se
+ES
+
+
+===== PAGE 81 (cmo87-page-81.png) =====
+
+Digital Signal Processing Laboratory
+Required Required Quantity Per | Minimum Required
+__Tools/Equipment | Grou Quantit
+Complete set of computer y 5
+system a LL
+Graphing software 1 5
+Mathematical software 1 5
+Open or commercial
+simulation tools in Digital 1 5 |
+Signal Processing ~ i
+* Maximum of & students per group and minimum required quantity is based on class
+size of 25 students.
+Oh,
+PSG for BSCpE (Annex V-B) Page 6 of 6 SRN
+She
+SNe

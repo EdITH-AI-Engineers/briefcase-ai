@@ -1,0 +1,5 @@
+# Rasterized page images — regenerate with pdftoppm (see README).
+ocr/*.png
+
+# Tesseract language data — auto-downloaded by tesseract.js on first run.
+eng.traineddata

@@ -1,0 +1,3304 @@
+
+===== PAGE 1 (cmo25-page-01.png) =====
+
+oO on oh,
+S05 Ux, & %
+5, A Republic of the Philippines SorriciaL™
+“ 2, = : .
+= z OFFICE OF THE PRESIDENT 3 RELEASE §
+3 '§ COMMISSION ON HIGHER EDUCATION ©, cuep cent Offce &
+Nae "RECORDS SECTOR
+On a “ oF
+Ave, ye. >
+CHED MEMORANDUM ORDER (CMO)
+NO. 25 ;
+Series of 2015
+SUBJECT : REVISED POLICIES, STANDARDS, AND GUIDELINES FOR
+BACHELOR OF SCIENCE IN COMPUTER SCIENCE (BSCS),
+BACHELOR OF SCIENCE IN INFORMATION SYSTEMS (BSIS),
+AND BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
+(BSIT) PROGRAMS
+In accordance with the pertinent provisions of Republic Act (RA) No. 7722, otherwise known
+as the "Higher Education Act of 1994" in pursuance of an outcomes-based quality
+assurance system as advocated under CMO 46 s. 2012, and by virtue of the Commission en
+banc Resolution No. 268-2015 dated May 25, 2015 the following policies, standards and
+guidelines (PSGs) are hereby adopted and promulgated by the Commission.
+ARTICLE I
+INTRODUCTION
+Section 1 Rationale
+Based on the Guidelines for the Implementation of CMO 46 s 2012, this PSG
+implements the “shift to learning competency-based standards/outcomes-
+based education.” It specifies the ‘core competencies’ expected of graduates
+of Bachelor of Science in Computer Science (BSCS), Bachelor of Science in
+information Systems (BSIS), and Bachelor of Science in Information
+Technology (BSIT), “regardless of the type of HEI they graduate from”
+However, in “recognition of the spirit of outcomes-hased education and ... of
+the typology of HEIs,” this PSG also provides “ample space for HEls to
+innovate in the curriculum in line with the assessment of how best to achieve
+learning outcomes in their particular contexts and their respective
+missions ..."
+The field of computing is ever dynamic; its advancement and development
+had been rapid and its evolvement is a continuous process (O'Brien, 2008).
+To face the challenges of advancement, the Commission recognizes the need
+to be responsive to the current needs of the country. It is essential and
+important that the country's computing capability be continually developed
+and strengthened to be at par globally.
+it is the objective of the Commission to develop and promote the Policies,
+Standards and Guidelines (PSG) for BSCS, BSIS and BSIT, to provide a
+minimum standard for Higher Education Institutions (HEls) offering or
+intending to offer these programs. The PSG is developed with consultations
+from all stakeholders, from the academe to industry (Sarmiento, 2009).
+The PSG contains provisions that cultivate the culture of excellence in
+offering these programs. This is in line with the vision of the Commission to
+have HEIs produce competent graduates that shall cater to the needs of the
+‘ industry. The PSG is also designed for all HEls to exercise their
+innovativeness and creativity in the development of their curricula in the
+offering of BSCS, BSIS, and BSIT programs (RA 7722, 1994).
+Up car Dram. Cueron City Pisses
+Higher Education Development Center Building, C.P. Garcia Ave., UP Campus, Diliman, Quezon City, hilippines
+Web Site: www.ched.qov.ph Tel. Nos. 441-1177, 385-4391, 441-1169, 441-1149, 441-1170, 441-1216, 392-5296
+
+
+===== PAGE 2 (cmo25-page-02.png) =====
+
+ARTICLE ll
+AUTHORITY TO OPERATE
+
+Section 2 Government Recognition
+All Higher Education Institutions {HEIs} including private HEls, State
+Universities and Colleges (SUCs), and Local Universities and Colleges (LUCs)
+intending to offer BSCS, BSIS, and BSIT must first secure proper authority
+from the Commission in accordance with this PSG. All HEIs with existing
+BSCS, BSIS, and/or BSIT programs are required to shift to outcomes-based
+approach pursuant to this PSG and must inform the Commission of such shift.
+SUCs and LUCs should likewise strictly adhere to the provisions in these
+policies, standards and guidelines.
+
+ARTICLE
+: GENERAL PROVISIONS
+
+Section 3 The succeeding articles provide minimum standards and other requirements
+and prescriptions. The minimum standards for each program are expressed
+as minimum sets of desired program outcomes which are given in Article IV
+Section 6. The Commission designed sample curricula to attain such
+outcomes and these are shown in Article V Section 9. The total number of
+units for each program is here prescribed as the “minimum unit requirement”
+under Section 13 of RA 7722. In designing the curricula, the Commission
+employed curriculum maps which are shown in Article V Section 10 as
+sample curriculum map.
+
+Using a learner-centered/outcomes-based approach, the Commission
+provided sample curricula delivery methods shown in Article VV Section 11.
+The sample course syllabi given in Article V Section 12 show some of these
+methods.
+
+Based on the curricula and the means of their delivery, the Commission
+determined the physical resource requirements for the library, laboratories
+and other facilities and the human resource requirements in terms of
+administration and faculty, as indicated in Article Vi.
+
+Section 4 The HEIs are allowed to design curricula suited to their own contexts and
+missions provided that they can demonstrate that the same leads to the
+attainment of the required minimum set of outcomes, albeit by a different
+route. In the same vein, they have latitude in terms of curriculum delivery and
+in terms of specification and deployment of human and physical resources as
+long as they can show that the attainment of the program outcomes and
+satisfaction of program educational objectives can be assured by the
+alternative means they propose.
+
+The HEls can use the CHED Implementation Handbook for Qutcomes-
+Based Education (OBE) and the Institutional Sustainability Assessment
+(ISA) as a guide in complying with Sections 16, 17 and 22 of Article VII,
+hereof.
+of Mtg,
+&
+1 i
+= 2 Page
+
+
+===== PAGE 3 (cmo25-page-03.png) =====
+
+This PSG is based on the 10-year basic education system and on the existing
+General Education (GE) program. It reflects the reform towards outcomes-
+based education as well as international trends in computer science,
+information systems and information technology curricula. However, this does
+. not yet include necessary changes as a consequence of the K-12 reform. The
+latter shall be addressed subsequently.
+ARTICLE IV
+PROGRAM SPECIFICATIONS
+Section 5 Program Description
+5.1 Degree Name
+A. Bachelor of Science in Computer Science (BSCS)
+Graduates of this program shall be conferred the degree of Bachelor of
+Science in Computer Science (BSCS).
+B. Bachelor of Science in Information Systems (BSIS)
+Graduates of this program shall be conferred the degree of Bachelor of
+Science in Information Systems (BSIS}.
+C. Bachelor of Science in Information Technology (BSIT)
+Graduates of this program shall be conferred the degree of Bachelor of
+Science in Information Technology (BSIT).
+5.2 Nature of the Field of Study
+5.2.1 Bachelor of Science in Computer Science (BSCS)
+The BS Computer Science program includes the study of computing
+concepts and theories, algorithmic foundations and new
+developments in computing. The program prepares students to design
+and create aigorithmically complex software and develop new and
+effective algorithms for solving computing problems.
+The program also includes the study of the standards and practices in
+Software Engineering. it prepares students to acquire skills and
+disciplines required for designing, writing and modifying software
+components, modules and applications that comprise software
+solutions.
+5.2.2 Bachelor of Science in Information Systems (BSIS)
+The BS Information Systems Program includes the study of application
+and effect of information technology to organizations. Graduates of the
+program should be able to implement an information system, which
+considers complex technological and organizational factors affecting it.
+These include components, tools, techniques, strategies,
+methodologies, etc.
+och,
+NEY
+q) H J Page
+=
+
+
+===== PAGE 4 (cmo25-page-04.png) =====
+
+Graduates are able to help an organization determine how information
+and technology-enabled business processes can be used as strategic
+tool to achieve a competitive advantage. As a result, IS professionals
+require a sound understanding of organizational principles and
+practices so that they can serve as an effective bridge between the
+technical and managementfusers communities within an organization.
+This enables them to ensure that the organization has the information
+and the systems it needs to support its operations.
+5.2.3 Bachelor of Science in Information Technology {BSIT)
+The BS Information Technology program includes the study of the
+utilization of both hardware and software technologies involving
+planning, installing, customizing, operating, managing and
+administering, and maintaining information technology infrastructure
+that provides computing solutions to address the needs of an
+organization.
+The program prepares graduates to address various user needs
+involving the selection, development, application, integration and
+management of computing technologies within an organization.
+5.3 Program Goals
+
+The BSCS, BSIS, and BSIT graduates are expected to become
+globally competent, innovative, and socially and ethically responsible
+
+computing professionals engaged in life-long learning endeavours.
+They are capable of contributing to the country’s national development
+
+goals.
+
+5.4 Specific Professions/careers/occupations for Graduates
+A. Bachelor of Science in Computer Science (BSCS)
+
+Primary Job Roles
+
++ Software Engineer
+
+* Systems Software Developer
+
+* Research and Development computing professional
+
+o Applications Software Developer
+
+» Computer Programmer
+
+Secondary Job Roles
+
+* Systems Analyst
+
++ Data Analyst
+
+e Quality Assurance Specialist
+
+» Software Support Specialist
+
+B. Bachelor of Science in Information Systems (BSIS)
+
+Primary Job Roles
+
+» Organizational Process Analyst
+
+» Data Analyst samen,
+
+ALA
+i i 4 irae.
+== |
+
+
+===== PAGE 5 (cmo25-page-05.png) =====
+
+« Solutions Specialist
+e Systems Analyst
+¢ |S Project Management Personnel
+Secondary Job Roles
++ Applications Developer
+« End User Trainer
+» Documentation Specialist
+e Quality Assurance Specialist
+C. Bachelor of Science in Information Technology (BSIT)
+Primary Job Roles
+* Web and Applications Developer
++ Junior Database Administrator
++ Systems Administrator
++ Network Engineer
++ Junior Information Security Administrator
+» Systems Integration Personnel
+» IT Audit Assistant
++ Technica! Support Specialist
+Secondary Job Roles
+* QA Specialist
++ Systems Analyst
+« Computer Programmer
+5.5 Allied Fields
+In general, subject to the specific provision below, the following may be
+considered as allied fields:
+1. Basic Sciences, Math and Engineering
+2. Programs that have at least 50% of core and professional courses of a
+specific ITE program
+3. Any program deemed to be an allied program by the TPITE such as
+the following:
+A. Bachelor of Science in Computer Science (BSCS)
+» Applied Mathematics
+o Computer Engineering
+» Electrical Engineering
+» Electronics Engineering
+* Entertainment and Multimedia Computing
+s Mathematics
+» Physics
++ Statistics
+of Rca,
+Pa
+A
+= 51 Pace
+
+
+===== PAGE 6 (cmo25-page-06.png) =====
+
+B. Bachelor of Science in Information Systems (BSIS)
+¢ Applied Mathematics
+» Industrial Engineering
+* Information Management
+¢ Library 2nd Information Science
++ Statistics
++ informatics
+C. Bachelor of Science in Information Technology (BSIT)
++ Computer Engineering
++ Electrical Engineering
+s Electronics Engineering
++ |nformatics
++ |[nformation Management
+Section 6 Program Qutcomes
+The minimum standards for the BSCS, BSIS, and BSIT programs are
+expressed in the following minimum set of graduate outcomes. The graduate
+outcomes common to all programs, and those common to the discipline are
+further mapped into the expanded graduate outcomes specific to the sub-
+disciplines of CS, IS, and IT, as outlined in Section 6.3.
+6.1 Common to all programs in all types of schools
+The graduates have the ability to
+a) articulate and discuss the latest developments in the specific
+field of practice. (Philippine Qualifications Framework (PQF)
+level 6 descriptor) (Graduate Outcomes: CS10, IS10, IT13)
+b) effectively communicate orally and in writing using both
+English and Filipino (Graduate Outcomes; CS08, 1S08, IT10)
+c) work effectively and independently in multi-disciplinary and
+multi-cultural teams. (PQF level 6 descriptor} (Graduate
+Qutcomes: CS07, IS07, ITOB)
+d} actin recognition of professional, social, and ethical
+responsibility (Graduate Outcomes:CS8089, 1S09, IT12)
+e) preserve and promote “Filipino historical and cultural heritage”
+{based on RA 7722)
+6.2 Common to the discipline
+The graduates of BSCS, BSIS, and BSIT must have the ability to
+a) analyze complex problems, and identify and define the
+computing requirements needed to design an appropriate
+solution (Graduate Outcomes: C802, 1502-03, 1T03)
+b} apply computing and other knowledge domains to address
+real-world problems (Graduate Outcomes: CS01, 1S01, IT01)
+¢) design and develop computing solutions using a system-level
+perspective (Graduate Outcomes: CS03-05, 1504-05, IT05)
+d) utilize modern computing tools (Graduate Outcomes: CS08,
+S06, ITO7)
+of da,
+&
+RS $F
+—— JE
+
+
+===== PAGE 7 (cmo25-page-07.png) =====
+
+6.3 Specific to a sub-discipline and a major
+A. Bachelor of Science in Computer Science (BSCS)
+Graduate
+Graduate Attribute | Outcomes Graduate Outcomes
+Code
+Apply knowledge of computing fundamentals, knowledge of a
+Knowledge for | computing specialization, and mathematics, science, and domain
+Solving Computing €S01 knowledge appropriate for the computing specialization to the
+Problems abstraction and conceptualization of computing models from defined |
+problems and requirements.
+Identify, analyze, formulate, research literature, and solve compiex
+Problem Analysis C502 computing problems and requirements reaching substantiated
+conclusions using fundamental principles of mathematics, computing
+i sciences, and relevant domain disciplines ]
+An ability to apply mathematical foundations, algorithmic principles
+cS03 and computer science theory in the modeling and design of computer-
+based systems in a way that demonstrates comprehension of the
+tradeoffs involved in design choices
+Design/Development Knowledge and understanding of information security issues in
+of Solutions relation to the design, development and use of information systems
+i + Design and evaluate solutions for complex computing problems, and
+CS05 | design and evaluate systems, components, or processes that meet
+specified needs with appropriate consideration for public health and
+safety, cultural, societal, and environmental considerations.
+Create, select, adapt and apply appropriate techniques, resources
+Modem Tool Usage CS06 and modern computing fools to complex computing activities, with an
+understanding of the limitations to accomplish a common goal
+Work diverse teams and in multidisciplinary settings
+Communicate effectively with the computing community and with
+- society at large about complex computing activities by being able to
+Communication C508 comprehend and write effective reports, design documentation, make
+effective presentations, and give and understand clear instructions
+C . An ability to recognize the legal, social, ethical and professional
+omputing i involved in the utilization of computer technology and bi
+Professionalism and CS09 Issues involvedin th comp ; 9y N
+Ethics guided by the adoption of appropriate professional, ethical and legal
+practices
+earning for continual development as a computing professional
+B. Bachelor of Science in Information Systems (BSIS)
+Graduate |
+Graduate Attribute | Outcomes Graduate Outcomes |
+Code |
+t
+sopnoedge for Apply knowledge of business processes, computing, mathematics and
+g Computing ISOM J
+Problems social sciences appropriate to Information Systems
+ply had
+£3 7 Page
+EA
+
+
+===== PAGE 8 (cmo25-page-08.png) =====
+
+Analyze a problem, identify and define the computing requirements
+1502 with respect to organizational factors appropnate to its solution and
+Problem Analysis plan strategies for their solution
+and possible {rade-offs presented within the given requirement
+Design, implement, and evaluate information systems, processes,
+1S04 components, or programs and to source cost-benefit efficient
+of Solutions 1505 Use knowledge and understanding of enterprises in modelling and
+design of information systems
+Deploy and use effectively skills, tools and techniques necessary for
+Individual and Team Function effectively on teamsi{recognizing the different roles within a
+Work 1507 team and different ways of organizing teams) to accomplish a
+common goal
+Communicate effectively with a range of audiences. Communication
+Communication 1S08 skills includes techincal writing, presentation and neogitation, and
+numeracy.
+Computing Recognize the legal. social, ethical and professional issues involved in
+Professionalism and 1509 the exploitation of computer technology and be guided by the
+Ethics in the Society adoption of appropriate professional, ethical and legal practices both
+in the local and global communi
+Recognize the need for and engage in an independent and life-long
+Life-Long Learning |  1S10 learning, planning self-iearming and improving performance as the
+foundation for on-going professional development
+C. Bachelor of Science in Information Technology (BSIT)
+Graduate :
+Code
+Solving Computing to the discipline
+Problems
+| requirements appropriate to its solution
+IT04 selection, creation, evaluation and administration of computer-based
+systems
+Design, implement, and evaluate computer-based systems,
+Design/Development i105 processes, components, or programs to meet desired needs and
+of Solutions requirements under various constraints
+Apply knowledge through the use of current techniques, skills, tools
+Function effectively as a member or leader of a development team
+Individual and Team 1708 recognizing the different roles within a team to accomplish a common
+Work goal
+Communicate effectively with the computing community and with
+Communication IT10 society at large about complex computing activities through logical
+mn TR a
+SA Bl Puwe
+&s
+==
+
+
+===== PAGE 9 (cmo25-page-09.png) =====
+
+Comoutin IT11 Analyze the local and global impact of computing information
+Professionaliom and technology on individuals, organizations, and society
+Social Responsibility IT12 Understand professional, ethical, legal, security and social issues and
+responsibilities in the utilization of information technology.
+Recognize the need for and engage in planning self-learning and
+Life-Long Leaming 1IT13 improving performance as a foundation for continuing professional
+development
+6.4 Common to a horizontal type as defined in CMO 46 s
+2012
+e Graduates of professional institutions demonstrate a service
+orientation in one’s profession
++ Graduates of colleges participate in various types of employment,
+development activities, and public discourses particularly in
+response to the needs of the communities one serves
+e Graduates of universities participate in the generation of new
+knowledge or in research and development projects
+Graduates of State Universities and Colleges must, in addition, have
+the competencies to support “national, regional and local development
+plans.” {RA 7722)
+A PHEI, at its option, may adopt mission-related program outcomes
+that are not included in the minimum set.
+Section 7 Minimum Performance Indicators
+Graduate attributes can be assessed through set of performance indicators
+provided in the following table.
+| Graduate Attribute | Performance Indicators
+Knowledge for Solving | Completed and successfully defended Capstone Project /Thesis in line with
+Computing Problems | the discipline,
+Problem Analysis Documented software/hardware requirements specifications following
+computing industry standards,
+| Design/Development of | Designed and developed a computing solution using object-oriented
+Solutions | approach.
+Modem Tool Usage | Used an integrated development environment,
+individual & Team Work | Worked in a group to develop a machine project.
+| Communication | Presented a proposed solution in class or in a public forum.
+i Computing
+Professionalism and | iImmersed/exposed in an actual working environment in industry.
+Ethics
+Life-Long Leaming | Created a report on a conducted independent leaming activity.
+An institution may enhance the minimum performance indicators using an industry or
+globally accepted reference competency inventory.
+E% 9 Pare
+Ea i
+
+
+===== PAGE 10 (cmo25-page-10.png) =====
+
+ARTICLE V
+CURRICULUM
+Section 8 Curriculum Description
+Section 8.1 General Description
+The curricula for BSCS, BSIS, and BSIT shall include the required GE
+courses, six (6) core courses common to all programs, professional courses
+required for each program, and electives as well as domain specific courses
+when needed. The students are also required to undertake practicum work
+and complete a thesis or capstone project.
+| BSCS BSIS BSIT
+General Education
+Common Courses 180
+Professional Courses
+Professional Electives | 80 | 120] 120]
+Additional Math Requirement | 30] ~~ 00] ~~ 00]
+PE e080 60]
+NSTP| 60 680 80]
+Minimum Total Units 1460] 146.0 | 146.0
+The minimum total number of units is 146. For the Centers of Excellence
+(COEs), the Professional Courses and Electives, and Additional Math
+Requirement may have a minimum of 48 units (instead of 60) as long as the
+learning outcomes of the knowledge areas are met, resulting to a minimum
+total number of 134 units.
+The General Education courses for the BSCS, BSIS, and BSIT programs
+shall be as foliows:
+GENERAL EDUCATION Units Total Units
+
+Language and Humanities wm
+Englsh ER
+Fin Te |
+Humanities (Literature, Arts, Philosophy etc) | 9 |
+
+Mathematics, Natural Sciences and Technology se]
+Mathematics (Algebra, Statistics) 6
+Natural Sciences 8
+Electives (Trigonometry, Physics, 3
+Science and Society, etc.
+
+Social Sciences & Communications os
+Le & Works of Riza IEE
+Philippine History & Culture os]
+Psychology, Sociology, Anthropology,
+
+Economics (w/ Taxation & Agrarian Reform
+Integrated), Asian/Westem Civilization, Mass
+Comm., Society and Culture {w/ Family
+Planning), Politics & Govemance (w/ Philippine
+Constitution
+10 Faw.
+£%
+
+
+===== PAGE 11 (cmo25-page-11.png) =====
+
+The common courses for the BSCS, BSIS, and BSIT programs shall be as
+follows:
+. Introduction to Computing
+. Computer Programming 1 (Fundamentals of Programming)
+. Computer Programming 2 (Intermediate Programming)
+. Data Structures and Algorithms
+. Information Management
+. Applications Development and Emerging Technologies
+HEls shall comply with the minimum requirements prescribed in this PSG. In
+addition, they may enrich the prescribed curricula with additional courses
+based on their institutional and program goals and objectives.
+COURSE SPECIFICATIONS: CORE COMPUTING COURSES
+CC100 -- INTRODUCTION TO COMPUTING
+This course provides an overview of the Computing Industry and Computing
+profession, including Research and Applications in different fields; an
+Appreciation of Computing in different fields such as Biology, Sociology,
+Environment and Gaming; an Understanding of ACM Requirements; an
+Appreciation of the history of computing; and Knowledge of the Key Components
+of Computer Systems (Organization and Architecture), Malware, Computer
+© Security, Internet and internet protocols, HTML4/5 and CSS.
+Course Credits © 3 units
+Course Pre-Requisite : None
+CC101 -- PROGRAMMING 1
+The course covers the use of general purpose programming language to solve
+problems. The emphasis is to train students to design, impiement, test, and
+debug programs intended to solve computing problems using fundamental
+programming constructs.
+Course Credits » 3 units
+Pre-Requisite © None
+CC102 -- PROGRAMMING 2
+This course is a continuation of CC101 — Programming 1. The emphasis is to
+train students to design, implement, test, and debug programs intended to solve
+computing problems using basic data structures and standard libraries.
+Course Credits © 3 units
+Pre-Requisite . CC101 -- Programming 1
+CC103 -- DATA STRUCTURES AND ALGORITHMS
+The course covers the standard data representation and algorithms to soive
+computing problems efficiently (with respect to space requirements and time
+complexity of algorithm). This covers the following: Stacks, Queues, Trees,
+oA mex,
+NET
+AY Payee
+
+
+===== PAGE 12 (cmo25-page-12.png) =====
+
+Graphs, Maps, and Sets. Thorough discussion of sorting and searching
+algorithms and hashing is covered.
+Course Credits © 3 units
+Pre-Requisite © CC102 — Programming 2
+CC104 — INFORMATION MANAGEMENT
+This course covers information management, database design, data modeling,
+SQL, and implementation using relational database system.
+Course Credits © 3 units
+Course Pre-Requisite : CC103 - Data Structures and Algorithms
+CC105 — APPLICATIONS DEVEL OPMENT AND EMERGING TECHNOLOGIES
+Development of applications using web, mobile, and emerging technologies with
+emphasis on requirements management, interface design, usability, testing,
+deployment, including ethical and legal considerations.
+Course Credits © 3 units
+Pre-Requisite : CC102 — Programming 2
+Section 8.2 Specific Description of Program Curricula
+A. Bachelor of Science in Computer Science (BSCS)
+The Computer Science curriculum includes foundation and
+professional courses that cover theory, algorithms, software
+design and development, and new developments in
+computing.
+The curriculum should include courses in the following
+Knowledge Areas as recommended in ACM Computer
+Science Curricula 2013":
+1. Algorithms and Complexities
+a. Design and Analysis of Algorithms
+b. Automata Theory and Formal Languages
+c. Computational Science
+2. Architecture and Organization
+3. Discrete Structures
+a. Logic, Sets, Relations, Functions, and Proof
+Techniques
+b. Graphs, Trees, Matrices, Combinatorics and
+Recurrences
+4. Human Computer Interaction
+a. Fundamentals of HCI
+b. Graphics and Visual Computing
+5. Information Assurance and Security
+6. Networks and Communications
+7. Operating Systems
+- ¥
+acm.org wichg,
+AT
+3 If 12 | te 3 BN N
+3
+
+
+===== PAGE 13 (cmo25-page-13.png) =====
+
+a. Fundamentals of Operating Systems
+b. Parallel and Distributing Computing
+8. Programming Languages (Design and Implementation)
+9. Software Development Fundamentals
+a. Fundamentals of Programming
+b. Intermediate Programming
+c. Data Structures and Algorithms
+d. Object Oriented Programming
+10. Software Engineering
+a. Analysis and Design
+b. Implementation and Management
+c. intelligent Systems
+11. Social Issues and Professional Practice
+B. Bachelor of Science in information Systems (BSIS)
+The Information Systems curriculum encompasses
+introductory and professional courses to cover the various
+information systems functional areas as follows:
+1. Fundamentals of IS
+2. Professional Issues in information Systems
+3. IT infrastructure and Network Technologies
+4. Systems Analysis, Design and Development
+5. Enterprise Architectures
+6. IS Project Management
+7. IS Strategy, Management and Acquisition
+In addition, the curriculum shall include business enterprise
+domain courses such as the following:
+1. Organization and Management Concepts
+2. Financial Management
+3. Business Process Design and Management
+4. Evaluation of Business Performance
+5. Quantitative Methods
+C. Bachelor of Science in Information Technology (BSIT)
+The Information Technology curriculum includes basic and
+advanced courses on planning, development, integration,
+and management of information technology infrastructure
+that provide computing solutions to address the needs of
+organizations.
+The curriculum should include courses in the following
+Knowledge Areas as recommended in ACM Information
+Technology Curricula 2008
+1. Information Technology Fundamentals
+2. Human Computer Interaction
+3. Information Assurance and Security
+Tacm.org onmicy,
+£3 13 Page
+pr=rd
+
+
+===== PAGE 14 (cmo25-page-14.png) =====
+
++ Fundamentals of IAS
+: eo Advanced Topics of IAS
+4. Information Management
+¢ Fundamentals of IM
++ Fundamentals of Database Systems
++ Advanced Database Systems
+5. Integrative Programming and Technologies
+e Fundamentals of Programming
+» Intermediate Programming
+« Data Structures and Algorithms
++ Object Oriented Programming
++ Event Driven Programming
+6. Networking
+e Fundamentals of Networking
+e Advanced Networking
+7. Platform Technologies
+« Intangible Technologies
++ Tangible Technologies
+8. Systems Administration and Maintenance
+9. Systems Integration and Architecture
+s+ Fundamentals of SIA
+¢ Advanced SIA
+10. Social and Professional Issues
+11. Web Systems and Technologies
+Section 8.3 internship/On-the-job-training/Practicum.
+internship/OJT/Practicum is an immersion program wherein
+the students will have the chance and opportunity to be with
+the IT industry. This program is important because the
+students will have the chance to apply the skills, knowledge
+and attitude learned in the school and at the same time the
+opportunity to experience the corporate environment. Learning
+expectations in the iT related field should be established
+between the HEI and the industry in the form of a
+Memorandum of Agreement (MOA) or Memorandum of
+Understanding (MOU).
+Internship is a requirement for the BSCS, BSIS and BSIT
+programs. Students are eligible to enroll the internship
+program after completing 70% of the total number of units in
+the curricuium. The minimum number of internship hours
+{preferably in a full time capacity) for the BSIS and BSIT
+programs is 486 hours and 162 hours for the BSCS program.
+Section 8.4 Thesis/Capstone Project
+Thesis is required for BSCS while Capstone Project is required
+for BSIS and BSIT. Both function as terminal project
+requirements that would not only demonstrate a student's
+comprehensive knowledge of the area of study and research
+E% 14 Face
+x
+
+
+===== PAGE 15 (cmo25-page-15.png) =====
+
+methods used but also allow them to apply the concepts and
+methods to a specific problem in their area of specialization.
+
+BS Computer Science students are required to complete a
+thesis that is focused on the theories and concepts of
+computing in the form of a scientific work.
+
+BS Information Systems students must complete a project
+such as business application development, or an information
+Systems plan.
+
+BS Information Technology students must complete a
+capstone project such as a software/system development with
+emphasis on the IT infrastructure, or an IT Management
+project.
+
+it 1s expressly understood that Computing Thesis and
+Capstone Projects need not require surveys, statistics, and
+descriptive methods, unless appropriate.
+
+a. A Thesis is a technical report on a systematic
+investigation of a problem that can be solved using
+Computing. It may include a solution, an
+approximate or partial solution, a scientific
+investigation, or the development of results leading
+to the solution of the problem.
+
+A Computer Science thesis must be anchored on
+Computer Science principles.
+
+b. A Capstone Project is an undertaking appropriate
+to a professional field. It should significantly address
+an existing problem or need.
+
+An Information Systems Capstone Project focuses
+on business processes and the implications of
+introducing a Computing solution to a problem.
+An Information Technology Capstone Project
+focuses on the infrastructure, application, or
+processes involved in implementing a Computing
+solution to a problem.
+Scope of the Theses / Capstone Projects
+The Thesis or Capstone Project should integrate the different
+courses, knowledge, and competencies learned in the
+curriculum. Students are encouraged to produce innovative
+results, generate new knowledge or theories, or explore new
+frontiers of knowledge or application areas.
+The HEI should have specific guidelines on Thesis and
+Capstone Projects. Attached as Annex A is a sample guideline.
+¢
+on Ney, :
+{4 5 1I5|Page
+AS)
+org
+
+
+===== PAGE 16 (cmo25-page-16.png) =====
+
+Section 9 Sample Curriculum
+9.1. Components
+General Education. Core Courses, Electives, etc.
+A. Bachelor of Science in Computer Science (BSCS)
+The following is a list of professional and elective courses in the
+sample curriculum for BSCS:
+Required Courses
+ce Introduction to Computing
+30
+cC103 Intermediate Programming | 3.0 |
+30 |
+v
+SDF 104 Object-oriented Programming
+AL Algorithms and Complexity | 3.0
+AL102 AL
+1.0
+Operaing Systems
+Programming Languages
+SP101 Social Issues and Professional Practice
+CS Thesis Writing 1
+POt01 | PD [PamalelandDistrbuted Computing | 30 |
+SF101
+of Mn, ~
+LAM,
+1) <>
+16a
+
+
+===== PAGE 17 (cmo25-page-17.png) =====
+
+Bachelor of Science in Information Systems (BSIS)
+The following is a list of professional and elective courses in the
+sample curriculum for BSIS:
+CcC104 PIF
+CC105 | DIM [information Management
+UE Application Development and Emerging Technologies
+Fis CN
+18106 | IPM _ | ISProjectManagementt | 8
+3
+3
+ROL PRE Pedometers EL
+Recommended Electives
+(ADVO3 | BD [ITAudtandContols | 03 |
+ADVOS | BD  |Businessinteligenee | 3 |
+(ADVI ~~ [BD  [EnterpriseResourcePlanning | 03
+‘ADVI | BD |SupplyChanManagement ~~ [ 3 |
+ADV12 | BOD [CustomerRelafionship Management | 3 |
+Bachelor of Science in Information Technology (BSIT)
+The following is a list of professional and elective courses in the
+sample curriculum for BSIT:
+Cio
+[CCI5 |W [nomaionManagemen | 3
+omy, 17) Pac.
+N Ne 4
+
+
+===== PAGE 18 (cmo25-page-18.png) =====
+
+HCI101 Introduction to Human Computer Interaction
+1AS101 Information Assurance and Security 1
+IAS102 Information Assurance and Security 2
+IM101 | M| Fundamentals of Database Systems
+IPT101 Integrative Programming and Technologies 1
+MS101 Discrete Mathematics
+| M5102 Quantitative Methods (incl. Modeling & Simulation)
+NET101 Networking 1
+NET102 NET Networking 2 3 |
+PRAGHD]
+SA101 Systems Administration and Maintenance 3
+SIA101 Systems Integration and Architecture 1 3
+SP101 Social and Professional Issues 3
+CAP101 { THS Capstone Project and Research 1
+CAP102 Capstone Project and Research 2
+Recommended Electives
+IPT102 IPT Integrative Programming Technologies 2
+PT101 Platform Technologies
+WS101 Web Systems and Technologies
+PF101 Object-Oriented Programming
+SIA102 SIA | Systems Integration and Architecture 2
+HC1102 Human Computer Interaction 2
+9.2. Sample Program of Study
+A. Bachelor of Science in Computer Science (BSCS)
+Tora.
+Ee TE Te ET er ET mr Reo
+om | ms ms! ws | ows| wo wel sof wel mel wes
+we | ww] w]e ew] ew] | oe] w[ ow
+common | so wel owe se se] LT [wo
+I E'S AY EN ANY NYY HS A BYE
+ee | ao] awl wl ow fw]
+wow Lael ele |__|
+CS Unis b 6 9 9 14 12 3 13 5 78
+Introduction
+to
+Computing
+AL 101° Automata
+Algorithms Theory and
+and | Fomnal
+AL Complexi Languages
+AR101
+ang
+AR Orgamzaton
+C5102
+[5] Discrete Structures 1 Structures 2
+HC1er* i
+Human i
+Compute
+1A8101"
+FE I I EE BR
+ATTN, 18|Pace
+SET, A
+HES
+
+
+===== PAGE 19 (cmo25-page-19.png) =====
+
+and Secu
+cC10s
+(M101)
+information \
+Management
+NC10
+ye
+Netwo
+rks
+i i and
+Comm
+unicat
+NC ans
+08101
+Operalin |
+9 |
+as Systems
+PLI0T™
+Programming
+FL Languages i
+SOF104* i |
+Cbject:
+| onented
++ Programmin
+SDF ce102 cc : :
+(SDF101)™ {SOF103)™ | !
+Fundament CC(103) SOF10Z™ Data !
+ais of Intermediate Programming structures
+programemin and
+q algorithms '
+SE102 1
+SE101™ I Software .
+Scttware Engineer h
+SE Engineenng 1 ng?
+SPiOTT |
+Social Issues i | i
+and H i
+| Professional
+. SP Practce 1 |
+THS1
+! LU THS101* | 02
+- cs :
+cs Thesis
+THS Thesis 1 2
+PRAC1GY |
+PRC | Praclcum
+Elecive Math Elective” CS Elect CS Eleg 2% Kh
+CC 106" !
+Application :
+Development
+and Emerging |
+ce Technologies | I
+* Pure Lecture
+ha 2 hours lecture, 3 hours lab per week
+ha Supervised independent Study
+B. Bachelor of Science in Information Systems (BSIS)
+- —— Sophomocs Yow
+Total
+som | tm | ome | ow | ow tw | ome | ow | ow
+ow | oms| ows] as] ams] om 2 21 I
+Ee I RE A AY TY TY AY EE RY
+I EE EE FE De
+we asus! 0s. |]
+IS Units | f 12 9 15 12 12 f TE
+ccioi™
+ITF introduction
+! to Compuiing
+i CC104™
+PIF Data 1
+Structures |
+-
+LETTE
+£3 19 | i ih
+©
+. H :
+EA ¥
+precy
+
+
+===== PAGE 20 (cmo25-page-20.png) =====
+
+Algorithms i :
+cc1os™
+Information
+Management
+N 15102
+15101 Professional
+Fundamentals sues In
+of Information | | ation
+Systems Systeme 1
+15303
+i IT
+Infrastructure
+and Network
+Technologies .
+15104" ]
+Syslems i
+SAD Analysis ang
+Design _—
+| S108"
+. Eh | Enterprise
+: Architecture
+i cei cco !
+Pr Computer Computer '
+Programming ; Programming i
+1 ! 2
+5106" !
+1S Project |
+IPM Management Hi
+1 i
+15107"
+1S Strategy
+1SMA Management |
+and Acquisibon eo
+cC106™
+Application
+UE Development
+and Emerging
+Technoleges i
+‘ DM101* !
+; DMG DM104* | |
+| DBC H Cranston p pu Business Evaluation of |
+| | | Management Management Process Business
+| | Concepts Management Performance
+! QUAMET* |
+MATH Quantitative | :
+Methods | i
+CAP101*™ CAP1GZ™
+CAP Capsione Capstone
+Project 1 Project 2
+PRACIOT™
+Prachcum for
+PRC Information |
+Systems
+- - Pure Lecture
+xx - 2 hours lecture, 3 hours lab per week
+hd - Supervised Independent Study
+A. Bachelor of Science in Information Technology (BSIT)
+ver | | rtmenter Year  SophomoreYew | phomore Year | ervew | Year Cl ever Year Total |
+sm [wT ope | aw | ore | ow | oa | sume ow | ow |
+er ET PY TR PT PE PE PY PU PR
+|
+IE I I TY EY AY I EE wn!
+IE DY TY RY I A EE AE
+IT Units [¥ Gg 4 ’ is : 5
+cclo™
+ITF Introduction
+to Computing
+HCI 101"
+Introducton
+i HCi 1 Human
+i Computer
+interaction
+ie Wow,
+-. r
+£3 20 Fu.
+a " ~
+BH) &
+N= 7
+
+
+===== PAGE 21 (cmo25-page-21.png) =====
+
+| i IAS 101" IAS 102+
+1A8 Information Infgrmatian |
+Assurance Assurance and H
+and Secunty 1 Security 2 i
+CCigs™
+M101
+Information: Advanced |
+Management 1 Database ,
+Systems .
+MS 301° M5102 :
+MS Discrete Quantitative !
+Mathematics Methods
+NET NET 101% NET102*
+Networking 1 Networking 2
+cco cots
+Computer
+Programming Structures \
+. and i
+PF Algorithms .
+[STi PF 101
+Computer Obect :
+i Programming Oriented [
+2 Programming 1
+| Sa 101% |
+Systems
+SA Adminisiration
+and ;
+Maintenance
+SIA 101
+Sysbems
+SIA Integration
+| and
+Architecture 1
+SP 101
+Social and
+SP Professional
+i] Issues !
+| CC106™
+\ Application
+WS Development
+and Emerging
+Technologies
+CAPR 101 CAP 102
+THS Capslane Capstone
+Project 1 Project 2
+PRAC i
+101m |
+Practicum
+FT 101% Sia 102"
+oy PT 101% Integratve PF 101" System
+(Elective) Platform Programming Event Driven bl " |
+Technologies and Programming Archicture
+Technologies 2 =
+* - Pure Lecture
+hs - 2 hours lecture, 3 hours jab per week
+rer - Supervised Independent Study
+Section 10 Sample Curriculum Map
+Curriculum Map for the Bachelor of Science in Computer Science
+Courss | (0 | re Pre- slzlglzlg iss sgl
+Code pi Requisite Sample Leaning Quicomes B18 88 8 818 8868
+Lot Explain fundamental principles, concepts and evolution
+of computing systems as they relate to diferent fields
+Introduction to Expound on the recent developments in the different :
+cee cc Computing None 3 Loz compuling knowledge areas t
+Loa Analy ze solutions employed by organizations to address
+different computing issues
+Many,
+EY
+3
+1 4
+“aa
+21 | Page
+
+
+===== PAGE 22 (cmo25-page-22.png) =====
+
+Design. impiement, les, and debug a program, based on
+a given specification, thal uses each of the folowing
+LO fundamental programming components: (1} primitive data
+types, (2) basic computation, {3} simple 10, (4)
+conditional and iteralive structures, (5) definition of
+functions and parameter passing, and(8) recursion
+Fundamentals
+Coin | SOF | of Nene 3
+| Frogramming »
+i Assess and recommend revisions to another
+| programmer's code (1) regarding documentation and
+program style standards that contribute to readablity and
+L02 | mantanability of software, (2) regarding appropriateness
+of chosen conditional and iterative constructs given a
+programming task, and {3jregarding thoroughness in
+applying procedural abstraction
+To
+Design. implement. test, and debug a program, based on | | : H
+a given specification, that uses (1) data structures | | ! i
+LO1 | amays, sinngs, structures. Inked list.and files, (2) : |
+conditional, iterative and recursive constructs. and (3) |
+standard libraries In the assigned programming language | | i | | |
+| | |
+SEEN
+CC103 SOF intermediate SOF10% 3 Assess and recommend revisions to another | ' 1] | ,
+Programming programmer's code {1) regarding appropriateness of i :
+LOZ chosen data structure, (2) regarding appropriateness of [ | |
+chosen conditional and iterative constructs given a Vo |
+programming task, and (3jregarding thoroughness in | |
+applying procedural abstraction | |
+! I
+|
+Los Argue the costs and benefits of dynamic and slate data | |
+© | structure implemeniations |
+| A T
+Design, implement, test. and debug a program, based on
+1 LOT | agen specficaton. that uses and mplements abstract
+I dala types (stacks queues, pronty queues. Sets. maps)
+Data i
+CC104 SOF Structures and S0F102 3 7 El E| E |
+Algonthms Argue strengths and weaknesses among multiple
+Loz mplementations for a problem {1e., on the aspects of
+I iterative vs. recursive solutions and on the aspects of
+I abstraction,encapsulation, and information hiding)
+{ i. .
+i Analyze an existing database system with respect to
+! ! LO1 | quality issues: Reliability, scalability, efficiency,
+: effectiveness and security
+A Information
+£C105 IM Management S5DF102 3 E|/E[E|E|E|E|E|E |
+Design a database based on user requirements using a
+LOZ | widely used modeling notation, and be able to use
+declarative query language to elicit information
+Develop specifications for a software development effort
+that precisely arliculates the functional requirements
+LO1 | expected execution palhs, and the explicit use of cutting
+edge or emerging technologies. which includes hardware
+devices and software library APIs
+;
+Applications Select and use a defined coding. documentation writing, |
+CC106 IM Development 1M101/ and licensing standards in a sufficiently complex software
+cc and Emerging CC105 3 LO? project where coding idioms and mechanisms for E E
+Technologies implernenting designs 10 achieve desired properties such
+as rehability, efficiency. and robustness are practiced with |
+respect 10 legal and ethical consideratons. i !
+. J
+| Undertake, as part of a team activity, an inspection of the i
+LO2 | source code and unit testing of the funcional units of a
+I sufficiently complex software project.
+Clul™
+7A,
+x [4 ¥
+3 H 22 Pape
+A EE
+“Sima”
+ey .
+
+
+===== PAGE 23 (cmo25-page-23.png) =====
+
+LOT Compare and contrast proceduraifunctional approach to
+object-oriented programming approach, | |
+SDF Object: f
+104 SDF oriented SDF102 3 El EVE E |
+Programming Design. implement, test and debug programs using DOP
+LOZ | concepts like abstraction, encapsulation, inheritance and
+polymorphism 1 ,
+Perform the operations associated with Sets, Functions
+LO | and Relations, and relate these operations to computer |
+programming | |
+[I
+| Drscrete Construct sound arguments in propositonal and
+DS10t [2 ALTRIG 3 LOZ | predicate logic by applying appropnate rules of inference Ll] 1
+Structures 1 a
+given sample intelligent software
+EE
+| Construct valld mathematical proofs using mathematical i
+LOS © induction, direct proof and proof by contradiction to
+| | simplify programs and prove program correctness d
+i |
+I
+Solve real-wond computing problems thal require :
+! LO1 | mapping to permutalions, combinatons of a sel, and
+\ modular arithmetic 1 |
+i i
+Discrete . ! i
+0s5102 os ose 3 ~ | Compute the event probabilities using counting and hl
+Structures 2 | LOZ :
+Bayes Theorem of a sample computing problem ! :
+| a.
+i |
+Los Solve equations mvolving recurrence ang relate them to i ’
+recursive algorithms |
+F .
+]
+Reason about memory leaks, dangling-pointer [
+Lo derefarences, and the benefits and limitations of garbage i
+collection through an undarstanding of programming h
+language implementation and how memory 1s organized. |
+PLOT PL Programming SDF103 3 Evaluate the appropriateness of the use of a E E E |
+Languages LOZ | programming language for implementing a particular
+| application based on language features
+Implement a simple interpreter or a portion of the
+LO3 | language translation process such as a lexical analyzer, | .
+| parser. code generator or ophmizer \
+LOT Use big O notaton formally 1a give asymptotic upper |
+bounds on time and space complexify of algorithms
+|
+. Choose and apply the most appropriate algonthm design |
+LOALIDY AL Somme anc Jad 3 LOZ | technique (divide and conguer, backtracking, greedy. E| E|E E
+| plexity dynarnic programming} for solving problems
+LC3 Describe the behavior and running time of various |
+i searching, sorting, and graph algorithms. |
+i |
+: : I Design finite-stale machines. regular expressions, |
+: | context-free grammar, push-down automata and turing
+LO1 | machines for modeling a given language; ard define the i :
+Automata classes P and NP and explan their significance to )
+AL10Z AL Theary and ALD? 3 computing applications clele|l | E ;
+| _anguages |
+: I
+Lo? Apply the concept of state machines in the design and
+imptermentabon of software
+ofl Mc, ’
+EAL
+p= F Pay
+EAS 23 [Pag
+oy
+SE
+
+
+===== PAGE 24 (cmo25-page-24.png) =====
+
+i H
+Implerment a simple client-server sockel-based | |
+LO1 | application thal meets the needs of an arganizalicn
+against secunty threats;
+Networks and Design and implement a simple reliable network protocol
+NC104 NC | Commungcatio SDF102 3 LO? | through the diagnosis and fixing of common network E|E|E|E|E E|E
+ns problems;
+| LO3 Compare and contrast the fixed and dynamic allocation
+fechriques
+LOY | Analyze the tradeoffs inherent in OOS design | i
+|
+| i .
+! | Compare and contrast the algonthms used for processor
+Operaling LOZ | scheduiing and the different ways of allocating memory ta _
+4
+0510 0s Systems SDF103 3 tasks E[E[E]E | | E E|E
+103 Design and creale concurrent programs considering | | L
+| | “| synchronization issues
+i |
+Design the basic building biocks of a computer ]
+LO" arithmetic-logic unit (gate-level). registers {gate-level).
+Architecture 05101 central processing unit (register ransferevel). memory |
+ARIO1 AR and SOF103 3 (register ranster-devel) Tel El E
+{ Organization
+Write simple programs in assembly language. |
+| {
+! | Argue the pros and cons of the design and implementon | i
+I . * I ion. i
+Social issues LO | of computing solutions in education. industry and
+| and | government. 1 name a few
+5101 5p Frafessonat SE102 3 E|E| E|E
+tice 1 I
+Practice LOZ Evaluate professional. ethical and social issues of i ) '
+computing decisions I
+Discus s the difference between the waterfall-based
+LOY | models and agile-based models, and identify the
+strengths and weaknesses of these modeis
+|
+| Discuss the difference between the waterfall-based
+. LO1 | models and agile-based models and identify the
+: strengths and weaknesses of these models
+p Software M101
+SE10° SE Engineanng 1 SDF1D4 3 E|E|E|E|E]E EIE|E|E
+| Exiract user requirements translate these to formal i
+l LOZ | models. and present these using UML -based |
+| ' | visualizalons
+i | Lo3 Design an over-all architecture of the system, and justity
+' I its appropriateness
+| LO4 Translate program designs and specifications info actual
+program codes
+LOT Improve an existing software by adopting an appropriate
+design patiern
+Lo? Translate program designs and specifications into actual !
+programm codes
+E102 SE Software 2 SE101 3 Design test case documents applying good testing D DlplolD
+ngineenng LO3 | practices. run the existing program against these test
+cases, and reporf program defects properly !
+!
+f | LO Update asoftware that requires defect foung or has
+| undergone some changes in specifications
+om MCh, ..
++ , ip) 4 §
+4, 0 Ze | ; id IX -
+£75
+
+
+===== PAGE 25 (cmo25-page-25.png) =====
+
+I Describe the sat of controls and processes both technical
+and policy intended to protect and defend information and
+LOY | information systems by ensuring ther availability,
+integrity, authentication. and confidentiality and
+Information providing for non-repudiation.
+1481014 1AS Assurance and 2 E E E| ELE
+Security
+Articulate the strengths and weaknesses associated with
+LG2 | differenl approaches to security 1o the validity of cument
+i and past processes and data
+Lot Develop appropnate user interfaces for domain specific
+! applications !
+! Human
+HCI101 HCI Computer SDF 102 E E[EYE|E|E]E
+Interaction LG Evaluate the effectiveness of a design of an application
+or product in solving domain-specific problems | :
+' |
+| Lot Formulate the research objectves, scope and limitations, |
+| and evaluation metric for a chosen topic
+|
+| |
+LO2 | Collect and compare related inerature related to the topic
+" :
+THS101 | THS | C8 Theus1 qorear 3 pj of D p|o|cC
+9 Propose an ethical and feasible software solution 1o the
+identehied research problem that employs new designs,
+loots, and methodologies, as well as unique and useful
+LG3 | enhancements, with creating a prototype software system | A
+in mind or with demenstrating thal a cerlan theory /
+aigonithm / design might work through exploratory and
+experimental research
+LO" Collect pertinent data to support research objectives of
+the thesis
+I !
+I
+LOZ Design the architecture and components of the proposed !
+THS102 THS C3 Thesis 2 TH5101 3 sofware solution D Dib LC
+| LO3 Justify the proposed solution's feasibility and |
+: ghtectiveness to solve the computing problem |
+Analyze, design, implement, test, maintain, and/or
+PRCID 2 document a software system as applied io a real-world
+PRC Practicum 3 LO1 | problem, as part of a team in an actual company Ci
+1 Standing f
+environment. thereby also developing persona; and
+I interpersonal warking sXils in the process
+Curriculum Map for the Bachelor of Science in Information
+Systems
+Course | course Title Roaut 5 2.82
+Code ame Sample Leaning Outcomes EC I J
+|
+Explan fungamental principles, concepts and :
+evolution of computing syslems as they relate 10 |
+different fields |
+CU Fi i EX
+puting LO? Expound on the recent developments in the ! !
+different computing knowledge: areas |
+Los Analyze solutions employed by organizations to |
+address different computing issues ;
+ot Rng,
+: 24%
+; SH
+BEERS 5 ae
+
+
+===== PAGE 26 (cmo25-page-26.png) =====
+
+Design, implement, test, and debug a program, |
+based on a given specification, that uses each of
+the following fundamantal programming
+LC1 | components: (1) primitive data types, {2) basic
+Computer computation, (3) simple 1/0, [4] conditional and
+CC102 | Programming 1 None iterative structures, (5) definition of functions and
+parameter passing, and{6) recursion
+4
+-
+Analyze and simulate results of algorithms that
+LO2 | may be implemented as a solution lo a given
+problem
+Design, implement. test, and debug a program,
+based on a given specification, that uses - (1)
+Computer dala structures amays. stacks. queues, trees,
+CC103 | Programming 2 CC102 LO1 | strings, structures, inked bs! and files, (2) | '
+conditonal, iterative, ang recursive constructs, |
+and (3) standard libraries in the assighed |
+programming language |
+Design, impsement, test and debug a program |
+Lod based on a given specifications thal uses and E E E | i
+implement abstract dala types (stacks, queues, ;
+priority queues, sets, maps) | !
+Data Structures 3 i |
+CC104 | and Algorithms CC103
+Analysis Argue strengths and weaknesses among mullipie i } ! | i |
+implementations for a problem (e g. on the i ! A.
+LOZ | aspects of iterative or recursive solutions and on E E E |
+: the aspects of abstrachon, encapsulation and | bo
+information hiding) i
+—
+| information 3 integrate business intelligence functions in the i |
+5 |
+cetes i Management i CCio4 tot development of database systems in enterpnses E E E [ !
+X Develop specifications for a software
+| development effort thal precisely articulates the
+Lot | furctonat requirements. expected execution
+paths, and the explicit use of cutting edge or
+3 emerging technologies, which includes hamware
+| devices and software fibrary APs. |
+! ! 1
+! _—
+Application Select and use a defined coding, documentation Co
+Development 4M ear writing, and licensing standards in a sufficiently ! Lod
+cece and Emerging Standing complex software project where coding idioms E E :
+Technologies LOZ | and mechanisms for implementing designs to !
+achieve desired properlies such as reliability, ] !
+efficiency, and robustness are practiced with i
+respect lo legal and ethical considerations !
+Loo
+Undertake, as pari of a team actmity an i
+Loa | 'spection of the source code and unit testing of i | !
+tre functional units of a sufficiently complex ;
+software project |
+Fundamentats of 3 Compare and identify the major technologies and
+15101 IS GC LO1 | applications of information systems in driving |
+development and changes wn enterprises
+Examine professional, ethical and moral
+LO1 challenges in computing and use of information |
+Professional systems and recommend courses of acfion. |
+5102 Issues in 15 cet 3 gE. 0 '
+Applyfexhibit ethical thinking skills in analyzing . |
+LO2 and finding resolutions to computing issues i |
+| !
+i Po
+IT Infrastructure Evaluate how {T infrastructure components are i !
+1103 and Network cco LOT | organized into infrastructure solutons in difierent E| EE |E i
+Technologies organizalional environments : | |
+! |
+3 |
+ic,
+ST
+A 26 | Pave
+v &
+Rey
+
+
+===== PAGE 27 (cmo25-page-27.png) =====
+
+|
+LOZ Examine, test and evaluation wab solutions as
+appiied to business enterprise
+Use systems thinking to analyze business
+Lot processes and identify problems and opporiunites
+that can be solved and supported by technology D D E
+solutions |
+|
+i
+} Systems 3
+3 2 Year Apply appropriate 100s. methods, E E E D £
+15104 pays and Standing LOZ | modelstechmigues in systems analysis and E 0
+sign design
+—]
+Loa Develop and defend a project design proposal to D £ o | | :
+different audiences. ] B
+, |
+3
+Enferonse Examine and evaluate core concepts of |
+15105 Archers 15103 LO1 datainformation architecture used in existing E D ;
+I datafinformation architecture designs
+Lot | Examine the use of project management best i i :
+| praclices in real-life projects
+|
+15106 1S Proeet S104 | Elele|e ele] E
+. Management 1 | I. i
+! : i | Loz | Aoely project management concepts. principles J
+; i and tools In performing an actual |S project. i
+| B 1
+! | Examine existing and emerging information i | .
+i LO1 | technologies, the functions of IS and how it i bo
+impacts organizational operations ’
+IS Strategy 3 0 0 a!
+4™ Year |
+15107 Management ; ' ! i i
+and Acquisition Standing Analyze how siralegic decisions are made ! !
+i ple ’E
+Lop | conceming acquiring 1S resources and D | i !
+capabilities including the ability to evaluate the : : ; ! .
+different sourcing options i
+Examine ang Evauate orgamizalioral structure
+i Ln policies and procedures and the information o
+Organization | a systems that support them | E E i E E
+and Loo
+Omir Management cen | :
+, Concepts Log Examine and Evaluate management lifecycle and | E E E E | D
+| the information systems that support them |
+{ Financal i Examine and Evaluate financial processes and
+DMt02 | DMmiot 3 L001 | reports and the information systems that support E E E £ £ E :
+| Management them | | | .
+! ! | I
+Use systems thinking in modeling and analyzing | bo
+business processes '
+Business 3 EE] DDE | i
+DM103 | Process DM102 : oo
+Management Log | Remink processes to smpify business operations | £ El pt 0 E ;
+ERE
+4 : |
+Evatuate business perlormance applying the | |
+LOY | different evaluation tools consistent with quailty i
+management and conlinuous improvement | D D
+| Evaluation of 3 | |
+DM104 | Business CM103 Lop | Develop quality metrics for assessment of |
+Performance customer satisfaction in all phases of Ife cycle. D | D |
+| |
+Design a business performance management |
+LOG program for SMEs E ELE |
+. |
+QUAM Cuantitative 3rd Year LOT Use appropriate mathematical tools for decision 0 0 | i
+ET Methods Standing 3 making. :
+Implement mathematical methods in IT solutions | | ! i
+h 3
+ce
+{i % 27 Pay
+Y 3
+pr y—y
+
+
+===== PAGE 28 (cmo25-page-28.png) =====
+
+1 Project 1 Standing |
+CAP10 | Capstane d™ year 3 0 0
+2 Project 2 Standing
+— —
+Analyze, design, implement, test, maintain,
+3 and/or document a software system as applied to ! |
+PRACD 4th Year a real-world problem, as pari of a leam in an |
+1 Practicum Standing Lot actual company environment. thereby also u D b ' 0 0 C b 0
+developing personal and interpersonal working i
+i i skills In the process ;
+Curriculum Map for the Bachelor of Science in Information Technology
+Course | Knowledg . Pre- . e | ~n| ea |= |» [oR J I" "= BE I VRRPSN
+Code e Area Course Title re Sample Leaming Outcomes EEE | EE EE |E | ECE E :
+| Explain fundamental 1 i
+i principles, concepts and |
+LOY | evolution of computing !
+systems as they relate to Poo
+difierent fields Lo]
+} Expound on the recent : 1 |
+coro | ITF kod © | None 3 | Lop | developments me i Lo lr]
+4 different computing
+| knowledge areas
+Analyze solutions |
+Loa employed by organizations i .
+to address different ! ! i { : vo
+| compuiing Issues ! ! ! |
+i , Design, implement, test. 1
+and debug a program, |
+based on a given A |
+| specification, that uses | Cod
+. gach of the following | | |
+fundamental programming |
+LO components: {1} pnmitive
+Computer data oes. fe |
+. computation, {3) simple
+CC12 | PF Frogramiming Mane 3 1/0. (4) conditional and |
+iterative structures, (5) i
+definition of functiens and :
+parameter passing. and(5} i
+TecLrsion
+Analyze and simulate
+| Log | results of algorithms that |
+may be impiemented as a |
+solution to a given problem { 1
+Design, implement. test
+. | and depug a program, (
+based on a given
+specification, that uses (1)
+data structures arrays, |
+| Lot | Stings. structures, linked i J {
+| | Ist.ang files, {2) i
+i condmonal. nerative, and
+recursive constructs, and
+(3) standard libraries in the
+assigned programming |
+Computer language
+CC103 PF " Assess and recommend E 1 1 E E
+Programming? revisions to another | !
+programmers code (1)
+regarding appropriateness !
+of chosen data structure. :
+(2) regarding
+appropnateness of chosen
+| conditonal and Herative
+{ constructs given a i
+i programming task, and !
+{3)regarding thoroughness :
+in applying procedural i i
+abstraction i
+of ica,
+Fy 4 28a
+2 . r
+1 4
+Err
+
+
+===== PAGE 29 (cmo25-page-29.png) =====
+
+Argue the costs and Tl
+L03 benefits of dynamic and
+slatic data struclure
+1 implementations
+Design, implement, test, i
+and debug a program.
+! Dased on a given
+specification. that uses and i
+implements abstract data
+types (stacks, queues, |
+priority Gueues. sets. |
+Data maps | |
+cCto4 PF Structures and Argue strengths and [ | t | |
+Algorithms weaknesses among i
+multiple implementations i '
+for a problem (1.e.. on the
+LOZ | aspecis of erative vs
+recurswe solutions and on '
+the aspects of abstraction
+encapsulation, and J i i
+information hiding} | ,
+i
+Analyze an existing
+| database system with :
+Lot respect to qualty issues |
+Rehability, scalability, |
+efficiency, effectiveness |
+i and security | | |
+CC105 IM Moers cele 3 E E E E E E E | E | |
+| | Design a database based | |
+’ , 1 On user requirements using
+: | awdely used modeling
+102 | notation, and be able to |
+B i use daclarative query | |
+| | language to elicit | '
+: formation
+Develop specifications for :
+| a software development Co
+| eflont that precisely :
+/ : articulates the functional
+requirements, expected
+LOT | execulion paths, and the
+explicit use of cutting edge
+or emerging technologies,
+which includes hamware i
+| | devices and software
+iibrary APs. i
+Select and use a defined |
+3 coding. documentalion
+) writing, and licensing
+standards in a sufficiently
+Application complex soars project bo
+vel where coding idioms and (
+cee ws De Eom: M101 Lop | mechamsms fo Ele |E
+Technologies implementing designs to
+achipve desired properties !
+| such as refiabiity, ,
+! efficiency. anc robusiness |
+are practiced with respect fi
+i to legal and ethical !
+| considerations i
+]
+Underlake, as par of a
+, team activity, an inspection |
+| LO3 of the source code and unit i
+| testing of the lunctional i
+’ units of a sufficiently
+, complex Software project.
+1
+|
+| Guantitative hod Use appropriate
+MS102 MS Melo ds Statist 3 LO1 | mathematical tools for D
+decision making |
+Ics
+o Tne, 29 | b FL RA
+F/ 5 i
+es
+=’
+
+
+===== PAGE 30 (cmo25-page-30.png) =====
+
+1]
+|mpiement mathematical !
+102 | methods in IT solutions to |
+problems ’ ;
+|
+Compare and contrast -
+Lot proceguralifunctional
+approach to obiecl-onented
+; programming approach. |
+Object oc |
+PF 101 PE onented 103 3 Design, implement, test E|E El 1 |E E | E
+Programming and debug programs using | i :
+| Lop | OOP concep fike | |
+: ! { abstraction. encapsulation
+inhentance and | |
+! polymorphism d
+i Design. code. test and | | | |
+| i ; Evenl-Dnven CcC10 debug simple event-driven ’
+| PFI0Z i PE | Programming 4 3 | LOT programs thal respond to £ E E E ELE |
+L user avents | i
+Hl
+Analyze different user
+populatic ns with regard to |
+| Lop | ther abilities and | i
+introdustion to characterishes for using i :
+Human cec10 both software and i
+Hat | HCl Computer 7 3 | haroware products. E | E E E |
+; Interaction |
+Evaluate the design of
+Lo existing user interfaces ; i
+| | | | based on the cognitive ] i [
+models of target user
+Develop prototypes ' ]
+LO1 | interfaces for users with
+specific accessibility 1ssues |
+! Perform usability
+| evaluation of an existing |
+| software based on general
+Human and principles used in the |
+HCN0Z | HC! Computer 3 heunstic evaluaton, EE |E E EE !
+interaction 2 usability performance and i
+Lo? |
+! i preference metnes
+) {leaming, task ime, task !
+completion, and user \
+satisfaction}. and common | H |
+| usability guidehnes and
+standards.
+Examine the different
+techniques of warehousing
+LO1 | and miming data that will
+! support organizations i
+ADVANCED con decisions |
+M101 Database 5 3 E E E E
+Systems Propose possibilities on
+how to improve 2 specific |
+LOZ  algonthm as may be {
+applied 10 data
+. warehousing and mining. |
+Recommend an
+ot appropriate operating
+| system based on given
+| system requirements
+. Platform 2C10 I" Pian and write a simple
+PT PT Technologies 3 : LOZ? assembly-tanguage : EEE E
+program.
+Ferform a cost-benefit
+© LO3 | analysis for a proposed
+i | server solution
+“
+(7% 30 |i ape
+SE)
+e
+Rizr id
+
+
+===== PAGE 31 (cmo25-page-31.png) =====
+
+Describe data i
+i communications and
+| LOA network models,
+topologies, protocols, |
+standards and
+architectures |
+Describe necessary
+hardware and components
+used fo establish
+ET o communication between i
+N 1 0 MET Networking 1 ! Te k! LC2 | multiple networks and £ E E E 1 i
+, analyze the effect of i i
+vanous topologies,
+applications and devices |
+4 on ngiwork performance
+H 1
+J | i
+| | I | |
+: | Analyze routing algorithms
+| , | protocols, process routing
+| LO3 tables and configure
+routers for proper | I
+| onentation of an efficient ' / i ! A
+© nefwork |
+| Design, configure and
+(01 | deploy switches utilizing ! |
+VLANs, trunking and port ! ! | ! | i
+aggregation. i ! | : J
+d )
+| Implement multiple | | | |
+NET10 NET? networks and connect | | \
+2 NET | Networking 2 a 3 Loy | them together, selecting EE |€E EE | | =
+i vo routing and switching : J i l
+| eglpment for a given i
+i ! i | network application. |
+103 implement load balancing H ! ' i
+In routers and switches i | |
+E)
+| Design, develop and test a
+; program that uses a | )
+Lot | Messaging sevice that f | Po |
+| sands asynchronous | |
+: messages across the |
+: network |
+| rooming PF10 Design. develop and test a |
+ram that uses SAX or d !
+P1101 | PT and ch 3 bow fo parse an XML EE EJE|E]E |
+| Technalogies 1 | Loe document, X5L and XSLT
+! to transform a data stream
+from one format to another | |
+| Write, debug and test a ;
+[ ; script using an operaling i
+' LO3 | scripting language to
+g
+facilitate the management HE
+of an operaling system | !
+Compare and contrast the
+Lat different encrypting and |
+' i decrypting lechnigues that |
+leg: alive. ensures Security of data | |
+rogramming p |
+(FT102 | IPT and To 3 Recommend where an £ E E E | |
+pevtindogees apohcano n language anc a : : [ i | :
+L0z scripting |anguage would
+be more appropriate and
+give a valid reason to
+support the selection
+ofl Racy, »
+Ee %
+ER" N Y: ..
+wr ¥ 3 1 | PT! v 20
+
+
+===== PAGE 32 (cmo25-page-32.png) =====
+
+Analyze the |
+appropriateness of a
+LO1 | decision to in-Source of i
+outsource IT services in a
+given situation
+Systems IPT10 Create a tesling |
+Sla101 | SIA Integration and ] 3 envionment and design a E E E E E = E E E | E
+Architecture 1 LOZ stress test using
+approprigle tools and
+techniques that impact !
+systein performance | | |
+1 |
+| : implement an enterprise | |
+LO3 | integration middleware
+platform. | Co
+|
+i Summarize and analyze | bo
+| Lot | 'hedaia from a usabiity | | |
+i test and recommend
+| appropriate actions. | | | |
+1
+Construct an architectural
+Systems
+SIA10 model of a complex system = | zo
+SIAN0Z | SIA ngraton ang | 3 YO2 | ging an architectural | E|E]E E Elec |E | PEE |
+. framework \
+I
+| H
+Develop a component and | | | | |
+i LO3 i demonstrate its integration | {
+into an existing | b
+environment 1
+| | Al Argue the pros and cons of | |
+Social and least the design and
+SP LSP Professional Junior 3 LCT | implemention of computing E E E | E E | E
+Issues Stand solutions in various )
+ing organizations
+| Analyze ethical and legal
+Socal and sues that arise n
+i osp102 | op Professional sro 3 | Loy | Information techaology fieki E elelelelele
+Issues 7 to determine haw to )
+address them technically
+! and ethically |
+Examine the relalionship i
+between threats, |
+vulnerabilities. | !
+LOT | countermeasures.
+
+i atlackes, compromises and | |
+remediation throughout the |
+entre system life cycle i i |
+
+information SAID Explain the key factors | | |
+IAS101 | IAS Assurance and p 3 involved in authenticator E | E | E E | E
+Security 1 LOZ | and how they are used to | |
+venfy identity and grant }
+access 10 the system i .
+Describe the legal and 1 | |
+ethical co nsideralions |
+LO3 | related to the handling and
+management of enterprise
+information assets |
+a % v
+AM IT
+i |
+NY
+Ered
+
+
+===== PAGE 33 (cmo25-page-33.png) =====
+
+i
+1
+| i
+| Discuss policies and j :
+: ! practices to systems
+Lo1 integration and architecture
+! 4 to ensure secure System
+: operation and information |
+assurance. |
+[ ! i
+!
+| | .
+| Information 1AS10 © Perform a vulnerability | ,
+| 1A8102 [| 1A8 Assurance and 1 3 anaiysis of a system ang E E IE E E E | |
+Secunty 2 explain how design, | J i
+i LO? implementation, ang ) !
+; instaliation of hardware
+: ' and software conlribute to :
+. : vulnerabilities of the
+) | organization. |
+i L03 | Propose strategies on how | i | ; ) \
+| "10 counter attack threats | |
+|
+| | Develop Web applications i | 1 |
+| : i using HTML, XHTML ;
+. | | XML. client-side | |
+| programming and other
+| | Web GUI technologies to | '
+, | \ LO1 | create and validate !
+documents, generate |
+! contents via programming
+eb Systems and nlegrate digital ! |
+ws101 | WS an 3 libranes with other media Eile jE |EI|E E : £
+| Teshnologees contents | i | :
+‘ : i
+| ! I
+: Set up a web server to | : | :
+! t | support Server-side | [
+‘ t |" processing in a secure ! | i
+i | 102 | faston and identity
+[ common server-side i
+: | configuration 15sues that
+i } aflect securing. |
+I _—
+| \ :
+| | Deploy and serve media ! :
+LO1 | contents within web |
+| applications
+|
+i | H
+’ i i : implement a website ang {
+: ed Systems | ws10 | LOZ | integrate it with other IT
+, i
+w3102 | WS Technologies y 3 Applications E 3 E E E E E E
+' 2 Propose possible
+improvements in the
+. L03 implemented web ! |
+: applcaton to enhance ;
+| secunty / avoid |
+i | vulnerabilities | |
+' |
+i Formulate the project
+i Lot objectives. scope and
+i 1 . limitations, and evaluation
+metre
+14310
+| CAP10 Capstone 1 Collect and compare
+y Project and CCc1o 3 LOZ | literature related to the a] [8] 0 iD] 2
+Research 1 § project !
+| Propose an ethical and
+Los feasible IT solution to the
+denfified problems in the
+project
+| 107 | Implement the proposed IT
+Solution
+Capslong
+CAP10 Project an CAP1 3 Evaluate and interpret the olo
+2 Research 2 01 performance resuits of the
+LOZ | IT solution based on
+identified evaluation
+| metrics B
++20 =e,
+{£75 330 iae
+5 NYS so
+ae?
+
+
+===== PAGE 34 (cmo25-page-34.png) =====
+
+| Recommend possible
+LOE | improvements in the IT
+i Solution due to I
+: implementation issues Co
+Justify now resources will
+i LO1 be allocated for the vanous
+i administrative domains
+| Formulate poiicies Co
+Lop governing the use of IT Co
+Systems Systems within the I
+SATOH 5A Adminstration A310 | 3 : organization D b 0
+Maintenance i R Recommend measures an
+Los | how to administer and
+maintain systems i
+effectively ' H
+Modify configuration of an | |
+I LO4 | operating system to
+i implement policy
+Analyze, design, !
+impiement, test, maintain, ‘
+andfor document a | |
+148 software system as applied | ; ;
+PRACT 101 to a real-workd problem as |
+01 Practicum 3 LOY part of a team In an actual [ol D D 0 D D D ol DID
+i cc company environment
+| 106 thereby also developing
+personal and interperscnal :
+working skills in the bo
+process i :
+! ) |
+Section 11 Sample Means of Curriculum Delivery
+The graduate outcomes of the BSCS, BSIS and BSIT curricula are achieved through,
+but not limited to the following activities:
+1. Lecture and Classroom Discussions
+2. Programming Demonstrations
+3. Guided Hands-on Programming Sessions
+4. Guided Design and Development of Project Specifications
+5. Independent Programming Assignments such as Machine Problems
+6. Case Analysis and Case Studies
+7. Capstone Projects for BSIS and BSIT, which involves Requirements
+Gathering, Design, and Impiementation
+8. Thesis for BSCS
+9. Mentorship and Monitored Internships
+Section 12 Sample Syllabi for Selected Core Courses
+INTRODUCTION TO COMPUTING
+Prerequisite None
+Type of Course ; Lecture
+Units : 3
+PLL
+SM:
+AH
+==
+41a
+
+
+===== PAGE 35 (cmo25-page-35.png) =====
+
+Course Description:
+This course provides an overview of the Computing Industry and Computing
+profession, including Research and Applications in different fields; an Appreciation of
+Computing in different fields such as Biology, Sociology, Environment and Gaming;
+an Understanding of ACM Requirements; an Appreciation of the history of computing;
+and Knowledge of the Key Components of Computer Systems (Organization and
+Architecture), Malware, Computer Security, internet and Internet protocols, HTML4/5
+and CSS.
+Learning Outcomes:
+By the end of the course, students should be able to:
+LO1. Explain fundamental principles. concepts and evolution of computing systems
+as they relate to different fields
+LO2. Expound on the recent developments in the different computing knowledge
+areas
+LO3. Analyze solutions empioyed by organizations to address different computing
+issues
+Each of these LOs addresses the Degree Graduate Outcomes as
+follows:
++ articulate and discuss the latest developments in the specific field of practice.
+(Philippine Qualifications Framework (PQF) level 6 descriptor) (Graduate
+Outcomes: CS10,1S10,1T13)
+» effectively communicate orally and in writing using both English and Filipino
+{Graduate Qutcomes: CS08, 1508, iT10)
+s act in recognition of professional, social, and ethical responsibility (Graduate
+Outcomes: CS09, I1S09, IT12)
+» apply computing and other knowledge domains to address real-world
+problems {Graduate Outcomes: CS01, 1S01, ITO1)
+» utilize modern computing tools {Graduate Outcomes: CS06, I1S08, ITO7)
+Major Course Outputs:
+As evidence of attaining the above learning outcomes, students are required to do
+and submit the following during the indicated dates of the term. The rubrics for these
+outputs are provided.
+| Outcome Required Output B
+| LO1/ MCO1: A case report on Information Technology best practices |
+| LO2 in various applications in IT industry.
+LO3 MCQO2: Evaluation report on IT solutions employed by an
+a organization covering various IT issues. Co |
+LLL
+Sa
+AY 510
+
+
+===== PAGE 36 (cmo25-page-36.png) =====
+
+Other Requirements and Assessments:
+Aside from the major course outputs above, this course has one other summative
+assessment: a cumulative final exam. In addition, there are formative assessments of
+two types: departmental exams and graded class activities. Graded class activities
+inciude (but not limited to) recitation, seatwork, assignments and reports.
+Grading System:
+To pass this course, one must accumulate at least 60 points through the course
+requirements discussed above. The maximum points that a student can obtain
+through each requirement are shown below.
+Reguirement/Assessment Task
+2 Major Exams
+Final Exam Yd 15
+Case Studies and Reports
+Class participation, Seatwork 15
+TOTAL
+Learning Plan:
+(LO | ~~ Topics | Classschedule | Learning Activities |
+| | andReadings | eeks] | 0]
+B Industry in the Profession | Weeks 1-3 | Discussion should include
+Appreciation of Computing in | (but not limited to) the
+| Different Fields | following:
+o professions and careers in
+| the Computing field
+| LO | | © Computing domains
+-— o Computing disciplines
+Different Specializations | | o Computing Knowledge i
+| | Areas |
+| « Case Studies
+| | » Reading Assignments
+| Evolution of Computing | Week 4
+| | Key Components of a Computer | Week 5-6 | |
+| System, Operating Systems |
+| le Exam
+| | Information Technology concepts covering IT
+| Professions and Careers, IT Domains and IT Case Studies
+| Lo2 | Disciplines, History of Computing, Computer System | pemonstration
+| and Operating Systems | Reading Assignments
+Malware [| Week7 |
+| | Computer Securit | Weeks |
+| i Networks, Internet and Internet | Weeks 9-10 |
+| Protocols |
+| « Exam?2 |
+| Information Technology concepts covering Malware, |
+Computer Security, Networks, Internet and Internet
+| Protocols
+£% 3671.
+i :
+i= ¢
+
+
+===== PAGE 37 (cmo25-page-37.png) =====
+
+io | Topics ~~ TClassschedule | Learning Activities |
+| HTML and CSS | Weeks 11-12 |
+Computer Systems (Organization and | Weeks 13-14 |
+Architecture | |
+
+| Final Exam
+Text / Materials :
+References :
+Cashman, S. & Vermaat, M.E. (2014). Discovering Computers. Cengage Learning
+Note: Include books published in the last 3 years.
+
+APPLICATIONS DEVELOPMENT AND EMERGING TECHNOLOGIES
+
+Course Name : [CC106] Applications Development and Emerging
+
+Technologies
+
+Course Credits © 3 units (2 units lecture, 1 unit laboratory)
+
+Contact Hours : 5 hours / week (2 hours lecture, 3 hours laboratory)
+
+Pre-Requisite : Computer Programming 2
+
+Description : Development of applications using web, mobile, and emerging
+
+technologies with emphasis on requirements management, interface
+design, usability, testing, deployment, including ethical and legal
+considerations.
+
+Learning Outcomes:
+
+By the end of the course, students should be able to:
+
+LO1. Develop specifications for a software development effort that precisely articulates the
+functional requirements, expected execution paths, and the explicit use of cutting
+edge or emerging technologies, which includes hardware devices and software library
+APis.
+
+LO2. Select and use a defined coding, documentation writing, and licensing standards in a
+sufficiently complex software project where coding idioms and mechanisms for
+implementing designs to achieve desired properties such as reliability, efficiency, and
+robustness are practiced with respect to legal and ethical considerations.
+
+LO3. Undertake, as part of a team activity, an inspection of the source code and unit testing
+of the functional units of a sufficiently complex software project.
+
+Course Outline:
+
+1. Overview of software and hardware technologies
+
+2. Reguirements Analysis and Modeling
+
+3. Design Principles and Patterns
+
+4. Prototyping and Quality Assurance :
+
+5. Software Testing and Deployment
+
+6. Ethical and Legal Considerations onic,
+
+#% Lx
+
+toy!
+
+Rar d
+3700
+
+
+===== PAGE 38 (cmo25-page-38.png) =====
+
+Major Course Outputs:
+As evidence of attaining the above learning outcomes, students are required to do and
+submit the following during the indicated dates of the term. The rubrics for these outputs are
+provided.
+Learning 1 Co mn IR y Cl
+| LO1 | MCO1: A detailed specifications of a sufficiently | i
+1 complex software system that explicitly use cutting |
+| edge or emerging technologies. |
+MCO2: A rigorous set of test data and sequence of | |
+input operations, expected results or program |
+| behavior, and the actual results or program behavior |
+designed to comprehensively test the functional and
+| operational aspects of the softwareproject. | |
+LO2 | MCO3: A documented evaluation and feedback on i
+_ —_— | the software sourcecode. = | _— _
+LO3 ! MCO4: A documented evaluation of the software |
+| project with respect to software documentation,
+_______|regression tests, and actual user feedback. |
+Other Requirements and Assessments:
+Presentations of the outputs are also required.
+Grading System:
+To pass this course, one must accumulate at least ___ points through the course
+requirements discussed above. The maximum points that a student can obtain through each
+requirement are shown below.
+Requirement/Assessment Task Maximum
+Points
+Software Requirements, Design, and
+Execution Plan )
+Software Implementation, Test, and
+| Soft Deployment
+Class Presentations
+TOTAL 100 i
+Learning Plan:
+Note: The HEI may choose the cutting edge or emerging technology to use.
+om mc,
+RS ‘
+38)
+
+
+===== PAGE 39 (cmo25-page-39.png) =====
+
+!
+| Rubrics:
+|
+| |
+| Criteria Exemplary * Acceptabie Developing Beginning No Qutput
+Program i The application | The code The code The code Program that
+Correctness | meets all the works sometimes fails | often fails, does not run
+requirements | for typical ar typical input. | even for and /or
+specified inthe | input, but Many parts of typical input. | implemented
+project | fails for the program Most incorrectly
+specification. minor implementation | indicated (based on
+| The code is special violate indicated | restrictions specifications
+syntactically and cases; i restrictions and | were and
+: | logically correct the major | some parts of violated. restrictions)
+. for all cases. requirements ; the automatically
+i implementation of are met, solution are not gets 0 for this
+| the program _ though implemented course output.
+follows the . some minor | using
+indicated ones are not. | appropriate
+guidelines and Some programming |
+does not violate Implementati | constructs. | i
+indicated an of the | |
+| restrictions. The program
+| | implementation violates
+| also exhibits indicated
+appropriate use restrictions.
+of programming
+yo | constructs.
+| Effective Answers to Answers to Answers to Correct Failure to
+Communication | questions are . Questions questions are | understandin | explain and
+/ Concept correct, are correct, but g justify
+Understanding | reasonable, and correct, but cannot justify of the workings of
+reflective of the some solution (e.q., problem, the code
+code. The justifications | solution via trial | but was submitted will
+justifications , provided are | and error, unable automatically
+provided are weak. rather to explain merit O for
+sound. than proper workings of | this course
+| understanding | code output.
+and application | provided.
+of
+concepts). oo
+Readability The program Minor code Not all functions | Minimal No internal
+conforms to a formatting / program internal documentation
+: coding standard does features have documentati | and code
+| that promotes : not exhibit proper internal | on is not
+| code readability. consistency | documentation | and code readable.
+| Internal in coding readability.
+documentation is | standard.
+: comprehensive,
+“
+Ll
+£3
+3 390
+==
+
+
+===== PAGE 40 (cmo25-page-40.png) =====
+
+References :
+1. Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, Design Patterns:
+Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994.
+2. Stephen G. Kochan, Programming in Objective-C 2.0, Addison-Wesley, 2009
+3. George Reese, Cloud Application Architectures: Building Applications and Infrastructure in
+the Cloud, O'Reilly Media, 2009.
+4. Wei-Meng Lee, Beginning Android Tablet Application Development, Wrox, 2011.
+5. Stephen Fishman JD, Legal Guide to Web and Software Development, Nolo,
+2007.
+Note: Include books published in the last 3 years.
+Section 12 Sample Performance indicators (rubrics-1 subject only)
+4 3 2 1
+Descriptions of t Descriptions of Descriptions of Descriptions of
+scientific | scientific scientific scientific :
+terms, facts, terms, facts, terms, facts, terms, facts. |
+concepts, | concepts, | concepts, concepts, |
+principles. theories principles, principles, principles,
+; Knowledge | and | theories and theories and theories and
+| methods are | methods are methods are methods are
+complete and I mostly somewhat minimally |
+| correct | compiete complete and present |
+| and correct correct. or correct
+Applications are Applications Applications Applications
+| thorough, | are mostly are somewhat, are minimally
+Ces appropriate, and © thorough, appropriate, | appropriate and
+Application | accurate. appropriate, and accurate. accurate.
+| and
+accurate.
+Some of the Some of the Some of the i Little of the
+written, oral written, oral written, oral written, oral
+| and/or visual : and/or visual and/or visual and/or visual
+Communication | communication is communication communication communication
+organized and is is 1S
+effective organized and organized and organized and
+effective effective. effective.
+Source: http.//www.isbe.net/ils/science/pdf/rubric. pdf
+ot TUE,
+6
+ANH
+prey
+40 bs [I
+
+
+===== PAGE 41 (cmo25-page-41.png) =====
+
+ARTICLE VI
+REQUIRED RESOURCES
+Section 13 Administration
+
+13.1 Composition - A well-organized and competent staff and faculty shall
+administer the implementation of these programs and should meet the
+requirements set by the Commission.
+
+13.2 A Higher Education Institution (HEI) offering any of these programs shall have
+a full time academic administrator for each program. This administrator can be
+a Dean, Department Head, Director, Coordinator or equivalent depending on
+the organizational structure of the HEI.
+
+13.3 General Qualifications of the Program Administrator - The Administrator of
+these programs must possess any one of the following:
+
+A. Bachelor of Science in Computer Science Program
+a. Doctorate degree in Computer Science.
+b. Master's degree in Computer Science, plus:
+
++ at least three (3) years of CS work, CS consultancy, CS
+research experience, or tertiary level CS teaching experience,
+within the last five (5) years
+
+c. At least a master's degree in a CS allied program plus:
+
+» completion of Bachelor's degree in Computer Science; or
+
++» completion of all coursework requirements for a master's
+degree in CS;
+
+and
+
+e at least three (3) years of CS work, CS consultancy, CS
+research experience, or tertiary level CS teaching experience.
+within the last five (5) years.
+
+d. A doctorate degree in a CS allied program plus:
+
++ at least ten (10) years of CS work, CS consultancy, CS
+research experience, or tertiary level CS teaching experience,
+within the last twelve (12) years.
+
+B. Bachelor of Science in Information Systems and Bachelor of Science in
+Information Technology Programs
+a. Doctorate degree in CS, IS, or IT.
+b. Master's degree in CS, IS, or IT plus:
+
+» at least three (3) years of computing work, computing consuitancy,
+computing research experience, or tertiary level teaching experience
+in computing within the last five (5) years.
+
+c. At least a master’s degree in IS/|T allied programs, Engineering, or
+Mathematics plus:
+ahs »
+ph:
+
+
+===== PAGE 42 (cmo25-page-42.png) =====
+
++ completion of Bachelor's degree in CS, IS, or IT; or
+
+e coursework requirements for a master's degree in CS, IS, or iT,
+
+and
+
+s at least three (3) years of computing work, computing consultancy,
+computing research experience, or tertiary level teaching experience
+in computing within the last five (5) years.
+
+d. A doctorate degree in 1S/IT allied programs, Engineering, or
+
+Mathematics plus:
+
+* at least ten (10) years of computing work, computing consultancy,
+computing research experience or tertiary leve! teaching experience in
+computing, within the last twelve (12) years;
+
+13.4 General Functions and Responsibilities of the Program Administrator - The
+general functions and/or responsibilities of the Program Administrator should
+be as follow, thus:
+
+13.41 To lead in strategic planning and management, including the
+formulation and implementation of the faculty development program;
+
+13.4.2 To assist in the formulation of institutional policies;
+
+13.4.3 To exercise overall supervision of all academic and non-
+academic personnel of the coliege or depariment;
+
+13.4.4 To coordinate with the office concerned with student
+services;
+
+13.4.5 To lead research and extension activities among faculty
+and students, including technology innovation and
+commercialization activities,
+
+13.4.6 To oversee the formation, implementation and evaluation of plans and
+programs for development and the supervision/coordination of
+activities and services for the advancement of goals and objectives of
+the program,
+
+13.4.7 To help enforce the concerned HEI's rules and the laws
+affecting education, and the procedures, policies, rules
+and regulations promulgated under authority of or as
+adopted by the Commission and/or the HEI,
+
+13.4.8 To exercise educational leadership and accountability
+over the following:
+
+13.4.8.1 assignment of academic load to faculty
+members, including appointment of faculty
+advisers;
+13.4.8.2 appointment, promotion, retirement,
+termination of and disciplinary actions
+against faculty members and non-teaching
+personnel, subject to the HEI's policies and
+procedures;
+STWR 42 | | EE.
+g *
+es
+
+
+===== PAGE 43 (cmo25-page-43.png) =====
+
+13.49 To undertake periodic curriculum review, revision, and development
+with the assistance of the faculty members in the degree program
+concerned; and
+
+13.4.10 To prepare course offerings, institute methodologies of instruction,
+adopt and recommend appropriate instructional and reference
+materials, and recommend books to add to the collection of the
+library.
+
+13.411 To initiate and monitor development of academic and industrial
+linkages, extension and outreach programs, and career and
+internship placement programs;
+
+13.4.12 To ensure the attainment of graduate outcomes through monitoring of
+graduates, and regular consultation with alumni and industry partners.
+This may be done through the creation of an industry advisory board.
+
+Section 14 Faculty
+14.1 Faculty Composition
+
+14.1.1 There should be at least three (3) full time faculty
+members per program, one of whom could be the
+dean/program head/coordinator.
+
+14.1.2 At least forty percent (40%) of CS, IS, and IT core and
+professional courses should be taught by full-time CS,
+1S, and IT faculty members. There shall be a career
+development and tenure track for full time faculty
+members.
+
+14.1.3 For the Computer Science Program, at least sixty
+percent (60%) of CS professional courses should be taught by CS
+degree holders. At least thirty percent (30%) of all full-time CS faculty
+members should have a graduate degree in Computer Science.
+
+14.1.4 For the Information Systems and Information Technology Programs,
+at least sixty percent (60%) of IS and IT professional courses should
+be taught by degree holders in either IS or IT program. At least thirty
+percent (30%) of all full-time IS and IT faculty members should have a
+graduate degree in either CS, IS or IT.
+
+14.1.5 There shall be faculty members with industry experience
+
+within the last two (2) years. These may be full-time or
+part-time faculty members.
+
+14.1.6 HEIs offering CS, IS or IT programs are strongly encouraged to have
+faculty members with doctorate degrees in CS, IS, IT or allied fields.
+
+14.1.7 HEls offering CS, IS or IT programs are strongly encouraged to have
+faculty members who actively do research and development work in
+CS, IS or IT, and who publish regularly in refereed journals and
+proceedings. Likewise, the faculty members are also encouraged to
+
+43 11
+or Nox, :
+&S
+Ror g
+
+
+===== PAGE 44 (cmo25-page-44.png) =====
+
+join and actively participate in computing related professional
+organization(s).
+14.2 Qualifications of Faculty
+A. Bachelor of Science in Computer Science
+A CS faculty should possess at least one (1) of the following qualifications:
+
+14.2.1 Atleast a baccalaureate degree in CS, IS, or IT.
+
+14.2.2 At least a baccalaureate degree in any allied program or at least
+
+a master’s degree in a Science, Technology, Engineering, and
+
+Mathematics (STEM) field plus any of the following:
+
+14.2.2.1 Compietion of coursework requirements
+for a master's or doctorate degree in a
+CS program; or
+
+14.2 2.2 At least three (3) years experience in the
+
+IT profession such as technical administration,
+systems design, applications programming or
+equivalent or computing research within the last 5
+years.
+
+14.2.3 At least a baccalaureate degree with an international IT
+certification to teach professional courses specific to that
+certification.
+
+B. Bachelor of Science in Information Systems and Bachelor of Science in
+Information Technology
+An IS or IT faculty should possess at least one (1) of the following
+qualifications:
+
+14.2.1 At least a baccalaureate degree in C3, IS, or IT.
+
+14.2.2 At least a baccalaureate degree in any allied
+
+program or at ieast a master’s degree in a STEM
+
+field plus any of the following:
+
+14.2.2. 1 Completion of coursework requirements
+for a master's or doctorate degree in a
+CS, IS, or IT program.
+
+14.2 2.2 At least three (3) years computing work or consultancy
+or computing research experience or tertiary level
+teaching experience in computing, within the last five
+(5) years
+
+14.2.3 At least a master's degree in Accountancy, Business, and
+
+Management (ABM) program with adequate exposure to
+
+“—.y
+SA 44 |
+£3
+pry
+
+
+===== PAGE 45 (cmo25-page-45.png) =====
+
+computing through coursework or thesis/projects plus at least
+one of the following:
+a. completion of coursework requirements for a
+master's degree in any computing program; or
+b. at least three (3) years of computing work or
+consultancy or computing research experience or
+tertiary level teaching experience in computing, within
+the last five (5) years,
+
+14.2.4 At least a baccalaureate degree with an international IT
+certification to teach professional courses specific to that
+certification.
+
+14.2.5 Faculty members deemed to be qualified in an appropriate
+business program may teach business domain courses in the
+IS program within their specialization.
+
+14.3 Load
+
+14.3.1 Assignment - The regular load of a CS, IS, and IT facuity member is at most
+twenty-four (24) units or thirty (30) contact hours per week whichever is
+lesser, inclusive of lecture and laboratory. Overload should not exceed six
+(8) hours per week. There should not be more than four (4) preparations per
+term.
+
+14.3.2 Teaching Load - As a general rule, in case the Dean has to teach, his or her
+teaching load should not exceed nine (9) contact hours per week. This load
+takes into consideration the functions of the Dean. For the department chair,
+his/her teaching load should not exceed twelve (12) contact hours.
+
+14.3.3 Consultation Hours - Each full time faculty member shall render at least
+four (4) hours per week for student consultation. This should be outside of
+the regular contact hours.
+
+14.4 Employment Status — A full-time faculty member should render at least twenty-four
+(24) hours in residence per week as certified by the HEI, have a minimum contract
+of one (1) year in the college/department and must not be employed full time
+elsewhere.
+
+14.5 Faculty Support
+
+14.5.1 Faculty Development Program - The college/department should have a
+written comprehensive faculty development program. There shall be a
+specific budget allocation to implement such program. HEIs are enjoined to
+send full-time faculty members to participate in various activities of
+computing professional organizations. There shall also be clear guidelines
+on ranking and promotion of faculty members up to professor level.
+
+14.5.2 Facilities - The HEI should provide office space, computers with Internet
+connections and printers for faculty and administrators. There should be
+one (1) computer for every three (3) full-time equivalent faculty members
+
+- 45 Fa
+of Why { :
+&%
+1) /
+
+
+===== PAGE 46 (cmo25-page-46.png) =====
+
+and one (1) for every administrator. Consultation areas for student and
+faculty are also required.
+Section 15 Library
+15.1 Librarian(s) -~ HEIs offering the CS, IS, and IT programs should have at least
+one (1) full-time licensed librarian with at least one (1) year appointment. The
+librarian(s) shall participate in faculty meetings and activities and serve as (a)
+member(s) of the educational program planning committee. The librarian(s)
+should work closely with the Dean or Department Chair in collection
+development for the CS. IS, and IT programs.
+The librarian({s) should be encouraged to join recognized librarian societies
+and associations for professional development.
+There should be at least one (1) librarian/staff for every five hundred (500)
+students or fraction thereof.
+15.2 Book Collection. - The library collection of the HEI should meet the
+following requirements, namely:
+
+15.2.1 To support HEI's curricular needs and to provide enough books
+for students, its library should have at least five (5) titles per
+professional course, at least one (1) of which has been
+published within the last five (5) years. The total number of
+volumes per course should be such that, there should be one
+{1) volume for every ten {10} students enrolled (e.g. if there are
+100 students enrolled in the course Introduction to Computing,
+then there should be 10 volumes of books on Introduction to
+Computing of which 5 titles should be distinct). Book holdings
+should preferably include more reference books and textbooks
+
+"rather than vendor specific technology books. e-Books should
+
+also be counted to satisfy this requirement.
+
+| 15.2.2 For initial offering, the minimum volumes of books covering first
+
+to third year courses are required to be found in the library. For
+program recognition, an HEl should have the required number
+of books in all four-year levels.
+
+15.2.3 The library should include significant holdings of up-to-date
+computer magazines, journals and periodicals that are
+published locally and internationally. These include at least two
+(2) publications per program. The HEI should have current
+subscription to the journals and magazines. Paid online / digital
+subscriptions to at ieast twenty (20) journal titles are allowed as
+substitute for journals and magazines provided that they can be
+readily accessed and printed by faculty, students and staff.
+
+15.2.4 The library must provide Internet terminals for access to
+electronic materials.
+
+15.2.5 The library must provide access (with capability to read or print)
+i to electronic library materials such as CD-ROMs and electronic
+subscriptions. These are considered as additional library
+holdings beyond the minimum requirements.
+RL 46110.
+JAH
+Sg
+
+
+===== PAGE 47 (cmo25-page-47.png) =====
+
+15.2.6 The library facilities may be augmented by providing Learning
+Commons.
+
+15.3 Space Requirements. - The library should have a seating capacity of at least
+five percent (5%) of the total students enrolied and a minimum floor area of at
+least two (2) sqm per seat. This may include spaces provided as Learning
+Commons.
+
+Section 16 Laboratory and Physical Facilities
+
+16.1 Classroom Requirements. There should be at least one classroom per one
+hundred fifty (150) students enrolled. Preferably, there should be no more than
+50 students in a class. In case of large classes with more than 50 students,
+preferably, there should be separate discussion classes with at most 50
+students each.
+
+16.2 Laboratory Requirements. The number of terminals dedicated for computing
+
+students should be at least 1/5 of the total number of computing students. This
+is to allow each student to have enough individual hands-on computer time
+per week. The computer-to-student ratio in a laboratory class should be 1:1.
+In addition to teaching facilities, the HEI must provide internet access for the
+students and faculty members. All computer laboratories must have Internet
+Access. The minimum dedicated bandwidth must be at least 4Mbps. There
+should be at least 4Mbps per 500 students. Students must also have access
+to wifi and to a learning management system.
+The required computer hardware and software should be able to respond to
+the objectives of the courses in the curriculum. They should conform to
+generally accepted industry standards and be capable of providing training in
+multiple platforms. There should also be equipment for courses that require
+specific hardware such as routers and switches. Only licensed software,
+including free and open source software, may be installed.
+
+16.3 Audio Visual Facilities. Every laboratory must be equipped with projection
+equipment or large display to demonstrate digital content. In addition,
+projectors must also be available for use in lecture rooms. Large lecture halls
+must be equipped with sound systems.
+
+ARTICLE Vil
+COMPLIANCE OF HEIs
+
+Using the CHED Implementation Handbook for OBE and ISA as reference, a HEI shall develop
+the following items which will be submitted to CHED when they apply for a permit for a new program
+or the approval of the transformation of existing programs to outcomes-based framework:
+Section 17 The complete set of program outcomes, including its proposed additional
+
+program outcomes.
+Section 18 lis proposed curriculum and its justification including a curriculum map.
+Section 19 Proposed performance indicators for each outcome. Proposed measurement
+
+system for the level of attainment of each indicator.
+
+
+===== PAGE 48 (cmo25-page-48.png) =====
+
+Section 20 Proposed outcomes-based syllabus for each course.
+Section 21 Proposed system of program assessment and evaluation
+Section 22 Proposed system of program Continuous Quality Improvement (CQI).
+ARTICLE Vii
+PROVISIONS FOR K-12 IMPLEMENTATION
+Section 23 Revised General Education (GE)
+
+When the new GE curriculum will take effect in AY 2018-2019, as provided in CMO
+20, s. 2013 entitled “General Education Curriculum: Holistic Understandings, Intellectual and Civic
+Competencies”, the 54 units GE requirements will be reduced to a minimum of 36 units.
+
+The balance of 18 units may be replaced by professional/ domain courses in each of
+the three (3) programs (CS, IS and IT) as long as the minimum total number of units is satisfied as
+articulated in Section 8.1.
+
+ARTICLE IX
+TRANSITORY, REPEALING AND EFFECTIVITY CLAUSE
+Section 24 Transitory Provision
+
+HEIs that have been granted permit or recognition are hereby given one (1) year from
+
+the date of effectivity hereof to fully comply with all the requirements as stipulated in
+
+this CMO, including both the changes to the new curriculum and transformation to
+
+OBE. Compliance to these requirements shail also be required to State Universities
+
+and Colleges (SUCs) and Local Colleges and Universities (LCUs).
+Section 25 Repealing Clause
+
+All pertinent rules and regulations or parts thereof that are inconsistent with the
+
+provisions of these policies, standards, and guidelines are hereby repealed or
+
+modified accordingly.
+Section 26  Effectivity Clause
+This CMO shall be effective beginning SY 2016-2017 after publication in the Official
+Gazette or in a newspaper of general circulation.
+Quezon City, Philippines, _ gagust %, 2015
+FOR THE COMMISSION:
+a 23 J
+PATRICIA B. LICUANAN, Ph.D.
+Chairperson
+CN
+Wr SF 48 ra..
+Sr
+
+
+===== PAGE 49 (cmo25-page-49.png) =====
+
+ANNEX A
+GUIDELINES
+UNDERGRADUATETHESIS / CAPSTONE PROJECTS
+FOR COMPUTING PROGRAMS
+EE)
+ARTICLE |
+INTRODUCTION
+Section 1 Rationale and Background
+The Commission on Higher Education has approved programs for
+Computer Science, Information Technology and Information Systems.
+These shall henceforth be referred to as Computing Programs. This
+shall also include any programs that may be endorsed by the Technical
+Panel for Information Technology Education (TPITE), and
+subsequently approved by CHED.
+The Thesis / Capstone Project are required for candidates for
+graduation in ali Computing Programs. Both the thesis and capstone
+projects are terminal project requirements that would not only
+demonstrate a student's comprehensive knowiedge of the area of
+study and research methods used but also allow them to apply the
+concepts and methods to a specific problem in their area of
+specialization.
+BS Computer Science students are required to complete a thesis that
+is focused on the theories and concepts of computing in the form of a
+scientific work.
+BS Information Systems students must complete a project in the form
+of a business application development, or an Information Systems
+plan.
+BS Information Technology students must complete a capstone project
+in the form of an IT application, a Multimedia Systems development, or
+an IT Management project.
+it is expressly understood that Computing Thesis and Capstone
+projects need not require surveys, statistics, and descriptive methods,
+unless appropriate.
+HEIs are required to include thesis and capstone projects in their
+curricula. The Policies and Standards for Undergraduate Thesis
+intends to serve as a guide for administrators, faculty and students
+&
+A
+w= ‘
+
+
+===== PAGE 50 (cmo25-page-50.png) =====
+
+alike in determining what are allowable standards or capstone projects
+in the context of undergraduate studies in Computing.
+ARTICLE Il
+THESIS / CAPSTONE PROJECTS SPECIFICATIONS
+Section 2 Definitions
+
+2.1 A Thesis is a technical report on a systematic investigation of a
+problem that can be solved using Computing. It may include a
+solution, an approximate or partial solution, a scientific
+investigation, or the development of results leading to the
+solution of the problem.
+
+21.1 A Computer Science thesis must be anchored on
+Computer Science principles.
+
+2.2 A Capstone Project is an undertaking appropriate to a
+professional field. It should significantly address an existing
+problem or need.
+
+2.2.1 An Information Technology Capstone Project focuses on
+the infrastructure, application, or processes involved in
+introducing a Computing solution to a problem.
+
+2.2.2 An Information Systems Capstone Project focuses on
+business processes and the implications of introducing a
+Computing solution to a problem.
+
+Section 3 Scope of the Theses / Capstone Projects
+
+The Thesis or Capstone Project should integrate the different courses,
+
+knowledge, and competencies learned in the curriculum. Students are
+
+encouraged to produce innovative results, generate new knowledge or
+theories, or explore new frontiers of knowledge or application areas.
+
+For Computer Science, theses involving the development of the
+
+software systems should involve algorithm-based research and
+
+development founded on Computer Science principles. This should be
+reflected in the final report.
+
+For Information Technology Capstone Projects, recommended
+
+infrastructure and its implications on other systems should be clearly
+
+specified in the final report with the introduction of the project.
+
+For Information Systems Capstone Projects, changes in process and
+
+information flow and/or information policies with the introduction of the
+
+system should be clearly specified in the final report.
+€% 50 Page
+== 4
+
+
+===== PAGE 51 (cmo25-page-51.png) =====
+
+The thesis/capstone project adviser shouid determine the appropriate
+complexity level of the specific problem being addressed and the
+proposed solution, considering the duration of the project, the
+composition of the team, and the resources available.
+Section 4 Suggested Areas for Theses / Capstone Projects
+Following is a list of some suggested areas per program. The specific
+areas identified for each degree program may also be considered for
+the other computing degree programs, depending on the scope,
+limitations, and approach and following the principles stated in
+preceding sections.
+41 Computer Science
+4.1.1 Current Computer Science Topics
+= Software Development and Theory
+= Mobile Computing Systems
+= Software Extensions or Plug-ins
+= Expert Systems and Decision Support Systems
+» Systems Software (software tools/utilities, interpreters,
+simulators, compilers, security aspects)
+» Intelligent Systems
+» Game Development
+= Computer Vision
+» Image / Signal Processing
+» Natural Language Processing
+= Pattern Recognition and Data Mining
+= Bioinformatics
+* Graphics Applications
+* Cloud Computing
+= Parallel Computing
+* Embedded Systems
+» Emerging Technologies
+4.1.2 Foundations of Computer Science
+* Automata and Formal Languages
+= Data Structures and Algorithm Design and Analysis
+= Web Semantics
+» Coding Theory
+= Programming Languages
+=» Visualization Systems
+= Computer and Architecture
+* Modeling and Simulation
+ry, LY
+(>
+gd nl S51 Papee
+I = | 17a
+
+
+===== PAGE 52 (cmo25-page-52.png) =====
+
+4.1.3 Human-Computer Interaction
+= Usability
+= Affective Computing
+* Emphatic Computing
+4.2 Information Systems
+4.3.1. Software Development
+» Software Customization
+» Information Systems development for actual client
+= Web Applications Development
+= Mobile Computing Systems
+4.3.2. IS Planning
+* Enterprise Resource Plan :
+» Information Systems Strategic Plan
+4.3.3. Analysis and Design of a sufficiently complex business
+system
+4.3 Information Technology
+4.2.1 Software Development
+= Software Customization
+=» Information Systems Development for an actual client
+(with pilot testing)
+= Web Applications Development (with at least alpha
+testing on live servers)
+* Mobile Computing Systems
+4.2.2 Multimedia Systems
+» (Game Development
+* e-Learning Systems
+= |nteractive Systems
+= Information Kiosks
+4.2.3. Network Design and Implementation and Server Farm
+Configuration and Management
+4.2.4. IT Management
+» |T Strategic Plan for sufficiently complex enterprises
+» IT Security Analysis, Planning and Implementation
+CAC
+7 \: cn |
+£3 52 vue
+
+
+===== PAGE 53 (cmo25-page-53.png) =====
+
+Section 5 Thesis / Project Duration
+Students should be given ample time to finish their project. Two (2) to
+three (3) terms or semesters should be prescribed in the curriculum for
+BS Computer Science students to complete their theses and one (1) to
+three (3) terms or semesters for BS Information Technology and BS in
+Information Systems students to complete their Capstone Projects.
+The maximum number of units that may be required for Thesis or
+Capstone Projects is nine (9) units.
+Grading systems and possible honoraria rates for thesis/capstone
+project are left to the discretion of the HEI, provided that such policies
+are not grossly disadvantageous to the students, and provided further
+that such policies are documented and approved by the proper HEI
+authorities.
+Section 6 Composition of Thesis / Project Groups
+Students should preferably work in teams of two (2) to four (4)
+members depending on the complexity of the project. The adviser
+should be able to determine whether the team can complete the project
+on time.
+Multidiscipiinary teams are also encouraged, provided that team
+members prepare separate documentations per program.
+| Section 7 Adviser / Panel Composition
+7.1 Panel Composition
+The project is prepared under the guidance of an adviser and
+presented and accepted by a Panel composed of at least 3
+members that includes the adviser.
+7.2 Adviser / Panel Qualifications
+The adviser must have completed a computing project
+successfully beyond the bachelor's degree project. As much as
+possible, the adviser should be a fuli-time faculty member of the
+HEI. Otherwise a full-time faculty co-adviser is required.
+Advisers and Panel Members should have a degree in a
+Computing or allied programs, or must be domain experts in the
+area of study. At least one of the panel members must have a
+masters degree in Computing (preferably in the same field as
+E% 53 Pay
+R32
+
+
+===== PAGE 54 (cmo25-page-54.png) =====
+
+the thesis or project) or allied program. For [T and IS, at least
+one of the panel members should preferably have industry
+experience.
+
+The adviser must be able to guide the students throughout the
+whole project life cycle, including the thesis/capstone project
+defense and possible project deployment.
+
+Faculty advisers should preferably handle at most five projects
+at one time, and in no case should exceed ten (10) projects.
+Panel members should preferably be limited to at most ten (10)
+projects and in no case should this exceed twenty projects in
+one semester, counting all projects in all HEIs.
+
+In case of the participation of an external client, then the
+organization for which the project is intended should be
+represented as much as possible.
+
+Section 8 Presentation of the Thesis or capstone Projects |
+Thesis and Capstone project must be presented in a public forum. This
+forum may be an international, national, regional, or school-based
+conference, meeting, or seminar that is announced and open to
+interested parties. This may be separate from the presentation before
+the Panel mentioned in Section 6. A school-based colloquium
+organized for this purpose would suffice to satisfy this requirement.
+Presentation in a public forum, such as the National Conference on IT
+Education (NCITE) of PSITE, is encouraged.
+
+ARTICLE lll
+THE THESIS | PROJECT FORMAT
+
+Section 9 Suggested Documentation Template / Format
+Upon completion of the Thesis or Capstone Project, the students shall
+be required to submit copies of documentation of their work by team.
+This may be in the form of a research report in journal article format
+such as ACM or IEEE Format, a bound technical report, or
+comprehensive electronic documentation. The format is left to the
+discretion of the HEI.
+
+9.1. Computer Science Thesis
+9.1.1. Sample Outline for Thesis involving Foundations of
+Computer Science
+Title Page -
+Abstract po
+=
+ha s 54 ag
+
+
+===== PAGE 55 (cmo25-page-55.png) =====
+
+Table of Contents
+List of Figures, List of Tables, List of Notations
+Introduction
+- Background of the problem
+- Statement of the problem
+- Objectives
+- Significance
+Scope and Limitations
+Related Literature
+Theoretical Background
+- include comprehensive discussion on theorems,
+definitions, fundamental aigorithms |, mathematical
+modelsformuia
+Proposed Solution to the Problem
+Results and Discussion, includes theoretical proof,
+verification, or evidence
+Conclusions and Recommendations
+Appendices may include the following
+- Relevant Source Code, where applicable
+- Source Data, where applicable
+- One-page Curriculum Vitae per team member
+9.1.2. Sample Outline for Thesis involving Software
+Development
+Title Page
+Abstract or Executive Summary
+Table of Contents
+List of Figures, List of Tables, List of Notations
+Introduction
+- Project Context
+- Purpose and Description
+- Objectives
+- Scope and limitations
+Related Literature
+Technical Background
+- Include in-depth discussion on relevant technical
+aspects of the project
+Design and Methodology
+- Include discussion on conceptual design / system
+architecture’ block diagrams and algorithms
+Results and Discussion
+Conclusions and Recommendations
+Appendices may include the following
+- Relevant Source Code
+- Evaluation Tool or Test Documents
+- Sample input/output/Reports
+-t
+&% 55 Pup
+AA :
+
+
+===== PAGE 56 (cmo25-page-56.png) =====
+
+- Users Guide
+- One-Page Curriculum Vitae per team member
+9.1.3. ACM Journal Article Format
+9.2. Information Technology and Information Systems Capstone
+Projects
+9.2.1 Sample Outline for IS Plans
+The IS Plan may follow any of the established frameworks,
+such as that of the National Computer Center.
+9.2.2 Sample Outline for Capstone Projects
+Title Page
+Executive Summary
+Table of Contents
+List of Figures, List of Tables, List of Notations
+introduction
+- Project Context
+- Purpose and Description
+- Objectives
+- Scope and limitations
+Review of Related Literature/Systems
+Technical Background
+Methodology, Results and Discussion
+- Requirements Analysis
+- Requirements Documentation
+- Design of Software, Systems, Product, and/or
+Processes
+- Development and Testing, where applicable
+- Description of the Prototype, where applicable
+- Implementation Plan (Infrastructure/Deployment)
+where needed
+- Implementation Results, where applicable
+Recommendations
+Appendices may include the following
+- Relevant Source Code
+- Evaluation Tool or Test Documents
+- Sample input/output/Reports
+- Users Guide
+- Process/Data/information Flow
+- Screen layouts
+- TestResults
+- Sample Generated Outputs
+- Pictures showcasing the data gathering,
+investigation done (e.g. floor plan, layout, building,
+etc.)
+- One-Page Curriculum Vitae per team member
+S56 | Pave
+LAT | Pa
+
+
+===== PAGE 57 (cmo25-page-57.png) =====
+
+. Ee
+ARTICLE IV
+‘ INTELLECTUAL PROPERTY RIGHTS
+Section 10 Intellectual Property (IP) Rights
+
+All Thesis and Projects must not infringe on existing |P. All prior works,
+including open source, open content, and creative commons content,
+shall be properly cited.
+Copyright and other Intellectual Property Rights arising from the Thesis
+or Capstone Project shall be bound by the IP Poiicies of the HEI,
+provided that any such policies shall not be grossly disadvantageous to
+the creators of IP.
+
+iy
+
+Es
+
+Er-d f
+57 | boa Low
