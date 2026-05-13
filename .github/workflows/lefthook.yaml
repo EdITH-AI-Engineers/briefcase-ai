@@ -1,0 +1,9 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: npx commitlint --edit {1}
+
+pre-push:
+  commands:
+    commitlint-range:
+      run: npx commitlint --from origin/main --to HEAD --verbose
