@@ -28,20 +28,6 @@ export type NarrativeMetrics = {
   frameworkAlignmentBelowThresholdCount: number;
 };
 
-export type BandDistribution = {
-  "bottom-quartile": number;
-  "below-median": number;
-  "above-median": number;
-  "top-quartile": number;
-};
-
-export type CohortMetrics = {
-  cohortSize: number;
-  bandDistribution: BandDistribution;
-  programBreakdown: Record<string, { size: number; meanScore: number }>;
-  suspiciousPrograms: string[];
-};
-
 export type StudentFlag = {
   kind:
     | "invalid_citation_structured"
@@ -70,7 +56,6 @@ export type EvaluationResult = {
   thresholds: Thresholds;
   structured: StructuredMetrics;
   narrative: NarrativeMetrics;
-  cohort: CohortMetrics;
   perStudent: PerStudentEval[];
   overallPass: boolean;
   failingMetrics: string[];

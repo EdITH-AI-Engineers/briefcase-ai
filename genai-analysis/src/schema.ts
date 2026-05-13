@@ -1,4 +1,5 @@
 import { Type, type Schema } from "@google/genai";
+import { NARRATIVE_SCHEMA } from "./narrative-schema.js";
 
 export const ANALYSIS_SCHEMA: Schema = {
   type: Type.OBJECT,
@@ -140,4 +141,22 @@ export const ANALYSIS_SCHEMA: Schema = {
     "strengths",
     "gaps",
   ],
+};
+
+export const STUDENT_ASSESSMENT_SCHEMA: Schema = {
+  type: Type.OBJECT,
+  properties: {
+    analysis: {
+      ...ANALYSIS_SCHEMA,
+      description:
+        "Structured, citation-bearing JSON assessment for the student profile.",
+    },
+    narrative: {
+      ...NARRATIVE_SCHEMA,
+      description:
+        "Markdown narrative report derived from the structured assessment in this same response.",
+    },
+  },
+  required: ["analysis", "narrative"],
+  propertyOrdering: ["analysis", "narrative"],
 };

@@ -1,6 +1,6 @@
 import { Type, type Schema } from "@google/genai";
 
-// Pass 3 response shape. The body of the narrative is free-form
+// Narrative response shape. The body of the narrative is free-form
 // markdown; we wrap it in a minimal JSON object so responseMimeType=
 // "application/json" can still enforce retry-safe parsing.
 export const NARRATIVE_SCHEMA: Schema = {

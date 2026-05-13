@@ -8,7 +8,7 @@ async function main() {
     console.error(
       "usage: npm run evaluate -- <runDir>\n" +
         "  <runDir> is a directory produced by `npm run analyze`, containing\n" +
-        "  analyses.json, cohort.json, narratives/, and manifest.json.",
+        "  analyses.json, narratives/, and manifest.json.",
     );
     process.exit(2);
   }

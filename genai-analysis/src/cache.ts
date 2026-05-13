@@ -1,10 +1,7 @@
 import { getClient } from "./client.js";
 import { ANALYSIS, MIN_CACHE_TOKENS, MODEL } from "./config.js";
 import type { Framework } from "./context.js";
-import {
-  buildNarrativeSystemInstruction,
-  buildSystemInstruction,
-} from "./prompt.js";
+import { buildAssessmentSystemInstruction } from "./prompt.js";
 import { withRetry } from "./retry.js";
 
 export type CacheState =
@@ -61,13 +58,7 @@ async function createCache(
 export async function createAnalysisCache(
   framework: Framework,
 ): Promise<CacheState> {
-  return createCache(buildSystemInstruction(framework), "analysis");
-}
-
-export async function createNarrativeCache(
-  framework: Framework,
-): Promise<CacheState> {
-  return createCache(buildNarrativeSystemInstruction(framework), "narrative");
+  return createCache(buildAssessmentSystemInstruction(framework), "assessment");
 }
 
 export async function deleteSharedCache(name: string): Promise<void> {

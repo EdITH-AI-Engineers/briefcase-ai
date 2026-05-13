@@ -216,12 +216,13 @@ export async function generateDataset(
         seedHint,
         cachedContent,
       });
-      out.push(...batch);
+      const accepted = batch.slice(0, remaining);
+      out.push(...accepted);
       batchIdx += 1;
       console.log(
-        `  batch ${batchIdx}: +${batch.length} rows (total ${out.length}/${total})`,
+        `  batch ${batchIdx}: +${accepted.length} rows (total ${out.length}/${total})`,
       );
-      if (opts.onBatch) await opts.onBatch(batch, batchIdx);
+      if (opts.onBatch) await opts.onBatch(accepted, batchIdx);
     }
   } finally {
     if (cacheState.used) {

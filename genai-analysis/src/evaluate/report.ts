@@ -3,7 +3,6 @@ import { basename, join } from "node:path";
 import type { AnalysisResult, StudentProfile } from "../types.js";
 import { overlapRatio, rougeL, summarize } from "./metrics.js";
 import type {
-  CohortMetrics,
   EvaluationResult,
   NarrativeMetrics,
   PerStudentEval,
@@ -117,12 +116,6 @@ export async function evaluateRun(
     addFlag,
   );
 
-  const cohortPath = join(runDir, "cohort.json");
-  const cohort = evaluateCohort(
-    analyses,
-    JSON.parse(await readFile(cohortPath, "utf8")),
-  );
-
   const perStudent: PerStudentEval[] = analyses.map((a) => ({
     student_id: a.student_id,
     program: a.program,
@@ -143,7 +136,6 @@ export async function evaluateRun(
     thresholds,
     structured,
     narrative,
-    cohort,
     perStudent,
     overallPass,
     failingMetrics,
@@ -367,69 +359,6 @@ async function evaluateNarratives(
   };
 }
 
-type CohortJson = Record<string, { size: number; per_competency: { name: string; rank_band: string }[] }>;
-
-function evaluateCohort(
-  analyses: AnalysisResult[],
-  cohort: CohortJson,
-): CohortMetrics {
-  const size = Object.keys(cohort).length;
-  const counts = {
-    "bottom-quartile": 0,
-    "below-median": 0,
-    "above-median": 0,
-    "top-quartile": 0,
-  };
-  let totalBands = 0;
-  for (const c of Object.values(cohort)) {
-    for (const p of c.per_competency) {
-      if (p.rank_band in counts) {
-        counts[p.rank_band as keyof typeof counts] += 1;
-        totalBands += 1;
-      }
-    }
-  }
-  const bandDistribution =
-    totalBands === 0
-      ? counts
-      : {
-          "bottom-quartile": counts["bottom-quartile"] / totalBands,
-          "below-median": counts["below-median"] / totalBands,
-          "above-median": counts["above-median"] / totalBands,
-          "top-quartile": counts["top-quartile"] / totalBands,
-        };
-
-  // Per-program average score (from the analyses' level string).
-  const LEVEL_SCORE: Record<string, number> = {
-    "Not Demonstrated": 0,
-    Emerging: 1,
-    Developing: 2,
-    Proficient: 3,
-    Advanced: 4,
-  };
-  const byProgram: Record<string, { sum: number; n: number; size: number }> = {};
-  for (const a of analyses) {
-    const p = a.program;
-    byProgram[p] = byProgram[p] ?? { sum: 0, n: 0, size: 0 };
-    byProgram[p].size += 1;
-    for (const c of a.competencies) {
-      byProgram[p].sum += LEVEL_SCORE[c.level] ?? 0;
-      byProgram[p].n += 1;
-    }
-  }
-  const programBreakdown: CohortMetrics["programBreakdown"] = {};
-  const suspiciousPrograms: string[] = [];
-  for (const [prog, agg] of Object.entries(byProgram)) {
-    const mean = agg.n === 0 ? 0 : agg.sum / agg.n;
-    programBreakdown[prog] = { size: agg.size, meanScore: mean };
-    // If a whole program averages below 0.5 (basically all "Not Demonstrated"/"Emerging"),
-    // flag it as suspicious — usually a sign of calibration drift.
-    if (agg.size >= 3 && mean < 0.5) suspiciousPrograms.push(prog);
-  }
-
-  return { cohortSize: size, bandDistribution, programBreakdown, suspiciousPrograms };
-}
-
 function checkThresholds(
   s: StructuredMetrics,
   n: NarrativeMetrics,
@@ -502,21 +431,6 @@ function renderMarkdown(r: EvaluationResult): string {
   lines.push(`- Tagged-sentence rate (mean): ${pct(r.narrative.taggedSentenceRate)}`);
   lines.push(`- Groundedness (profile→narrative token overlap): mean ${r.narrative.groundedness.mean.toFixed(3)} (stdev ${r.narrative.groundedness.stdev.toFixed(3)}, min ${r.narrative.groundedness.min.toFixed(3)}, max ${r.narrative.groundedness.max.toFixed(3)})`);
   lines.push(`- Framework alignment (ROUGE-L sentence vs. cited clause): mean ${r.narrative.frameworkAlignment.mean.toFixed(3)} over ${r.narrative.frameworkAlignment.count} tagged sentences (${r.narrative.frameworkAlignmentBelowThresholdCount} below threshold)`);
-
-  lines.push("");
-  lines.push("## Cohort");
-  lines.push(`- Cohort size: ${r.cohort.cohortSize}`);
-  lines.push("- Band distribution:");
-  for (const [band, frac] of Object.entries(r.cohort.bandDistribution)) {
-    lines.push(`  - ${band}: ${pct(frac)}`);
-  }
-  lines.push("- Per-program breakdown:");
-  for (const [prog, b] of Object.entries(r.cohort.programBreakdown)) {
-    lines.push(`  - ${prog}: n=${b.size}, mean competency score ${b.meanScore.toFixed(2)} / 4`);
-  }
-  if (r.cohort.suspiciousPrograms.length) {
-    lines.push(`- Suspicious programs (very low mean): ${r.cohort.suspiciousPrograms.join(", ")}`);
-  }
 
   lines.push("");
   lines.push("## Per-student flags");

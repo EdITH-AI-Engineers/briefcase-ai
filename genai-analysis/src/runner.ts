@@ -1,31 +1,23 @@
-import { analyzeStudent, narrateStudent } from "./analyze.js";
+import { analyzeStudent } from "./analyze.js";
 import {
   createAnalysisCache,
-  createNarrativeCache,
   deleteSharedCache,
   type CacheState,
 } from "./cache.js";
 import { ANALYSIS } from "./config.js";
 import type { Framework } from "./context.js";
-import type { AnalysisResult, StudentProfile } from "./types.js";
+import type { StudentAssessmentResult, StudentProfile } from "./types.js";
 
 export type AnalyzeCallback = (
-  result: AnalysisResult,
+  result: StudentAssessmentResult,
   index: number,
   student: StudentProfile,
-) => Promise<void> | void;
-
-export type NarrateCallback = (
-  studentId: string,
-  narrativeMarkdown: string,
-  index: number,
 ) => Promise<void> | void;
 
 export type RunFeatures = {
   flex: boolean;
   concurrency: number;
   analysisCache: CacheState;
-  narrativeCache?: CacheState;
 };
 
 // Bounded-concurrency map that preserves input order. Runs up to
@@ -70,7 +62,7 @@ export type AnalyzeRunnerOptions = {
 
 export async function analyzeDataset(
   opts: AnalyzeRunnerOptions,
-): Promise<AnalysisResult[]> {
+): Promise<StudentAssessmentResult[]> {
   let cacheState: CacheState = { used: false };
   if (ANALYSIS.useCache) {
     try {
@@ -104,7 +96,7 @@ export async function analyzeDataset(
         const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
         completed += 1;
         const label = student.full_name ?? student.id;
-        console.log(`  analyze ${completed}/${total}: ${label} (${elapsed}s)`);
+        console.log(`  assess ${completed}/${total}: ${label} (${elapsed}s)`);
         return result;
       },
       async (result, index, student) => {
@@ -119,75 +111,6 @@ export async function analyzeDataset(
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         console.warn(`  analysis cache delete failed: ${msg}`);
-      }
-    }
-  }
-}
-
-export type NarrateRunnerOptions = {
-  profiles: StudentProfile[];
-  analyses: AnalysisResult[];
-  framework: Framework;
-  onNarrate?: NarrateCallback;
-  onFeatures?: (features: { narrativeCache: CacheState }) => void;
-};
-
-export async function narrateDataset(opts: NarrateRunnerOptions): Promise<void> {
-  let cacheState: CacheState = { used: false };
-  if (ANALYSIS.useCache) {
-    try {
-      cacheState = await createNarrativeCache(opts.framework);
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      console.warn(`  narrative cache setup failed, continuing without it: ${msg}`);
-    }
-  }
-
-  opts.onFeatures?.({ narrativeCache: cacheState });
-  const cachedContent = cacheState.used ? cacheState.name : undefined;
-
-  const byId = new Map<string, AnalysisResult>();
-  for (const a of opts.analyses) byId.set(a.student_id, a);
-
-  const total = opts.profiles.length;
-  let completed = 0;
-  try {
-    await mapBounded(
-      opts.profiles,
-      ANALYSIS.concurrency,
-      async (student) => {
-        const analysis = byId.get(student.id);
-        if (!analysis) {
-          completed += 1;
-          console.warn(
-            `  narrate ${completed}/${total}: no analysis for ${student.id}, skipping`,
-          );
-          return null as unknown as { id: string; markdown: string };
-        }
-        const t0 = Date.now();
-        const result = await narrateStudent({
-          student,
-          analysis,
-          framework: opts.framework,
-          cachedContent,
-        });
-        const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-        completed += 1;
-        const label = student.full_name ?? student.id;
-        console.log(`  narrate ${completed}/${total}: ${label} (${elapsed}s)`);
-        return { id: result.student_id, markdown: result.narrative_markdown };
-      },
-      async (r, index) => {
-        if (r && opts.onNarrate) await opts.onNarrate(r.id, r.markdown, index);
-      },
-    );
-  } finally {
-    if (cacheState.used) {
-      try {
-        await deleteSharedCache(cacheState.name);
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        console.warn(`  narrative cache delete failed: ${msg}`);
       }
     }
   }

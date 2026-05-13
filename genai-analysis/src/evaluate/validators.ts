@@ -89,7 +89,6 @@ export const REQUIRED_NARRATIVE_SECTIONS = [
   "Profile Snapshot",
   "Competency Assessment",
   "Development Trajectory",
-  "Anonymous Peer Comparison",
   "Outlook & Next Steps",
 ] as const;
 

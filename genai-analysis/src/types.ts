@@ -127,20 +127,6 @@ export type Gap = {
   recommendation: string;
 };
 
-export type RankBand =
-  | "bottom-quartile"
-  | "below-median"
-  | "above-median"
-  | "top-quartile";
-
-export type CohortComparison = {
-  size: number;
-  per_competency: {
-    name: string;
-    rank_band: RankBand;
-  }[];
-};
-
 export type AnalysisResult = {
   student_id: string;
   program: Program;
@@ -148,10 +134,14 @@ export type AnalysisResult = {
   competencies: CompetencyAssessment[];
   strengths: Strength[];
   gaps: Gap[];
-  cohort?: CohortComparison;
 };
 
 export type NarrativeResult = {
   student_id: string;
   narrative_markdown: string;
+};
+
+export type StudentAssessmentResult = {
+  analysis: AnalysisResult;
+  narrative: NarrativeResult;
 };

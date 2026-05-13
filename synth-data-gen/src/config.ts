@@ -1,6 +1,6 @@
 import { Type, type Schema } from "@google/genai";
 
-export const MODEL = "gemini-3.1-flash-lite-preview";
+export const MODEL = "gemini-2.5-flash-lite";
 
 export type ColumnSpec = {
   type: Type;
@@ -357,12 +357,12 @@ must fall within the student's plausible active years.
 `.trim();
 
 export const GENERATION = {
-  batchSize: 20,
-  totalRows: 100,
+  batchSize: 10,
+  totalRows: 10,
   temperature: 1.1,
   outputDir: "output",
   useFlex: true,
-  useCache: true,
+  useCache: false,
   cacheTtlSeconds: 3600,
 };
 

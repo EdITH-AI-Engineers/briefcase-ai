@@ -1,17 +1,12 @@
 import "dotenv/config";
 import { access, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
-import { aggregateCohort } from "./cohort.js";
 import { ANALYSIS, MODEL } from "./config.js";
 import { loadFramework } from "./context.js";
-import {
-  analyzeDataset,
-  narrateDataset,
-  type RunFeatures,
-} from "./runner.js";
+import { analyzeDataset, type RunFeatures } from "./runner.js";
 import type {
   AnalysisResult,
-  CohortComparison,
+  StudentAssessmentResult,
   StudentProfile,
 } from "./types.js";
 
@@ -25,8 +20,7 @@ function runStamp(): string {
 }
 
 // If the configured profiles path doesn't exist, fall back to the newest
-// run-*/profiles.json under the same output directory. Lets the defaults
-// "just work" after any synth-data-gen run.
+// run-*/profiles.json under the same output directory.
 async function resolveProfilesPath(configured: string): Promise<string> {
   const abs = resolve(process.cwd(), configured);
   try {
@@ -52,7 +46,7 @@ async function resolveProfilesPath(configured: string): Promise<string> {
         );
         return candidate;
       } catch {
-        // keep searching
+        // Keep searching.
       }
     }
     throw new Error(
@@ -71,7 +65,6 @@ async function main() {
   await mkdir(narrativesDir, { recursive: true });
 
   const analysesPath = join(runDir, "analyses.json");
-  const cohortPath = join(runDir, "cohort.json");
   const manifestPath = join(runDir, "manifest.json");
   const startedAt = new Date().toISOString();
 
@@ -94,74 +87,39 @@ async function main() {
     console.log(`  - ${d.id} v${d.version}: ${d.title}`);
   }
 
-  console.log(`\nPass 1: analyzing ${profiles.length} profiles...`);
+  console.log(`\nPass 1: assessing and narrating ${profiles.length} profiles...`);
 
-  // Input-order results array; entries are filled in as each
-  // concurrent call completes, so the written checkpoint is sparse
-  // mid-run but aligns to input order at completion.
-  const collected: (AnalysisResult | undefined)[] = new Array(
+  // Input-order results array; entries are filled in as each concurrent call
+  // completes, so the written checkpoint is sparse mid-run but aligns to input
+  // order at completion.
+  const collected: (StudentAssessmentResult | undefined)[] = new Array(
     profiles.length,
   ).fill(undefined);
   let status: RunStatus = "failed";
   let errorMsg: string | undefined;
   let features: RunFeatures | undefined;
-  let cohortMap: Map<string, CohortComparison> = new Map();
   let narrativesWritten = 0;
+  const profileIds = new Set(profiles.map((p) => p.id));
 
   const writeAnalysesCheckpoint = async () => {
-    // Compact: write only completed entries, preserving input order.
     const completed = collected.filter(
-      (r): r is AnalysisResult => r !== undefined,
+      (r): r is StudentAssessmentResult => r !== undefined,
     );
-    await writeFile(analysesPath, JSON.stringify(completed, null, 2));
+    const analyses: AnalysisResult[] = completed.map((r) => r.analysis);
+    await writeFile(analysesPath, JSON.stringify(analyses, null, 2));
   };
 
   try {
-    const analyzeResults = await analyzeDataset({
+    const assessmentResults = await analyzeDataset({
       profiles,
       framework,
       onAnalyze: async (result, index) => {
         collected[index] = result;
-        await writeAnalysesCheckpoint();
-      },
-      onFeatures: (f) => {
-        features = f;
-      },
-    });
-    // analyzeResults is already in input order — overwrite in case any
-    // onAnalyze slot didn't land (it always should, but defensive).
-    for (let i = 0; i < analyzeResults.length; i++) {
-      collected[i] = analyzeResults[i];
-    }
 
-    const finalAnalyses = collected.filter(
-      (r): r is AnalysisResult => r !== undefined,
-    );
-
-    // Pass 2 — deterministic cohort aggregation.
-    console.log(`\nPass 2: aggregating cohort (${finalAnalyses.length} students)...`);
-    cohortMap = aggregateCohort(finalAnalyses);
-    for (const r of finalAnalyses) {
-      r.cohort = cohortMap.get(r.student_id);
-    }
-    await writeAnalysesCheckpoint();
-    await writeFile(
-      cohortPath,
-      JSON.stringify(Object.fromEntries(cohortMap), null, 2),
-    );
-
-    // Pass 3 — per-student narrative.
-    console.log(`\nPass 3: narrating ${finalAnalyses.length} profiles...`);
-    const profileIds = new Set(profiles.map((p) => p.id));
-    await narrateDataset({
-      profiles,
-      analyses: finalAnalyses,
-      framework,
-      onNarrate: async (modelStudentId, narrativeMarkdown, index) => {
-        // Trust the profile's id, not the model's echoed id — guards
-        // against both minor drift ("CASE" flips) and path-injection
-        // via a pathological model response.
+        // Trust the profile's id, not the model's echoed id. This guards
+        // against minor drift and path-injection via a pathological response.
         const authoritativeId = profiles[index].id;
+        const modelStudentId = result.narrative.student_id;
         if (modelStudentId !== authoritativeId) {
           console.warn(
             `  narrative id drift: model returned '${modelStudentId}', using profile id '${authoritativeId}'`,
@@ -169,21 +127,33 @@ async function main() {
         }
         if (!profileIds.has(authoritativeId)) {
           console.warn(`  skipping unknown profile id ${authoritativeId}`);
-          return;
+        } else {
+          const body = result.narrative.narrative_markdown.trimEnd();
+          const full = `${body}\n\n---\n\n## References\n\n${framework.references}\n`;
+          await writeFile(join(narrativesDir, `${authoritativeId}.md`), full);
+          narrativesWritten += 1;
         }
-        const body = narrativeMarkdown.trimEnd();
-        const full = `${body}\n\n---\n\n## References\n\n${framework.references}\n`;
-        await writeFile(join(narrativesDir, `${authoritativeId}.md`), full);
-        narrativesWritten += 1;
+
+        await writeAnalysesCheckpoint();
       },
       onFeatures: (f) => {
-        if (features) features.narrativeCache = f.narrativeCache;
+        features = f;
       },
     });
 
+    for (let i = 0; i < assessmentResults.length; i++) {
+      collected[i] = assessmentResults[i];
+    }
+
+    const finalResults = collected.filter(
+      (r): r is StudentAssessmentResult => r !== undefined,
+    );
+
+    await writeAnalysesCheckpoint();
+
     status =
-      finalAnalyses.length >= profiles.length &&
-      narrativesWritten >= finalAnalyses.length
+      finalResults.length >= profiles.length &&
+      narrativesWritten >= finalResults.length
         ? "success"
         : "partial";
   } catch (err) {
@@ -194,7 +164,7 @@ async function main() {
   } finally {
     await writeAnalysesCheckpoint();
     const completedAnalyses = collected.filter(
-      (r): r is AnalysisResult => r !== undefined,
+      (r): r is StudentAssessmentResult => r !== undefined,
     ).length;
     const manifest = {
       runId,
@@ -216,7 +186,6 @@ async function main() {
       requestedProfiles: profiles.length,
       completedAnalyses,
       completedNarratives: narrativesWritten,
-      cohortSize: cohortMap.size,
       temperature: ANALYSIS.temperature,
       narrativeTemperature: ANALYSIS.narrativeTemperature,
       features,
@@ -227,7 +196,6 @@ async function main() {
       `\nStatus: ${status} (analyses ${completedAnalyses}/${profiles.length}, narratives ${narrativesWritten}/${completedAnalyses})`,
     );
     console.log(`Analyses: ${analysesPath}`);
-    console.log(`Cohort:   ${cohortPath}`);
     console.log(`Narratives: ${narrativesDir}/`);
     console.log(`Manifest: ${manifestPath}`);
   }

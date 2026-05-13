@@ -1,4 +1,4 @@
-export const MODEL = "gemini-3.1-flash-lite-preview";
+export const MODEL = "gemini-2.5-flash-lite";
 
 export const ANALYSIS = {
   // Manifest (relative to cwd) describing the framework document bundle.
@@ -13,22 +13,22 @@ export const ANALYSIS = {
   // Where to write analysis outputs (run-<timestamp> subfolders).
   outputDir: "output",
 
-  // Pass 1 (structured JSON assessment) knobs.
+  // Combined per-student assessment+narrative pass knobs.
   temperature: 0.3,
 
-  // Pass 3 (per-student markdown narrative) knobs.
+  // Legacy narrative-only rerun knob.
   narrativeTemperature: 0.5,
 
   useFlex: true,
-  useCache: true,
+  useCache: false,
   cacheTtlSeconds: 3600,
 
-  // Bounded concurrency for Pass 1 and Pass 3 LLM calls. Each call is
+  // Bounded concurrency for per-student LLM calls. Each call is
   // independent (order preserved by indexing in runner.ts), so this is
   // safe to raise as long as the provider accepts concurrent requests.
   // 4 is a conservative default that roughly 3-4x's throughput vs.
   // sequential on flex tier; raise with care.
-  concurrency: 4,
+  concurrency: 1,
 };
 
 export const MIN_CACHE_TOKENS = 1024;
