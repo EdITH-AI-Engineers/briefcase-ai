@@ -1,0 +1,21 @@
+{
+  "name": "@briefcase/genai-analysis",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "analyze": "tsx src/index.ts",
+    "evaluate": "tsx src/evaluate/index.ts"
+  },
+  "dependencies": {
+    "@briefcase/shared": "workspace:*",
+    "@google/genai": "^1.50.1",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

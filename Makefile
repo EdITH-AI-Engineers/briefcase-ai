@@ -2,67 +2,46 @@
 
 help:
 	@echo "Briefcase AI commands"
-	@echo ""
-	@echo "Setup:"
-	@echo "  make install    Install dependencies for all packages with bun"
-	@echo ""
-	@echo "Pipeline:"
+	@echo "  make install    Install root Bun workspace dependencies"
 	@echo "  make generate   Generate synthetic student profiles"
 	@echo "  make analyze    Analyze generated profiles with Gemini"
 	@echo "  make evaluate   Run offline analysis evaluator"
 	@echo "  make pipeline   Run generate, analyze, and evaluate"
-	@echo ""
-	@echo "Apps:"
 	@echo "  make api        Start the Hono API server"
 	@echo "  make ui         Start the Vite React UI"
-	@echo "  make dev        Print two-terminal dev instructions"
-	@echo ""
-	@echo "Checks:"
-	@echo "  make test       Run dashboard API unit tests"
-	@echo "  make typecheck  Typecheck packages that expose typecheck scripts"
+	@echo "  make test       Run API unit tests"
+	@echo "  make typecheck  Typecheck workspace packages"
 	@echo "  make build      Build the UI"
 
 install:
-	cd synth-data-gen && bun install
-	cd genai-analysis && bun install
-	cd briefcase-api && bun install
-	cd briefcase-ui && bun install
+	bun install
 
 generate:
-	cd synth-data-gen && bun run generate
+	bun run generate
 
 analyze:
-	cd genai-analysis && bun run analyze
+	bun run analyze
 
 evaluate:
-	cd genai-analysis && bun run evaluate
+	bun run evaluate
 
-pipeline: generate analyze evaluate
+pipeline:
+	bun run pipeline
 
 api:
-	cd briefcase-api && bun run dev
+	bun run api
 
 ui:
-	cd briefcase-ui && bun run dev
+	bun run ui
 
 dev:
-	@echo "Start the API and UI in separate terminals:"
-	@echo ""
-	@echo "Terminal 1:"
-	@echo "  make api"
-	@echo ""
-	@echo "Terminal 2:"
-	@echo "  make ui"
-	@echo ""
-	@echo "Current caveat: the API serves fixture data until the real run adapter is added."
+	bun run dev
 
 test:
-	cd briefcase-api && bun run test
+	bun run test
 
 typecheck:
-	cd genai-analysis && bun run typecheck
-	cd briefcase-api && bun run typecheck
-	cd briefcase-ui && bun run typecheck
+	bun run typecheck
 
 build:
-	cd briefcase-ui && bun run build
+	bun run build
