@@ -40,7 +40,16 @@ export type StudentDashboardDto = {
     redFlags: string[];
   };
   roadmap: {
-    nodes: { id: string; label: string; detail: string; type: "gap" | "course" | "project" | "evidence"; x: number; y: number }[];
+    nodes: {
+      id: string;
+      label: string;
+      detail: string;
+      type: "gap" | "course" | "project" | "evidence";
+      x: number;
+      y: number;
+      competency: string;
+      objectives?: string[];
+    }[];
     edges: { id: string; source: string; target: string }[];
   };
   recommendations: { title: string; provider: string; reason: string; relatedCompetency: string; url?: string }[];

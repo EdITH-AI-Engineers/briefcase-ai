@@ -1,4 +1,5 @@
 import type { StudentDashboardDto, Level } from "../types/dashboard.js";
+import { linkedinLearningSearchUrl, pickKeywords } from "./linkedin-search.js";
 
 const levelScore: Record<Level, number> = {
   "Not Demonstrated": 0,
@@ -55,7 +56,13 @@ function skillGroups(profile: Record<string, unknown>, redFlags: string[]): Stud
 }
 
 type CompetencyDto = StudentDashboardDto["competencies"][number];
-type Gap = { competency: string; issue: string; recommendation: string };
+type Gap = {
+  competency: string;
+  issue: string;
+  recommendation: string;
+  level: Level;
+  searchKeywords?: string[];
+};
 
 const competencyActions: Record<string, { learn: string; build: string; document: string }> = {
   "Computing Foundations": {
@@ -126,10 +133,16 @@ function normalizeGaps(raw: unknown, competencies: CompetencyDto[]): Gap[] {
     const rawRecommendation = rawGap ? asText(rawGap.recommendation) || asText(rawGap.action) || asText(rawGap.next_step) : "";
     const evidence = competency.evidence.length > 0 ? `Current evidence: ${competency.evidence.slice(0, 2).join(", ")}.` : "Current evidence is sparse or absent.";
     const basis = citationLabel(competency);
+    const rawKeywords = rawGap?.search_keywords;
+    const searchKeywords = Array.isArray(rawKeywords)
+      ? (rawKeywords as unknown[]).map(asText).filter(Boolean)
+      : undefined;
     return {
       competency: competency.name,
       issue: `${competency.level} vs ideal ${competency.idealScore}/100. ${evidence} ${basis}`,
       recommendation: rawRecommendation || competencyActions[competency.name]?.build || "Add concrete portfolio evidence mapped to this competency.",
+      level: competency.level,
+      searchKeywords,
     };
   });
 }
@@ -143,11 +156,14 @@ function roadmap(gaps: Gap[]): StudentDashboardDto["roadmap"] {
     const courseId = `course-${index}`;
     const projectId = `project-${index}`;
     const evidenceId = `evidence-${index}`;
+    const actions = competencyActions[gap.competency];
+    const objectives = actions ? [actions.learn, actions.build, actions.document] : undefined;
+    const competency = gap.competency;
     nodes.push(
-      { id: gapId, label: gap.competency, detail: gap.issue, type: "gap", x: 0, y },
-      { id: courseId, label: "Learn", detail: competencyActions[gap.competency]?.learn ?? "Review the mapped framework outcomes for this competency.", type: "course", x: 270, y },
-      { id: projectId, label: "Build", detail: competencyActions[gap.competency]?.build ?? gap.recommendation, type: "project", x: 540, y },
-      { id: evidenceId, label: "Document", detail: competencyActions[gap.competency]?.document ?? "Collect artifacts, reflection notes, and advisor-reviewed evidence.", type: "evidence", x: 810, y },
+      { id: gapId, label: gap.competency, detail: gap.issue, type: "gap", x: 0, y, competency, objectives },
+      { id: courseId, label: "Learn", detail: actions?.learn ?? "Review the mapped framework outcomes for this competency.", type: "course", x: 270, y, competency, objectives },
+      { id: projectId, label: "Build", detail: actions?.build ?? gap.recommendation, type: "project", x: 540, y, competency, objectives },
+      { id: evidenceId, label: "Document", detail: actions?.document ?? "Collect artifacts, reflection notes, and advisor-reviewed evidence.", type: "evidence", x: 810, y, competency, objectives },
     );
     edges.push(
       { id: `${gapId}-${courseId}`, source: gapId, target: courseId },
@@ -208,13 +224,20 @@ export function buildDashboard(input: {
     competencies,
     skills: skillGroups(input.profile, redFlags),
     roadmap: roadmap(gaps),
-    recommendations: gaps.map((gap) => ({
-      title: `${gap.competency} booster path`,
-      provider: "LinkedIn Learning",
-      reason: gap.recommendation,
-      relatedCompetency: gap.competency,
-      url: "https://www.linkedin.com/learning/",
-    })),
+    recommendations: gaps.flatMap((gap) => {
+      const keywords = pickKeywords(gap.competency, gap.recommendation, gap.searchKeywords);
+      return keywords.slice(0, 3).map((keyword, index) => ({
+        title: index === 0
+          ? `${gap.competency}: ${keyword}`
+          : `Deepen with "${keyword}"`,
+        provider: "LinkedIn Learning",
+        reason: index === 0
+          ? gap.recommendation
+          : `Targeted ${gap.level.toLowerCase()} search for ${gap.competency.toLowerCase()}.`,
+        relatedCompetency: gap.competency,
+        url: linkedinLearningSearchUrl({ keywords: keyword, level: gap.level }),
+      }));
+    }),
     references: (input.manifest.framework?.docs ?? []).map((doc: any) => ({ id: doc.id, title: doc.title, url: doc.url })),
     narrative: input.narrative,
   };

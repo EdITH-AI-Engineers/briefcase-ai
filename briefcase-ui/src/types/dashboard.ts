@@ -11,7 +11,19 @@ export type StudentDashboardDto = {
     missing: string[];
     redFlags: string[];
   };
-  roadmap: { nodes: { id: string; label: string; detail: string; type: string; x: number; y: number }[]; edges: { id: string; source: string; target: string }[] };
+  roadmap: {
+    nodes: {
+      id: string;
+      label: string;
+      detail: string;
+      type: string;
+      x: number;
+      y: number;
+      competency: string;
+      objectives?: string[];
+    }[];
+    edges: { id: string; source: string; target: string }[];
+  };
   recommendations: { title: string; provider: string; reason: string; relatedCompetency: string; url?: string }[];
   references: { id: string; title: string; url: string }[];
   narrative: string;

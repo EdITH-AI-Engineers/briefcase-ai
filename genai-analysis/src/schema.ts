@@ -119,9 +119,16 @@ export const ANALYSIS_SCHEMA: Schema = {
             type: Type.STRING,
             description: "Specific, actionable next step tied to this gap.",
           },
+          search_keywords: {
+            type: Type.ARRAY,
+            description:
+              "1-3 short LinkedIn Learning search terms (2-4 words each) that would surface relevant courses for this gap at the student's current proficiency. Prefer generic, course-friendly phrases (e.g. 'threat modeling', 'docker for developers', 'technical writing'). Avoid student-specific or proper nouns.",
+            items: { type: Type.STRING },
+            nullable: true,
+          },
         },
         required: ["area", "reason", "recommendation"],
-        propertyOrdering: ["area", "reason", "recommendation"],
+        propertyOrdering: ["area", "reason", "recommendation", "search_keywords"],
       },
     },
   },
