@@ -1,4 +1,4 @@
-export const MODEL = "gemini-2.5-flash-lite";
+export const MODEL = "gemini-2.0-flash-lite";
 
 export const ANALYSIS = {
   // Manifest (relative to cwd) describing the framework document bundle.
@@ -13,14 +13,15 @@ export const ANALYSIS = {
   // Where to write analysis outputs (run-<timestamp> subfolders).
   outputDir: "output",
 
-  // Combined per-student assessment+narrative pass knobs.
+  // Combined per-student assessment+narrative pass knob.
   temperature: 0.3,
 
-  // Legacy narrative-only rerun knob.
+  // Reserved for legacy narrative-only experiments; the main analyzer now
+  // uses `temperature` for the combined response.
   narrativeTemperature: 0.5,
 
   useFlex: true,
-  useCache: false,
+  useCache: true,
   cacheTtlSeconds: 3600,
 
   // Bounded concurrency for per-student LLM calls. Each call is
@@ -28,7 +29,7 @@ export const ANALYSIS = {
   // safe to raise as long as the provider accepts concurrent requests.
   // 4 is a conservative default that roughly 3-4x's throughput vs.
   // sequential on flex tier; raise with care.
-  concurrency: 1,
+  concurrency: 4,
 };
 
 export const MIN_CACHE_TOKENS = 1024;
