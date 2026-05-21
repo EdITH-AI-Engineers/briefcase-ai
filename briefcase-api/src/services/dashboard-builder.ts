@@ -118,7 +118,7 @@ function normalizeGaps(raw: unknown, competencies: CompetencyDto[]): Gap[] {
   const weakCompetencies = competencies
     .filter((competency) => competency.score < competency.idealScore)
     .sort((a, b) => a.score - b.score)
-    .slice(0, 3);
+    .slice(0, 2);
   const rawByCompetency = new Map<string, Record<string, unknown>>();
   if (Array.isArray(raw)) {
     for (const gap of raw) {
@@ -130,16 +130,20 @@ function normalizeGaps(raw: unknown, competencies: CompetencyDto[]): Gap[] {
 
   return weakCompetencies.map((competency) => {
     const rawGap = rawByCompetency.get(competency.name);
+    console.log(rawGap);
     const rawRecommendation = rawGap ? asText(rawGap.recommendation) || asText(rawGap.action) || asText(rawGap.next_step) : "";
-    const evidence = competency.evidence.length > 0 ? `Current evidence: ${competency.evidence.slice(0, 2).join(", ")}.` : "Current evidence is sparse or absent.";
-    const basis = citationLabel(competency);
+
+    // const evidence = competency.evidence.length > 0 ? `Current evidence: ${competency.evidence.slice(0, 2).join(", ")}.` : "Current evidence is sparse or absent.";
+    // const basis = citationLabel(competency);
+
     const rawKeywords = rawGap?.search_keywords;
     const searchKeywords = Array.isArray(rawKeywords)
       ? (rawKeywords as unknown[]).map(asText).filter(Boolean)
       : undefined;
+    const rawIssue = rawGap?.reason as string;
     return {
       competency: competency.name,
-      issue: `${competency.level} vs ideal ${competency.idealScore}/100. ${evidence} ${basis}`,
+      issue: rawIssue,
       recommendation: rawRecommendation || competencyActions[competency.name]?.build || "Add concrete portfolio evidence mapped to this competency.",
       level: competency.level,
       searchKeywords,

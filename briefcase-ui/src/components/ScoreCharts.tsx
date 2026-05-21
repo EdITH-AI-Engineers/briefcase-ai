@@ -33,8 +33,8 @@ export function ScoreCharts({ data }: { data: StudentDashboardDto }) {
             <PolarGrid stroke="rgba(15,23,42,.12)" />
             <PolarAngleAxis dataKey="name" tick={{ fontSize: 10, fill: "#475569" }} tickFormatter={wrapLabel} />
             <Tooltip formatter={(value, name) => [`${value}/100`, String(name)]} />
-            <Radar dataKey="ideal" name="Ideal score" stroke="#94a3b8" fill="#94a3b8" fillOpacity={0.08} />
-            <Radar dataKey="score" name="Student score" stroke="#0f766e" fill="#0f766e" fillOpacity={0.32} />
+            <Radar dataKey="ideal" name="Ideal score" stroke="#334454" fill="#334454" fillOpacity={0.08} />
+            <Radar dataKey="score" name="Student score" stroke="#08A0E9" fill="#08A0E9" fillOpacity={0.32} />
           </RadarChart>
         </ResponsiveContainer>
       </div>
@@ -58,8 +58,8 @@ export function ScoreCharts({ data }: { data: StudentDashboardDto }) {
               labelFormatter={(label) => String(label)}
               formatter={(value, name) => [`${value}/100`, name === "score" ? "Student score" : "Ideal score"]}
             />
-            <Bar dataKey="ideal" name="Ideal score" fill="#94a3b8" fillOpacity={0.22} radius={[6, 6, 0, 0]} />
-            <Bar dataKey="score" name="Student score" fill="#0f766e" radius={[6, 6, 0, 0]} />
+            <Bar dataKey="ideal" name="Ideal score" fill="#334454" fillOpacity={0.22} radius={[6, 6, 0, 0]} />
+            <Bar dataKey="score" name="Student score" fill="#08A0E9" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

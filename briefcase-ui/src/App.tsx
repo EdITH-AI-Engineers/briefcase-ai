@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, BriefcaseBusiness, CheckCircle2, ExternalLink, FileText, PlayCircle } from "lucide-react";
 import { fetchDashboard, fetchRuns, fetchStudentDashboard, fetchStudents, type RunSummary, type StudentSummary } from "./lib/api";
 import type { StudentDashboardDto } from "./types/dashboard";
@@ -9,10 +9,6 @@ import { Drawer } from "./components/Drawer";
 import { ReferenceChip } from "./components/ReferenceChip";
 
 type RoadmapNode = StudentDashboardDto["roadmap"]["nodes"][number];
-
-function Progress({ value }: { value: number }) {
-  return <div className="progress"><span style={{ width: `${value}%` }} /></div>;
-}
 
 function ProfilePicker({
   runs,
@@ -76,6 +72,8 @@ function Dashboard({
     ? data.recommendations.filter((rec) => rec.relatedCompetency === drawerNode.competency)
     : [];
 
+  const [popover, setPopover] = useState<{ id: string; rect: DOMRect } | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   return (
     <main className="shell">
       <section className="toolbar">
@@ -98,28 +96,38 @@ function Dashboard({
       <section className="hero">
         <div className="hero-text">
           <div className="eyebrow"><BriefcaseBusiness size={16} /> Briefcase AI</div>
-          <h1>{data.student.name}</h1>
+          <span>{data.student.name}</span>
           <p>{data.overview.summary}</p>
         </div>
         <div className="hero-score">
-          <span>Overall score</span>
-          <strong>{data.overview.overallScore}</strong>
-          <em>{data.overview.ratingLabel}</em>
-          <div
-            className="score-bar"
-            role="progressbar"
-            aria-valuenow={data.overview.overallScore}
-            aria-valuemin={0}
-            aria-valuemax={100}
-          >
-            <span className="fill" style={{ width: `${data.overview.overallScore}%` }} />
-            <span
-              className="ideal-marker"
-              style={{ left: `${data.overview.idealScore}%` }}
-              aria-label={`Ideal ${data.overview.idealScore}`}
-            />
+          <span >Overall score</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <strong>{data.overview.overallScore}</strong>
+            <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 2, paddingLeft: 10 }}>
+              <em style={{ width: "100%" }}>{data.overview.ratingLabel}</em>
+              <div
+                className="score-bar"
+                role="progressbar"
+                aria-valuenow={data.overview.overallScore}
+                aria-valuemin={0}
+                aria-valuemax={100}
+              >
+                <div className="dual-bar">
+                  <span className="dual-bar__ideal" style={{ width: `${data.overview.idealScore}%` }} />
+                  <span className="dual-bar__actual" style={{ width: `${data.overview.overallScore}%` }} />
+
+                </div>
+                <span
+                  className="ideal-marker"
+                  style={{ left: `${data.overview.idealScore}%` }}
+                  aria-label={`Ideal ${data.overview.idealScore}`}
+                />
+              </div>
+              <small>Ideal year-level score: <span style={{ fontWeight: "bold", color: "#fba607" }}>{data.overview.idealScore}</span></small>
+            </div>
           </div>
-          <small>Ideal year-level score {data.overview.idealScore}</small>
+
+
           <div className="hero-stats" aria-label="Score per competency">
             {data.competencies.map((competency) => (
               <div className="hero-stat" key={competency.name}>
@@ -132,7 +140,10 @@ function Dashboard({
                   aria-valuemax={100}
                   aria-label={`${competency.name} ${competency.score} of 100`}
                 >
-                  <span className="fill" style={{ width: `${competency.score}%` }} />
+                  <div className="dual-bar">
+                    <span className="dual-bar__ideal" style={{ width: `${competency.idealScore}%` }} />
+                    <span className="dual-bar__actual" style={{ width: `${competency.score}%` }} />
+                  </div>
                   <span
                     className="ideal-marker"
                     style={{ left: `${competency.idealScore}%` }}
@@ -148,13 +159,13 @@ function Dashboard({
 
       <section className="overview-grid">
         <div className="panel issues-panel">
-          <div>
+          <div className="warning">
             <h2>Top issues</h2>
             {data.overview.topIssues.length > 0
               ? data.overview.topIssues.map((issue) => <p key={issue}><AlertTriangle size={15} />{issue}</p>)
               : <p><CheckCircle2 size={15} />No top issues available for this profile.</p>}
           </div>
-          <div>
+          <div className="good">
             <h2>Quick fixes</h2>
             {data.overview.quickFixes.length > 0
               ? data.overview.quickFixes.map((fix) => <p key={fix}><CheckCircle2 size={15} />{fix}</p>)
@@ -173,8 +184,6 @@ function Dashboard({
               <h3>{competency.name}</h3>
               <p>{competency.diagnosis}</p>
             </div>
-            <strong>{competency.level}</strong>
-            <Progress value={competency.score} />
             {competency.citations.length > 0 && (
               <div className="citation-chips">
                 {competency.citations.map((citation) => {
@@ -188,7 +197,7 @@ function Dashboard({
                       key={`${citation.doc}-${citation.clause}`}
                       trigger={<span className="ref-chip" aria-label={reference.title}>{label}</span>}
                     >
-                      <strong>{reference.title}</strong>
+                      <strong style={{ color: "#08A0E9" }}>{reference.title}</strong>
                       <span style={{ color: "#94a3b8" }}>Clause {citation.clause}</span>
                       {reference.url.startsWith("http") ? (
                         <a href={reference.url} target="_blank" rel="noreferrer">{reference.url}</a>
@@ -208,11 +217,15 @@ function Dashboard({
         <div className="section-kicker">Skills and red flags</div>
         <div className="skill-columns">
           {Object.entries({ Hard: data.skills.hard, Soft: data.skills.soft, Tools: data.skills.tools, Domains: data.skills.domains }).map(([label, skills]) => (
-            <div key={label}><h3>{label}</h3>{skills.map((skill) => <span className="tag" key={skill.name}>{skill.name}<b>{skill.rating}</b></span>)}</div>
+            <div key={label}><h3>{label}</h3>{skills.map((skill) => <span className="tag" key={skill.name}>{skill.name}<b style={skill.rating < 50 ? { color: "#ba2208" } : { color: "#08A0E9" }}>{skill.rating}</b></span>)}</div>
           ))}
         </div>
-        <div className="missing-tags">{data.skills.missing.map((item) => <span key={item}>{item}</span>)}</div>
-        <div className="red-flags">{data.skills.redFlags.map((flag) => <p key={flag}><AlertTriangle size={15} />{flag}</p>)}</div>
+
+        <div className="red-flags">
+          <span style={{ font: "800 20px Lora, monospace" }}>Missing Skills</span>
+          <div className="missing-tags">{data.skills.missing.map((item) => <span key={item}>{item}</span>)}</div>
+          <span style={{ font: "800 20px Lora, monospace", paddingTop: "20px" }}>Red Flags</span>
+          {data.skills.redFlags.map((flag) => <p key={flag}><AlertTriangle size={15} />{flag}</p>)}</div>
       </section>
 
       <Roadmap data={data} onNodeClick={setDrawerNode} />
