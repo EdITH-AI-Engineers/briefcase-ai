@@ -1,0 +1,26 @@
+[
+  {
+    "student_id": "stu-feu-047",
+    "program": "BSCS",
+    "summary": "Mikaela shows a strong third-year profile in programming, data handling, and peer leadership, with weaker evidence in systems deployment and security practice.",
+    "competencies": [
+      { "name": "Computing Foundations", "level": "Proficient", "evidence": ["TypeScript", "Python", "introductory programming workshops"], "citations": [{ "doc": "slate", "clause": "c1" }, { "doc": "cc2020", "clause": "KA-SDF" }], "confidence": "high", "notes": "Repeated programming and tutoring evidence." },
+      { "name": "Systems & Infrastructure", "level": "Developing", "evidence": ["Docker", "attendance API"], "citations": [{ "doc": "slate", "clause": "c2" }, { "doc": "cc2020", "clause": "KA-SF" }], "confidence": "medium", "notes": "Backend project is present, but deployment and networking evidence is thin." },
+      { "name": "Data & Information Management", "level": "Proficient", "evidence": ["PostgreSQL", "SQL extracts", "student retention dashboard"], "citations": [{ "doc": "slate", "clause": "c3" }, { "doc": "cc2020", "clause": "KA-IM" }], "confidence": "high", "notes": "Multiple database and analytics signals." },
+      { "name": "Security, Ethics & Professional Responsibility", "level": "Emerging", "evidence": ["QR code validation"], "citations": [{ "doc": "slate", "clause": "c4" }, { "doc": "ched-25", "clause": "bscs-po-4" }], "confidence": "low", "notes": "Security appears only indirectly." },
+      { "name": "Professional Communication", "level": "Developing", "evidence": ["Volunteer tutor", "committee lead"], "citations": [{ "doc": "slate", "clause": "c5" }], "confidence": "medium", "notes": "Teaching and coordination imply communication, but artifacts are not shown." },
+      { "name": "Collaboration & Teamwork", "level": "Proficient", "evidence": ["Backend committee lead", "student developer organization"], "citations": [{ "doc": "slate", "clause": "c6" }, { "doc": "cc2020", "clause": "DISP-COLLAB" }], "confidence": "high", "notes": "Leadership evidence is concrete." },
+      { "name": "Self-Directed Learning & Innovation", "level": "Developing", "evidence": ["Google Data Analytics Foundations", "student retention dashboard"], "citations": [{ "doc": "slate", "clause": "c7" }, { "doc": "cc2020", "clause": "DISP-SELF" }], "confidence": "medium", "notes": "Good initiative, but needs deeper independent portfolio proof." }
+    ],
+    "strengths": [
+      { "title": "Programming depth", "evidence": "TypeScript, Python, and tutoring experience." },
+      { "title": "Data project evidence", "evidence": "Retention dashboard using Python and SQL." },
+      { "title": "Leadership", "evidence": "Backend committee lead role." }
+    ],
+    "gaps": [
+      { "competency": "Security, Ethics & Professional Responsibility", "issue": "Security evidence is thin and mostly inferred from validation work.", "recommendation": "Add a small threat-modeling note or security testing section to the attendance API project." },
+      { "competency": "Systems & Infrastructure", "issue": "Deployment, networking, and operations evidence is incomplete.", "recommendation": "Deploy one backend project with documented Docker, logs, monitoring, and environment setup." },
+      { "competency": "Professional Communication", "issue": "Communication artifacts are implied but not documented.", "recommendation": "Publish a short technical write-up or project README explaining design decisions." }
+    ]
+  }
+]

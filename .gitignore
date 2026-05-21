@@ -2,3 +2,10 @@ node_modules
 dist
 .env
 output/
+.plankton
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Generated reports
+report/
