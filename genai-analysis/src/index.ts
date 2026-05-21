@@ -4,6 +4,7 @@ import { dirname, join, resolve } from "node:path";
 import { ANALYSIS, MODEL } from "./config.js";
 import { loadFramework } from "./context.js";
 import { analyzeDataset, type RunFeatures } from "./runner.js";
+import { splitSkills } from "./skills.js";
 import type {
   AnalysisResult,
   StudentAssessmentResult,
@@ -100,12 +101,23 @@ async function main() {
   let features: RunFeatures | undefined;
   let narrativesWritten = 0;
   const profileIds = new Set(profiles.map((p) => p.id));
+  const profilesById = new Map(profiles.map((p) => [p.id, p]));
+
+  const enrichAnalysis = (analysis: AnalysisResult): AnalysisResult => {
+    const profile = profilesById.get(analysis.student_id);
+    return {
+      ...analysis,
+      skills: splitSkills(profile?.skills ?? []),
+    };
+  };
 
   const writeAnalysesCheckpoint = async () => {
     const completed = collected.filter(
       (r): r is StudentAssessmentResult => r !== undefined,
     );
-    const analyses: AnalysisResult[] = completed.map((r) => r.analysis);
+    const analyses: AnalysisResult[] = completed.map((r) =>
+      enrichAnalysis(r.analysis),
+    );
     await writeFile(analysesPath, JSON.stringify(analyses, null, 2));
   };
 

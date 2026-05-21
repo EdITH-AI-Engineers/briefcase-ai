@@ -1,4 +1,4 @@
-export const MODEL = "gemini-2.0-flash-lite";
+export const MODEL = "gemini-2.5-flash-lite";
 
 export const ANALYSIS = {
   // Manifest (relative to cwd) describing the framework document bundle.
@@ -27,9 +27,9 @@ export const ANALYSIS = {
   // Bounded concurrency for per-student LLM calls. Each call is
   // independent (order preserved by indexing in runner.ts), so this is
   // safe to raise as long as the provider accepts concurrent requests.
-  // 4 is a conservative default that roughly 3-4x's throughput vs.
+  // 2 is a conservative default that roughly 2-3x's throughput vs.
   // sequential on flex tier; raise with care.
-  concurrency: 4,
+  concurrency: 2,
 };
 
 export const MIN_CACHE_TOKENS = 1024;
