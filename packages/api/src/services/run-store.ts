@@ -2,6 +2,7 @@ import { analysisOutputDir } from "@briefcase/shared";
 import { access, readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { buildDashboard } from "./dashboard-builder.js";
+import type { AnalysisManifest, DashboardAnalysis, DashboardProfile } from "./dashboard-builder.js";
 
 async function readJson<T>(path: string): Promise<T> {
   return JSON.parse(await readFile(path, "utf8")) as T;
@@ -16,15 +17,26 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
-async function readRun(runId: string) {
+type AnalysisRun = {
+  runDir: string;
+  manifest: AnalysisManifest & {
+    profilesPath?: string;
+    completedAnalyses?: number;
+    requestedProfiles?: number;
+  };
+  analyses: DashboardAnalysis[];
+  profiles: DashboardProfile[];
+};
+
+async function readRun(runId: string): Promise<AnalysisRun | null> {
   const runDir = join(analysisOutputDir, runId);
   const manifestPath = join(runDir, "manifest.json");
   const analysesPath = join(runDir, "analyses.json");
   if (!(await exists(manifestPath)) || !(await exists(analysesPath))) return null;
 
   const [manifest, analyses] = await Promise.all([
-    readJson<any>(manifestPath),
-    readJson<any[]>(analysesPath),
+    readJson<AnalysisRun["manifest"]>(manifestPath),
+    readJson<DashboardAnalysis[]>(analysesPath),
   ]);
   const profilesPath = String(manifest.profilesPath ?? join(runDir, "profiles.json"));
   if (!(await exists(profilesPath))) return null;
@@ -33,7 +45,7 @@ async function readRun(runId: string) {
     runDir,
     manifest,
     analyses,
-    profiles: await readJson<any[]>(profilesPath),
+    profiles: await readJson<DashboardProfile[]>(profilesPath),
   };
 }
 

@@ -1,3 +1,4 @@
+import type { Citation, Program } from "@briefcase/shared";
 import type { StudentDashboardDto, Level } from "../types/dashboard.js";
 
 const levelScore: Record<Level, number> = {
@@ -31,17 +32,54 @@ function sparsity(profile: Record<string, unknown>): StudentDashboardDto["studen
   return "Rich";
 }
 
-function skillGroups(profile: Record<string, unknown>, redFlags: string[]): StudentDashboardDto["skills"] {
-  const skills = Array.isArray(profile.skills) ? (profile.skills as { name: string; rating?: number }[]) : [];
+type DashboardSkill = { name: string; rating: number };
+
+export type FrameworkDoc = { id: string; title: string; url: string };
+
+export type AnalysisManifest = {
+  status?: string;
+  framework?: {
+    bundleVersion?: string;
+    docs?: FrameworkDoc[];
+  };
+};
+
+type RawSkill = { name: string; percentage?: number; rating?: number };
+type RawGap = { competency?: string; area?: string; title?: string; recommendation?: string; action?: string; next_step?: string };
+type RawCompetency = { name: string; level: string; evidence?: string[]; citations?: Citation[]; notes?: string };
+export type DashboardProfile = Record<string, unknown> & {
+  id: string;
+  full_name?: string;
+  program?: Program | string;
+  year_level?: number;
+  skills?: RawSkill[];
+};
+export type DashboardAnalysis = {
+  student_id?: string;
+  summary?: string;
+  competencies: RawCompetency[];
+  gaps?: RawGap[];
+};
+
+type DashboardInput = {
+  runId: string;
+  profile: DashboardProfile;
+  analysis: DashboardAnalysis;
+  narrative: string;
+  manifest: AnalysisManifest;
+};
+
+function skillGroups(profile: DashboardProfile, redFlags: string[]): StudentDashboardDto["skills"] {
+  const skills = profile.skills ?? [];
   const grouped = {
-    hard: [] as { name: string; rating: number }[],
-    soft: [] as { name: string; rating: number }[],
-    tools: [] as { name: string; rating: number }[],
-    domains: [] as { name: string; rating: number }[],
+    hard: [] as DashboardSkill[],
+    soft: [] as DashboardSkill[],
+    tools: [] as DashboardSkill[],
+    domains: [] as DashboardSkill[],
   };
   for (const skill of skills) {
     const key = skill.name.toLowerCase();
-    const item = { name: skill.name, rating: skill.rating ?? 50 };
+    const item = { name: skill.name, rating: skill.percentage ?? skill.rating ?? 50 };
     if (hardSkills.has(key)) grouped.hard.push(item);
     else if (softSkills.has(key)) grouped.soft.push(item);
     else if (tools.has(key)) grouped.tools.push(item);
@@ -99,6 +137,10 @@ function asText(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function toLevel(value: string): Level {
+  return value in levelScore ? (value as Level) : "Not Demonstrated";
+}
+
 function citationLabel(competency: CompetencyDto): string {
   const citations = competency.citations
     .filter((citation) => citation.doc !== "slate")
@@ -107,18 +149,16 @@ function citationLabel(competency: CompetencyDto): string {
   return citations.length > 0 ? `Framework basis: ${citations.join(", ")}.` : "Framework basis: CHED, CC2020, SFIA mapped assessment slate.";
 }
 
-function normalizeGaps(raw: unknown, competencies: CompetencyDto[]): Gap[] {
+function normalizeGaps(raw: RawGap[] | undefined, competencies: CompetencyDto[]): Gap[] {
   const weakCompetencies = competencies
     .filter((competency) => competency.score < competency.idealScore)
     .sort((a, b) => a.score - b.score)
     .slice(0, 3);
-  const rawByCompetency = new Map<string, Record<string, unknown>>();
-  if (Array.isArray(raw)) {
-    for (const gap of raw) {
-      const item = gap as Record<string, unknown>;
-      const competency = asText(item.competency) || asText(item.area) || asText(item.title);
-      if (competency) rawByCompetency.set(competency, item);
-    }
+  const rawByCompetency = new Map<string, RawGap>();
+  for (const gap of raw ?? []) {
+    const item = gap;
+    const competency = asText(item.competency) || asText(item.area) || asText(item.title);
+    if (competency) rawByCompetency.set(competency, item);
   }
 
   return weakCompetencies.map((competency) => {
@@ -158,21 +198,16 @@ function roadmap(gaps: Gap[]): StudentDashboardDto["roadmap"] {
   return { nodes, edges };
 }
 
-export function buildDashboard(input: {
-  runId: string;
-  profile: Record<string, unknown>;
-  analysis: Record<string, unknown>;
-  narrative: string;
-  manifest: Record<string, any>;
-}): StudentDashboardDto {
-  const competenciesRaw = input.analysis.competencies as any[];
+export function buildDashboard(input: DashboardInput): StudentDashboardDto {
+  const competenciesRaw = input.analysis.competencies;
   const year = Number(input.profile.year_level) || null;
   const idealScore = year ? idealByYear[year] ?? 65 : 65;
-  const competencies = competenciesRaw.map((competency, index) => {
-    const score = levelScore[competency.level as Level] ?? 0;
+  const competencies = competenciesRaw.map((competency) => {
+    const level = toLevel(competency.level);
+    const score = levelScore[level] ?? 0;
     return {
       name: competency.name,
-      level: competency.level,
+      level,
       score,
       idealScore,
       diagnosis: competency.notes ?? "No diagnosis available.",
@@ -180,7 +215,7 @@ export function buildDashboard(input: {
       citations: competency.citations ?? [],
     };
   });
-  const overallScore = Math.round(competencies.reduce((sum, item) => sum + item.score, 0) / competencies.length);
+  const overallScore = competencies.length > 0 ? Math.round(competencies.reduce((sum, item) => sum + item.score, 0) / competencies.length) : 0;
   const gaps = normalizeGaps(input.analysis.gaps, competencies);
   const redFlags = gaps.map((gap) => gap.issue).filter(Boolean);
 
@@ -215,7 +250,7 @@ export function buildDashboard(input: {
       relatedCompetency: gap.competency,
       url: "https://www.linkedin.com/learning/",
     })),
-    references: (input.manifest.framework?.docs ?? []).map((doc: any) => ({ id: doc.id, title: doc.title, url: doc.url })),
+    references: (input.manifest.framework?.docs ?? []).map((doc) => ({ id: doc.id, title: doc.title, url: doc.url })),
     narrative: input.narrative,
   };
 }
