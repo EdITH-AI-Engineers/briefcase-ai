@@ -17,6 +17,14 @@ export type SkillEntry = {
   percentage: number;
 };
 
+export type SkillKind = "hard" | "soft";
+
+export type SkillBreakdown = {
+  hard: SkillEntry[];
+  soft: SkillEntry[];
+  uncategorized: SkillEntry[];
+};
+
 export type WorkExperienceEntry = {
   company: string;
   role: string;
@@ -131,6 +139,7 @@ export type AnalysisResult = {
   student_id: string;
   program: Program;
   summary: string;
+  skills?: SkillBreakdown;
   competencies: CompetencyAssessment[];
   strengths: Strength[];
   gaps: Gap[];

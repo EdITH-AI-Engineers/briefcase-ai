@@ -357,8 +357,8 @@ must fall within the student's plausible active years.
 `.trim();
 
 export const GENERATION = {
-  batchSize: 10,
-  totalRows: 10,
+  batchSize: 15,
+  totalRows: 15,
   temperature: 1.1,
   outputDir: "output",
   useFlex: true,

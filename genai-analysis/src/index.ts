@@ -4,6 +4,7 @@ import { dirname, join, resolve } from "node:path";
 import { ANALYSIS, MODEL } from "./config.js";
 import { loadFramework } from "./context.js";
 import { analyzeDataset, type RunFeatures } from "./runner.js";
+import { splitSkills } from "./skills.js";
 import type {
   AnalysisResult,
   StudentAssessmentResult,
@@ -99,13 +100,70 @@ async function main() {
   let errorMsg: string | undefined;
   let features: RunFeatures | undefined;
   let narrativesWritten = 0;
-  const profileIds = new Set(profiles.map((p) => p.id));
+  const enrichAnalysis = (
+    analysis: AnalysisResult,
+    profile?: StudentProfile,
+  ): AnalysisResult => {
+    if (!profile) {
+      console.warn(
+        `  no source profile for analysis '${analysis.student_id}'; leaving skills unset`,
+      );
+      return {
+        ...analysis,
+        skills: undefined,
+      };
+    }
+
+    return {
+      ...analysis,
+      skills: splitSkills(profile.skills ?? []),
+    };
+  };
+
+  const normalizeResultIds = (
+    result: StudentAssessmentResult,
+    index: number,
+    warnOnDrift = true,
+  ): StudentAssessmentResult => {
+    const profile = profiles[index];
+    if (!profile) {
+      console.warn(
+        `  no source profile at index ${index}; keeping model-returned ids`,
+      );
+      return result;
+    }
+
+    const authoritativeId = profile.id;
+    const analysisStudentId = result.analysis.student_id;
+    const narrativeStudentId = result.narrative.student_id;
+
+    if (warnOnDrift && analysisStudentId !== authoritativeId) {
+      console.warn(
+        `  analysis id drift: model returned '${analysisStudentId}', using profile id '${authoritativeId}'`,
+      );
+    }
+    if (warnOnDrift && narrativeStudentId !== authoritativeId) {
+      console.warn(
+        `  narrative id drift: model returned '${narrativeStudentId}', using profile id '${authoritativeId}'`,
+      );
+    }
+
+    return {
+      analysis: {
+        ...result.analysis,
+        student_id: authoritativeId,
+      },
+      narrative: {
+        ...result.narrative,
+        student_id: authoritativeId,
+      },
+    };
+  };
 
   const writeAnalysesCheckpoint = async () => {
-    const completed = collected.filter(
-      (r): r is StudentAssessmentResult => r !== undefined,
+    const analyses: AnalysisResult[] = collected.flatMap((r, index) =>
+      r ? [enrichAnalysis(r.analysis, profiles[index])] : [],
     );
-    const analyses: AnalysisResult[] = completed.map((r) => r.analysis);
     await writeFile(analysesPath, JSON.stringify(analyses, null, 2));
   };
 
@@ -114,19 +172,14 @@ async function main() {
       profiles,
       framework,
       onAnalyze: async (result, index) => {
-        collected[index] = result;
+        const normalizedResult = normalizeResultIds(result, index);
+        collected[index] = normalizedResult;
 
         // Trust the profile's id, not the model's echoed id. This guards
         // against minor drift and path-injection via a pathological response.
-        const authoritativeId = profiles[index].id;
-        const modelStudentId = result.narrative.student_id;
-        if (modelStudentId !== authoritativeId) {
-          console.warn(
-            `  narrative id drift: model returned '${modelStudentId}', using profile id '${authoritativeId}'`,
-          );
-        }
-        if (!profileIds.has(authoritativeId)) {
-          console.warn(`  skipping unknown profile id ${authoritativeId}`);
+        const authoritativeId = profiles[index]?.id;
+        if (!authoritativeId) {
+          console.warn(`  skipping unknown profile at index ${index}`);
         } else {
           const body = result.narrative.narrative_markdown.trimEnd();
           const full = `${body}\n\n---\n\n## References\n\n${framework.references}\n`;
@@ -142,7 +195,7 @@ async function main() {
     });
 
     for (let i = 0; i < assessmentResults.length; i++) {
-      collected[i] = assessmentResults[i];
+      collected[i] = normalizeResultIds(assessmentResults[i], i, false);
     }
 
     const finalResults = collected.filter(

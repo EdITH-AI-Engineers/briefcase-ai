@@ -13,22 +13,23 @@ export const ANALYSIS = {
   // Where to write analysis outputs (run-<timestamp> subfolders).
   outputDir: "output",
 
-  // Combined per-student assessment+narrative pass knobs.
+  // Combined per-student assessment+narrative pass knob.
   temperature: 0.3,
 
-  // Legacy narrative-only rerun knob.
+  // Reserved for legacy narrative-only experiments; the main analyzer now
+  // uses `temperature` for the combined response.
   narrativeTemperature: 0.5,
 
   useFlex: true,
-  useCache: false,
+  useCache: true,
   cacheTtlSeconds: 3600,
 
   // Bounded concurrency for per-student LLM calls. Each call is
   // independent (order preserved by indexing in runner.ts), so this is
   // safe to raise as long as the provider accepts concurrent requests.
-  // 4 is a conservative default that roughly 3-4x's throughput vs.
+  // 2 is a conservative default that roughly 2-3x's throughput vs.
   // sequential on flex tier; raise with care.
-  concurrency: 1,
+  concurrency: 2,
 };
 
 export const MIN_CACHE_TOKENS = 1024;
