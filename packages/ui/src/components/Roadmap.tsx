@@ -1,5 +1,7 @@
-import { Background, ReactFlow, type Edge, type Node } from "@xyflow/react";
+import { Background, ReactFlow, type Edge, type Node, type NodeMouseHandler } from "@xyflow/react";
 import type { StudentDashboardDto } from "../types/dashboard";
+
+type RoadmapNode = StudentDashboardDto["roadmap"]["nodes"][number];
 
 const colorByType: Record<string, string> = {
   gap: "road-node gap-node",
@@ -15,7 +17,13 @@ const labelByType: Record<string, string> = {
   evidence: "Document",
 };
 
-export function Roadmap({ data }: { data: StudentDashboardDto }) {
+export function Roadmap({
+  data,
+  onNodeClick,
+}: {
+  data: StudentDashboardDto;
+  onNodeClick?: (node: RoadmapNode) => void;
+}) {
   const nodes: Node[] = data.roadmap.nodes.map((node) => ({
     id: node.id,
     position: { x: node.x, y: node.y },
@@ -31,6 +39,11 @@ export function Roadmap({ data }: { data: StudentDashboardDto }) {
     type: "default",
   }));
   const edges: Edge[] = data.roadmap.edges.map((edge) => ({ ...edge, animated: true, style: { stroke: "#0f766e", strokeWidth: 2 } }));
+  const nodesById = new Map(data.roadmap.nodes.map((node) => [node.id, node] as const));
+  const handleNodeClick: NodeMouseHandler = (_, node) => {
+    const source = nodesById.get(node.id);
+    if (source) onNodeClick?.(source);
+  };
 
   return (
     <section className="panel roadmap-panel">
@@ -39,13 +52,33 @@ export function Roadmap({ data }: { data: StudentDashboardDto }) {
           <div className="section-kicker">Action Plan</div>
           <h2>Gap to evidence roadmap</h2>
         </div>
-        <p>Each row turns one weak competency into a course, portfolio task, and documented artifact.</p>
+        <p>Each row turns one weak competency into a course, portfolio task, and documented artifact. Click any node to view goals, objectives, and recommended courses.</p>
       </div>
       <div className="roadmap-canvas">
-        <ReactFlow nodes={nodes} edges={edges} fitView proOptions={{ hideAttribution: true }} nodesDraggable={false} nodesConnectable={false} zoomOnScroll={false} panOnScroll>
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          fitView
+          proOptions={{ hideAttribution: true }}
+          nodesDraggable={false}
+          nodesConnectable={false}
+          zoomOnScroll={false}
+          panOnScroll
+          onNodeClick={handleNodeClick}
+        >
           <Background color="#dbe3ea" gap={28} />
         </ReactFlow>
       </div>
+      {onNodeClick && (
+        <div className="roadmap-details-list" aria-label="Roadmap details">
+          {data.roadmap.nodes.map((node) => (
+            <button key={node.id} type="button" onClick={() => onNodeClick(node)}>
+              <span>{labelByType[node.type]}</span>
+              <strong>{node.label}</strong>
+            </button>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

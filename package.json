@@ -14,7 +14,7 @@
     "pipeline": "bun run generate && bun run analyze && bun run evaluate",
     "api": "cd packages/api && bun run dev",
     "ui": "cd packages/ui && bun run dev",
-    "dev": "echo 'Run bun run api and bun run ui in separate terminals.'",
+    "dev": "sh -c 'trap \"kill 0\" INT TERM EXIT; bun run api & bun run ui & wait'",
     "test": "cd packages/api && bun run test",
     "typecheck": "cd packages/shared && bun run typecheck && cd ../synth-data-gen && bun run typecheck && cd ../genai-analysis && bun run typecheck && cd ../api && bun run typecheck && cd ../ui && bun run typecheck",
     "build": "cd packages/ui && bun run build"

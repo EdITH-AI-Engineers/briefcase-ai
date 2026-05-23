@@ -37,7 +37,13 @@ const analysisShapeHint = [
   "      confidence (high/medium/low), optional notes.",
   "  - strengths: clearest demonstrated capabilities, each with evidence.",
   "  - gaps: framework competencies with weak or missing evidence,",
-  "      each with a concrete, actionable recommendation.",
+  "      each with a concrete, actionable recommendation. Include",
+  "      search_keywords: 1-3 short LinkedIn Learning search phrases",
+  "      (2-4 words) appropriate to the student's current level — these",
+  "      are surfaced as deep links into LinkedIn Learning's course",
+  "      search. Prefer canonical, course-friendly terms (e.g.",
+  "      'threat modeling', 'docker for developers', 'sql joins') and",
+  "      avoid proper nouns or profile-specific phrasing.",
 ];
 
 const narrativeDirective = [

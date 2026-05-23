@@ -1,6 +1,6 @@
 import { Type, type Schema } from "@google/genai";
 
-export const MODEL = "gemini-2.5-flash-lite";
+export const MODEL = "gemini-2.5-flash";
 
 export type ColumnSpec = {
   type: Type;

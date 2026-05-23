@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, BriefcaseBusiness, CheckCircle2, ExternalLink, FileText, PlayCircle } from "lucide-react";
 import { fetchDashboard, fetchRuns, fetchStudentDashboard, fetchStudents, type RunSummary, type StudentSummary } from "./lib/api";
 import type { StudentDashboardDto } from "./types/dashboard";
-import { ScoreCharts } from "./components/ScoreCharts";
-import { Roadmap } from "./components/Roadmap";
+import { Popover } from "./components/Popover";
+import { Drawer } from "./components/Drawer";
+import { ReferenceChip } from "./components/ReferenceChip";
+
+type RoadmapNode = StudentDashboardDto["roadmap"]["nodes"][number];
+
+const ScoreCharts = lazy(() => import("./components/ScoreCharts").then((module) => ({ default: module.ScoreCharts })));
+const Roadmap = lazy(() => import("./components/Roadmap").then((module) => ({ default: module.Roadmap })));
 
 function Progress({ value }: { value: number }) {
   return <div className="progress"><span style={{ width: `${value}%` }} /></div>;
@@ -62,38 +68,86 @@ function Dashboard({
   onRunChange: (runId: string) => void;
   onStudentChange: (studentId: string) => void;
 }) {
+  const [drawerNode, setDrawerNode] = useState<RoadmapNode | null>(null);
+  const referenceById = useMemo(
+    () => new Map(data.references.map((reference) => [reference.id, reference])),
+    [data.references],
+  );
+  const drawerCourses = drawerNode
+    ? data.recommendations.filter((rec) => rec.relatedCompetency === drawerNode.competency)
+    : [];
+
   return (
     <main className="shell">
+      <section className="toolbar">
+        <ProfilePicker
+          runs={runs}
+          students={students}
+          data={data}
+          selectedRunId={selectedRunId}
+          selectedStudentId={selectedStudentId}
+          onRunChange={onRunChange}
+          onStudentChange={onStudentChange}
+        />
+        <aside className="sparsity-card">
+          <span>Profile sparsity</span>
+          <strong>{data.student.sparsity}</strong>
+          <small>{data.student.program} · Year {data.student.yearLevel ?? "unknown"} · Framework {data.run.frameworkVersion}</small>
+        </aside>
+      </section>
+
       <section className="hero">
-        <div>
-          <ProfilePicker
-            runs={runs}
-            students={students}
-            data={data}
-            selectedRunId={selectedRunId}
-            selectedStudentId={selectedStudentId}
-            onRunChange={onRunChange}
-            onStudentChange={onStudentChange}
-          />
+        <div className="hero-text">
           <div className="eyebrow"><BriefcaseBusiness size={16} /> Briefcase AI</div>
           <h1>{data.student.name}</h1>
           <p>{data.overview.summary}</p>
         </div>
-        <div className="hero-card">
-          <span>Profile sparsity</span>
-          <strong>{data.student.sparsity}</strong>
-          <small>{data.student.program} · Year {data.student.yearLevel ?? "unknown"} · Framework {data.run.frameworkVersion}</small>
+        <div className="hero-score">
+          <span>Overall score</span>
+          <strong>{data.overview.overallScore}</strong>
+          <em>{data.overview.ratingLabel}</em>
+          <div
+            className="score-bar"
+            role="progressbar"
+            aria-valuenow={data.overview.overallScore}
+            aria-valuemin={0}
+            aria-valuemax={100}
+          >
+            <span className="fill" style={{ width: `${data.overview.overallScore}%` }} />
+            <span
+              className="ideal-marker"
+              style={{ left: `${data.overview.idealScore}%` }}
+              aria-label={`Ideal ${data.overview.idealScore}`}
+            />
+          </div>
+          <small>Ideal year-level score {data.overview.idealScore}</small>
+          <div className="hero-stats" aria-label="Score per competency">
+            {data.competencies.map((competency) => (
+              <div className="hero-stat" key={competency.name}>
+                <span className="hero-stat-name" title={competency.name}>{competency.name}</span>
+                <div
+                  className="score-bar score-bar-sm"
+                  role="progressbar"
+                  aria-valuenow={competency.score}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-label={`${competency.name} ${competency.score} of 100`}
+                >
+                  <span className="fill" style={{ width: `${competency.score}%` }} />
+                  <span
+                    className="ideal-marker"
+                    style={{ left: `${competency.idealScore}%` }}
+                    aria-label={`Ideal ${competency.idealScore}`}
+                  />
+                </div>
+                <span className="hero-stat-score">{competency.score}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="overview-grid">
-        <div className="score-dial">
-          <span>Overall score</span>
-          <strong>{data.overview.overallScore}</strong>
-          <em>{data.overview.ratingLabel}</em>
-          <Progress value={data.overview.overallScore} />
-          <small>Compared with ideal year-level score of {data.overview.idealScore}</small>
-        </div>
         <div className="panel issues-panel">
           <div>
             <h2>Top issues</h2>
@@ -110,7 +164,9 @@ function Dashboard({
         </div>
       </section>
 
-      <ScoreCharts data={data} />
+      <Suspense fallback={<div className="panel loading-panel">Loading score charts...</div>}>
+        <ScoreCharts data={data} />
+      </Suspense>
 
       <section className="panel competency-list">
         <div className="section-kicker">Diagnosis per competency</div>
@@ -122,6 +178,31 @@ function Dashboard({
             </div>
             <strong>{competency.level}</strong>
             <Progress value={competency.score} />
+            {competency.citations.length > 0 && (
+              <div className="citation-chips">
+                {competency.citations.map((citation) => {
+                  const reference = referenceById.get(citation.doc);
+                  const label = `${citation.doc} §${citation.clause}`;
+                  if (!reference) {
+                    return <span key={`${citation.doc}-${citation.clause}`} className="ref-chip">{label}</span>;
+                  }
+                  return (
+                    <Popover
+                      key={`${citation.doc}-${citation.clause}`}
+                      trigger={<span className="ref-chip" aria-label={reference.title}>{label}</span>}
+                    >
+                      <strong>{reference.title}</strong>
+                      <span style={{ color: "#94a3b8" }}>Clause {citation.clause}</span>
+                      {reference.url.startsWith("http") ? (
+                        <a href={reference.url} target="_blank" rel="noreferrer">{reference.url}</a>
+                      ) : (
+                        <span style={{ color: "#94a3b8" }}>{reference.url}</span>
+                      )}
+                    </Popover>
+                  );
+                })}
+              </div>
+            )}
           </article>
         ))}
       </section>
@@ -137,12 +218,15 @@ function Dashboard({
         <div className="red-flags">{data.skills.redFlags.map((flag) => <p key={flag}><AlertTriangle size={15} />{flag}</p>)}</div>
       </section>
 
-      <Roadmap data={data} />
+      <Suspense fallback={<div className="panel loading-panel">Loading roadmap...</div>}>
+        <Roadmap data={data} onNodeClick={setDrawerNode} />
+      </Suspense>
 
       <section className="recommendation-grid">
         {data.recommendations.map((rec) => (
-          <a className="course-card" href={rec.url} key={rec.title} target="_blank" rel="noreferrer">
+          <a className="course-card" href={rec.url} key={`${rec.relatedCompetency}-${rec.title}-${rec.url ?? ""}`} target="_blank" rel="noreferrer">
             <span>{rec.provider}</span>
+            <em className="source-badge">{rec.source.replace(/_/g, " ")}</em>
             <h3>{rec.title}</h3>
             <p>{rec.reason}</p>
             <small>{rec.relatedCompetency} <ExternalLink size={13} /></small>
@@ -152,8 +236,40 @@ function Dashboard({
 
       <section className="panel references-panel">
         <div className="section-kicker"><FileText size={15} /> Framework references</div>
-        {data.references.map((ref) => <a key={ref.id} href={ref.url} target="_blank" rel="noreferrer">{ref.id}<span>{ref.title}</span></a>)}
+        <div className="chip-row">
+          {data.references.map((reference) => <ReferenceChip key={reference.id} reference={reference} />)}
+        </div>
       </section>
+
+      <Drawer
+        open={!!drawerNode}
+        onClose={() => setDrawerNode(null)}
+        title={drawerNode?.label ?? ""}
+      >
+        {drawerNode && (
+          <>
+            <p className="drawer-detail">{drawerNode.detail}</p>
+            {drawerNode.objectives && drawerNode.objectives.length > 0 && (
+              <>
+                <h3>Goals & objectives</h3>
+                <ul>{drawerNode.objectives.map((objective) => <li key={objective}>{objective}</li>)}</ul>
+              </>
+            )}
+            <h3>LinkedIn Learning courses</h3>
+            {drawerCourses.length > 0 ? (
+              drawerCourses.map((rec) => (
+                <a key={rec.title} className="drawer-course" href={rec.url} target="_blank" rel="noreferrer">
+                  <span>{rec.provider}</span>
+                  <h3>{rec.title}</h3>
+                  <p>{rec.reason}</p>
+                </a>
+              ))
+            ) : (
+              <p className="drawer-empty">No recommended courses tied to this competency yet.</p>
+            )}
+          </>
+        )}
+      </Drawer>
     </main>
   );
 }
