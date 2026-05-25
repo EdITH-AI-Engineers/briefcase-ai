@@ -83,7 +83,13 @@ const analysis = {
     {
       competency: "Systems & Infrastructure",
       issue: "Raw LLM issue should not drive deterministic roadmap.",
-      recommendation: "Raw recommendation should not drive deterministic build step.",
+      recommendation: "Deploy one backend project with documented Docker, logs, monitoring, and environment setup.",
+      search_keywords: ["docker for developers", "cloud deployment"],
+    },
+    {
+      competency: "Professional Communication",
+      issue: "Communication artifacts are implied but not documented.",
+      recommendation: "Publish a short technical write-up or project README explaining design decisions.",
     },
   ],
 };
@@ -98,24 +104,94 @@ describe("buildDashboard", () => {
     }
   });
 
-  it("derives framework-based roadmap gaps from weak competency scores", () => {
+  it("builds roadmap actions from generated analysis gaps", () => {
     const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
 
     const gapNodes = dashboard.roadmap.nodes.filter((node) => node.type === "gap");
     assert.deepEqual(gapNodes.map((node) => node.label), [
       "Systems & Infrastructure",
-      "Security, Ethics & Professional Responsibility",
-      "Data & Information Management",
+      "Professional Communication",
     ]);
-    assert.match(gapNodes[0].detail, /Emerging vs ideal 80\/100/);
-    assert.match(gapNodes[0].detail, /Framework basis: cc2020:KA-OS/);
+    assert.equal(gapNodes[0].detail, "Raw LLM issue should not drive deterministic roadmap.");
 
     const learnNode = dashboard.roadmap.nodes.find((node) => node.id === "course-0");
     const buildNode = dashboard.roadmap.nodes.find((node) => node.id === "project-0");
     const documentNode = dashboard.roadmap.nodes.find((node) => node.id === "evidence-0");
 
-    assert.match(learnNode?.detail ?? "", /operating systems, networking, architecture/);
-    assert.match(buildNode?.detail ?? "", /Deploy a service/);
-    assert.match(documentNode?.detail ?? "", /architecture diagram/);
+    assert.match(learnNode?.detail ?? "", /docker for developers, cloud deployment/);
+    assert.equal(buildNode?.detail, "Deploy one backend project with documented Docker, logs, monitoring, and environment setup.");
+    assert.match(documentNode?.detail ?? "", /Raw LLM issue should not drive deterministic roadmap/);
+  });
+
+  it("keeps course-specific generated competencies even when they are not in the assessment list", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile,
+      manifest,
+      narrative: "",
+      analysis: {
+        ...analysis,
+        gaps: [
+          {
+            area: "Capstone Research Methods",
+            reason: "The course output requires stronger evidence of research design and validation.",
+            recommendation: "Create a validation plan with research questions, metrics, and advisor feedback.",
+            search_keywords: ["research design", "capstone validation"],
+          },
+        ],
+      },
+    });
+
+    const gapNode = dashboard.roadmap.nodes.find((node) => node.type === "gap");
+    const buildNode = dashboard.roadmap.nodes.find((node) => node.type === "project");
+
+    assert.equal(gapNode?.label, "Capstone Research Methods");
+    assert.equal(gapNode?.detail, "The course output requires stronger evidence of research design and validation.");
+    assert.equal(buildNode?.detail, "Create a validation plan with research questions, metrics, and advisor feedback.");
+  });
+
+  it("accepts generated skill percentages as dashboard ratings", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: {
+        ...profile,
+        skills: [{ name: "MongoDB", level: "Expert", percentage: 88 }],
+      },
+      analysis,
+      manifest,
+      narrative: "",
+    });
+
+    assert.deepEqual(dashboard.skills.hard, [{ name: "MongoDB", rating: 88 }]);
+  });
+
+  it("prefers generated analysis fields over profile fallbacks", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: {
+        ...profile,
+        id: "profile-id",
+        program: "profile-program",
+        skills: [{ name: "Python", rating: 80 }],
+      },
+      analysis: {
+        ...analysis,
+        student_id: "analysis-id",
+        program: "analysis-program",
+        skills: {
+          hard: [{ name: "Data Modeling", percentage: 91 }],
+          soft: [{ name: "Stakeholder Communication", percentage: 76 }],
+          uncategorized: [{ name: "Domain Discovery", percentage: 68 }],
+        },
+      },
+      manifest,
+      narrative: "",
+    });
+
+    assert.equal(dashboard.student.id, "analysis-id");
+    assert.equal(dashboard.student.program, "analysis-program");
+    assert.deepEqual(dashboard.skills.hard, [{ name: "Data Modeling", rating: 91 }]);
+    assert.deepEqual(dashboard.skills.soft, [{ name: "Stakeholder Communication", rating: 76 }]);
+    assert.deepEqual(dashboard.skills.uncategorized, [{ name: "Domain Discovery", rating: 68 }]);
   });
 });

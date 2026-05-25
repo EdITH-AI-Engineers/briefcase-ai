@@ -31,13 +31,20 @@ export type StudentDashboardDto = {
     evidence: string[];
     citations: { doc: string; clause: string }[];
   }[];
+  strengths: {
+    area: string;
+    evidence: string[];
+  }[];
+  gaps: {
+    area: string;
+    reason: string;
+    recommendation: string;
+    search_keywords?: string[];
+  }[];
   skills: {
     hard: { name: string; rating: number }[];
     soft: { name: string; rating: number }[];
-    tools: { name: string; rating: number }[];
-    domains: { name: string; rating: number }[];
-    missing: string[];
-    redFlags: string[];
+    uncategorized: { name: string; rating: number }[];
   };
   roadmap: {
     nodes: {

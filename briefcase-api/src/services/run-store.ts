@@ -20,7 +20,12 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
-async function readRun(runId: string) {
+function isRunId(runId: string): boolean {
+  return /^run-[a-zA-Z0-9._-]+$/.test(runId);
+}
+
+async function readRunMetadata(runId: string) {
+  if (!isRunId(runId)) return null;
   const runDir = join(analysisOutputDir, runId);
   const manifestPath = join(runDir, "manifest.json");
   const analysesPath = join(runDir, "analyses.json");
@@ -30,6 +35,15 @@ async function readRun(runId: string) {
     readJson<any>(manifestPath),
     readJson<any[]>(analysesPath),
   ]);
+
+  return { runDir, manifest, analyses };
+}
+
+async function readRun(runId: string) {
+  const metadata = await readRunMetadata(runId);
+  if (!metadata) return null;
+
+  const { runDir, manifest, analyses } = metadata;
   const profilesPath = String(manifest.profilesPath ?? join(runDir, "profiles.json"));
   if (!(await exists(profilesPath))) return null;
 
@@ -55,7 +69,7 @@ export async function listRuns() {
       .sort()
       .reverse()
       .map(async (id) => {
-        const run = await readRun(id);
+        const run = await readRunMetadata(id);
         if (!run) return null;
         return {
           id,
