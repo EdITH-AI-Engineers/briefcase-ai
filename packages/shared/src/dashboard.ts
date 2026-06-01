@@ -25,7 +25,15 @@ export type StudentDashboardDto = {
     idealScore: number;
     ratingLabel: string;
     summary: string;
-    topIssues: string[];
+    topIssues: {
+      competency: string;
+      level: DashboardLevel;
+      score: number;
+      idealScore: number;
+      summary: string;
+      status: string;
+      citations: { doc: string; clause: string }[];
+    }[];
     quickFixes: string[];
   };
   competencies: {

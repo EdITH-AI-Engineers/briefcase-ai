@@ -21,20 +21,45 @@ export function ScoreCharts({ data }: { data: StudentDashboardDto }) {
     name: item.name,
     score: item.score,
     ideal: item.idealScore,
+    gap: Math.max(0, item.idealScore - item.score),
   }));
+  const gapChart = [...chart].sort((a, b) => b.gap - a.gap);
 
   return (
     <section className="panel score-grid">
-      <div className="section-kicker">Score Distribution</div>
+      <div className="section-kicker">Score vs target analytics</div>
+      <div className="chart-card wide">
+        <h3>Largest gaps to year-level target</h3>
+        <ResponsiveContainer width="100%" height={260}>
+          <BarChart data={gapChart} layout="vertical" margin={{ left: 18, right: 26, top: 12, bottom: 12 }}>
+            <CartesianGrid horizontal={false} stroke="rgba(15,23,42,.08)" />
+            <XAxis type="number" domain={[0, 100]} tickLine={false} axisLine={false} />
+            <YAxis
+              type="category"
+              dataKey="name"
+              width={104}
+              tick={{ fontSize: 11, fill: "#475569" }}
+              tickFormatter={shortLabel}
+              tickLine={false}
+              axisLine={false}
+            />
+            <Tooltip
+              labelFormatter={(label) => String(label)}
+              formatter={(value) => [`${value} points`, "Gap to target"]}
+            />
+            <Bar dataKey="gap" name="Gap to target" fill="#b45309" radius={[0, 8, 8, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
       <div className="chart-card wide">
         <h3>Competency shape</h3>
         <ResponsiveContainer width="100%" height={320}>
           <RadarChart data={chart}>
-            <PolarGrid stroke="rgba(15,23,42,.12)" />
-            <PolarAngleAxis dataKey="name" tick={{ fontSize: 10, fill: "#475569" }} tickFormatter={wrapLabel} />
+            <PolarGrid stroke="rgba(15,23,42,.14)" />
+            <PolarAngleAxis dataKey="name" tick={{ fontSize: 11, fill: "#334155" }} tickFormatter={wrapLabel} />
             <Tooltip formatter={(value, name) => [`${value}/100`, String(name)]} />
-            <Radar dataKey="ideal" name="Ideal score" stroke="#94a3b8" fill="#94a3b8" fillOpacity={0.08} />
-            <Radar dataKey="score" name="Student score" stroke="#0f766e" fill="#0f766e" fillOpacity={0.32} />
+            <Radar dataKey="ideal" name="Ideal score" stroke="#b45309" fill="#f59e0b" fillOpacity={0.18} />
+            <Radar dataKey="score" name="Student score" stroke="#0f766e" fill="#14b8a6" fillOpacity={0.36} />
           </RadarChart>
         </ResponsiveContainer>
       </div>
@@ -58,7 +83,7 @@ export function ScoreCharts({ data }: { data: StudentDashboardDto }) {
               labelFormatter={(label) => String(label)}
               formatter={(value, name) => [`${value}/100`, name === "score" ? "Student score" : "Ideal score"]}
             />
-            <Bar dataKey="ideal" name="Ideal score" fill="#94a3b8" fillOpacity={0.22} radius={[6, 6, 0, 0]} />
+            <Bar dataKey="ideal" name="Ideal score" fill="#f59e0b" fillOpacity={0.34} radius={[6, 6, 0, 0]} />
             <Bar dataKey="score" name="Student score" fill="#0f766e" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>

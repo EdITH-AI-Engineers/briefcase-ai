@@ -98,6 +98,109 @@ describe("buildDashboard", () => {
     }
   });
 
+  it("computes missing portfolio evidence from weak competencies", () => {
+    const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
+
+    assert.deepEqual(dashboard.skills.missing, [
+      "deployment logs or runbook",
+      "architecture diagram",
+      "environment configuration evidence",
+      "threat model or security checklist",
+      "privacy or ethics reflection",
+    ]);
+    assert.equal(dashboard.skills.missing.includes("security testing"), false);
+    assert.equal(dashboard.skills.missing.includes("technical writing"), false);
+  });
+
+  it("varies missing portfolio evidence by weak competency", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile,
+      analysis: {
+        ...analysis,
+        competencies: analysis.competencies.map((competency) => ({
+          ...competency,
+          level: competency.name === "Professional Communication" ? "Emerging" : "Advanced",
+        })),
+      },
+      manifest,
+      narrative: "",
+    });
+
+    assert.deepEqual(dashboard.skills.missing, [
+      "technical brief or README improvement",
+      "presentation slides",
+      "peer or advisor feedback",
+    ]);
+  });
+
+  it("does not report missing evidence already represented by profile skills", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: {
+        ...profile,
+        skills: [
+          ...profile.skills,
+          { name: "Deployment logs", rating: 70 },
+          { name: "Architecture diagram", rating: 70 },
+        ],
+      },
+      analysis,
+      manifest,
+      narrative: "",
+    });
+
+    assert.equal(dashboard.skills.missing.includes("deployment logs or runbook"), false);
+    assert.equal(dashboard.skills.missing.includes("architecture diagram"), false);
+    assert.ok(dashboard.skills.missing.includes("environment configuration evidence"));
+  });
+
+  it("keeps missing evidence bounded for sparse or unknown data", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { id: "sparse", skills: [{ name: "Unknown Skill", rating: 20 }] },
+      analysis: {
+        summary: "Sparse summary.",
+        competencies: [],
+        gaps: [],
+      },
+      manifest,
+      narrative: "",
+    });
+
+    assert.deepEqual(dashboard.skills.missing, [
+      "project artifact linked to a competency gap",
+      "reflection note explaining what the artifact demonstrates",
+    ]);
+  });
+
+  it("preserves recommendation source behavior for AI keywords", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile,
+      analysis: {
+        ...analysis,
+        gaps: [
+          {
+            competency: "Systems & Infrastructure",
+            recommendation: "Deploy a service with logs.",
+            search_keywords: ["  Docker   containers  ", "https://example.test/course", "Docker containers"],
+          },
+        ],
+      },
+      manifest,
+      narrative: "",
+    });
+
+    const systemsRecommendations = dashboard.recommendations.filter(
+      (recommendation) => recommendation.relatedCompetency === "Systems & Infrastructure",
+    );
+    assert.ok(systemsRecommendations.length > 0);
+    assert.equal(systemsRecommendations[0]?.source, "ai_keywords");
+    assert.match(systemsRecommendations[0]?.url ?? "", /Docker\+containers/);
+    assert.equal(systemsRecommendations.some((recommendation) => recommendation.url?.includes("example.test") ?? false), false);
+  });
+
   it("derives framework-based roadmap gaps from weak competency scores", () => {
     const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
 
@@ -107,8 +210,16 @@ describe("buildDashboard", () => {
       "Security, Ethics & Professional Responsibility",
       "Data & Information Management",
     ]);
-    assert.match(gapNodes[0].detail, /Emerging vs ideal 80\/100/);
-    assert.match(gapNodes[0].detail, /Framework basis: cc2020:KA-OS/);
+    assert.match(gapNodes[0].detail, /Little systems evidence\./);
+
+    const topIssue = dashboard.overview.topIssues.find((issue) => issue.competency === "Systems & Infrastructure");
+    assert.ok(topIssue, "expected a Systems & Infrastructure top issue");
+    assert.equal(topIssue.level, "Emerging");
+    assert.equal(topIssue.score, 25);
+    assert.equal(topIssue.idealScore, 80);
+    assert.equal(topIssue.summary, "Little systems evidence.");
+    assert.equal(topIssue.status, "Currently Emerging (25/100), expected 80/100 for Year 4.");
+    assert.deepEqual(topIssue.citations.slice(0, 1), [{ doc: "cc2020", clause: "KA-OS" }]);
 
     const learnNode = dashboard.roadmap.nodes.find((node) => node.id === "course-0");
     const buildNode = dashboard.roadmap.nodes.find((node) => node.id === "project-0");

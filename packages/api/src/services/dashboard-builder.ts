@@ -16,6 +16,49 @@ const hardSkills = new Set(["typescript", "python", "sql", "javascript", "java",
 const softSkills = new Set(["leadership", "collaboration", "communication", "tutoring"]);
 const tools = new Set(["docker", "postgresql", "node.js", "react", "git"]);
 
+const missingEvidenceByCompetency: Record<string, string[]> = {
+  "Computing Foundations": [
+    "algorithm implementation with tests",
+    "data structure design notes",
+    "complexity analysis write-up",
+  ],
+  "Systems & Infrastructure": [
+    "deployment logs or runbook",
+    "architecture diagram",
+    "environment configuration evidence",
+  ],
+  "Data & Information Management": [
+    "database schema or data model",
+    "query examples",
+    "data analysis output",
+  ],
+  "Security, Ethics & Professional Responsibility": [
+    "threat model or security checklist",
+    "privacy or ethics reflection",
+    "secure validation evidence",
+  ],
+  "Professional Communication": [
+    "technical brief or README improvement",
+    "presentation slides",
+    "peer or advisor feedback",
+  ],
+  "Collaboration & Teamwork": [
+    "issue tracker or team milestone evidence",
+    "meeting notes",
+    "role summary from a team project",
+  ],
+  "Self-Directed Learning & Innovation": [
+    "learning log",
+    "prototype experiment notes",
+    "tradeoff reflection for a new tool",
+  ],
+};
+
+const fallbackMissingEvidence = [
+  "project artifact linked to a competency gap",
+  "reflection note explaining what the artifact demonstrates",
+];
+
 function ratingLabel(score: number): string {
   if (score >= 86) return "Excellent";
   if (score >= 72) return "Strong";
@@ -50,6 +93,7 @@ type RawGap = {
   competency?: string;
   area?: string;
   title?: string;
+  reason?: string;
   recommendation?: string;
   action?: string;
   next_step?: string;
@@ -78,7 +122,44 @@ type DashboardInput = {
   manifest: AnalysisManifest;
 };
 
-function skillGroups(profile: DashboardProfile, redFlags: string[]): StudentDashboardDto["skills"] {
+function normalizeEvidenceText(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9+#.]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function isEvidenceRepresented(item: string, profileSkills: Set<string>): boolean {
+  const normalizedItem = normalizeEvidenceText(item);
+  if (!normalizedItem) return false;
+  const itemTokens = normalizedItem.split(" ").filter((token) => token.length > 2);
+  for (const skill of profileSkills) {
+    if (skill === normalizedItem || skill.includes(normalizedItem) || normalizedItem.includes(skill)) return true;
+    if (itemTokens.some((token) => skill === token || skill.includes(token))) return true;
+  }
+  return false;
+}
+
+function missingPortfolioEvidence(profile: DashboardProfile, gaps: Gap[]): string[] {
+  const profileSkills = new Set((profile.skills ?? []).map((skill) => normalizeEvidenceText(skill.name)).filter(Boolean));
+  const missing: string[] = [];
+  const seen = new Set<string>();
+  for (const gap of gaps) {
+    const expected = missingEvidenceByCompetency[gap.competency] ?? [];
+    for (const item of expected) {
+      const key = normalizeEvidenceText(item);
+      if (!key || seen.has(key) || isEvidenceRepresented(item, profileSkills)) continue;
+      seen.add(key);
+      missing.push(item);
+      if (missing.length >= 5) return missing;
+    }
+  }
+  if (missing.length > 0) return missing;
+  return fallbackMissingEvidence.filter((item) => !isEvidenceRepresented(item, profileSkills)).slice(0, 2);
+}
+
+function skillGroups(profile: DashboardProfile, redFlags: string[], missing: string[]): StudentDashboardDto["skills"] {
   const skills = profile.skills ?? [];
   const grouped = {
     hard: [] as DashboardSkill[],
@@ -96,17 +177,22 @@ function skillGroups(profile: DashboardProfile, redFlags: string[]): StudentDash
   }
   return {
     ...grouped,
-    missing: ["security testing", "deployment logs", "technical writing", "monitoring"],
+    missing,
     redFlags,
   };
 }
 
 type CompetencyDto = StudentDashboardDto["competencies"][number];
+type GapCitation = StudentDashboardDto["overview"]["topIssues"][number]["citations"][number];
 type Gap = {
   competency: string;
   issue: string;
+  status: string;
   recommendation: string;
   level: Level;
+  score: number;
+  idealScore: number;
+  citations: GapCitation[];
   searchKeywords?: string[];
 };
 
@@ -156,15 +242,46 @@ function toLevel(value: string): Level {
   return value in levelScore ? (value as Level) : "Not Demonstrated";
 }
 
-function citationLabel(competency: CompetencyDto): string {
-  const citations = competency.citations
-    .filter((citation) => citation.doc !== "slate")
-    .slice(0, 2)
-    .map((citation) => `${citation.doc}:${citation.clause}`);
-  return citations.length > 0 ? `Framework basis: ${citations.join(", ")}.` : "Framework basis: CHED, CC2020, SFIA mapped assessment slate.";
+function gapCitations(competency: CompetencyDto): GapCitation[] {
+  const seen = new Set<string>();
+  const out: GapCitation[] = [];
+  for (const citation of competency.citations) {
+    if (citation.doc === "slate") continue;
+    const key = `${citation.doc}:${citation.clause}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({ doc: citation.doc, clause: citation.clause });
+    if (out.length >= 4) break;
+  }
+  return out;
 }
 
-function normalizeGaps(raw: RawGap[] | undefined, competencies: CompetencyDto[]): Gap[] {
+function yearLabel(year: number | null): string {
+  return year ? `Year ${year}` : "this year level";
+}
+
+function cleanReason(input: string): string {
+  const trimmed = input.trim();
+  if (!trimmed || trimmed === "No diagnosis available.") return "";
+  return trimmed;
+}
+
+function gapSummary(
+  competency: CompetencyDto,
+  year: number | null,
+): string {
+  const target = competency.idealScore;
+  if (competency.level === "Not Demonstrated") {
+    return `No demonstrated evidence yet; expected ${target}/100 for ${yearLabel(year)}.`;
+  }
+  return `Currently ${competency.level} (${competency.score}/100), expected ${target}/100 for ${yearLabel(year)}.`;
+}
+
+function normalizeGaps(
+  raw: RawGap[] | undefined,
+  competencies: CompetencyDto[],
+  year: number | null,
+): Gap[] {
   const weakCompetencies = competencies
     .filter((competency) => competency.score < competency.idealScore)
     .sort((a, b) => a.score - b.score)
@@ -179,17 +296,22 @@ function normalizeGaps(raw: RawGap[] | undefined, competencies: CompetencyDto[])
   return weakCompetencies.map((competency) => {
     const rawGap = rawByCompetency.get(competency.name);
     const rawRecommendation = rawGap ? asText(rawGap.recommendation) || asText(rawGap.action) || asText(rawGap.next_step) : "";
-    const evidence = competency.evidence.length > 0 ? `Current evidence: ${competency.evidence.slice(0, 2).join(", ")}.` : "Current evidence is sparse or absent.";
-    const basis = citationLabel(competency);
+    const rawReason = rawGap ? asText(rawGap.reason) : "";
     const rawKeywords = rawGap?.search_keywords;
     const searchKeywords = Array.isArray(rawKeywords)
       ? rawKeywords.map(asText).filter(Boolean)
       : undefined;
+    const status = gapSummary(competency, year);
+    const reason = cleanReason(rawReason) || cleanReason(competency.diagnosis);
     return {
       competency: competency.name,
-      issue: `${competency.level} vs ideal ${competency.idealScore}/100. ${evidence} ${basis}`,
+      issue: reason || status,
+      status,
       recommendation: rawRecommendation || competencyActions[competency.name]?.build || "Add concrete portfolio evidence mapped to this competency.",
       level: competency.level,
+      score: competency.score,
+      idealScore: competency.idealScore,
+      citations: gapCitations(competency),
       searchKeywords,
     };
   });
@@ -240,8 +362,9 @@ export function buildDashboard(input: DashboardInput): StudentDashboardDto {
     };
   });
   const overallScore = competencies.length > 0 ? Math.round(competencies.reduce((sum, item) => sum + item.score, 0) / competencies.length) : 0;
-  const gaps = normalizeGaps(input.analysis.gaps, competencies);
+  const gaps = normalizeGaps(input.analysis.gaps, competencies, year);
   const redFlags = gaps.map((gap) => gap.issue).filter(Boolean);
+  const missingEvidence = missingPortfolioEvidence(input.profile, gaps);
 
   return {
     run: {
@@ -261,11 +384,19 @@ export function buildDashboard(input: DashboardInput): StudentDashboardDto {
       idealScore,
       ratingLabel: ratingLabel(overallScore),
       summary: String(input.analysis.summary ?? "No summary available."),
-      topIssues: gaps.map((gap) => gap.issue),
+      topIssues: gaps.map((gap) => ({
+        competency: gap.competency,
+        level: gap.level,
+        score: gap.score,
+        idealScore: gap.idealScore,
+        summary: gap.issue,
+        status: gap.status,
+        citations: gap.citations,
+      })),
       quickFixes: gaps.map((gap) => gap.recommendation),
     },
     competencies,
-    skills: skillGroups(input.profile, redFlags),
+    skills: skillGroups(input.profile, redFlags, missingEvidence),
     roadmap: roadmap(gaps),
     recommendations: gaps.flatMap((gap) => {
       const selection = pickKeywords(gap.competency, gap.recommendation, gap.searchKeywords);
