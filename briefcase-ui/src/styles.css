@@ -416,8 +416,8 @@ li {
 
 .student-profile-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .student-profile-panel h2 {
@@ -435,12 +435,12 @@ li {
 }
 
 .student-profile-panel p:not(.eyebrow) {
-  max-width: 720px;
+  max-width: 980px;
 }
 
 .student-info-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -457,6 +457,11 @@ li {
   padding: 9px;
 }
 
+.student-info-grid span {
+  align-content: center;
+  min-height: 58px;
+}
+
 .student-info-grid strong,
 .evidence-strip strong {
   color: #12356f;
@@ -469,8 +474,8 @@ li {
 .evidence-strip {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 7px;
 }
 
 .evidence-strip span {
@@ -484,7 +489,8 @@ li {
 }
 
 .evidence-strip span {
-  min-height: 68px;
+  min-height: 58px;
+  padding: 8px;
 }
 
 .section-head {
@@ -1018,7 +1024,8 @@ pre {
 }
 
 @media (min-width: 761px) and (max-width: 980px) {
-  .visual-overview {
+  .visual-overview,
+  .student-info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

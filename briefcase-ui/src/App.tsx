@@ -524,10 +524,6 @@ export default function App() {
             </div>
             <div className="student-info-grid">
               <span>
-                <strong>{dashboard.student?.id || "No ID"}</strong>
-                Student ID
-              </span>
-              <span>
                 <strong>{dashboard.student?.program || "Unknown"}</strong>
                 Program
               </span>
