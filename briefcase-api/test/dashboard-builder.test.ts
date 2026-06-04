@@ -194,4 +194,136 @@ describe("buildDashboard", () => {
     assert.deepEqual(dashboard.skills.soft, [{ name: "Stakeholder Communication", rating: 76 }]);
     assert.deepEqual(dashboard.skills.uncategorized, [{ name: "Domain Discovery", rating: 68 }]);
   });
+
+  it("builds a curriculum learning map from courses.json", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSAI", year_level: 1 },
+      analysis: { ...analysis, program: "BSCSAI" },
+      manifest,
+      narrative: "",
+    });
+
+    assert.match(dashboard.learningMap.programCode, /^BSCS/);
+    assert.equal(dashboard.learningMap.targetYearLevel, 1);
+    assert.ok(dashboard.learningMap.idealSkills.length > 0);
+    assert.ok(dashboard.learningMap.nodes.length > 0);
+    assert.ok(dashboard.learningMap.nodes.every((node) => node.courseCode && node.skill));
+  });
+
+  it("targets only the student's exact year level", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSIT", specialization: "Web and Mobile Application", year_level: 4 },
+      analysis: { ...analysis, program: "BSIT" },
+      manifest,
+      narrative: "",
+    });
+
+    assert.equal(dashboard.learningMap.targetYearLevel, 4);
+    assert.ok(dashboard.learningMap.idealSkills.length > 0);
+    assert.equal(dashboard.learningMap.idealSkills.every((skill) => skill.year === "Senior"), true);
+    assert.equal(dashboard.learningMap.idealSkills.some((skill) => skill.year === "Freshman"), false);
+  });
+
+  it("maps course titles to skill-level targets", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSAI", year_level: 1 },
+      analysis: { ...analysis, program: "BSCSAI" },
+      manifest,
+      narrative: "",
+    });
+    const programming = dashboard.learningMap.idealSkills.find((skill) => skill.courseTitle === "Computer Programming 1");
+
+    assert.equal(programming?.courseCode, "CCS0003");
+    assert.equal(programming?.name, "Programming Fundamentals");
+    assert.notEqual(programming?.name, "Introduction to C++ Programming");
+    assert.notEqual(programming?.name, "C++");
+    assert.match(programming?.coursewareUrl ?? "", /paraverse\.feutech\.edu\.ph\/mflix\/course\/[a-f0-9]+$/);
+    assert.doesNotMatch(programming?.coursewareUrl ?? "", /search=/);
+  });
+
+  it("deduplicates repeated title and skill pairs", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSAI", year_level: 1 },
+      analysis: { ...analysis, program: "BSCSAI" },
+      manifest,
+      narrative: "",
+    });
+    const titleSkillPairs = dashboard.learningMap.idealSkills.map((skill) => `${skill.courseTitle}|${skill.name}`);
+
+    assert.equal(new Set(titleSkillPairs).size, titleSkillPairs.length);
+  });
+
+  it("uses common skill names instead of narrow module labels", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCPE", year_level: 2 },
+      analysis: { ...analysis, program: "BSCPE" },
+      manifest,
+      narrative: "",
+    });
+    const hardware = dashboard.learningMap.idealSkills.find((skill) => skill.courseTitle === "Computer Hardware Fundamentals");
+
+    assert.equal(hardware?.name, "Computer Hardware");
+    assert.equal(dashboard.learningMap.idealSkills.some((skill) => skill.name === "Cases Cooling And Peripherals"), false);
+    assert.equal(dashboard.learningMap.idealSkills.some((skill) => /cpe curriculum/i.test(skill.name)), false);
+  });
+
+  it("maps machine learning specialization titles to the right skills", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSDS", year_level: 3 },
+      analysis: { ...analysis, program: "BSCSDS" },
+      manifest,
+      narrative: "",
+    });
+    const machineLearningAlgorithms = dashboard.learningMap.idealSkills
+      .filter((skill) => skill.courseTitle === "CS SPECIALIZATION 3 - MACHINE LEARNING ALGORITHMS")
+      .map((skill) => skill.name)
+      .sort();
+    const advancedMachineLearning = dashboard.learningMap.idealSkills
+      .filter((skill) => skill.courseCode === "CS0077")
+      .map((skill) => skill.name);
+
+    assert.deepEqual(machineLearningAlgorithms, ["Algorithms", "Machine Learning"]);
+    assert.deepEqual(advancedMachineLearning, ["Machine Learning"]);
+    assert.equal(
+      dashboard.learningMap.idealSkills.some((skill) => skill.name === "CS SPECIALIZATION 4 - ADVANCE MACHINE LEARNING"),
+      false,
+    );
+  });
+
+  it("uses courseware links and excludes CS0016", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSDS", year_level: 3 },
+      analysis: { ...analysis, program: "BSCSDS" },
+      manifest,
+      narrative: "",
+    });
+    const statistics = dashboard.learningMap.idealSkills.find((skill) => skill.courseCode === "CS0073");
+
+    assert.equal(dashboard.learningMap.idealSkills.some((skill) => skill.courseCode === "CS0016"), false);
+    assert.match(statistics?.coursewareUrl ?? "", /paraverse\.feutech\.edu\.ph\/mflix\/course/);
+    assert.match(statistics?.coursewareUrl ?? "", /search=/);
+    assert.match(statistics?.linkedinLearningUrl ?? "", /linkedin\.com\/learning\/search/);
+    assert.match(statistics?.linkedinLearningUrl ?? "", /keywords=Statistics/);
+  });
+
+  it("maps CS project courses to a common project skill", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSCSDS", year_level: 3 },
+      analysis: { ...analysis, program: "BSCSDS" },
+      manifest,
+      narrative: "",
+    });
+    const csProject = dashboard.learningMap.idealSkills.find((skill) => skill.courseTitle === "CS Project 1");
+
+    assert.equal(csProject?.name, "Software Project Development");
+    assert.equal(dashboard.learningMap.idealSkills.some((skill) => skill.name === "CS Project 1"), false);
+  });
 });

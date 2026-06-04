@@ -53,8 +53,6 @@ dev:
 	@echo ""
 	@echo "Terminal 2:"
 	@echo "  make ui"
-	@echo ""
-	@echo "Current caveat: the API serves fixture data until the real run adapter is added."
 
 test:
 	cd briefcase-api && bun run test
