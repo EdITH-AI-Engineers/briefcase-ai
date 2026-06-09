@@ -9,6 +9,8 @@ import { withRetry } from "./retry.js";
 import { STUDENT_ASSESSMENT_SCHEMA } from "./schema.js";
 import type { StudentAssessmentResult, StudentProfile } from "./types.js";
 
+type AnyRecord = Record<string, unknown>;
+
 export type AnalyzeOptions = {
   student: StudentProfile;
   framework: Framework;
@@ -16,6 +18,42 @@ export type AnalyzeOptions = {
   cachedContent?: string;
   temperature?: number;
 };
+
+function isRecord(value: unknown): value is AnyRecord {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function hasText(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function isProgram(value: unknown): value is StudentAssessmentResult["analysis"]["program"] {
+  return value === "BSCS" || value === "BSIT" || value === "BSCpE" || value === "unknown";
+}
+
+function parseStudentAssessmentResult(text: string): StudentAssessmentResult {
+  const parsed = JSON.parse(text) as unknown;
+  if (!isRecord(parsed) || !isRecord(parsed.analysis) || !isRecord(parsed.narrative)) {
+    throw new SyntaxError("Model response did not include analysis and narrative objects.");
+  }
+
+  const { analysis, narrative } = parsed;
+  if (
+    !hasText(analysis.student_id) ||
+    !isProgram(analysis.program) ||
+    !hasText(analysis.summary) ||
+    !Array.isArray(analysis.competencies) ||
+    !Array.isArray(analysis.strengths) ||
+    !Array.isArray(analysis.gaps)
+  ) {
+    throw new SyntaxError("Model response analysis object is missing required fields.");
+  }
+  if (!hasText(narrative.student_id) || !hasText(narrative.narrative_markdown)) {
+    throw new SyntaxError("Model response narrative object is missing required fields.");
+  }
+
+  return parsed as StudentAssessmentResult;
+}
 
 // Combined per-student pass: structured assessment plus markdown narrative.
 // This replaces the old split flow after the cohort pass was removed.
@@ -48,7 +86,7 @@ export async function analyzeStudent(
       });
       const text = response.text;
       if (!text) throw new Error("Empty response from model.");
-      return JSON.parse(text) as StudentAssessmentResult;
+      return parseStudentAssessmentResult(text);
     },
     {
       onRetry: (err, attempt, delayMs) => {

@@ -14,7 +14,7 @@ export const NARRATIVE_SCHEMA: Schema = {
     narrative_markdown: {
       type: Type.STRING,
       description:
-        "The full markdown body of the student report. Exclude the References section — it is appended deterministically by the runner from frameworks/references.md.",
+        "The full markdown body of the student report. Exclude the References section; it is appended deterministically by the runner from frameworks/references.md. Every substantive sentence must end with one or more inline framework clause tags, not just the final sentence in a paragraph.",
     },
   },
   required: ["student_id", "narrative_markdown"],
