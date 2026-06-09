@@ -137,6 +137,8 @@ export async function listRuns() {
       .map(async (id) => {
         const run = await readRunMetadata(id);
         if (!run) return null;
+        const profilesPath = resolveAllowedProfilesPath(run.runDir, run.manifest);
+        if (!profilesPath || !(await exists(profilesPath))) return null;
         return {
           id,
           status: run.manifest.status,

@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
+import { mkdir, rm, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import { describe, it } from "node:test";
+import { fileURLToPath } from "node:url";
 import { app } from "../src/app.ts";
+
+const analysisOutputDir = fileURLToPath(new URL("../../genai-analysis/output", import.meta.url));
 
 describe("api routes", () => {
   it("responds to health checks", async () => {
@@ -41,5 +46,27 @@ describe("api routes", () => {
 
     assert.equal(response.status, 200);
     assert.equal(Array.isArray(body), true);
+  });
+
+  it("does not list runs with missing profiles files", async () => {
+    const runId = `run-test-missing-profiles-${Date.now()}`;
+    const runDir = join(analysisOutputDir, runId);
+
+    await mkdir(runDir, { recursive: true });
+    try {
+      await writeFile(
+        join(runDir, "manifest.json"),
+        JSON.stringify({ status: "success", profilesPath: "missing-profiles.json" }),
+      );
+      await writeFile(join(runDir, "analyses.json"), JSON.stringify([]));
+
+      const response = await app.request("/api/runs");
+      const body = await response.json() as Array<{ id?: string }>;
+
+      assert.equal(response.status, 200);
+      assert.equal(body.some((run) => run.id === runId), false);
+    } finally {
+      await rm(runDir, { recursive: true, force: true });
+    }
   });
 });
