@@ -127,10 +127,10 @@ function stripHaystack(candidate: CourseCandidate): CoursewareSearchResult {
 }
 
 function nearbyHtmlBlock(html: string, index: number): string {
-  const start = Math.max(0, html.lastIndexOf("<div", index));
+  const start = html.lastIndexOf("<div", index);
   const end = html.indexOf("</div>", index);
   if (start === -1 || end === -1) return html.slice(index, index + 800);
-  return html.slice(start, Math.min(html.length, end + 6));
+  return html.slice(Math.max(0, start), Math.min(html.length, end + 6));
 }
 
 function attributeUrls(html: string, pattern: RegExp, baseUrl: string): string[] {

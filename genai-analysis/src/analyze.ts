@@ -61,6 +61,9 @@ function parseStudentAssessmentResult(text: string): StudentAssessmentResult {
   if (!hasText(narrative.student_id) || !hasText(narrative.narrative_markdown)) {
     throw new SyntaxError("Model response narrative object is missing required fields.");
   }
+  if (narrative.student_id !== analysis.student_id) {
+    throw new SyntaxError("Model response narrative student_id did not match analysis student_id.");
+  }
 
   analysis.program = program;
   return parsed as StudentAssessmentResult;

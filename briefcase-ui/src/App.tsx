@@ -784,11 +784,12 @@ export default function App() {
                   ) : null}
                 </div>
                 <div className="progress-list">
-                  {visibleLearningSkills.map((skill) => {
+                  {visibleLearningSkills.map((skill, index) => {
                     const itemProgress = progressPercent(skill.currentRating, skill.targetRating ?? dashboard.learningMap?.targetScore ?? ideal);
                     const skillMessage = learningSkillMessage(skill);
+                    const skillKey = `${skill.courseCode ?? "course"}-${skill.name ?? "skill"}-${index}`;
                     return (
-                      <article className="progress-item" key={`${skill.courseCode}-${skill.name}`}>
+                      <article className="progress-item" key={skillKey}>
                         <div>
                           <h3>{skill.courseTitle}</h3>
                           {skillMessage ? <p>{skillMessage}</p> : null}
