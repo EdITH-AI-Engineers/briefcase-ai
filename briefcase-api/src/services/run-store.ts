@@ -1,14 +1,66 @@
 import { access, readdir, readFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildDashboard } from "./dashboard-builder.js";
+
+type AnyRecord = Record<string, unknown>;
+type RunManifest = {
+  status?: string;
+  profilesPath?: string;
+  requestedProfiles?: number;
+  completedAnalyses?: number;
+  framework?: {
+    bundleVersion?: string;
+    docs?: unknown;
+  };
+};
+type AnalysisRecord = AnyRecord & { student_id: string };
+type ProfileRecord = AnyRecord & { id: string };
 
 const here = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = resolve(here, "../../..");
 const analysisOutputDir = join(repoRoot, "genai-analysis", "output");
+const synthOutputDir = join(repoRoot, "synth-data-gen", "output");
 
-async function readJson<T>(path: string): Promise<T> {
-  return JSON.parse(await readFile(path, "utf8")) as T;
+function isRecord(value: unknown): value is AnyRecord {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isAnalysisRecord(value: unknown): value is AnalysisRecord {
+  return isRecord(value) && typeof value.student_id === "string" && value.student_id.trim().length > 0;
+}
+
+function isProfileRecord(value: unknown): value is ProfileRecord {
+  return isRecord(value) && typeof value.id === "string" && value.id.trim().length > 0;
+}
+
+function isPathInside(path: string, root: string): boolean {
+  const rel = relative(resolve(root), resolve(path));
+  return rel === "" || (!!rel && !rel.startsWith("..") && !isAbsolute(rel));
+}
+
+function resolveAllowedProfilesPath(runDir: string, manifest: RunManifest): string | null {
+  const configured = typeof manifest.profilesPath === "string" && manifest.profilesPath.trim()
+    ? manifest.profilesPath
+    : join(runDir, "profiles.json");
+  const profilesPath = resolve(runDir, configured);
+  const allowedRoots = [runDir, synthOutputDir];
+  return allowedRoots.some((root) => isPathInside(profilesPath, root)) ? profilesPath : null;
+}
+
+function parseManifest(value: unknown): RunManifest | null {
+  if (!isRecord(value)) return null;
+  return {
+    ...(typeof value.status === "string" ? { status: value.status } : {}),
+    ...(typeof value.profilesPath === "string" ? { profilesPath: value.profilesPath } : {}),
+    ...(typeof value.requestedProfiles === "number" ? { requestedProfiles: value.requestedProfiles } : {}),
+    ...(typeof value.completedAnalyses === "number" ? { completedAnalyses: value.completedAnalyses } : {}),
+    ...(isRecord(value.framework) ? { framework: value.framework as RunManifest["framework"] } : {}),
+  };
+}
+
+async function readJson(path: string): Promise<unknown> {
+  return JSON.parse(await readFile(path, "utf8")) as unknown;
 }
 
 async function exists(path: string): Promise<boolean> {
@@ -20,24 +72,52 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
-async function readRun(runId: string) {
+function isRunId(runId: string): boolean {
+  return /^run-[a-zA-Z0-9._-]+$/.test(runId);
+}
+
+async function readRunMetadata(runId: string) {
+  if (!isRunId(runId)) return null;
   const runDir = join(analysisOutputDir, runId);
   const manifestPath = join(runDir, "manifest.json");
   const analysesPath = join(runDir, "analyses.json");
   if (!(await exists(manifestPath)) || !(await exists(analysesPath))) return null;
 
-  const [manifest, analyses] = await Promise.all([
-    readJson<any>(manifestPath),
-    readJson<any[]>(analysesPath),
-  ]);
-  const profilesPath = String(manifest.profilesPath ?? join(runDir, "profiles.json"));
+  try {
+    const [rawManifest, rawAnalyses] = await Promise.all([
+      readJson(manifestPath),
+      readJson(analysesPath),
+    ]);
+    const manifest = parseManifest(rawManifest);
+    if (!manifest || !Array.isArray(rawAnalyses)) return null;
+
+    const analyses = rawAnalyses.filter(isAnalysisRecord);
+    if (analyses.length === 0 && rawAnalyses.length > 0) return null;
+
+    return { runDir, manifest, analyses };
+  } catch {
+    return null;
+  }
+}
+
+async function readRun(runId: string) {
+  const metadata = await readRunMetadata(runId);
+  if (!metadata) return null;
+
+  const { runDir, manifest, analyses } = metadata;
+  const profilesPath = resolveAllowedProfilesPath(runDir, manifest);
+  if (!profilesPath) return null;
   if (!(await exists(profilesPath))) return null;
+
+  const rawProfiles = await readJson(profilesPath);
+  if (!Array.isArray(rawProfiles)) return null;
+  const profiles = rawProfiles.filter(isProfileRecord);
 
   return {
     runDir,
     manifest,
     analyses,
-    profiles: await readJson<any[]>(profilesPath),
+    profiles,
   };
 }
 
@@ -55,8 +135,10 @@ export async function listRuns() {
       .sort()
       .reverse()
       .map(async (id) => {
-        const run = await readRun(id);
+        const run = await readRunMetadata(id);
         if (!run) return null;
+        const profilesPath = resolveAllowedProfilesPath(run.runDir, run.manifest);
+        if (!profilesPath || !(await exists(profilesPath))) return null;
         return {
           id,
           status: run.manifest.status,
