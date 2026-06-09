@@ -95,6 +95,14 @@ const analysis = {
 };
 
 describe("buildDashboard", () => {
+  it("splits the student name into first and last fields", () => {
+    const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
+
+    assert.equal(dashboard.student.firstName, "Test");
+    assert.equal(dashboard.student.lastName, "Student");
+    assert.equal(dashboard.student.name, "Test Student");
+  });
+
   it("does not expose fake cohort data", () => {
     const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
 

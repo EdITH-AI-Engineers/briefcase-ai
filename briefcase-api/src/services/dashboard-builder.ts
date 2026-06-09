@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Level, StudentDashboardDto } from "../types/dashboard.js";
 import { linkedinLearningSearchUrl, pickKeywords } from "./linkedin-search.js";
+import { splitPersonName } from "./name.js";
 import { paraverseCoursewareSearchUrl } from "./paraverse-courseware-search.js";
 
 type AnyRecord = Record<string, unknown>;
@@ -569,8 +570,8 @@ function buildLearningMap(input: {
     summary: selectedProgram && idealSkills.length === 0
       ? `${programLabel}: no Year ${targetYearLevel} main-course skill targets were found in courses.json.`
       : selectedProgram
-      ? `${programLabel}: ${missingCount} missing and ${needsWorkCount} needs-work skills for the Year ${targetYearLevel} curriculum target.`
-      : "No matching curriculum was found in courses.json for this student's program.",
+        ? `${programLabel}: ${missingCount} missing and ${needsWorkCount} needs-work skills for the Year ${targetYearLevel} curriculum target.`
+        : "No matching curriculum was found in courses.json for this student's program.",
     idealSkills,
     nodes,
     edges,
@@ -915,17 +916,27 @@ export function buildDashboard(input: {
         ? asText(input.manifest.framework.bundleVersion) || "unknown"
         : "unknown",
     },
-    student: {
-      id: asText(input.analysis.student_id) || String(input.profile.id ?? ""),
-      name: asText(input.profile.full_name) || asText(input.analysis.student_id) || String(input.profile.id ?? "Unknown Student"),
-      program: asText(input.analysis.program) || asText(input.profile.program) || "unknown",
-      specialization: asText(input.analysis.specialization) || asText(input.profile.specialization),
-      headline: asText(input.profile.headline),
-      biography: asText(input.profile.short_biography) || asText(input.profile.biography),
-      yearLevel: year,
-      sparsity: sparsity(input.profile),
-      evidenceCounts: evidenceCounts(input.profile),
-    },
+    student: (() => {
+      const personName = splitPersonName({
+        fullName: input.profile.full_name ?? input.profile.fullName,
+        firstName: input.profile.first_name ?? input.profile.firstName,
+        lastName: input.profile.last_name ?? input.profile.lastName,
+      });
+
+      return {
+        id: asText(input.analysis.student_id) || String(input.profile.id ?? ""),
+        firstName: personName.firstName,
+        lastName: personName.lastName,
+        name: personName.name || asText(input.analysis.student_id) || String(input.profile.id ?? "Unknown Student"),
+        program: asText(input.analysis.program) || asText(input.profile.program) || "unknown",
+        specialization: asText(input.analysis.specialization) || asText(input.profile.specialization),
+        headline: asText(input.profile.headline),
+        biography: asText(input.profile.short_biography) || asText(input.profile.biography),
+        yearLevel: year,
+        sparsity: sparsity(input.profile),
+        evidenceCounts: evidenceCounts(input.profile),
+      };
+    })(),
     overview: {
       overallScore,
       idealScore,

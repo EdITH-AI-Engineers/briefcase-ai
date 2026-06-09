@@ -2,6 +2,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildDashboard } from "./dashboard-builder.js";
+import { splitPersonName } from "./name.js";
 
 type AnyRecord = Record<string, unknown>;
 type RunManifest = {
@@ -164,7 +165,11 @@ export async function getStudents(runId: string) {
     .filter((profile) => analyzedIds.has(profile.id))
     .map((profile) => ({
       id: profile.id,
-      name: profile.full_name,
+      ...splitPersonName({
+        fullName: profile.full_name ?? profile.fullName,
+        firstName: profile.first_name ?? profile.firstName,
+        lastName: profile.last_name ?? profile.lastName,
+      }),
       program: profile.program,
       yearLevel: profile.year_level,
     }));

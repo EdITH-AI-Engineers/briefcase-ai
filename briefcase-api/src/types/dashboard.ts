@@ -9,6 +9,8 @@ export type StudentDashboardDto = {
   run: { id: string; status: string; frameworkVersion: string };
   student: {
     id: string;
+    firstName: string;
+    lastName: string;
     name: string;
     program: string;
     specialization: string;
