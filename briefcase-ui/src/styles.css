@@ -172,17 +172,7 @@ li {
   font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
-.summary-band p,
-.skill-panel-head p,
-.card p,
-.card li,
-.clean-list li,
-.stack p,
-.stack strong,
-.progress-item h3,
-.progress-item p,
-.narrative p,
-.narrative li {
+.clamped-text {
   display: -webkit-box;
   line-clamp: 3;
   -webkit-line-clamp: 3;
@@ -196,44 +186,34 @@ li {
     padding 180ms ease;
 }
 
-.summary-band p:hover,
-.summary-band p:focus,
-.skill-panel-head p:hover,
-.skill-panel-head p:focus,
-.card p:hover,
-.card p:focus,
-.card li:hover,
-.card li:focus,
-.clean-list li:hover,
-.clean-list li:focus,
-.stack p:hover,
-.stack p:focus,
-.stack strong:hover,
-.stack strong:focus,
-.progress-item h3:hover,
-.progress-item h3:focus,
-.progress-item p:hover,
-.progress-item p:focus,
-.narrative p:hover,
-.narrative p:focus,
-.narrative li:hover,
-.narrative li:focus {
+.clamped-text.expanded {
   display: block;
   overflow: visible;
   z-index: 2;
 }
 
-.card p:hover,
-.card li:hover,
-.clean-list li:hover,
-.stack p:hover,
-.stack strong:hover,
-.progress-item h3:hover,
-.progress-item p:hover,
-.narrative p:hover,
-.narrative li:hover {
+.expandable-text:focus-within .clamped-text,
+.clamped-text.expanded {
   background: #ffffff;
   box-shadow: 0 10px 24px rgba(24, 62, 118, 0.1);
+}
+
+.expandable-text,
+.clean-list li,
+.card li,
+.narrative li {
+  display: grid;
+  gap: 6px;
+}
+
+.text-expand-button {
+  justify-self: start;
+  border: 1px solid #bfd2ef;
+  background: #ffffff;
+  color: #1554b8;
+  font-size: 0.76rem;
+  min-height: 30px;
+  padding: 0 10px;
 }
 
 .meta-row {
@@ -965,7 +945,8 @@ pre {
   line-height: 1.6;
   padding: 18px;
   white-space: pre-wrap;
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 @media (max-width: 760px) {

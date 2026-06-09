@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8787";
@@ -193,6 +193,63 @@ function EmptyPanel({ title, text }: { title: string; text: string }) {
   );
 }
 
+function ExpandableText({
+  as = "p",
+  children,
+  className,
+}: {
+  as?: "p" | "li" | "h3" | "strong";
+  children: ReactNode;
+  className?: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const id = useId();
+  const textClassName = `clamped-text${expanded ? " expanded" : ""}`;
+  const button = (
+    <button
+      type="button"
+      className="text-expand-button"
+      aria-controls={id}
+      aria-expanded={expanded}
+      onClick={() => setExpanded((current) => !current)}
+    >
+      {expanded ? "Show less" : "Show more"}
+    </button>
+  );
+
+  if (as === "li") {
+    return (
+      <li className={className}>
+        <span id={id} className={textClassName}>
+          {children}
+        </span>
+        {button}
+      </li>
+    );
+  }
+
+  if (as === "strong") {
+    return (
+      <div className={`expandable-text${className ? ` ${className}` : ""}`}>
+        <strong id={id} className={textClassName}>
+          {children}
+        </strong>
+        {button}
+      </div>
+    );
+  }
+
+  const Tag = as;
+  return (
+    <div className={`expandable-text${className ? ` ${className}` : ""}`}>
+      <Tag id={id} className={textClassName}>
+        {children}
+      </Tag>
+      {button}
+    </div>
+  );
+}
+
 function LinkedInLearningLogo({ href }: { href?: string }) {
   if (!href) return null;
 
@@ -250,7 +307,7 @@ function NarrativeText({ text }: { text?: string }) {
 
   function flushParagraph(key: string) {
     if (!paragraph.length) return;
-    blocks.push(<p key={key}>{renderNarrativeInline(paragraph.join(" "))}</p>);
+    blocks.push(<ExpandableText key={key}>{renderNarrativeInline(paragraph.join(" "))}</ExpandableText>);
     paragraph = [];
   }
 
@@ -259,7 +316,7 @@ function NarrativeText({ text }: { text?: string }) {
     blocks.push(
       <ul key={key}>
         {bullets.map((line) => (
-          <li key={line}>{renderNarrativeInline(line)}</li>
+          <ExpandableText as="li" key={line}>{renderNarrativeInline(line)}</ExpandableText>
         ))}
       </ul>,
     );
@@ -313,6 +370,7 @@ export default function App() {
   const [showMetLearning, setShowMetLearning] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [rawText, setRawText] = useState("");
+  const latestStudentRequestId = useRef(0);
 
   async function readApi(path: string) {
     const response = await fetch(`${API_BASE}${path}`);
@@ -322,7 +380,7 @@ export default function App() {
   }
 
   async function loadStudentsForRun(runId: string, studentId?: string) {
-    const response = await fetch(`${API_BASE}/api/runs/${runId}/students`);
+    const response = await fetch(`${API_BASE}/api/runs/${encodeURIComponent(runId)}/students`);
     if (!response.ok) return;
 
     const parsed = (await response.json()) as StudentsPayload;
@@ -370,10 +428,18 @@ export default function App() {
     const runId = dashboard?.run?.id;
     if (!runId) return;
 
+    const requestId = latestStudentRequestId.current + 1;
+    latestStudentRequestId.current = requestId;
+    const isLatestRequest = () => requestId === latestStudentRequestId.current;
+
     setState("loading");
 
     try {
-      const { response, body, parsed } = await readApi(`/api/runs/${runId}/students/${studentId}/dashboard`);
+      const { response, body, parsed } = await readApi(
+        `/api/runs/${encodeURIComponent(runId)}/students/${encodeURIComponent(studentId)}/dashboard`,
+      );
+      if (!isLatestRequest()) return;
+
       setRawText(body);
       setPayload(parsed);
 
@@ -388,6 +454,8 @@ export default function App() {
       setCurrentIndex(students.findIndex((student) => student.id === studentId));
       setState("ready");
     } catch (error) {
+      if (!isLatestRequest()) return;
+
       const message = error instanceof Error ? error.message : "Unable to load student.";
       setRawText(message);
       setPayload(null);
@@ -424,17 +492,21 @@ export default function App() {
       missing: skills.filter((skill) => skill.status === "missing").length,
     };
   }, [dashboard]);
-  const learningCompletion = learningSkillCount
-    ? Math.round(
-        (learningSkills.reduce((sum, skill) => {
-          const target = skill.targetRating ?? dashboard?.learningMap?.targetScore ?? ideal;
-          const current = typeof skill.currentRating === "number" ? skill.currentRating : 0;
-          return sum + Math.min(current, target);
-        }, 0) /
-          learningSkills.reduce((sum, skill) => sum + (skill.targetRating ?? dashboard?.learningMap?.targetScore ?? ideal), 0)) *
-          100,
-      )
-    : 0;
+  const learningCompletion = useMemo(() => {
+    if (!learningSkillCount) return 0;
+
+    const targetForSkill = (skill: (typeof learningSkills)[number]) =>
+      skill.targetRating ?? dashboard?.learningMap?.targetScore ?? ideal;
+    const totalTarget = learningSkills.reduce((sum, skill) => sum + targetForSkill(skill), 0);
+    if (totalTarget === 0) return 0;
+
+    const cappedCurrent = learningSkills.reduce((sum, skill) => {
+      const target = targetForSkill(skill);
+      const current = typeof skill.currentRating === "number" ? skill.currentRating : 0;
+      return sum + Math.min(current, target);
+    }, 0);
+    return Math.round((cappedCurrent / totalTarget) * 100);
+  }, [dashboard, ideal, learningSkillCount, learningSkills]);
   const skillBuckets = [
     ["hard", dashboard?.skills?.hard ?? []],
     ["soft", dashboard?.skills?.soft ?? []],
@@ -519,7 +591,7 @@ export default function App() {
             </span>
           </div>
           <h2>{dashboard?.overview?.ratingLabel ?? "Waiting for API response"}</h2>
-          <p>{dashboard?.overview?.summary ?? rawText}</p>
+          <ExpandableText>{dashboard?.overview?.summary ?? rawText}</ExpandableText>
         </div>
       </section>
 
@@ -647,7 +719,7 @@ export default function App() {
                         <div className="skill-panel-head">
                           <div>
                             <h3>{skillBucketLabel(bucket)}</h3>
-                            <p>{skillBucketDescription(bucket)}</p>
+                            <ExpandableText>{skillBucketDescription(bucket)}</ExpandableText>
                           </div>
                           <span>{skills.length}</span>
                         </div>
@@ -690,11 +762,11 @@ export default function App() {
                     <h3>{item.name}</h3>
                     <span>{item.level}</span>
                   </div>
-                  <p>{item.diagnosis}</p>
+                  <ExpandableText>{item.diagnosis}</ExpandableText>
                   {item.evidence?.length ? (
                     <ul>
                       {item.evidence.slice(0, 3).map((evidence) => (
-                        <li key={evidence}>{evidence}</li>
+                        <ExpandableText as="li" key={evidence}>{evidence}</ExpandableText>
                       ))}
                     </ul>
                   ) : null}
@@ -707,7 +779,7 @@ export default function App() {
             <h2>Quick Fixes</h2>
             <ul className="clean-list">
               {(dashboard.overview?.quickFixes ?? []).map((fix) => (
-                <li key={fix}>{fix}</li>
+                <ExpandableText as="li" key={fix}>{fix}</ExpandableText>
               ))}
             </ul>
           </section>
@@ -716,7 +788,7 @@ export default function App() {
             <h2>Top Issues</h2>
             <ul className="clean-list">
               {(dashboard.overview?.topIssues ?? []).map((issue) => (
-                <li key={issue}>{issue}</li>
+                <ExpandableText as="li" key={issue}>{issue}</ExpandableText>
               ))}
             </ul>
           </section>
@@ -727,7 +799,7 @@ export default function App() {
               {(dashboard.strengths ?? []).map((strength) => (
                 <article key={strength.area}>
                   <h3>{strength.area}</h3>
-                  <p>{strength.evidence?.join(" ")}</p>
+                  <ExpandableText>{strength.evidence?.join(" ")}</ExpandableText>
                 </article>
               ))}
             </div>
@@ -739,8 +811,8 @@ export default function App() {
               {(dashboard.gaps ?? []).map((gap) => (
                 <article key={gap.area}>
                   <h3>{gap.area}</h3>
-                  <p>{gap.reason}</p>
-                  <strong>{gap.recommendation}</strong>
+                  <ExpandableText>{gap.reason}</ExpandableText>
+                  <ExpandableText as="strong">{gap.recommendation}</ExpandableText>
                 </article>
               ))}
             </div>
@@ -791,8 +863,8 @@ export default function App() {
                     return (
                       <article className="progress-item" key={skillKey}>
                         <div>
-                          <h3>{skill.courseTitle}</h3>
-                          {skillMessage ? <p>{skillMessage}</p> : null}
+                          <ExpandableText as="h3">{skill.courseTitle}</ExpandableText>
+                          {skillMessage ? <ExpandableText>{skillMessage}</ExpandableText> : null}
                         </div>
                         <div className="progress-item-meter">
                           <span className={`mini-status mini-status-${skill.status ?? "unknown"}`}>
@@ -837,7 +909,7 @@ export default function App() {
                     <h3>{item.title}</h3>
                     <span>{item.provider}</span>
                   </div>
-                  <p>{item.reason}</p>
+                  <ExpandableText>{item.reason}</ExpandableText>
                   <div className="card-footer">
                     <small>{item.relatedCompetency}</small>
                     <ResourceLinks linkedinLearningUrl={item.url} />

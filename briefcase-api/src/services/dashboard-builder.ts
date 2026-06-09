@@ -52,6 +52,9 @@ type CourseProgram = {
   programCategory: string;
   modules: CourseModule[];
 };
+type GenaiSkillsModule = {
+  getSkillKind: (name: string) => SkillKind;
+};
 
 const levelScore: Record<Level, number> = {
   "Not Demonstrated": 0,
@@ -62,9 +65,10 @@ const levelScore: Record<Level, number> = {
 };
 
 const idealByYear: Record<number, number> = { 1: 35, 2: 50, 3: 65, 4: 80 };
-const genaiSkillsPath = fileURLToPath(new URL("../../../genai-analysis/src/skills.ts", import.meta.url));
 const coursesPath = fileURLToPath(new URL("../../../genai-analysis/src/courses.json", import.meta.url));
-let cachedSkillKinds: Map<string, SkillKind> | null = null;
+const genaiSkillsModule = await import(
+  new URL("../../../genai-analysis/src/skills.ts", import.meta.url).href
+) as GenaiSkillsModule;
 let cachedCoursePrograms: CourseProgram[] | null = null;
 
 function isRecord(value: unknown): value is AnyRecord {
@@ -189,7 +193,7 @@ const directSkillPatterns: Array<[RegExp, string]> = [
   [/\b(introduction to computing|computing fundamentals?|number systems?|software|computer fundamentals?)\b/i, "Computer Fundamentals"],
   [/\bcomputer engineering as a discipline\b/i, "Computer Engineering Foundations"],
   [/\bengineering design\b/i, "Engineering Design"],
-  [/\bengineering ethics|principles of ethics|introduction to ethics\b/i, "Engineering Ethics"],
+  [/\b(?:engineering ethics|principles of ethics|introduction to ethics)\b/i, "Engineering Ethics"],
 ];
 
 const courseTitleSkillPatterns: Array<[RegExp, string[]]> = [
@@ -573,27 +577,8 @@ function buildLearningMap(input: {
   };
 }
 
-function loadSkillKinds(): Map<string, SkillKind> {
-  if (cachedSkillKinds) return cachedSkillKinds;
-  const skillKinds = new Map<string, SkillKind>();
-
-  try {
-    const source = readFileSync(genaiSkillsPath, "utf8");
-    const entryPattern = /\["([^"]+)",\s*"(hard|soft)"\]/g;
-    let match: RegExpExecArray | null;
-    while ((match = entryPattern.exec(source))) {
-      skillKinds.set(normalizeSkillName(match[1]), match[2] as SkillKind);
-    }
-  } catch {
-    // If the analysis package is unavailable, unknown skills remain uncategorized.
-  }
-
-  cachedSkillKinds = skillKinds;
-  return skillKinds;
-}
-
 function classifyFallbackSkill(name: string): SkillKind {
-  return loadSkillKinds().get(normalizeEquivalentSkillName(name)) ?? "uncategorized";
+  return genaiSkillsModule.getSkillKind(name);
 }
 
 function ratingLabel(score: number): string {

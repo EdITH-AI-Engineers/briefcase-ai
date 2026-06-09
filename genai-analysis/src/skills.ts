@@ -251,6 +251,7 @@ function courseTitle(value: AnyRecord): string {
 
 export function isMainCourseCode(code: string): boolean {
   const normalized = code.trim().toUpperCase();
+  if (!normalized) return false;
   return !EXCLUDED_COURSE_CODES.includes(normalized) &&
     !EXCLUDED_COURSE_PREFIXES.some((prefix) => normalized.startsWith(prefix));
 }
@@ -496,8 +497,12 @@ export function getCourseSkillTargets(): CourseSkillTarget[] {
   return COURSE_SKILL_PROGRAMS.flatMap((program) => program.targets);
 }
 
+export function getSkillKind(name: string): SkillKind | "uncategorized" {
+  return SKILL_KIND.get(normalizeEquivalentSkillName(name)) ?? "uncategorized";
+}
+
 export function classifySkill(skill: SkillEntry): SkillKind | "uncategorized" {
-  return SKILL_KIND.get(normalizeEquivalentSkillName(skill.name)) ?? "uncategorized";
+  return getSkillKind(skill.name);
 }
 
 export function splitSkills(skills: SkillEntry[] = []): SkillBreakdown {
