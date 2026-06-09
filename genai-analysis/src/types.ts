@@ -1,4 +1,10 @@
 export type Program = "BSCS" | "BSIT" | "BSCpE" | "unknown";
+export type ProfileProgram =
+  | Program
+  | `BSCS${string}`
+  | `BSIT${string}`
+  | `BSCPE${string}`
+  | `BSCpE${string}`;
 
 // Profile field shapes mirror the public student-portal profile page, which
 // renders six sections: Personal Information, Skills, Work Experience,
@@ -79,7 +85,7 @@ export type StudentProfile = {
   // --- Account metadata (not rendered on the public profile page;
   //     derived from the student's enrollment record at FEU Tech).
   //     Needed by the analyzer to route CHED citations correctly. ---
-  program?: Program;
+  program?: ProfileProgram;
   specialization?: string | null;
   year_level?: 1 | 2 | 3 | 4;
 

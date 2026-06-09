@@ -27,8 +27,17 @@ function hasText(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
 
-function isProgram(value: unknown): value is StudentAssessmentResult["analysis"]["program"] {
-  return value === "BSCS" || value === "BSIT" || value === "BSCpE" || value === "unknown";
+function normalizeProgram(
+  value: unknown,
+): StudentAssessmentResult["analysis"]["program"] | null {
+  if (typeof value !== "string") return null;
+
+  const normalized = value.replace(/[^a-z0-9]/gi, "").toUpperCase();
+  if (!normalized || normalized === "UNKNOWN") return "unknown";
+  if (normalized.startsWith("BSCS")) return "BSCS";
+  if (normalized.startsWith("BSIT")) return "BSIT";
+  if (normalized.startsWith("BSCPE")) return "BSCpE";
+  return null;
 }
 
 function parseStudentAssessmentResult(text: string): StudentAssessmentResult {
@@ -38,9 +47,10 @@ function parseStudentAssessmentResult(text: string): StudentAssessmentResult {
   }
 
   const { analysis, narrative } = parsed;
+  const program = normalizeProgram(analysis.program);
   if (
     !hasText(analysis.student_id) ||
-    !isProgram(analysis.program) ||
+    !program ||
     !hasText(analysis.summary) ||
     !Array.isArray(analysis.competencies) ||
     !Array.isArray(analysis.strengths) ||
@@ -52,6 +62,7 @@ function parseStudentAssessmentResult(text: string): StudentAssessmentResult {
     throw new SyntaxError("Model response narrative object is missing required fields.");
   }
 
+  analysis.program = program;
   return parsed as StudentAssessmentResult;
 }
 

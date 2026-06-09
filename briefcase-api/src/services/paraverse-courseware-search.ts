@@ -43,7 +43,7 @@ export async function searchParaverseCourseware(input: CoursewareSearchInput): P
   const keywords = normalizeKeywords(input.keywords);
   if (keywords.length === 0) return [];
 
-  const response = await fetcher(PARAVERSE_COURSEWARE_BASE);
+  const response = await fetcher(paraverseCoursewareSearchUrl({ keywords }));
   if (!response.ok) {
     throw new Error(`Paraverse courseware search failed with HTTP ${response.status}`);
   }

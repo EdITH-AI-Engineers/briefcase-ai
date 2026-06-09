@@ -336,17 +336,25 @@ export default function App() {
 
     try {
       const { response, body, parsed } = await readApi(ENDPOINT);
-      const nextDashboard = normalizeDashboard(parsed);
-
       setRawText(body);
       setPayload(parsed);
+
+      if (!response.ok) {
+        setDashboard(null);
+        setStudents([]);
+        setCurrentIndex(-1);
+        setState("error");
+        return;
+      }
+
+      const nextDashboard = normalizeDashboard(parsed);
       setDashboard(nextDashboard);
 
       if (nextDashboard?.run?.id) {
         await loadStudentsForRun(nextDashboard.run.id, nextDashboard.student?.id);
       }
 
-      setState(response.ok ? "ready" : "error");
+      setState("ready");
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unable to reach API.";
       setRawText(message);
@@ -366,17 +374,24 @@ export default function App() {
 
     try {
       const { response, body, parsed } = await readApi(`/api/runs/${runId}/students/${studentId}/dashboard`);
-      const nextDashboard = normalizeDashboard(parsed);
-
       setRawText(body);
       setPayload(parsed);
+
+      if (!response.ok) {
+        setDashboard(null);
+        setState("error");
+        return;
+      }
+
+      const nextDashboard = normalizeDashboard(parsed);
       setDashboard(nextDashboard);
       setCurrentIndex(students.findIndex((student) => student.id === studentId));
-      setState(response.ok ? "ready" : "error");
+      setState("ready");
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unable to load student.";
       setRawText(message);
       setPayload(null);
+      setDashboard(null);
       setState("error");
     }
   }

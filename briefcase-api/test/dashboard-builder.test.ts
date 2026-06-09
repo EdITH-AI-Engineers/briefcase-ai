@@ -226,6 +226,21 @@ describe("buildDashboard", () => {
     assert.equal(dashboard.learningMap.idealSkills.some((skill) => skill.year === "Freshman"), false);
   });
 
+  it("reports the fallback target year level when the profile year is unknown", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: { ...profile, program: "BSIT", specialization: "Web and Mobile Application", year_level: undefined },
+      analysis: { ...analysis, program: "BSIT" },
+      manifest,
+      narrative: "",
+    });
+
+    assert.equal(dashboard.student.yearLevel, null);
+    assert.equal(dashboard.learningMap.targetYearLevel, 4);
+    assert.ok(dashboard.learningMap.idealSkills.length > 0);
+    assert.equal(dashboard.learningMap.idealSkills.every((skill) => skill.year === "Senior"), true);
+  });
+
   it("maps course titles to skill-level targets", () => {
     const dashboard = buildDashboard({
       runId: "run-test",

@@ -11,7 +11,7 @@ export const ANALYSIS_SCHEMA: Schema = {
     program: {
       type: Type.STRING,
       description:
-        "Program of study echoed from the profile. Use 'unknown' if the profile does not specify.",
+        "Canonical base program for analysis. Map specialized curriculum codes such as BSCSAI/BSCSDS/BSCSSE to 'BSCS', BSIT* codes to 'BSIT', and BSCPE/BSCpE* codes to 'BSCpE'. Use 'unknown' if the profile does not specify a supported computing program.",
       enum: ["BSCS", "BSIT", "BSCpE", "unknown"],
     },
     summary: {

@@ -560,7 +560,7 @@ function buildLearningMap(input: {
   return {
     programCode: selectedProgram?.programCode ?? "",
     programCategory: selectedProgram?.programCategory ?? "",
-    targetYearLevel: input.yearLevel,
+    targetYearLevel,
     targetScore: input.targetScore,
     summary: selectedProgram && idealSkills.length === 0
       ? `${programLabel}: no Year ${targetYearLevel} main-course skill targets were found in courses.json.`

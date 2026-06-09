@@ -28,7 +28,7 @@ function frameworkInstructionParts(framework: Framework): string[] {
 const analysisShapeHint = [
   "Response shape (the schema is enforced; this is what each field means):",
   "  - student_id: must equal the profile's id field verbatim.",
-  "  - program: echo the profile's program field verbatim (BSCS / BSIT / BSCpE / unknown).",
+  "  - program: canonical base program for analysis (BSCS / BSIT / BSCpE / unknown); map specialized profile codes like BSCSAI, BSCSDS, BSCSSE to BSCS, BSIT* to BSIT, and BSCPE/BSCpE* to BSCpE.",
   "  - summary: one to two sentences, framework-grounded overview.",
   "  - competencies: one entry per framework competency, with",
   "      name (verbatim), level (framework scale verbatim),",
