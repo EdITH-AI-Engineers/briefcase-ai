@@ -13,16 +13,15 @@ export type ColumnSpec = {
   propertyOrdering?: string[];
 };
 
-// Column shape mirrors the StudentProfile type consumed by genai-analysis.
-// Keep field names in sync with genai-analysis/src/types.ts — the two are
-// contract-coupled even though the packages don't share code.
+// Core portal fields mirror the StudentProfile type consumed by genai-analysis.
+// Broader evidence aliases are accepted by StudentProfile's extra-field index
+// signature and consumed by dashboard/import paths.
 //
-// The visible-profile fields (skills, work_experience, honors_awards,
-// licenses_certifications, seminars_trainings, organizations_memberships)
-// mirror the six rendered sections on the student portal. The three
+// The profile fields include the six rendered student-portal sections plus
+// broader evidence aliases used by the dashboard/import pipeline. The three
 // account-metadata fields (program, specialization, year_level) are not
-// rendered on the public profile page but travel alongside it so the
-// analyzer can route CHED citations correctly.
+// rendered on the public profile page but travel alongside it so the analyzer
+// can route CHED citations correctly.
 export const COLUMNS: Record<string, ColumnSpec> = {
   id: {
     type: Type.STRING,
@@ -64,7 +63,7 @@ export const COLUMNS: Record<string, ColumnSpec> = {
   skills: {
     type: Type.ARRAY,
     description:
-      "Skills list. Each entry is the skill name, a self-reported level, and a percentage. Length and level spread vary by profile completeness (see CONTEXT). Must cohere with program, specialization, and year_level. Empty array is valid for very sparse profiles.",
+      "Skills list. Each entry is the skill name, a self-reported level, and a percentage. Generate a broader mix than a minimal profile: include programming languages, tools, platforms, methods, and 2-4 professional/soft skills when plausible. Length and level spread vary by profile completeness (see CONTEXT). Must cohere with program, specialization, and year_level. Skills do not need dates.",
     items: {
       type: Type.OBJECT,
       properties: {
@@ -88,46 +87,102 @@ export const COLUMNS: Record<string, ColumnSpec> = {
       propertyOrdering: ["name", "level", "percentage"],
     },
   },
-  work_experience: {
+  certifications: {
     type: Type.ARRAY,
     description:
-      "Work Experience section. Internships (OJT / practicum, typically year 4), part-time jobs, research assistantships, or short industry engagements. Student-organization roles belong in organizations_memberships, NOT here.",
+      "General Certifications section for imported resume evidence. Use only for certifications not already represented in licenses_certifications. Each entry must include an issue date in 2026 when the profile has recent certification evidence; expiry_date is null for non-expiring certificates.",
     items: {
       type: Type.OBJECT,
       properties: {
-        company: {
+        name: {
           type: Type.STRING,
-          description: "Hosting company or organization name.",
+          description: "Certification or certificate name.",
         },
-        role: {
+        issuer: {
           type: Type.STRING,
-          description: "Role title at the company.",
+          description: "Issuing organization, school, vendor, or training provider.",
         },
-        employment_type: {
+        issue_date: {
+          type: Type.STRING,
+          description: "Full issue date as rendered, preferably in 2026 for recent evidence.",
+        },
+        expiry_date: {
+          type: Type.STRING,
+          nullable: true,
+          description: "Expiry date if applicable; null when it does not expire or is not shown.",
+        },
+      },
+      required: ["name", "issuer", "issue_date"],
+      propertyOrdering: ["name", "issuer", "issue_date", "expiry_date"],
+    },
+  },
+  licenses_certifications: {
+    type: Type.ARRAY,
+    description:
+      "Licenses and Certifications section. Academic or industry certifications, aligned to program/specialization where relevant. Leave empty for SPARSE and most year-1/year-2 profiles. Use issue dates in 2026 for this year's evidence when present.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        name: {
+          type: Type.STRING,
+          description: "Certification name as rendered.",
+        },
+        issuer: {
+          type: Type.STRING,
+          description:
+            "Issuing organization (e.g. Cisco, AWS, Google, Microsoft, CompTIA, IBM, Oracle, an accredited university).",
+        },
+        issue_date: {
+          type: Type.STRING,
+          description:
+            "Full issue date as rendered. Prefer a 2026 date for recent evidence; otherwise keep it coherent with year_level.",
+        },
+        expiry_date: {
           type: Type.STRING,
           nullable: true,
           description:
-            "Employment-type label shown above the date range. One of: Internship, Part-time, Full-time, Contract, null. Null when the portal shows no label.",
-          enum: ["Internship", "Part-time", "Full-time", "Contract"],
-        },
-        date_range: {
-          type: Type.STRING,
-          description:
-            "Free-form date range as rendered, with optional duration in parentheses. Use three-letter month + year (e.g. 'Jun 2025 - Present', 'Jan 2025 - Aug 2025 (8 months)').",
-        },
-        description: {
-          type: Type.STRING,
-          description: "What the student did and learned, 1-2 sentences.",
+            "Expiry date if the certification expires; null for non-expiring certs (most academic certs) and for industry certs rendered without an expiry line.",
         },
       },
-      required: ["company", "role", "date_range", "description"],
-      propertyOrdering: ["company", "role", "employment_type", "date_range", "description"],
+      required: ["name", "issuer", "issue_date"],
+      propertyOrdering: ["name", "issuer", "issue_date", "expiry_date"],
+    },
+  },
+  awards: {
+    type: Type.ARRAY,
+    description:
+      "General Awards section for imported resume evidence. Use only for awards not already represented in honors_awards. Each entry has a date; prefer 2026 for current-year awards.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        title: {
+          type: Type.STRING,
+          description: "Award title.",
+        },
+        recipient_status: {
+          type: Type.STRING,
+          nullable: true,
+          description:
+            "Optional status line. One of: Recipient, Winner, Finalist, Nominee, null.",
+          enum: ["Recipient", "Winner", "Finalist", "Nominee"],
+        },
+        issuer: {
+          type: Type.STRING,
+          description: "Issuing body or awarding institution.",
+        },
+        date: {
+          type: Type.STRING,
+          description: "Full award date as rendered, preferably in 2026.",
+        },
+      },
+      required: ["title", "issuer", "date"],
+      propertyOrdering: ["title", "recipient_status", "issuer", "date"],
     },
   },
   honors_awards: {
     type: Type.ARRAY,
     description:
-      "Honors and Awards section. Scholarships, academic honors (Dean's/President's Lister), hackathon placements, external competitions. Length varies by completeness; leave empty when the student genuinely has none.",
+      "Honors and Awards section. Scholarships, academic honors (Dean's/President's Lister), hackathon placements, external competitions. Length varies by completeness; leave empty when the student genuinely has none. Use 2026 dates for this year's honors when present.",
     items: {
       type: Type.OBJECT,
       properties: {
@@ -149,49 +204,153 @@ export const COLUMNS: Record<string, ColumnSpec> = {
         date: {
           type: Type.STRING,
           description:
-            "Full date as rendered (e.g. 'December 10, 2024'). Must be coherent with year_level.",
+            "Full date as rendered (e.g. 'May 18, 2026'). Must be coherent with year_level.",
         },
       },
       required: ["title", "issuer", "date"],
       propertyOrdering: ["title", "recipient_status", "issuer", "date"],
     },
   },
-  licenses_certifications: {
+  education: {
     type: Type.ARRAY,
     description:
-      "Licenses and Certifications section. Academic or industry certifications, aligned to program/specialization where relevant. Leave empty for SPARSE and most year-1/year-2 profiles.",
+      "Education section. Include the current degree as a date range and optionally one recent academic program, microcredential, or exchange experience. Do not overfill. Current undergraduate education should overlap 2026.",
     items: {
       type: Type.OBJECT,
       properties: {
-        name: {
+        school: {
           type: Type.STRING,
-          description: "Certification name as rendered.",
+          description: "School or institution name.",
         },
-        issuer: {
+        degree: {
+          type: Type.STRING,
+          description: "Degree, program, or academic credential.",
+        },
+        date_range: {
           type: Type.STRING,
           description:
-            "Issuing organization (e.g. Cisco, AWS, Google, Microsoft, CompTIA, IBM, Oracle, an accredited university).",
+            "Academic time frame as rendered, e.g. 'Aug 2022 - Present' or 'Aug 2022 - Jun 2026'. Must overlap 2026 for the current degree.",
         },
-        issue_date: {
+        description: {
           type: Type.STRING,
-          description:
-            "Full issue date as rendered. Must be coherent with year_level.",
+          nullable: true,
+          description: "Optional short note about track, thesis, academic focus, or relevant coursework.",
         },
-        expiry_date: {
+      },
+      required: ["school", "degree", "date_range"],
+      propertyOrdering: ["school", "degree", "date_range", "description"],
+    },
+  },
+  projects: {
+    type: Type.ARRAY,
+    description:
+      "Projects section. Academic, capstone, hackathon, open-source, or personal projects. Each project must include a date_range/time frame, and current-year evidence should overlap 2026 (e.g. 'Jan 2026 - Mar 2026' or 'Feb 2026 - Present').",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        title: {
+          type: Type.STRING,
+          description: "Project title.",
+        },
+        role: {
+          type: Type.STRING,
+          nullable: true,
+          description: "Student's role, or null when the profile does not specify one.",
+        },
+        date_range: {
+          type: Type.STRING,
+          description: "Project time frame as rendered; must overlap 2026.",
+        },
+        technologies: {
+          type: Type.ARRAY,
+          description: "Short technology, tool, or method names used in the project.",
+          items: { type: Type.STRING },
+        },
+        description: {
+          type: Type.STRING,
+          description: "One or two sentences describing what was built and what evidence it gives.",
+        },
+      },
+      required: ["title", "date_range", "technologies", "description"],
+      propertyOrdering: ["title", "role", "date_range", "technologies", "description"],
+    },
+  },
+  experience: {
+    type: Type.ARRAY,
+    description:
+      "General Experience section for imported resume evidence. Use only for non-duplicate internships, assistantships, freelance, volunteer, or industry engagements not already in work_experience. Each entry has a date_range that overlaps 2026 when it is current-year evidence.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        company: {
+          type: Type.STRING,
+          description: "Hosting company, lab, client, or organization name.",
+        },
+        role: {
+          type: Type.STRING,
+          description: "Role title.",
+        },
+        employment_type: {
           type: Type.STRING,
           nullable: true,
           description:
-            "Expiry date if the certification expires; null for non-expiring certs (most academic certs) and for industry certs rendered without an expiry line.",
+            "Experience-type label. One of: Internship, Part-time, Full-time, Contract, Volunteer, Research, Freelance, null.",
+          enum: ["Internship", "Part-time", "Full-time", "Contract", "Volunteer", "Research", "Freelance"],
+        },
+        date_range: {
+          type: Type.STRING,
+          description:
+            "Free-form date range as rendered; use 2026 ranges for this year's evidence.",
+        },
+        description: {
+          type: Type.STRING,
+          description: "What the student did and learned, 1-2 sentences.",
         },
       },
-      required: ["name", "issuer", "issue_date"],
-      propertyOrdering: ["name", "issuer", "issue_date", "expiry_date"],
+      required: ["company", "role", "date_range", "description"],
+      propertyOrdering: ["company", "role", "employment_type", "date_range", "description"],
+    },
+  },
+  work_experience: {
+    type: Type.ARRAY,
+    description:
+      "Work Experience section. Internships (OJT / practicum, typically year 4), part-time jobs, research assistantships, or short industry engagements. Student-organization roles belong in organizations_memberships, NOT here. Each entry has a date_range; current-year work should overlap 2026.",
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        company: {
+          type: Type.STRING,
+          description: "Hosting company or organization name.",
+        },
+        role: {
+          type: Type.STRING,
+          description: "Role title at the company.",
+        },
+        employment_type: {
+          type: Type.STRING,
+          nullable: true,
+          description:
+            "Employment-type label shown above the date range. One of: Internship, Part-time, Full-time, Contract, null. Null when the portal shows no label.",
+          enum: ["Internship", "Part-time", "Full-time", "Contract"],
+        },
+        date_range: {
+          type: Type.STRING,
+          description:
+            "Free-form date range as rendered, with optional duration in parentheses. Use three-letter month + year (e.g. 'Jan 2026 - Present', 'Feb 2026 - May 2026 (4 months)').",
+        },
+        description: {
+          type: Type.STRING,
+          description: "What the student did and learned, 1-2 sentences.",
+        },
+      },
+      required: ["company", "role", "date_range", "description"],
+      propertyOrdering: ["company", "role", "employment_type", "date_range", "description"],
     },
   },
   seminars_trainings: {
     type: Type.ARRAY,
     description:
-      "Seminars and Trainings section. Campus events, workshops, and industry talks. Role drives how the entry reads as evidence: Speaker is strong communication + self-directed-learning evidence; Facilitator/Organizer is collaboration evidence; Attendee is weaker but still counts as CPD.",
+      "Seminars and Trainings section. Campus events, workshops, and industry talks. Role drives how the entry reads as evidence: Speaker is strong communication + self-directed-learning evidence; Facilitator/Organizer is collaboration evidence; Attendee is weaker but still counts as CPD. Use 2026 dates for this year's seminars.",
     items: {
       type: Type.OBJECT,
       properties: {
@@ -213,7 +372,7 @@ export const COLUMNS: Record<string, ColumnSpec> = {
         date: {
           type: Type.STRING,
           description:
-            "Full date as rendered. Must be coherent with year_level.",
+            "Full date as rendered, preferably in 2026. Must be coherent with year_level.",
         },
       },
       required: ["title", "issuer", "date"],
@@ -223,7 +382,7 @@ export const COLUMNS: Record<string, ColumnSpec> = {
   organizations_memberships: {
     type: Type.ARRAY,
     description:
-      "Organizations and Memberships section. Student organizations (FEU Tech chapters of ACM, JPCS, AITS, CpEO, GDSC) and professional-body memberships (IEEE / ACM / IEEE-CS student branches). Roles range from plain Member to elected/appointed officer titles.",
+      "Organizations and Memberships section. Student organizations (FEU Tech chapters of ACM, JPCS, AITS, CpEO, GDSC) and professional-body memberships (IEEE / ACM / IEEE-CS student branches). Roles range from plain Member to elected/appointed officer titles. Membership dates should overlap 2026 for current roles.",
     items: {
       type: Type.OBJECT,
       properties: {
@@ -262,17 +421,28 @@ internally consistent across program, specialization (if any),
 year_level, and every visible profile section.
 
 The profile schema mirrors the public student-portal view at the
-institution, with six rendered sections:
+institution and the broader dashboard import format. It contains these
+profile/evidence sections:
   - Personal Information (full_name, optional headline, short_biography)
-  - Skills (name + level + percentage)
+  - Skills (name + level + percentage; no dates)
+  - Certifications (name, issuer, issue_date, expiry_date)
+  - Licenses and Certifications (name, issuer, issue_date, expiry_date)
+  - Awards (title, recipient_status, issuer, date)
+  - Honors and Awards (title, recipient_status, issuer, date)
+  - Education (school, degree, date_range, description)
+  - Projects (title, role, date_range, technologies, description)
+  - Experience (company, role, employment_type, date_range, description)
   - Work Experience (company, role, employment_type, date_range,
     description) — internships / OJT / industry engagements only.
     Student-organization roles go in organizations_memberships.
-  - Honors and Awards (title, recipient_status, issuer, date)
-  - Licenses and Certifications (name, issuer, issue_date, expiry_date)
   - Seminars and Trainings (role, title, issuer, date)
   - Organizations and Memberships (organization, role, start_date,
     end_date — end_date null means current)
+Alias pairs (certifications/licenses_certifications,
+awards/honors_awards, experience/work_experience) must not duplicate the
+exact same evidence item. Put portal-style entries in the longer portal
+field names and use the shorter aliases for imported resume-style items
+when a profile is rich enough to have both.
 Program, specialization, and year_level are account metadata attached
 alongside the visible profile, not rendered on the public page.
 
@@ -292,9 +462,14 @@ each batch):
   ~20% SPARSE — barely-filled portal or year-1/year-2 student.
       - headline: null
       - short_biography: 1-2 short sentences
-      - skills: 2-5 items, Beginner/Intermediate only
+      - skills: 5-8 items, Beginner/Intermediate only
+      - education: 1 current-degree entry with a date range
+      - projects: 0-1 simple class project with a 2026 date_range
       - work_experience: empty
+      - experience: empty
+      - awards: empty
       - honors_awards: empty
+      - certifications: empty
       - licenses_certifications: empty
       - seminars_trainings: empty
       - organizations_memberships: empty or 1 (plain Member)
@@ -304,9 +479,14 @@ each batch):
   ~55% MODERATE — typical mid-progression student.
       - headline: null or a short tagline
       - short_biography: 2-3 sentences
-      - skills: 5-9 items, mostly Intermediate with a couple of Expert
+      - skills: 8-12 items, mostly Intermediate with a couple of Expert
+      - education: 1 current-degree entry, optional academic program
+      - projects: 1-3 class, portfolio, or hackathon projects with 2026 ranges
+      - experience: 0-1 non-duplicate assistantship/freelance/volunteer entry
       - work_experience: 0-1 (proper OJT is year-4 only)
+      - awards: 0-1
       - honors_awards: 0-2
+      - certifications: 0-1
       - licenses_certifications: 0-2
       - seminars_trainings: 0-1
       - organizations_memberships: 1-2 (member-level)
@@ -314,9 +494,14 @@ each batch):
   ~20% RICH — upper-year students with strong portfolios.
       - headline: short tagline
       - short_biography: 3-4 sentences
-      - skills: 8-14 items, mostly Expert, 1-2 Master
+      - skills: 12-18 items, mostly Expert, 1-2 Master
+      - education: 1-2 entries
+      - projects: 3-5 substantial projects with 2026 ranges
+      - experience: 1-2 non-duplicate assistantship/freelance/research entries
       - work_experience: 1-3
+      - awards: 1-2
       - honors_awards: 2-4
+      - certifications: 1-2
       - licenses_certifications: 2-4 track-relevant
       - seminars_trainings: 1-2
       - organizations_memberships: 2-3 including an officer role
@@ -324,17 +509,22 @@ each batch):
   ~5% OUTLIER-RICH — stand-out senior students.
       - headline: multi-clause tagline listing credentials/roles
       - short_biography: short paragraph, may include a LinkedIn URL
-      - skills: 10-14 items, several Master
+      - skills: 16-22 items, several Master
+      - education: 1-3 entries
+      - projects: 5-7 substantial projects with 2026 ranges
+      - experience: 2-3 non-duplicate assistantship/freelance/research entries
       - work_experience: 2-4 including substantive industry role
+      - awards: 2-3
       - honors_awards: 4-7 including external recognition
+      - certifications: 2-3
       - licenses_certifications: 4-6 spread across issuers
       - seminars_trainings: 1-3 including a Speaker-level engagement
       - organizations_memberships: 3-5 including professional-body memberships
 
 YEAR-LEVEL COHERENCE (hard rules):
-  - year 1 or 2: specialization MUST be null. work_experience empty.
-    licenses_certifications usually empty. Skill levels mostly
-    Beginner, occasional Intermediate.
+  - year 1 or 2: specialization MUST be null. work_experience and
+    experience empty. licenses_certifications and certifications usually
+    empty. Skill levels mostly Beginner, occasional Intermediate.
   - year 3: specialization MUST be non-null. OJT not yet completed.
   - year 4: specialization MUST be non-null. OJT experience REQUIRED
     in work_experience for RICH/OUTLIER profiles; optional for
@@ -350,10 +540,20 @@ names. Do not reuse within a batch; no placeholder names.
 TONE OF short_biography: student's own voice, first person,
 conversational. Sparse profiles sound sparse; do NOT upsell them.
 
-DATE COHERENCE: all dates across sections must be plausible relative
-to the student's year_level (assume "today" ~= 2026-04). Honors,
-certifications, experience, seminars, and organization memberships
-must fall within the student's plausible active years.
+DATE COHERENCE: assume today is June 10, 2026. Skills do not carry
+dates. Sections that represent evidence over time must include a time
+field only when it naturally belongs there:
+  - projects, experience, work_experience, education: date_range.
+  - organizations_memberships: start_date and end_date.
+  - certifications and licenses_certifications: issue_date and optional
+    expiry_date.
+  - awards, honors_awards, seminars_trainings: date.
+Generated current-year evidence should land in 2026. Every project
+date_range must overlap 2026. Current education and current memberships
+must overlap 2026. Experience/work_experience should overlap 2026 when
+the entry is meant to be this year's evidence. Historical dates are fine
+only when they are plausible for the student's year_level and do not
+pretend to be current-year evidence.
 `.trim();
 
 export const GENERATION = {

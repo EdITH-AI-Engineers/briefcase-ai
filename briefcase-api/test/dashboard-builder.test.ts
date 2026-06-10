@@ -112,6 +112,43 @@ describe("buildDashboard", () => {
     }
   });
 
+  it("returns full evidence section lists instead of counts", () => {
+    const dashboard = buildDashboard({
+      runId: "run-test",
+      profile: {
+        ...profile,
+        skills: [{ name: "Python", rating: 80 }],
+        projects: [{ title: "Portfolio API" }],
+        experience: [{ company: "Campus Lab" }],
+        work_experience: [{ company: "Internship" }],
+        educational_qualification: [{ school: "FEU Tech" }],
+        educational_qualifications: [{ school: "Online Program" }],
+        licenses_certifications: [{ name: "Cloud Foundations" }],
+        honors_awards: [{ title: "Dean's Lister" }],
+        seminars_trainings: [{ title: "AI Bootcamp" }],
+        organizations_memberships: [{ name: "Computer Society" }],
+      },
+      analysis,
+      manifest,
+      narrative: "",
+    });
+
+    assert.equal(Object.hasOwn(dashboard.student.evidenceCounts, "skills"), false);
+    assert.deepEqual(dashboard.student.evidenceCounts.projects, [{ title: "Portfolio API" }]);
+    assert.deepEqual(dashboard.student.evidenceCounts.experience, [
+      { company: "Campus Lab" },
+      { company: "Internship" },
+    ]);
+    assert.deepEqual(dashboard.student.evidenceCounts.education, [
+      { school: "FEU Tech" },
+      { school: "Online Program" },
+    ]);
+    assert.deepEqual(dashboard.student.evidenceCounts.certifications, [{ name: "Cloud Foundations" }]);
+    assert.deepEqual(dashboard.student.evidenceCounts.awards, [{ title: "Dean's Lister" }]);
+    assert.deepEqual(dashboard.student.evidenceCounts.trainings, [{ title: "AI Bootcamp" }]);
+    assert.deepEqual(dashboard.student.evidenceCounts.organizations, [{ name: "Computer Society" }]);
+  });
+
   it("builds roadmap actions from generated analysis gaps", () => {
     const dashboard = buildDashboard({ runId: "run-test", profile, analysis, manifest, narrative: "" });
 

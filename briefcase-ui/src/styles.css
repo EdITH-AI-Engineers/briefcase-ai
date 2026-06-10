@@ -172,48 +172,12 @@ li {
   font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
-.clamped-text {
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  position: relative;
-  transition:
-    background-color 180ms ease,
-    box-shadow 180ms ease,
-    opacity 180ms ease,
-    padding 180ms ease;
-}
-
-.clamped-text.expanded {
-  display: block;
-  overflow: visible;
-  z-index: 2;
-}
-
-.expandable-text:focus-within .clamped-text,
-.clamped-text.expanded {
-  background: #ffffff;
-  box-shadow: 0 10px 24px rgba(24, 62, 118, 0.1);
-}
-
 .expandable-text,
 .clean-list li,
 .card li,
 .narrative li {
   display: grid;
   gap: 6px;
-}
-
-.text-expand-button {
-  justify-self: start;
-  border: 1px solid #bfd2ef;
-  background: #ffffff;
-  color: #1554b8;
-  font-size: 0.76rem;
-  min-height: 30px;
-  padding: 0 10px;
 }
 
 .meta-row {

@@ -1,10 +1,11 @@
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8787";
 const ENDPOINT = "/api/dashboard/latest";
 
 type LoadState = "loading" | "ready" | "error";
+type EvidenceItems = number | unknown[];
 
 type StudentDashboard = {
   run?: { id?: string; status?: string; frameworkVersion?: string };
@@ -18,14 +19,13 @@ type StudentDashboard = {
     yearLevel?: number | null;
     sparsity?: string;
     evidenceCounts?: {
-      skills?: number;
-      projects?: number;
-      experience?: number;
-      education?: number;
-      certifications?: number;
-      awards?: number;
-      trainings?: number;
-      organizations?: number;
+      projects?: EvidenceItems;
+      experience?: EvidenceItems;
+      education?: EvidenceItems;
+      certifications?: EvidenceItems;
+      awards?: EvidenceItems;
+      trainings?: EvidenceItems;
+      organizations?: EvidenceItems;
     };
   };
   overview?: {
@@ -137,6 +137,11 @@ function idealPercent(ideal?: number) {
   return Math.max(0, Math.min(100, Math.round(ideal)));
 }
 
+function evidenceItemCount(value?: EvidenceItems) {
+  if (Array.isArray(value)) return value.length;
+  return typeof value === "number" && Number.isFinite(value) ? value : 0;
+}
+
 function statusLabel(status?: string) {
   if (status === "needs-work") return "Needs work";
   if (status === "missing") return "Missing";
@@ -202,28 +207,10 @@ function ExpandableText({
   children: ReactNode;
   className?: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const id = useId();
-  const textClassName = `clamped-text${expanded ? " expanded" : ""}`;
-  const button = (
-    <button
-      type="button"
-      className="text-expand-button"
-      aria-controls={id}
-      aria-expanded={expanded}
-      onClick={() => setExpanded((current) => !current)}
-    >
-      {expanded ? "Show less" : "Show more"}
-    </button>
-  );
-
   if (as === "li") {
     return (
       <li className={className}>
-        <span id={id} className={textClassName}>
-          {children}
-        </span>
-        {button}
+        <span>{children}</span>
       </li>
     );
   }
@@ -231,10 +218,7 @@ function ExpandableText({
   if (as === "strong") {
     return (
       <div className={`expandable-text${className ? ` ${className}` : ""}`}>
-        <strong id={id} className={textClassName}>
-          {children}
-        </strong>
-        {button}
+        <strong>{children}</strong>
       </div>
     );
   }
@@ -242,10 +226,7 @@ function ExpandableText({
   const Tag = as;
   return (
     <div className={`expandable-text${className ? ` ${className}` : ""}`}>
-      <Tag id={id} className={textClassName}>
-        {children}
-      </Tag>
-      {button}
+      <Tag>{children}</Tag>
     </div>
   );
 }
@@ -537,13 +518,12 @@ export default function App() {
   );
   const evidenceCounts = dashboard?.student?.evidenceCounts;
   const evidenceStats = [
-    ["Skills", evidenceCounts?.skills ?? 0],
-    ["Work Experience", evidenceCounts?.experience ?? 0],
-    ["Educational Qualification", evidenceCounts?.education ?? 0],
-    ["Honors and Awards", evidenceCounts?.awards ?? 0],
-    ["Licenses and Certifications", evidenceCounts?.certifications ?? 0],
-    ["Seminars and Trainings", evidenceCounts?.trainings ?? 0],
-    ["Organizations and Memberships", evidenceCounts?.organizations ?? 0],
+    ["Work Experience", evidenceItemCount(evidenceCounts?.experience)],
+    ["Educational Qualification", evidenceItemCount(evidenceCounts?.education)],
+    ["Honors and Awards", evidenceItemCount(evidenceCounts?.awards)],
+    ["Licenses and Certifications", evidenceItemCount(evidenceCounts?.certifications)],
+    ["Seminars and Trainings", evidenceItemCount(evidenceCounts?.trainings)],
+    ["Organizations and Memberships", evidenceItemCount(evidenceCounts?.organizations)],
   ] as const;
 
   return (

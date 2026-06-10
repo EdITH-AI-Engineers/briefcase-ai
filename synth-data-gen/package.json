@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "tsx src/index.ts"
+    "generate": "tsx src/index.ts",
+    "test": "node --import tsx --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^1.50.1",

@@ -55,9 +55,10 @@ function buildSystemInstruction(
     columnList,
     "",
     "Hard rules for every response:",
-    "  - Every row must be distinct. Rotate countries, ages, occupations aggressively.",
-    "  - Do NOT repeat names, emails, or ids within a batch.",
-    "  - Keep each row internally plausible (income plausible for occupation/country).",
+    "  - Every student profile must be distinct. Rotate programs, tracks, year levels, names, evidence density, and project themes.",
+    "  - Do NOT repeat names or ids within a batch.",
+    "  - Keep each row internally plausible for a Filipino undergraduate computing student.",
+    "  - Do not duplicate the exact same evidence item across alias fields.",
     "  - Return a JSON array conforming to the enforced schema, nothing else.",
   ].join("\n");
 }
@@ -160,12 +161,12 @@ export async function generateBatch(opts: GenerateOptions): Promise<Profile[]> {
 }
 
 const DIVERSITY_SEEDS = [
-  "lean toward Southeast Asia and West Africa",
-  "lean toward Latin America and Eastern Europe",
-  "lean toward Nordic countries and Central Asia",
-  "lean toward South Asia and the Middle East",
-  "lean toward Oceania and Southern Africa",
-  "lean toward East Asia and the Caribbean",
+  "lean toward BSCS students across Software Engineering, Data Science, and Artificial Intelligence",
+  "lean toward BSIT students across Web/Mobile, Cybersecurity, Business Analytics, and Game Development",
+  "lean toward BSCpE students across IoT/Data Analytics and Network Administration/Cybersecurity",
+  "lean toward lower-year sparse and moderate profiles with simple 2026 class projects",
+  "lean toward upper-year rich profiles with OJT, officer roles, certifications, and 2026 capstone work",
+  "lean toward varied Filipino names and mixed evidence density without duplicating entries",
 ];
 
 export async function generateDataset(
