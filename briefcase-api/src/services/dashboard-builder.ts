@@ -611,18 +611,17 @@ function sparsity(profile: AnyRecord): StudentDashboardDto["student"]["sparsity"
 }
 
 function evidenceCounts(profile: AnyRecord): StudentDashboardDto["student"]["evidenceCounts"] {
-  const count = (...keys: string[]) =>
-    keys.reduce((sum, key) => sum + (Array.isArray(profile[key]) ? (profile[key] as unknown[]).length : 0), 0);
+  const list = (...keys: string[]) =>
+    keys.flatMap((key) => Array.isArray(profile[key]) ? profile[key] as unknown[] : []);
 
   return {
-    skills: count("skills"),
-    projects: count("projects"),
-    experience: count("experience", "work_experience"),
-    education: count("education", "educational_qualification", "educational_qualifications"),
-    certifications: count("certifications", "licenses_certifications"),
-    awards: count("awards", "honors_awards"),
-    trainings: count("seminars_trainings"),
-    organizations: count("organizations_memberships"),
+    projects: list("projects"),
+    experience: list("experience", "work_experience"),
+    education: list("education", "educational_qualification", "educational_qualifications"),
+    certifications: list("certifications", "licenses_certifications"),
+    awards: list("awards", "honors_awards"),
+    trainings: list("seminars_trainings"),
+    organizations: list("organizations_memberships"),
   };
 }
 

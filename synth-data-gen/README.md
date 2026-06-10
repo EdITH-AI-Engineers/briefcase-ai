@@ -1,8 +1,8 @@
 # synth-data-gen
 
-Synthetic **student-profile** generator using Google's Gemini models via `@google/genai`. Produces schema-enforced JSON — each profile has id, full name, self-authored description, skills, certifications, awards, education, projects, and experience — batches requests, checkpoints after every batch, and tears down any caches it creates.
+Synthetic **student-profile** generator using Google's Gemini models via `@google/genai`. Produces schema-enforced JSON — each profile has id, full name, self-authored description, richer skills, certifications/licenses, awards/honors, education, projects, experience/work experience, seminars/trainings, and organizations/memberships — batches requests, checkpoints after every batch, and tears down any caches it creates.
 
-Downstream consumer: [`genai-analysis`](../genai-analysis) evaluates these profiles against an external skills framework. Column names in `src/config.ts` are kept in sync with `StudentProfile` in `genai-analysis/src/types.ts` — the two packages are contract-coupled.
+Downstream consumers: [`genai-analysis`](../genai-analysis) evaluates the portal fields against an external skills framework, and the dashboard/import pipeline reads the broader evidence aliases. Core portal column names in `src/config.ts` stay compatible with `StudentProfile` in `genai-analysis/src/types.ts`; extra aliases are accepted as additional profile evidence.
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ Free-form grounding brief — what kind of dataset, what to emphasize, what to a
 
 ### `MODEL`
 
-Pinned to `gemini-3.1-flash-lite-preview`. Swap to any model the SDK accepts.
+Pinned in `src/config.ts`. Swap to any model the SDK accepts.
 
 ## How it works
 

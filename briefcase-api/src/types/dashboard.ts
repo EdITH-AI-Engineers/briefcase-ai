@@ -17,14 +17,13 @@ export type StudentDashboardDto = {
     yearLevel: number | null;
     sparsity: "Missing" | "Sparse" | "Complete" | "Rich";
     evidenceCounts: {
-      skills: number;
-      projects: number;
-      experience: number;
-      education: number;
-      certifications: number;
-      awards: number;
-      trainings: number;
-      organizations: number;
+      projects: unknown[];
+      experience: unknown[];
+      education: unknown[];
+      certifications: unknown[];
+      awards: unknown[];
+      trainings: unknown[];
+      organizations: unknown[];
     };
   };
   overview: {
