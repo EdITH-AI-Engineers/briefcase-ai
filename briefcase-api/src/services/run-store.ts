@@ -3,6 +3,7 @@ import { isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildDashboard } from "./dashboard-builder.js";
 import { splitPersonName } from "./name.js";
+import { buildProfileSparsityWarning } from "./profile-sparsity.js";
 
 type AnyRecord = Record<string, unknown>;
 type RunManifest = {
@@ -188,6 +189,14 @@ export async function getDashboard(runId: string, studentId: string) {
     narrative = "";
   }
   return buildDashboard({ runId, profile, analysis, manifest: run.manifest, narrative });
+}
+
+export async function getStudentSparsityWarning(runId: string, studentId: string) {
+  const run = await readRun(runId);
+  if (!run) return null;
+  const profile = run.profiles.find((item) => item.id === studentId);
+  if (!profile) return null;
+  return buildProfileSparsityWarning(profile);
 }
 
 export async function getLatestDashboard() {

@@ -17,7 +17,6 @@ export type StudentDashboardDto = {
     headline: string;
     biography: string;
     yearLevel: number | null;
-    sparsity: "Missing" | "Sparse" | "Complete" | "Rich";
     evidenceCounts: {
       projects: unknown[];
       experience: unknown[];
