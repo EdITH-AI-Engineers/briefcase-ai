@@ -590,27 +590,6 @@ function ratingLabel(score: number): string {
   return "Needs Work";
 }
 
-function sparsity(profile: AnyRecord): StudentDashboardDto["student"]["sparsity"] {
-  const sections = [
-    "skills",
-    "certifications",
-    "licenses_certifications",
-    "awards",
-    "honors_awards",
-    "education",
-    "projects",
-    "experience",
-    "work_experience",
-    "seminars_trainings",
-    "organizations_memberships",
-  ];
-  const filled = sections.filter((key) => Array.isArray(profile[key]) && (profile[key] as unknown[]).length > 0).length;
-  if (filled <= 1) return "Missing";
-  if (filled <= 3) return "Sparse";
-  if (filled <= 6) return "Complete";
-  return "Rich";
-}
-
 function evidenceCounts(profile: AnyRecord): StudentDashboardDto["student"]["evidenceCounts"] {
   const list = (...keys: string[]) =>
     keys.flatMap((key) => Array.isArray(profile[key]) ? profile[key] as unknown[] : []);
@@ -932,7 +911,6 @@ export function buildDashboard(input: {
         headline: asText(input.profile.headline),
         biography: asText(input.profile.short_biography) || asText(input.profile.biography),
         yearLevel: year,
-        sparsity: sparsity(input.profile),
         evidenceCounts: evidenceCounts(input.profile),
       };
     })(),

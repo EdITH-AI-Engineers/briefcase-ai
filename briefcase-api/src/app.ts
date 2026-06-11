@@ -1,6 +1,13 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { getDashboard, getFrameworks, getLatestDashboard, getStudents, listRuns } from "./services/run-store.js";
+import {
+  getDashboard,
+  getFrameworks,
+  getLatestDashboard,
+  getStudents,
+  getStudentSparsityWarning,
+  listRuns,
+} from "./services/run-store.js";
 
 export const app = new Hono();
 
@@ -23,6 +30,11 @@ app.get("/api/dashboard/latest", async (c) => {
 app.get("/api/runs/:runId/students", async (c) => {
   const students = await getStudents(c.req.param("runId"));
   return c.json({ students });
+});
+app.get("/api/runs/:runId/students/:studentId/sparsity-check", async (c) => {
+  const warning = await getStudentSparsityWarning(c.req.param("runId"), c.req.param("studentId"));
+  if (!warning) return c.json({ error: "Student or run not found" }, 404);
+  return c.json({ warning });
 });
 app.get("/api/runs/:runId/students/:studentId/dashboard", async (c) => {
   const dashboard = await getDashboard(c.req.param("runId"), c.req.param("studentId"));
