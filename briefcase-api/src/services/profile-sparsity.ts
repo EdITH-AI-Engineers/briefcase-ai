@@ -62,7 +62,7 @@ function profileSparsityLevel(profile: AnyRecord): ProfileSparsityLevel {
 }
 
 function warningMessage(sparsity: ProfileSparsityLevel, missingSections: string[], thinSections: string[]): string {
-  if (sparsity === "Complete" || sparsity === "Rich") {
+  if ((sparsity === "Complete" || sparsity === "Rich") && thinSections.length === 0 && missingSections.length === 0) {
     return "Student profile has enough evidence for a stronger analysis.";
   }
 

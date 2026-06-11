@@ -88,6 +88,46 @@ describe("api routes", () => {
     }
   });
 
+  it("does not use the enough-evidence message when a complete profile still has missing sections", async () => {
+    const runId = `run-test-complete-sparsity-${Date.now()}`;
+    const runDir = join(analysisOutputDir, runId);
+    const studentId = "stu-complete-with-missing-sections";
+
+    await mkdir(runDir, { recursive: true });
+    try {
+      await writeFile(join(runDir, "manifest.json"), JSON.stringify({ status: "success" }));
+      await writeFile(join(runDir, "analyses.json"), JSON.stringify([{ student_id: studentId }]));
+      await writeFile(
+        join(runDir, "profiles.json"),
+        JSON.stringify([
+          {
+            id: studentId,
+            skills: [{ name: "Python" }, { name: "SQL" }],
+            projects: [{ title: "Portfolio API" }],
+            organizations_memberships: [{ organization: "Computer Society" }],
+            certifications: [{ name: "Cloud Foundations" }],
+          },
+        ]),
+      );
+
+      const response = await app.request(`/api/runs/${runId}/students/${studentId}/sparsity-check`);
+      const body = await response.json() as {
+        warning?: {
+          message?: string;
+          missingSections?: string[];
+          sparsity?: string;
+        };
+      };
+
+      assert.equal(response.status, 200);
+      assert.equal(body.warning?.sparsity, "Complete");
+      assert.ok(body.warning?.missingSections?.includes("education"));
+      assert.notEqual(body.warning?.message, "Student profile has enough evidence for a stronger analysis.");
+    } finally {
+      await rm(runDir, { recursive: true, force: true });
+    }
+  });
+
   it("lists runs as an array", async () => {
     const response = await app.request("/api/runs");
     const body = await response.json() as unknown;
