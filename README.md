@@ -68,6 +68,29 @@ Useful targets:
 
 The dashboard API reads real analysis runs from `genai-analysis/output/run-*`. If no run exists yet, the UI shows an empty state telling you to run `make pipeline`.
 
+## Profile sparsity requirements
+
+Before loading a student dashboard, the UI can call:
+
+```txt
+GET /api/runs/:runId/students/:studentId/sparsity-check
+```
+
+The API warns when a profile is `Missing` or `Sparse`, or when a section is present but below its minimum item count.
+
+| Section | Accepted profile fields | Minimum items |
+| --- | --- | --- |
+| Skills | `skills` | 2 |
+| Projects | `projects` | 1 |
+| Organizations | `organizations_memberships` | 1 |
+| Certifications | `certifications`, `licenses_certifications` | 1 |
+| Awards | `awards`, `honors_awards` | 1 |
+| Education | `education`, `educational_qualification`, `educational_qualifications` | 1 |
+| Experience | `experience`, `work_experience` | 1 |
+| Trainings | `seminars_trainings` | 1 |
+
+Sparsity levels are based on how many of those eight sections contain data: `Missing` is 0-1 filled sections, `Sparse` is 2-3, `Complete` is 4-6, and `Rich` is 7-8.
+
 ## Adding a package
 
 ```
